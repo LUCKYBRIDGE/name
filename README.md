@@ -99,11 +99,14 @@ npm run validate:data
 ## 라이선스·제3자 데이터
 이 저장소는 자체 작성 자료와 제3자 데이터를 함께 사용합니다.
 
+- 자체 작성 자료 권리 고지: `COPYRIGHT.md`
 - 제3자 고지: `THIRD_PARTY_NOTICES.md`
 - 개별 라이선스 원문: `LICENSES/`
 - 데이터 경로별 라이선스 맵: `data/meta/license-map.csv`
 - 출처·재배포 검토 상태: `data/meta/sources.csv`, `data/meta/source-audit.csv`
+- 출처별 앱 사용·재배포·표시 규칙: `data/meta/source-rights.csv`
 - 저작권·데이터 이용 정책: `COPYRIGHT_AND_DATA_USE.md`
+- 새 자료 추가 시 준수 규칙: `CONTRIBUTING.md`
 - 앱 표시용 출처·라이선스 문구: `APP_ATTRIBUTION.md`
 - 배포 범위 정책표: `data/meta/distribution-policy.csv`
 
