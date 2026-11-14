@@ -1,31 +1,43 @@
 # 구조화 데이터 운영 규칙
 
-이 폴더는 작명 앱과 AI가 직접 조회할 **구조화 데이터**를 저장합니다.
+이 폴더는 작명 앱과 AI가 직접 조회할 구조화 데이터를 저장한다.
 
 ## 주요 영역
-- `hanja/`: 인명용 한자 후보·독음·훈음·Unicode 기술 메타데이터
-- `surnames/`: 성씨 한자·본관·기준시점 통계. 현재 徐 기준 레코드부터 구축
+- `hanja/`: 인명용 한자 후보·독음·다중 의미·Unicode 기술 메타데이터
+- `surnames/`: 2015 총조사 순위 1~31위 31개 성씨 코어, 본관 요약·계통 연구
 - `myeongri/`: 천간·지지·십성·합충형파해 등 명리 계산 기본표
 - `rules/`: 공통 규칙표
 - `time/`: 절기·대한민국 시간대/DST 자료
-- `meta/`: 출처 등록부·데이터 통계·스키마 버전
+- `meta/`: 출처 등록부·출처 감사·빌드 계보·품질 게이트·통계·스키마 버전
 
-`surnames/`는 徐를 시작으로 단계적으로 확장하며 향후 `seongmyeong/`, `names/`, `romanization/`을 보강합니다.
+향후 핵심 확장 대상은 이름 통계, method별 성명학 계산 DB, 검증된 항렬 자료, 장기 사주 계산 테스트 벡터다.
 
-## 신뢰 계층
-1. **official** — 법령·법원·KASI 등 공식 원천
-2. **technical** — Unicode·IANA 등 기술 표준
-3. **academic** — 학술 연구
-4. **secondary** — 제3자 미러·구현 참고
-5. **provisional** — 버전·원천 확인이 추가로 필요한 임시 기술 데이터
+## 데이터 계층
+- raw: 원자료/미러 보존
+- normalized: 중복 제거·키 정규화
+- enriched: 외부 사전·기술 메타 결합
+- semantics / methods: 의미·작명/학파별 규칙
+- master / entries: 앱 조회용 통합 결과
 
-## 필수 규칙
-- 새 데이터에는 가능한 한 `source_id`를 부여하고 `meta/sources.csv`에 등록합니다.
-- 학파별 값은 `method_id` 없이 절대 속성처럼 저장하지 않습니다.
-- 미확인 값은 추측하지 않고 빈 값/null로 유지합니다.
-- raw → normalized → enriched → master의 계층을 구분합니다.
-- 데이터 수치의 단일 기준은 `meta/dataset-stats.json`입니다.
-- 현행 법적 판정이 필요한 인명용 한자는 후보 검색 데이터만으로 확정하지 않습니다.
+## 재현성
+`data/meta/build-manifest.json`이 파생 파일과 생성 스크립트의 관계를 기록한다.
+
+현재 정확 재생성 가능:
+- raw 한자 미러 → `by-reading.csv`, `characters.csv`
+- `by-reading.csv` → `reading-index.json`
+- `legal-reading-meaning.csv` → `meaning-senses.csv`
+- `sources.csv` → `source-audit.csv`
+
+전체 빌드 계보가 없는 enriched/KOSIS 파생 파일은 manifest에서 별도 표시한다.
+
+## 신뢰 원칙
+- 법적 사실·재현 가능한 계산·전통 해석을 분리
+- method별 값은 `method_id` 유지
+- 미확인 값은 null/빈 값
+- 후보 검색용 한자 미러와 현행 법적 판정 분리
+- `quality-gates.json`의 blocking 계층은 앱에서 확정 결과로 표시하지 않음
 
 ## 검증
-`scripts/validate/validate-data.mjs`는 한자 중복, 인덱스 일치, 기본 명리 표의 행 수 등을 검사합니다.
+```bash
+npm run check
+```

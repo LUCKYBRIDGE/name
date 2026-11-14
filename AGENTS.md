@@ -85,4 +85,8 @@
 법적 적합성, 발음, 의미, 한자 난이도, 디지털 표시, 이름 유행도, 항렬자, 로마자 표기와 국제 사용성을 전통 성명학과 별도 평가한다.
 
 ## 변경 작업
-구조화 데이터를 수정하면 가능하면 `node scripts/validate/validate-data.mjs` 기준을 만족해야 한다. 수치가 변하면 `data/meta/dataset-stats.json`을 먼저 갱신하고 README의 숫자를 독립적으로 관리하지 않는다.
+- 파생 데이터는 가능한 경우 직접 편집하지 말고 `data/meta/build-manifest.json`의 generator로 재생성한다.
+- 구조화 데이터·규칙·workflow 변경 후 `npm run check`를 통과시킨다.
+- `data/meta/quality-gates.json`에서 blocking 상태인 계층을 확정 사실로 승격하지 않는다.
+- 현행 공식 인명용 한자 전수 diff 완료 전까지 secondary mirror를 현행 법적 전체목록으로 표현하지 않는다.
+- 수치가 변하면 `data/meta/dataset-stats.json`을 갱신하고 README의 숫자를 독립적으로 관리하지 않는다.

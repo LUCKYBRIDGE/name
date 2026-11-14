@@ -74,9 +74,23 @@
 - 데이터 개수는 문서별로 복제하지 않고 [dataset-stats.json](data/meta/dataset-stats.json)을 기준으로 합니다.
 - 사주·성명학은 전통적 해석 체계이며 과학적으로 검증된 미래예측으로 표현하지 않습니다.
 
+## 재생성·품질 게이트
+- `data/meta/build-manifest.json`: 파생 파일의 입력·생성기·재현 가능 여부
+- `data/meta/quality-gates.json`: 앱이 확정값으로 사용해도 되는 계층과 미완성 계층
+- `data/meta/source-audit.csv`: 출처 라이선스 메타데이터 감사
+- `data/hanja/official/`: 현행 대법원 한자표 전수 diff 입력 규격
+
+현재 정규화 한자·독음 인덱스·다중 의미 레이어·출처 감사표는 원자료에서 정확히 재생성할 수 있습니다.
+
+```bash
+npm run check
+```
+
+현행 공식 인명용 한자 전체 행 대조는 아직 P0 품질 게이트로 남아 있으므로, 후보 미러를 현행 법적 전체목록으로 표현하지 않습니다.
+
 ## 검증
 대표 검증 사례는 `tests/`에 있으며, 데이터 구조 무결성은 다음 스크립트로 점검할 수 있습니다.
 
 ```bash
-node scripts/validate/validate-data.mjs
+npm run validate:data
 ```
