@@ -4,12 +4,13 @@
 
 ## 주요 영역
 - `hanja/`: 인명용 한자 후보·독음·훈음·Unicode 기술 메타데이터
+- `surnames/`: 성씨 한자·본관·기준시점 통계. 현재 徐 기준 레코드부터 구축
 - `myeongri/`: 천간·지지·십성·합충형파해 등 명리 계산 기본표
 - `rules/`: 공통 규칙표
 - `time/`: 절기·대한민국 시간대/DST 자료
 - `meta/`: 출처 등록부·데이터 통계·스키마 버전
 
-향후 `surnames/`, `seongmyeong/`, `names/`, `romanization/`을 확장합니다.
+`surnames/`는 徐를 시작으로 단계적으로 확장하며 향후 `seongmyeong/`, `names/`, `romanization/`을 보강합니다.
 
 ## 신뢰 계층
 1. **official** — 법령·법원·KASI 등 공식 원천
