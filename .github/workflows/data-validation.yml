@@ -15,10 +15,13 @@ on:
       - "README.md"
       - "INDEX.md"
       - "AGENTS.md"
+      - "COPYRIGHT.md"
       - "COPYRIGHT_AND_DATA_USE.md"
       - "APP_ATTRIBUTION.md"
+      - "CONTRIBUTING.md"
       - "package.json"
       - ".github/workflows/data-validation.yml"
+      - ".github/PULL_REQUEST_TEMPLATE.md"
   pull_request:
     paths:
       - "data/**"
@@ -33,10 +36,13 @@ on:
       - "README.md"
       - "INDEX.md"
       - "AGENTS.md"
+      - "COPYRIGHT.md"
       - "COPYRIGHT_AND_DATA_USE.md"
       - "APP_ATTRIBUTION.md"
+      - "CONTRIBUTING.md"
       - "package.json"
       - ".github/workflows/data-validation.yml"
+      - ".github/PULL_REQUEST_TEMPLATE.md"
 
 jobs:
   validate:
