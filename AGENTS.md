@@ -41,7 +41,7 @@
 - 성씨 기본 조회는 `data/surnames/surnames.csv`, 상세 조회는 `data/surnames/entries/<한자>.json`을 사용한다.
 - 현재 코어 범위는 2015 총조사 순위 1~31위 31개 성씨다.
 - 한글 성씨만 보고 한자를 임의 확정하지 않는다. 특히 조(趙/曺), 유(柳/劉)처럼 동음 성씨를 분리한다.
-- 李·林·柳·梁·劉처럼 두음법칙/복수 독음이 있는 한자는 상세 엔트리의 `alternate_readings`를 보존한다.
+- 李·林·柳·梁·劉처럼 두음법칙/복수 독음이 있는 한자는 상세 엔트리의 `character_readings`와 `surname_reading`을 구분해 보존한다.
 - 성씨의 사전 뜻을 이름자의 의미 점수처럼 합산하지 않는다.
 - 본관은 가족 맥락이며 자동 길흉 점수로 사용하지 않는다.
 - `representative-clans-2015.csv`는 전체 본관 목록이 아니라 대표 본관 부분 자료다.
@@ -49,7 +49,11 @@
 - 성-이름 경계 발음은 `pronunciation-profiles.csv`의 종성 여부를 먼저 보고 실제 표준발음 규칙을 적용한다.
 - 성과 이름 첫 음절이 같아도 자동 탈락시키지 않는다.
 - 실제 여권 로마자 성은 규칙형을 자동 강제하지 않고 기존 사용 이력과 외교부 규정을 우선한다.
-- 본관 역사 서술은 근거 수준과 caveat를 유지한다.
+- 본관 역사 서술은 `clan-history.csv`와 상세 JSON의 `genealogy_research`에서 근거 수준과 caveat를 유지한다.
+- 시조(founder), 원조(progenitor), 중시조(middle ancestor), 분관조(branch founder)를 같은 개념으로 합치지 않는다.
+- `evidence_level`이 myth/folklore/tradition/conflict 계열이면 역사적 확정 사실로 승격하지 않는다.
+- 출처가 충돌하는 洪·梁·孫·白 등의 계통 정보는 어느 한쪽으로 자동 결정하지 않는다.
+- 항렬·돌림자는 `research-status.csv`에서 검증 완료 상태가 아닌 한 생성·추정하지 않는다.
 
 ## 명리 계산
 고정 규칙은 `data/myeongri/`의 표를 우선한다. 지장간·십성·합충형파해·월지경계·오호둔·오서둔·십이운성은 데이터 표를 조회하고, 용신·격국·신강신약 등은 방법론을 먼저 선택한다.

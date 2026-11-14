@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.4.0",
+  "schema_version": "1.5.0",
   "updated_at": "2026-11-14",
-  "compatibility": "additive common-surname expansion: 31 master records, 30 new detailed profiles, pronunciation/stroke/disambiguation/representative-clan tables",
+  "compatibility": "additive genealogy evidence layer for all 31 core surnames; 30 expanded entries now embed genealogy_research",
   "conventions": {
     "source_reference": "Prefer source_id values registered in data/meta/sources.csv for new structured datasets.",
     "method_reference": "Use method_id for school- or author-dependent naming and myeongri rules.",
@@ -15,6 +15,9 @@
     "surname_strokes": "A dictionary/technical stroke count is not a default numerology count; method_id is required for naming-school calculations.",
     "common_surname_coverage": "Core surname data covers 2015 census ranks 1-31; top30-excluding-xu-2015.csv records the 30 newly added surnames because 徐(rank 13) was already present.",
     "representative_clans": "representative-clans-2015.csv is partial and must never be interpreted as a complete clan list.",
-    "hangul_hanja_disambiguation": "Same Hangul surname with different Hanja must remain separate surname_id records."
+    "hangul_hanja_disambiguation": "Same Hangul surname with different Hanja must remain separate surname_id records.",
+    "genealogy_claim_roles": "Keep founder, progenitor, middle ancestor, branch founder, historical clan reference, genealogy documentation, myth and legend as distinct claim types.",
+    "genealogy_conflicts": "Never auto-resolve conflicting founder or origin claims; preserve source_ids, evidence_level and caveat.",
+    "hangnyeol": "Do not infer or generate generation names unless a verified clan-specific source is registered."
   }
 }

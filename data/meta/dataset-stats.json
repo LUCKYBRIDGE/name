@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-11-14",
-  "schema_version": "1.4.0",
+  "schema_version": "1.5.0",
   "authoritative_for": "repository dataset counts and normalization status",
   "hanja": {
     "upstream_crawl_date": "2024-07-16",
@@ -34,7 +34,8 @@
     "U+25874 is present in the character master but has no reading in the secondary mirror.",
     "Traditional naming stroke counts must not be inferred from Unicode kTotalStrokes.",
     "Surname core data now covers 2015 census ranks 1-31 (31 records total); the user-requested expansion file contains 30 records excluding already-built 徐(rank 13).",
-    "representative-clans-2015.csv is a partial official representative-clan table, not a complete bongwan list for each surname."
+    "representative-clans-2015.csv is a partial official representative-clan table, not a complete bongwan list for each surname.",
+    "All 31 core surnames now have curated clan/genealogy research rows with evidence levels; this does not mean every clan or hangnyeol line is complete."
   ],
   "surnames": {
     "master_records": 31,
@@ -49,9 +50,16 @@
     "representative_clan_rows": 20,
     "representative_clan_surnames": 15,
     "full_clan_rows_for_xu": 8,
-    "clan_history_rows_for_xu": 3,
     "detailed_reference_surname": "徐",
-    "status": "common_surname_core_coverage; genealogy and full clan coverage remain incremental",
-    "ci_validation": true
+    "status": "common_surname_core_plus_curated_genealogy; full clan population and hangnyeol remain incremental",
+    "ci_validation": true,
+    "clan_history_rows": 33,
+    "surnames_with_clan_history": 31,
+    "deep_genealogy_entries": 31,
+    "research_status_rows": 31,
+    "full_clan_population_complete_surnames": 1,
+    "hangnyeol_verified_surnames": 0,
+    "explicit_conflict_or_variant_rows": 4,
+    "myth_or_legend_rows": 2
   }
 }

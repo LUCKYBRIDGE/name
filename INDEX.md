@@ -36,7 +36,9 @@ AI와 앱 개발 코드는 사용자 요청의 **의도**에 따라 필요한 �
 - 동음·두음법칙 구분: `data/surnames/hangul-hanja-disambiguation.csv`
 - 대표 본관 통계: `data/surnames/representative-clans-2015.csv`
 - 徐 전체 본관 통계: `data/surnames/clans-2015.csv`
-- 徐 본관 역사 참고: `data/surnames/clan-history.csv`
+- 31개 성씨 본관·계통 연구: `data/surnames/clan-history.csv`
+- 심층 연구 진행상태: `data/surnames/research-status.csv`
+- 徐 수준 연구 기준: `data/surnames/RESEARCH_GUIDE.md`
 - 처리 원칙: `knowledge/19-성씨-처리원칙.md`
 
 ## 명리 계산 데이터

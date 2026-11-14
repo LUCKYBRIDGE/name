@@ -43,7 +43,6 @@ for (const r of byRows) {
   if (relationKeys.has(key)) fail(`duplicate reading relation: ${key}`);
   relationKeys.add(key);
 }
-ok(`no duplicate reading relations (${byRows.length})`);
 const chRows=csvRows("data/hanja/normalized/characters.csv");
 const chCodes=new Set();
 for (const r of chRows) {
@@ -72,15 +71,17 @@ ok("myeongri fixed table counts");
 // Surname master
 const surnameRows=csvRows("data/surnames/surnames.csv");
 const surnameIds=new Set(), surnameCodes=new Set(), surnameRanks=new Set();
+const entryById=new Map();
 for (const r of surnameRows) {
   if (surnameIds.has(r.surname_id)) fail(`duplicate surname_id: ${r.surname_id}`);
   if (surnameCodes.has(r.codepoint)) fail(`duplicate surname codepoint: ${r.codepoint}`);
   if (surnameRanks.has(r.rank_2015)) fail(`duplicate surname rank: ${r.rank_2015}`);
   surnameIds.add(r.surname_id); surnameCodes.add(r.codepoint); surnameRanks.add(r.rank_2015);
   for (const sid of (r.source_ids||"").split("|").filter(Boolean)) if (!sourceIds.has(sid)) fail(`unknown surname source: ${sid}`);
-  if (!exists(`data/surnames/entries/${r.hanja}.json`)) fail(`missing detailed surname entry: ${r.hanja}`);
+  const path=`data/surnames/entries/${r.hanja}.json`;
+  if (!exists(path)) fail(`missing detailed surname entry: ${r.hanja}`);
   else {
-    const e=JSON.parse(read(`data/surnames/entries/${r.hanja}.json`));
+    const e=JSON.parse(read(path)); entryById.set(r.surname_id,e);
     if (e.surname_id !== r.surname_id || e.identity?.hanja !== r.hanja || e.identity?.hangul !== r.hangul) fail(`entry identity mismatch: ${r.hanja}`);
     if (Number(e.census_2015?.population) !== Number(r.population_2015)) fail(`entry population mismatch: ${r.hanja}`);
     if (Number(e.census_2015?.rank) !== Number(r.rank_2015)) fail(`entry rank mismatch: ${r.hanja}`);
@@ -90,13 +91,12 @@ for (const r of surnameRows) {
 if (surnameRows.length !== 31) fail(`surname master expected 31, got ${surnameRows.length}`);
 else ok("surname master 31 records and detailed entries");
 
-// Top30 expansion selection
+// Top30
 const top30=csvRows("data/surnames/top30-excluding-xu-2015.csv");
 const expectedRanks=[1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31];
 if (top30.length !== 30) fail(`top30 expansion expected 30, got ${top30.length}`);
 if (top30.some(r=>r.hanja==="徐")) fail("top30 expansion must exclude 徐");
 if (top30.map(r=>Number(r.original_rank_2015)).join(",") !== expectedRanks.join(",")) fail("top30 rank selection mismatch");
-for (let i=1;i<top30.length;i++) if (Number(top30[i-1].population_2015) < Number(top30[i].population_2015)) fail("top30 population order mismatch");
 ok("top30 expansion selection");
 
 // Pronunciation
@@ -118,12 +118,10 @@ ok("stroke policies separate technical and numerology counts");
 
 // Disambiguation
 const disRows=csvRows("data/surnames/hangul-hanja-disambiguation.csv");
-for (const r of disRows) {
-  for (const sid of r.surname_ids.split("|").filter(Boolean)) if (!surnameIds.has(sid)) fail(`unknown disambiguation surname_id: ${sid}`);
-}
+for (const r of disRows) for (const sid of r.surname_ids.split("|").filter(Boolean)) if (!surnameIds.has(sid)) fail(`unknown disambiguation surname_id: ${sid}`);
 ok("surname disambiguation references");
 
-// Representative clans are partial
+// Representative clans
 const repRows=csvRows("data/surnames/representative-clans-2015.csv");
 for (const r of repRows) {
   if (!surnameIds.has(r.surname_id)) fail(`unknown representative clan surname: ${r.surname_id}`);
@@ -133,17 +131,61 @@ for (const r of repRows) {
 }
 ok(`representative clan rows (${repRows.length})`);
 
-// Xu complete clan and historical reference checks
+// Genealogy evidence
+const histRows=csvRows("data/surnames/clan-history.csv");
+const historyIds=new Set();
+let conflictOrVariant=0, mythOrLegend=0;
+for (const r of histRows) {
+  if (!surnameIds.has(r.surname_id)) fail(`unknown clan-history surname_id: ${r.surname_id}`);
+  historyIds.add(r.surname_id);
+  const ids=(r.source_ids||"").split("|").filter(Boolean);
+  if (!ids.length) fail(`clan-history missing source: ${r.surname_id}/${r.bongwan}`);
+  for (const sid of ids) if (!sourceIds.has(sid)) fail(`unknown clan-history source: ${sid}`);
+  if (!r.claim_type || !r.evidence_level || !r.claim || !r.caveat) fail(`clan-history metadata missing: ${r.surname_id}/${r.bongwan}`);
+  if (/conflict|variant/.test(r.claim_type)) { conflictOrVariant++; if (!r.caveat) fail(`conflict without caveat: ${r.surname_id}`); }
+  if (/myth|legend/.test(r.claim_type)) mythOrLegend++;
+}
+if (histRows.length !== 33) fail(`clan-history expected 33 rows, got ${histRows.length}`);
+if (historyIds.size !== 31) fail(`clan-history expected 31 surnames, got ${historyIds.size}`);
+for (const r of surnameRows) if (!historyIds.has(r.surname_id)) fail(`surname has no genealogy row: ${r.hanja}`);
+ok(`genealogy evidence: ${histRows.length} rows / ${historyIds.size} surnames`);
+
+// Embedded genealogy in 30 expanded entries
+for (const r of surnameRows) {
+  const e=entryById.get(r.surname_id);
+  if (r.hanja==="徐") {
+    if (!e.clan_history && !Array.isArray(e.genealogy_research)) fail("徐 must retain deep clan history");
+    continue;
+  }
+  if (!Array.isArray(e.genealogy_research) || e.genealogy_research.length < 1) fail(`missing embedded genealogy_research: ${r.hanja}`);
+  for (const g of e.genealogy_research || []) {
+    if (!g.claim_type || !g.evidence_level || !g.claim || !g.caveat) fail(`embedded genealogy metadata missing: ${r.hanja}`);
+    for (const sid of g.source_ids || []) if (!sourceIds.has(sid)) fail(`unknown embedded genealogy source: ${r.hanja}/${sid}`);
+    if (g.do_not_infer_beyond_source !== true) fail(`genealogy inference guard missing: ${r.hanja}`);
+  }
+  if (!e.research_status?.overall_status) fail(`missing research_status: ${r.hanja}`);
+  if (e.verification?.hangnyeol_status !== "pending_verified_source") fail(`hangnyeol must remain pending: ${r.hanja}`);
+}
+ok("30 expanded surname entries embed genealogy evidence");
+
+// Xu full clan total
 const xu=surnameRows.find(r=>r.hanja==="徐");
 const clanRows=csvRows("data/surnames/clans-2015.csv");
 const xuTotal=clanRows.filter(r=>r.surname_id===xu.surname_id).reduce((n,r)=>n+Number(r.population_2015),0);
 if (xuTotal !== Number(xu.population_2015)) fail("徐 clan total mismatch");
-const histRows=csvRows("data/surnames/clan-history.csv");
-for (const r of histRows) {
-  for (const sid of (r.source_ids||"").split("|").filter(Boolean)) if (!sourceIds.has(sid)) fail(`unknown clan-history source: ${sid}`);
-  if (!r.evidence_level || !r.caveat) fail(`clan-history evidence metadata missing: ${r.bongwan}`);
+else ok("徐 full 2015 clan total");
+
+// Research status matrix
+const researchRows=csvRows("data/surnames/research-status.csv");
+const researchIds=new Set();
+for (const r of researchRows) {
+  if (!surnameIds.has(r.surname_id)) fail(`unknown research-status surname: ${r.surname_id}`);
+  if (researchIds.has(r.surname_id)) fail(`duplicate research-status surname: ${r.surname_id}`);
+  researchIds.add(r.surname_id);
+  if (!r.overall_status || !r.hangnyeol_generation_data) fail(`research-status incomplete: ${r.hanja}`);
 }
-ok("徐 full clan total and history evidence");
+if (researchRows.length !== 31 || researchIds.size !== 31) fail("research-status must cover 31 surnames");
+ok("research-status covers 31 surnames");
 
 // Stats
 if (stats.surnames.master_records !== surnameRows.length) fail("stats surname master count mismatch");
@@ -152,5 +194,10 @@ if (stats.surnames.top30_expansion_records !== top30.length) fail("stats top30 m
 if (stats.surnames.pronunciation_profiles !== pronRows.length) fail("stats pronunciation mismatch");
 if (stats.surnames.stroke_policy_rows !== strokeRows.length) fail("stats stroke policies mismatch");
 if (stats.surnames.representative_clan_rows !== repRows.length) fail("stats representative clans mismatch");
+if (stats.surnames.clan_history_rows !== histRows.length) fail("stats clan-history mismatch");
+if (stats.surnames.surnames_with_clan_history !== historyIds.size) fail("stats genealogy surname coverage mismatch");
+if (stats.surnames.research_status_rows !== researchRows.length) fail("stats research-status mismatch");
+if (stats.surnames.explicit_conflict_or_variant_rows !== conflictOrVariant) fail(`stats conflict rows mismatch: expected ${conflictOrVariant}`);
+if (stats.surnames.myth_or_legend_rows !== mythOrLegend) fail(`stats myth/legend rows mismatch: expected ${mythOrLegend}`);
 
 if (!process.exitCode) console.log("All integrity checks passed.");

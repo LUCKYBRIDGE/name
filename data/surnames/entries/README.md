@@ -4,25 +4,47 @@
 
 ## 공통 필수 영역
 - `surname_id`
-- `identity`: 한글·한자·Unicode·대표 독음
+- `identity`: 한글·한자·Unicode·성씨 독음·문자 독음
 - `character_metadata`: 사전형 훈·부수·기술 총획
 - `census_2015`: 2015-11-01 인구·순위
 - `pronunciation`: 음절 초성·중성·종성·CV/CVC
 - `romanization`: 국어의 로마자 표기법 기준형
+- `representative_clans_2015`: 공식 자료에서 확인된 대표 본관(부분 자료)
+- `genealogy_research`: 대표 본관의 시조·원조·중시조·계통 연구와 근거 수준
 - `stroke_policy`: 기술 총획과 성명학 획수의 분리
 - `naming_policy`: 성씨를 이름자와 다르게 처리하는 규칙
+- `research_status`: 전체 본관·항렬 등 미완성 영역
 - `verification`: 자료별 검증 상태
 
-## 선택 영역
-- `representative_clans_2015`: 공식 자료에서 대표 본관이 확인된 경우만 수록
-- `common_usage_examples`: 비공식 영문 사용례가 필요한 경우 참고용으로만 수록
-- 본관 역사·항렬·문중 전승은 별도 출처가 있을 때만 추가
+## genealogy_research
+각 항목은 다음을 유지한다.
+- `bongwan`
+- `claim_type`
+- `person` (있을 때만)
+- `claim`
+- `evidence_level`
+- `source_ids`
+- `caveat`
+- `do_not_infer_beyond_source: true`
+
+### claim_type 예
+- `founder_reference`: 비교적 명확한 시조 참고
+- `founder_tradition`: 족보·문중 전승
+- `progenitor_reference`: 원조
+- `middle_ancestor_reference`: 중시조
+- `branch_founder_reference`: 분관 시조
+- `historical_clan_reference`: 역사적 씨족 참고
+- `genealogy_documentation`: 족보·계통 문헌 존재 확인
+- `founder_mythic_tradition`, `founder_legend`: 신화·설화
+- `*_conflict`, `*_variant`: 출처 충돌·계통 변형
 
 ## 중요
-1. `technical_total_strokes`는 수리성명학의 기본 획수가 아니다.
-2. `representative_clans_2015`는 전체 본관 목록이 아니다.
-3. 한글 성씨가 같아도 한자가 다르면 다른 `surname_id`를 사용한다.
-4. 성씨의 사전적 뜻은 이름자 의미 점수에 자동 합산하지 않는다.
-5. 실제 여권 로마자 표기는 기존 사용 이력과 외교부 규정을 우선한다.
+1. 시조·원조·중시조·분관조를 같은 값으로 합치지 않는다.
+2. 설화나 족보 전승을 정사·법적 사실로 승격하지 않는다.
+3. 출처 충돌을 임의로 해결하지 않는다.
+4. `technical_total_strokes`는 수리성명학의 기본 획수가 아니다.
+5. `representative_clans_2015`는 전체 본관 목록이 아니다.
+6. 한글 성씨가 같아도 한자가 다르면 다른 `surname_id`를 사용한다.
+7. 항렬·돌림자는 검증된 문중별 출처가 없으면 생성하지 않는다.
 
-徐는 가장 상세한 기준 엔트리이며, 다른 상위 성씨는 동일한 코어 스키마에서 시작해 검증된 계보·항렬 자료가 확보될 때 확장한다.
+徐는 2015 본관별 인구 합계까지 완결된 기준 엔트리이며, 나머지 30개는 동일한 코어·계통 근거 스키마를 갖추되 전체 본관/항렬 완성도는 `research-status.csv`에서 별도 관리한다.
