@@ -1,6 +1,6 @@
 hangul,surname_ids,hanja_forms,relation_type,notes
-조,KR_SURNAME_U8D99|KR_SURNAME_U66FA,趙|曺,same_hangul_different_hanja,한글 성만으로 한자를 자동 확정하지 않는다.
-유,KR_SURNAME_U67F3|KR_SURNAME_U5289,柳|劉,same_hangul_different_hanja,柳·劉를 별도 성씨로 유지한다. 柳는 류 표기도 별도 통계에 존재할 수 있다.
-이,KR_SURNAME_U674E,李,initial_sound_law_variant,한자 독음 리가 성씨 표기에서 이로 쓰인다.
-임,KR_SURNAME_U6797,林,initial_sound_law_variant,한자 독음 림이 성씨 표기에서 임으로 쓰인다.
-양,KR_SURNAME_U6881,梁,initial_sound_law_variant,한자 독음 량이 성씨 표기에서 양으로 쓰인다.
+조,KR_SURNAME_U08D99|KR_SURNAME_U066FA,趙|曺,same_hangul_different_hanja,한글 성만으로 한자를 자동 확정하지 않는다.
+유,KR_SURNAME_U067F3|KR_SURNAME_U05289,柳|劉,same_hangul_different_hanja,柳·劉를 별도 성씨로 유지한다. 柳는 류 표기도 별도 통계에 존재할 수 있다.
+이,KR_SURNAME_U0674E,李,initial_sound_law_variant,한자 독음 리가 성씨 표기에서 이로 쓰인다.
+임,KR_SURNAME_U06797,林,initial_sound_law_variant,한자 독음 림이 성씨 표기에서 임으로 쓰인다.
+양,KR_SURNAME_U06881,梁,initial_sound_law_variant,한자 독음 량이 성씨 표기에서 양으로 쓰인다.
