@@ -1,0 +1,2 @@
+surname_id,hangul,hanja,syllable,onset,nucleus,coda,syllable_shape,boundary_profile,source_id,status,notes
+KR_SURNAME_U5F90,서,徐,서,ㅅ,ㅓ,,CV,open_syllable,NIKL_STANDARD_PRON,derived_verified,"성씨 음절에 종성이 없어 성-이름 경계에서 종성 때문에 생기는 연음·비음화·유음화·받침 유발 경음화를 기본적으로 촉발하지 않는다. 실제 전체 이름 발음은 개별 음절 조합으로 확인한다."
