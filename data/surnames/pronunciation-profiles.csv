@@ -1,2 +1,32 @@
 surname_id,hangul,hanja,syllable,onset,nucleus,coda,syllable_shape,boundary_profile,source_id,status,notes
 KR_SURNAME_U5F90,서,徐,서,ㅅ,ㅓ,,CV,open_syllable,NIKL_STANDARD_PRON,derived_verified,"성씨 음절에 종성이 없어 성-이름 경계에서 종성 때문에 생기는 연음·비음화·유음화·받침 유발 경음화를 기본적으로 촉발하지 않는다. 실제 전체 이름 발음은 개별 음절 조합으로 확인한다."
+KR_SURNAME_U091D1,김,金,김,ㄱ,ㅣ,ㅁ,CVC,closed_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 있으므로 이름 첫 음절과의 경계에서 실제 표준발음 규칙을 추가 적용한다.
+KR_SURNAME_U0674E,이,李,이,ㅇ,ㅣ,,CV,open_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 없으므로 성씨 종성 자체가 유발하는 경계 음운 변동은 없다. 전체 이름은 별도 평가한다.
+KR_SURNAME_U06734,박,朴,박,ㅂ,ㅏ,ㄱ,CVC,closed_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 있으므로 이름 첫 음절과의 경계에서 실제 표준발음 규칙을 추가 적용한다.
+KR_SURNAME_U05D14,최,崔,최,ㅊ,ㅚ,,CV,open_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 없으므로 성씨 종성 자체가 유발하는 경계 음운 변동은 없다. 전체 이름은 별도 평가한다.
+KR_SURNAME_U0912D,정,鄭,정,ㅈ,ㅓ,ㅇ,CVC,closed_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 있으므로 이름 첫 음절과의 경계에서 실제 표준발음 규칙을 추가 적용한다.
+KR_SURNAME_U059DC,강,姜,강,ㄱ,ㅏ,ㅇ,CVC,closed_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 있으므로 이름 첫 음절과의 경계에서 실제 표준발음 규칙을 추가 적용한다.
+KR_SURNAME_U08D99,조,趙,조,ㅈ,ㅗ,,CV,open_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 없으므로 성씨 종성 자체가 유발하는 경계 음운 변동은 없다. 전체 이름은 별도 평가한다.
+KR_SURNAME_U05C39,윤,尹,윤,ㅇ,ㅠ,ㄴ,CVC,closed_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 있으므로 이름 첫 음절과의 경계에서 실제 표준발음 규칙을 추가 적용한다.
+KR_SURNAME_U05F35,장,張,장,ㅈ,ㅏ,ㅇ,CVC,closed_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 있으므로 이름 첫 음절과의 경계에서 실제 표준발음 규칙을 추가 적용한다.
+KR_SURNAME_U06797,임,林,임,ㅇ,ㅣ,ㅁ,CVC,closed_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 있으므로 이름 첫 음절과의 경계에서 실제 표준발음 규칙을 추가 적용한다.
+KR_SURNAME_U097D3,한,韓,한,ㅎ,ㅏ,ㄴ,CVC,closed_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 있으므로 이름 첫 음절과의 경계에서 실제 표준발음 규칙을 추가 적용한다.
+KR_SURNAME_U05433,오,吳,오,ㅇ,ㅗ,,CV,open_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 없으므로 성씨 종성 자체가 유발하는 경계 음운 변동은 없다. 전체 이름은 별도 평가한다.
+KR_SURNAME_U07533,신,申,신,ㅅ,ㅣ,ㄴ,CVC,closed_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 있으므로 이름 첫 음절과의 경계에서 실제 표준발음 규칙을 추가 적용한다.
+KR_SURNAME_U06B0A,권,權,권,ㄱ,ㅝ,ㄴ,CVC,closed_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 있으므로 이름 첫 음절과의 경계에서 실제 표준발음 규칙을 추가 적용한다.
+KR_SURNAME_U09EC3,황,黃,황,ㅎ,ㅘ,ㅇ,CVC,closed_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 있으므로 이름 첫 음절과의 경계에서 실제 표준발음 규칙을 추가 적용한다.
+KR_SURNAME_U05B89,안,安,안,ㅇ,ㅏ,ㄴ,CVC,closed_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 있으므로 이름 첫 음절과의 경계에서 실제 표준발음 규칙을 추가 적용한다.
+KR_SURNAME_U05B8B,송,宋,송,ㅅ,ㅗ,ㅇ,CVC,closed_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 있으므로 이름 첫 음절과의 경계에서 실제 표준발음 규칙을 추가 적용한다.
+KR_SURNAME_U05168,전,全,전,ㅈ,ㅓ,ㄴ,CVC,closed_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 있으므로 이름 첫 음절과의 경계에서 실제 표준발음 규칙을 추가 적용한다.
+KR_SURNAME_U06D2A,홍,洪,홍,ㅎ,ㅗ,ㅇ,CVC,closed_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 있으므로 이름 첫 음절과의 경계에서 실제 표준발음 규칙을 추가 적용한다.
+KR_SURNAME_U067F3,유,柳,유,ㅇ,ㅠ,,CV,open_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 없으므로 성씨 종성 자체가 유발하는 경계 음운 변동은 없다. 전체 이름은 별도 평가한다.
+KR_SURNAME_U09AD8,고,高,고,ㄱ,ㅗ,,CV,open_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 없으므로 성씨 종성 자체가 유발하는 경계 음운 변동은 없다. 전체 이름은 별도 평가한다.
+KR_SURNAME_U06587,문,文,문,ㅁ,ㅜ,ㄴ,CVC,closed_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 있으므로 이름 첫 음절과의 경계에서 실제 표준발음 규칙을 추가 적용한다.
+KR_SURNAME_U06881,양,梁,양,ㅇ,ㅑ,ㅇ,CVC,closed_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 있으므로 이름 첫 음절과의 경계에서 실제 표준발음 규칙을 추가 적용한다.
+KR_SURNAME_U05B6B,손,孫,손,ㅅ,ㅗ,ㄴ,CVC,closed_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 있으므로 이름 첫 음절과의 경계에서 실제 표준발음 규칙을 추가 적용한다.
+KR_SURNAME_U088F5,배,裵,배,ㅂ,ㅐ,,CV,open_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 없으므로 성씨 종성 자체가 유발하는 경계 음운 변동은 없다. 전체 이름은 별도 평가한다.
+KR_SURNAME_U066FA,조,曺,조,ㅈ,ㅗ,,CV,open_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 없으므로 성씨 종성 자체가 유발하는 경계 음운 변동은 없다. 전체 이름은 별도 평가한다.
+KR_SURNAME_U0767D,백,白,백,ㅂ,ㅐ,ㄱ,CVC,closed_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 있으므로 이름 첫 음절과의 경계에서 실제 표준발음 규칙을 추가 적용한다.
+KR_SURNAME_U08A31,허,許,허,ㅎ,ㅓ,,CV,open_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 없으므로 성씨 종성 자체가 유발하는 경계 음운 변동은 없다. 전체 이름은 별도 평가한다.
+KR_SURNAME_U05289,유,劉,유,ㅇ,ㅠ,,CV,open_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 없으므로 성씨 종성 자체가 유발하는 경계 음운 변동은 없다. 전체 이름은 별도 평가한다.
+KR_SURNAME_U05357,남,南,남,ㄴ,ㅏ,ㅁ,CVC,closed_syllable,NIKL_STANDARD_PRON,derived_verified,성씨 종성이 있으므로 이름 첫 음절과의 경계에서 실제 표준발음 규칙을 추가 적용한다.
