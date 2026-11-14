@@ -103,7 +103,16 @@ npm run validate:data
 - 개별 라이선스 원문: `LICENSES/`
 - 데이터 경로별 라이선스 맵: `data/meta/license-map.csv`
 - 출처·재배포 검토 상태: `data/meta/sources.csv`, `data/meta/source-audit.csv`
+- 저작권·데이터 이용 정책: `COPYRIGHT_AND_DATA_USE.md`
+- 앱 표시용 출처·라이선스 문구: `APP_ATTRIBUTION.md`
+- 배포 범위 정책표: `data/meta/distribution-policy.csv`
 
 현재 루트에는 저장소 전체에 적용되는 별도 `LICENSE`를 두지 않았습니다. 따라서
 `THIRD_PARTY_NOTICES.md`는 제3자 데이터의 사용 조건을 기록할 뿐, 저장소의
 자체 작성 코드·문서·스키마·편집 해석 전체에 별도의 오픈소스 라이선스를 부여하지 않습니다.
+
+### 공개 저장소 주의
+
+이 저장소는 현재 public이므로, 지인에게만 사용하는 앱이라도 저장소 안의 제3자 데이터는 이미 공개적으로 제공되는 상태입니다. 따라서 앱 사용자 수와 별개로 제3자 라이선스·출처표시·재배포 조건을 관리합니다.
+
+광범위한 공개 또는 상업 배포 전에는 `data/meta/distribution-policy.csv`에서 재검토 대상으로 표시된 데이터, 특히 보조 출처가 섞인 `data/surnames/clans-core-2015.csv`와 행별 출처가 다른 본관 역사 데이터를 다시 확인합니다.
