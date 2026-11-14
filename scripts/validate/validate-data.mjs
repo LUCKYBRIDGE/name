@@ -121,6 +121,37 @@ const disRows=csvRows("data/surnames/hangul-hanja-disambiguation.csv");
 for (const r of disRows) for (const sid of r.surname_ids.split("|").filter(Boolean)) if (!surnameIds.has(sid)) fail(`unknown disambiguation surname_id: ${sid}`);
 ok("surname disambiguation references");
 
+// Exact 2015 clan summaries
+const clanCoreRows=csvRows("data/surnames/clans-core-2015.csv");
+const clanCoreBySurname=new Map();
+for (const r of clanCoreRows) {
+  if (!surnameIds.has(r.surname_id)) fail(`unknown clan-core surname: ${r.surname_id}`);
+  if (!clanCoreBySurname.has(r.surname_id)) clanCoreBySurname.set(r.surname_id,[]);
+  clanCoreBySurname.get(r.surname_id).push(r);
+  for (const sid of (r.source_ids||"").split("|").filter(Boolean)) if (!sourceIds.has(sid)) fail(`unknown clan-core source: ${sid}`);
+}
+for (const s of surnameRows) {
+  if (Number(s.male_2015)+Number(s.female_2015)!==Number(s.population_2015)) fail(`surname sex total mismatch: ${s.hanja}`);
+  const rows=clanCoreBySurname.get(s.surname_id)||[];
+  if (!rows.length) fail(`missing clan summary: ${s.hanja}`);
+  const aggregates=rows.filter(r=>r.is_aggregate==="true");
+  if (aggregates.length!==1) fail(`clan summary aggregate count: ${s.hanja}`);
+  const named=rows.filter(r=>r.is_aggregate!=="true");
+  if (named.length<1 || named.length>7) fail(`clan summary named row count: ${s.hanja}`);
+  for(let i=1;i<named.length;i++) if(Number(named[i-1].population_2015)<Number(named[i].population_2015)) fail(`clan summary not population-descending: ${s.hanja}`);
+  const pop=rows.reduce((n,r)=>n+Number(r.population_2015),0);
+  const male=rows.reduce((n,r)=>n+Number(r.male_2015),0);
+  const female=rows.reduce((n,r)=>n+Number(r.female_2015),0);
+  if(pop!==Number(s.population_2015) || male!==Number(s.male_2015) || female!==Number(s.female_2015)) fail(`clan summary total mismatch: ${s.hanja}`);
+  const e=entryById.get(s.surname_id);
+  const erows=e?.clans_2015_summary?.rows||[];
+  if(erows.length!==rows.length) fail(`embedded clan summary row count mismatch: ${s.hanja}`);
+  if(e?.verification?.clan_summary_status!=="validated_exact_total_2015") fail(`embedded clan summary status missing: ${s.hanja}`);
+  if(Number(e?.census_2015?.male)!==Number(s.male_2015) || Number(e?.census_2015?.female)!==Number(s.female_2015)) fail(`embedded sex total mismatch: ${s.hanja}`);
+}
+if (clanCoreBySurname.size!==31) fail(`clan summary expected 31 surnames, got ${clanCoreBySurname.size}`);
+ok(`exact clan summaries: ${clanCoreRows.length} rows / 31 surnames`);
+
 // Representative clans
 const repRows=csvRows("data/surnames/representative-clans-2015.csv");
 for (const r of repRows) {
@@ -194,6 +225,11 @@ if (stats.surnames.top30_expansion_records !== top30.length) fail("stats top30 m
 if (stats.surnames.pronunciation_profiles !== pronRows.length) fail("stats pronunciation mismatch");
 if (stats.surnames.stroke_policy_rows !== strokeRows.length) fail("stats stroke policies mismatch");
 if (stats.surnames.representative_clan_rows !== repRows.length) fail("stats representative clans mismatch");
+if (stats.surnames.clan_summary_rows !== clanCoreRows.length) fail("stats clan-summary rows mismatch");
+if (stats.surnames.clan_summary_named_rows !== clanCoreRows.filter(r=>r.is_aggregate!=="true").length) fail("stats clan-summary named rows mismatch");
+if (stats.surnames.clan_summary_aggregate_rows !== clanCoreRows.filter(r=>r.is_aggregate==="true").length) fail("stats clan-summary aggregate rows mismatch");
+if (stats.surnames.clan_summary_exact_total_surnames !== clanCoreBySurname.size) fail("stats clan-summary surname coverage mismatch");
+if (stats.surnames.sex_totals_complete_surnames !== surnameRows.filter(r=>r.male_2015&&r.female_2015).length) fail("stats sex-total coverage mismatch");
 if (stats.surnames.clan_history_rows !== histRows.length) fail("stats clan-history mismatch");
 if (stats.surnames.surnames_with_clan_history !== historyIds.size) fail("stats genealogy surname coverage mismatch");
 if (stats.surnames.research_status_rows !== researchRows.length) fail("stats research-status mismatch");

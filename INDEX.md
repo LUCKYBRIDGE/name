@@ -34,6 +34,7 @@ AI와 앱 개발 코드는 사용자 요청의 **의도**에 따라 필요한 �
 - 31개 발음 프로필: `data/surnames/pronunciation-profiles.csv`
 - 획수 안전 정책: `data/surnames/stroke-policies.csv`
 - 동음·두음법칙 구분: `data/surnames/hangul-hanja-disambiguation.csv`
+- 표준 본관 요약(31개·223행): `data/surnames/clans-core-2015.csv`
 - 대표 본관 통계: `data/surnames/representative-clans-2015.csv`
 - 徐 전체 본관 통계: `data/surnames/clans-2015.csv`
 - 31개 성씨 본관·계통 연구: `data/surnames/clan-history.csv`

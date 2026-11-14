@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.5.0",
+  "schema_version": "1.6.0",
   "updated_at": "2026-11-14",
-  "compatibility": "additive genealogy evidence layer for all 31 core surnames; 30 expanded entries now embed genealogy_research",
+  "compatibility": "additive 2015 sex totals and exact clan-summary layer for all 31 core surnames",
   "conventions": {
     "source_reference": "Prefer source_id values registered in data/meta/sources.csv for new structured datasets.",
     "method_reference": "Use method_id for school- or author-dependent naming and myeongri rules.",
@@ -18,6 +18,8 @@
     "hangul_hanja_disambiguation": "Same Hangul surname with different Hanja must remain separate surname_id records.",
     "genealogy_claim_roles": "Keep founder, progenitor, middle ancestor, branch founder, historical clan reference, genealogy documentation, myth and legend as distinct claim types.",
     "genealogy_conflicts": "Never auto-resolve conflicting founder or origin claims; preserve source_ids, evidence_level and caveat.",
-    "hangnyeol": "Do not infer or generate generation names unless a verified clan-specific source is registered."
+    "hangnyeol": "Do not infer or generate generation names unless a verified clan-specific source is registered.",
+    "clan_summary": "Use up to seven major bongwan rows plus a computed remainder that closes exactly to the surname total; never label the computed remainder as the source table's 기타.",
+    "full_clan_raw": "KOSIS DT_1IN15SD all-5plus bongwan raw coverage is distinct from the app summary layer."
   }
 }
