@@ -2,8 +2,9 @@
 
 ## 반영 결과
 - 대법원 미러 고유 코드포인트: 9,460
-- Unicode-derived 기술 부수/총획 데이터가 결합된 글자: 0
-- 미결합 글자: 9,460
+- Unicode-derived 기술 부수/총획 데이터가 결합된 글자: 8,786
+- 미결합 글자: 674
+- 커버리지: 92.9%
 
 ## 출처
 이번 결합은 `Baotrh8805/pbl6/ai-service/app/extract/data/unihan_rs.csv`를 **Unicode Unihan의 파생 미러**로 사용한다. 해당 프로젝트 문서는 이 CSV가 `Unihan_IRGSources.txt`의 `kRSUnicode`, `kTotalStrokes`에서 생성되며 Unicode License 적용 대상이라고 명시한다.
@@ -15,5 +16,5 @@
 
 향후 작업:
 1. Unicode 버전이 명시된 공식 `Unihan.zip`을 고정해 재생성
-2. 모든 인명용 확장 한자까지 커버리지 확인
+2. 미결합 확장 한자·호환 한자 원인 분류
 3. 성명학 원획은 별도 `method_id`와 출처를 가진 파생 데이터로 생성
