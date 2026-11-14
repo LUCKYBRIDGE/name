@@ -5,13 +5,33 @@ on:
     paths:
       - "data/**"
       - "tests/**"
-      - "scripts/validate/**"
+      - "scripts/**"
+      - "knowledge/**"
+      - "workflows/**"
+      - "templates/**"
+      - "docs/**"
+      - "sources/**"
+      - "research/**"
+      - "README.md"
+      - "INDEX.md"
+      - "AGENTS.md"
+      - "package.json"
       - ".github/workflows/data-validation.yml"
   pull_request:
     paths:
       - "data/**"
       - "tests/**"
-      - "scripts/validate/**"
+      - "scripts/**"
+      - "knowledge/**"
+      - "workflows/**"
+      - "templates/**"
+      - "docs/**"
+      - "sources/**"
+      - "research/**"
+      - "README.md"
+      - "INDEX.md"
+      - "AGENTS.md"
+      - "package.json"
       - ".github/workflows/data-validation.yml"
 
 jobs:
@@ -22,5 +42,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
+      - name: Check reproducible derived data
+        run: npm run check:derived
       - name: Validate structured naming data
-        run: node scripts/validate/validate-data.mjs
+        run: npm run validate:data

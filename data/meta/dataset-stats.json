@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-11-14",
-  "schema_version": "1.8.0",
+  "schema_version": "1.9.0",
   "authoritative_for": "repository dataset counts and normalization status",
   "hanja": {
     "upstream_crawl_date": "2024-07-16",
@@ -22,7 +22,8 @@
       "strokes": "provisional_unicode_technical_metadata",
       "semantic_senses": "derived_full_layer_unreviewed_lexicographic_split",
       "naming_meanings": "curated_pilot_editorial_layer",
-      "semantic_selection": "structured_policy_with_risk_not_auto_rejection"
+      "semantic_selection": "structured_policy_with_risk_not_auto_rejection",
+      "legal_official_full_diff": "pending_official_extraction"
     },
     "semantic_sense_rows": 13046,
     "semantic_relations": 7425,
@@ -34,7 +35,10 @@
     "semantic_selection_policy_version": "1.0.0",
     "semantic_risk_rule_rows": 9,
     "curated_sense_concern_rows": 5,
-    "selection_example_records": 3
+    "selection_example_records": 3,
+    "build_reproducible_steps": 4,
+    "build_reproducible_files": 5,
+    "build_nonreproducible_key_files": 4
   },
   "myeongri": {
     "heavenly_stems": 10,
@@ -52,7 +56,9 @@
     "All 31 core surnames now have curated clan/genealogy research rows with evidence levels; this does not mean every clan or hangnyeol line is complete.",
     "clans-core-2015.csv uses up to 7 selected major bongwan plus a computed remainder per surname; it is an exact-to-total summary, not a full copy of every 5+ person KOSIS bongwan row.",
     "Hanja can have multiple documented senses. meaning-senses.csv preserves all split senses by (hanja, legal_reading); naming interpretations are a separate editorial layer.",
-    "Selected naming sense, naming intent, and semantic-risk notices are separate from dictionary senses; semantic risk is not a fortune score and only invalid evidence/readings are blocked by default."
+    "Selected naming sense, naming intent, and semantic-risk notices are separate from dictionary senses; semantic risk is not a fortune score and only invalid evidence/readings are blocked by default.",
+    "Core Hanja normalization/index/semantic-sense files and source-audit.csv have exact regeneration scripts checked by CI.",
+    "2026 and 2027 solar-term rows were verified against KASI calendar/almanac pages on 2026-11-14."
   ],
   "surnames": {
     "master_records": 31,
@@ -85,5 +91,22 @@
     "clan_summary_exact_total_surnames": 31,
     "raw_all_5plus_bongwan_embedded_surnames": 0,
     "xu_legacy_clan_rows": 8
+  },
+  "time": {
+    "solar_term_years": [
+      2026,
+      2027
+    ],
+    "solar_term_rows": 48,
+    "official_calendar_verified_rows": 48,
+    "source_id": "KASI_CALENDAR",
+    "status": "official_calendar_data_verified_2026_2027"
+  },
+  "sources": {
+    "registry_records": 66,
+    "unknown_license_metadata": 42,
+    "named_license_records": 4,
+    "policy_label_records": 20,
+    "audit_file": "data/meta/source-audit.csv"
   }
 }

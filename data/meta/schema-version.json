@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.8.0",
+  "schema_version": "1.9.0",
   "updated_at": "2026-11-14",
-  "compatibility": "additive selected-sense, naming-intent and semantic-risk policy for Hanja naming",
+  "compatibility": "additive reproducible build manifest, real JSON Schema, quality gates, source audit and verified KASI time metadata",
   "conventions": {
     "source_reference": "Prefer source_id values registered in data/meta/sources.csv for new structured datasets.",
     "method_reference": "Use method_id for school- or author-dependent naming and myeongri rules.",
@@ -29,6 +29,10 @@
     "selected_sense": "Store selected_sense_ids separately from all documented sense IDs; selection does not alter dictionary senses.",
     "selection_origin": "Record whether the intended sense came from user/parent declaration, editorial suggestion, historical record, or is unknown.",
     "semantic_risk": "Semantic risk is an explanatory notice level, not auspiciousness and not automatic rejection; invalid is reserved for unsupported sense or reading mismatch.",
-    "unknown_naming_intent": "Do not invent a parent's original naming intention for an existing name when it is unknown."
+    "unknown_naming_intent": "Do not invent a parent's original naming intention for an existing name when it is unknown.",
+    "generated_data": "Derived files with an exact generator are registered in data/meta/build-manifest.json and checked by CI.",
+    "quality_gates": "App and AI must check data/meta/quality-gates.json before presenting incomplete layers as authoritative.",
+    "json_schema": "Files named *.schema.json use JSON Schema draft 2020-12; explanatory policy is stored separately.",
+    "official_hanja_diff": "Current legal Hanja full coverage is not claimed until normalized official reading-character rows are diffed against the mirror."
   }
 }

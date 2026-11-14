@@ -1,0 +1,102 @@
+{
+  "generated_at": "2026-11-14",
+  "gates": [
+    {
+      "gate_id": "LEGAL_HANJA_OFFICIAL_FULL_DIFF",
+      "priority": "P0",
+      "status": "pending_official_extraction",
+      "blocking_for": [
+        "bulk_legal_allowed_flag",
+        "claim_current_official_full_coverage"
+      ],
+      "evidence": [
+        "data/hanja/SOURCE_STATUS.md",
+        "data/hanja/official/README.md"
+      ],
+      "next_action": "Normalize current court rows and run compare-official-hanja.mjs."
+    },
+    {
+      "gate_id": "DERIVED_DATA_REPRODUCIBILITY",
+      "priority": "P0",
+      "status": "partial_pass",
+      "blocking_for": [],
+      "evidence": [
+        "data/meta/build-manifest.json"
+      ],
+      "next_action": "Add generators for enriched Hanja and KOSIS clan summary."
+    },
+    {
+      "gate_id": "HANJA_SEMANTIC_CURATION",
+      "priority": "P0",
+      "status": "pilot",
+      "coverage": {
+        "characters_curated": 12,
+        "semantic_characters": 7150
+      },
+      "blocking_for": [
+        "claim_full_curated_naming_semantics"
+      ],
+      "next_action": "Curate frequent naming Hanja and classify sense types."
+    },
+    {
+      "gate_id": "SOLAR_TERMS_2026_2027",
+      "priority": "P1",
+      "status": "verified_official",
+      "coverage": {
+        "years": [
+          2026,
+          2027
+        ],
+        "rows": 48
+      },
+      "evidence": [
+        "KASI_CALENDAR"
+      ],
+      "next_action": "Extend years and boundary regression vectors."
+    },
+    {
+      "gate_id": "SAJU_CALCULATION_ENGINE",
+      "priority": "P1",
+      "status": "pending",
+      "blocking_for": [
+        "repository_native_verified_saju_generation"
+      ],
+      "next_action": "Implement calendar/pillars engine and golden vectors."
+    },
+    {
+      "gate_id": "NAME_TREND_DATA",
+      "priority": "P1",
+      "status": "pending",
+      "blocking_for": [
+        "data_backed_popularity_score"
+      ],
+      "next_action": "Add court-based yearly name ranking data."
+    },
+    {
+      "gate_id": "SURNAME_HANGNYEOL",
+      "priority": "P1",
+      "status": "pending_verified_sources",
+      "coverage": {
+        "verified_surnames": 0,
+        "core_surnames": 31
+      },
+      "blocking_for": [
+        "automatic_generation_name_recommendation"
+      ],
+      "next_action": "Add clan/branch-specific verified generation-name sources only."
+    },
+    {
+      "gate_id": "SOURCE_LICENSE_AUDIT",
+      "priority": "P2",
+      "status": "metadata_audit_complete_manual_review_pending",
+      "coverage": {
+        "sources": 66,
+        "unknown_license_metadata": 42
+      },
+      "evidence": [
+        "data/meta/source-audit.csv"
+      ],
+      "next_action": "Review high-priority unknown licenses before bulk redistribution."
+    }
+  ]
+}

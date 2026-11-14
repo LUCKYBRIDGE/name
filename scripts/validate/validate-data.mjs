@@ -59,6 +59,21 @@ else ok(`hanja indexes consistent (${indexRelations} relations, ${chRows.length}
 const stats=JSON.parse(read("data/meta/dataset-stats.json"));
 if (stats.hanja.normalized_reading_relations !== byRows.length) fail("dataset-stats hanja relations mismatch");
 if (stats.hanja.unique_codepoints !== chRows.length) fail("dataset-stats hanja codepoints mismatch");
+if (stats.schema_version !== JSON.parse(read("data/meta/schema-version.json")).schema_version) fail("dataset/schema version mismatch");
+
+const buildManifest=JSON.parse(read("data/meta/build-manifest.json"));
+let reproducibleFiles=0;
+for (const step of buildManifest.derived||[]) {
+  if (step.reproducibility!=="exact") fail(`non-exact derived step: ${step.generator}`);
+  if (!exists(step.generator)) fail(`missing generator: ${step.generator}`);
+  for (const p of step.inputs||[]) if (!exists(p)) fail(`missing generator input: ${p}`);
+  for (const p of step.outputs||[]) { if (!exists(p)) fail(`missing generated output: ${p}`); reproducibleFiles++; }
+}
+const sourceAuditRows=csvRows("data/meta/source-audit.csv");
+if (sourceAuditRows.length!==sourceRows.length) fail("source audit row count mismatch");
+const auditIds=new Set(sourceAuditRows.map(r=>r.source_id));
+for (const id of sourceIds) if (!auditIds.has(id)) fail(`source missing audit row: ${id}`);
+ok(`build manifest/source audit: ${buildManifest.derived.length} steps / ${sourceAuditRows.length} sources`);
 
 // Hanja multi-sense semantics
 const senseRows=csvRows("data/hanja/semantics/meaning-senses.csv");
@@ -134,12 +149,17 @@ if (stats.hanja.curated_naming_sense_rows!==curatedRows.length) fail("stats cura
 if (stats.hanja.curated_naming_characters!==curatedChars.size) fail("stats curated_naming_characters mismatch");
 
 // Selected naming sense / intent / semantic-risk policy
-const selectionPolicy=JSON.parse(read("data/hanja/semantics/name-meaning-selection.schema.json"));
+const selectionPolicy=JSON.parse(read("data/hanja/semantics/name-meaning-selection.policy.json"));
 if (selectionPolicy.version!=="1.0.0") fail("semantic selection policy version mismatch");
-const requiredSelectionFields=new Set(selectionPolicy.character_selection_object?.required||[]);
+const selectionSchema=JSON.parse(read("data/hanja/semantics/name-meaning-selection.schema.json"));
+if (selectionSchema.$schema!=="https://json-schema.org/draft/2020-12/schema") fail("selection schema must use JSON Schema draft 2020-12");
+if (selectionSchema.type!=="object" || selectionSchema.additionalProperties!==false) fail("selection schema root shape");
+const requiredSelectionFields=new Set(selectionSchema.required||[]);
 for (const f of ["hanja","reading","all_sense_ids","selected_sense_ids","selection_origin","naming_intent","semantic_risk","interpretation"]) {
-  if (!requiredSelectionFields.has(f)) fail(`selection policy missing required field: ${f}`);
+  if (!requiredSelectionFields.has(f)) fail(`selection schema missing required field: ${f}`);
 }
+if (!selectionSchema.properties?.selected_sense_ids?.uniqueItems) fail("selected_sense_ids must be unique");
+if (selectionSchema.properties?.interpretation?.properties?.status?.const!=="editorial_paraphrase_not_dictionary_definition") fail("selection schema interpretation status constant");
 
 const riskRows=csvRows("data/hanja/semantics/semantic-risk-rules.csv");
 const riskIds=new Set(), validRiskLevels=new Set(["none","low","medium","high","invalid"]);
@@ -194,6 +214,10 @@ if (stats.hanja.semantic_selection_policy_version!==selectionPolicy.version) fai
 if (stats.hanja.semantic_risk_rule_rows!==riskRows.length) fail("stats semantic risk rule rows mismatch");
 if (stats.hanja.curated_sense_concern_rows!==concernRows.length) fail("stats sense concern rows mismatch");
 if (stats.hanja.selection_example_records!==(selectionExamples.examples||[]).length) fail("stats selection example count mismatch");
+if (stats.hanja.build_reproducible_steps!==buildManifest.derived.length) fail("stats build step count mismatch");
+if (stats.hanja.build_reproducible_files!==reproducibleFiles) fail("stats build file count mismatch");
+if (stats.sources.registry_records!==sourceRows.length) fail("stats source registry count mismatch");
+if (stats.sources.unknown_license_metadata!==sourceRows.filter(r=>r.license==="unknown").length) fail("stats unknown license metadata count mismatch");
 ok(`semantic selection policy: ${riskRows.length} rules / ${concernRows.length} curated concerns / ${selectionExamples.examples.length} examples`);
 
 // Myeongri
@@ -203,6 +227,22 @@ if (rowCount("data/myeongri/지지.csv") !== 12) fail("지지 count");
 if (rowCount("data/myeongri/육십갑자.csv") !== 60) fail("육십갑자 count");
 if (rowCount("data/myeongri/십성_천간100.csv") !== 100) fail("십성 count");
 ok("myeongri fixed table counts");
+
+const solarRows=[...csvRows("data/time/2026_24절기_KASI.csv"),...csvRows("data/time/2027_24절기_KASI.csv")];
+if (solarRows.length!==48) fail(`solar term rows expected 48, got ${solarRows.length}`);
+for (const r of solarRows) {
+  if (r.source_id!=="KASI_CALENDAR") fail(`solar term source_id mismatch: ${r.year}/${r.term}`);
+  if (r.status!=="official_calendar_data_verified_2026-11-14") fail(`solar term verification status mismatch: ${r.year}/${r.term}`);
+}
+if (stats.time.solar_term_rows!==solarRows.length || stats.time.official_calendar_verified_rows!==solarRows.length) fail("stats solar term count mismatch");
+ok("KASI 2026/2027 solar terms verified metadata");
+
+const quality=JSON.parse(read("data/meta/quality-gates.json"));
+const gateIds=new Set((quality.gates||[]).map(g=>g.gate_id));
+for (const id of ["LEGAL_HANJA_OFFICIAL_FULL_DIFF","DERIVED_DATA_REPRODUCIBILITY","HANJA_SEMANTIC_CURATION","SOLAR_TERMS_2026_2027","SAJU_CALCULATION_ENGINE","NAME_TREND_DATA","SURNAME_HANGNYEOL","SOURCE_LICENSE_AUDIT"]) if (!gateIds.has(id)) fail(`missing quality gate: ${id}`);
+if (quality.gates.find(g=>g.gate_id==="LEGAL_HANJA_OFFICIAL_FULL_DIFF")?.status!=="pending_official_extraction") fail("legal Hanja gate must remain pending");
+if (quality.gates.find(g=>g.gate_id==="SOLAR_TERMS_2026_2027")?.status!=="verified_official") fail("solar-term quality gate mismatch");
+ok("quality gates present and conservative");
 
 // Surname master
 const surnameRows=csvRows("data/surnames/surnames.csv");
