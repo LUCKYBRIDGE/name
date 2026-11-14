@@ -1,0 +1,16 @@
+{
+  "name": "luckybridge-name-data",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:normalize-hanja": "node scripts/build/normalize-hanja.mjs",
+    "build:reading-index": "node scripts/build/build-reading-index.mjs",
+    "build:meaning-senses": "node scripts/build/build-meaning-senses.mjs",
+    "audit:sources": "node scripts/audit/build-source-audit.mjs",
+    "build:derived": "node scripts/build/build-derived.mjs",
+    "check:derived": "node scripts/build/build-derived.mjs --check",
+    "audit:official-hanja": "node scripts/audit/compare-official-hanja.mjs",
+    "validate:data": "node scripts/validate/validate-data.mjs",
+    "check": "npm run check:derived && npm run validate:data"
+  }
+}

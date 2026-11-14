@@ -1,54 +1,112 @@
 {
-  "version": "1.0.0",
-  "purpose": "Store which documented Hanja sense is intended in a particular name without erasing other senses.",
-  "character_selection_object": {
-    "required": [
-      "hanja",
-      "reading",
-      "all_sense_ids",
-      "selected_sense_ids",
-      "selection_origin",
-      "naming_intent",
-      "semantic_risk",
-      "interpretation"
-    ],
-    "fields": {
-      "hanja": "Actual Hanja character used in the given name.",
-      "reading": "Actual name reading; semantic lookup key is (hanja, reading).",
-      "all_sense_ids": "All documented sense IDs for this Hanja+reading.",
-      "selected_sense_ids": "One or more documented sense IDs chosen as the naming intention.",
-      "selection_origin": [
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/LUCKYBRIDGE/name/data/hanja/semantics/name-meaning-selection.schema.json",
+  "title": "Hanja naming sense selection",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "hanja",
+    "reading",
+    "all_sense_ids",
+    "selected_sense_ids",
+    "selection_origin",
+    "naming_intent",
+    "semantic_risk",
+    "interpretation"
+  ],
+  "properties": {
+    "hanja": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reading": {
+      "type": "string",
+      "minLength": 1
+    },
+    "all_sense_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "selected_sense_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "selection_origin": {
+      "enum": [
         "user_declared",
         "parent_declared",
         "editorial_default_suggestion",
         "historical_record",
         "unknown"
+      ]
+    },
+    "naming_intent": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "semantic_risk": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "level",
+        "reason_ids",
+        "other_sense_notice_required",
+        "auto_reject_character"
       ],
-      "naming_intent": "Plain-language intention for why the selected sense was chosen. Null when unknown.",
-      "semantic_risk": {
-        "level": [
-          "none",
-          "low",
-          "medium",
-          "high",
-          "invalid"
-        ],
-        "reason_ids": "Rule IDs from semantic-risk-rules.csv.",
-        "other_sense_notice_required": "Whether non-selected senses should be shown prominently.",
-        "auto_reject_character": "Normally false; only invalid evidence/readings block a recommendation."
-      },
-      "interpretation": {
-        "text": "Natural-language naming explanation derived from selected documented senses.",
-        "status": "editorial_paraphrase_not_dictionary_definition"
+      "properties": {
+        "level": {
+          "enum": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "invalid"
+          ]
+        },
+        "reason_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^SEM[0-9]{3}$"
+          }
+        },
+        "other_sense_notice_required": {
+          "type": "boolean"
+        },
+        "auto_reject_character": {
+          "type": "boolean"
+        }
+      }
+    },
+    "interpretation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "text",
+        "status"
+      ],
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "status": {
+          "const": "editorial_paraphrase_not_dictionary_definition"
+        }
       }
     }
   },
-  "principles": [
-    "Selecting a sense does not change the dictionary meaning of the character.",
-    "Other documented senses remain attached to the character.",
-    "A negative or awkward non-selected sense is a notice, not an automatic rejection.",
-    "A selected sense must belong to the exact Hanja+reading relation.",
-    "Undocumented auspicious meanings are invalid.",
-    "Traditional stroke/phonetic/resource calculations remain separate from selected semantic intention."
-  ]
+  "$comment": "Subset selected_sense_ids ⊆ all_sense_ids and exact Hanja+reading membership are enforced by repository validation."
 }
