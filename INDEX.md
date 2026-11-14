@@ -1,67 +1,58 @@
-# NAME 지식 탐색 인덱스
+# NAME 지식·데이터 탐색 인덱스
 
-AI는 사용자 요청의 **의도**에 따라 아래 파일부터 읽는다. 모든 파일을 무조건 읽지 않는다.
+AI와 앱 개발 코드는 사용자 요청의 **의도**에 따라 필요한 데이터만 읽는다.
 
-| 요청 | 우선 읽을 파일 | 추가 참고 |
+## 요청별 우선 경로
+| 요청 | 우선 데이터/문서 | 추가 참고 |
 |---|---|---|
-| 이름 추천 | knowledge/00-사용-절차.md, workflows/이름-추천.md | knowledge/02-한자-분석-절차.md |
+| 이름 추천 | workflows/이름-추천.md | knowledge/17-이름-실사용성-평가.md |
 | 이름 분석 | workflows/기존-이름-분석.md | docs/04-성명학-규칙.md |
-| 한자 뜻·음·획수 | knowledge/02-한자-분석-절차.md | knowledge/03-한자-데이터-스키마.md |
-| 인명용 한자 여부 | research/한자-공식자료-확인-경로.md | docs/03-인명용한자-데이터.md |
-| 사주·오행 | docs/02-사주와-오행.md | workflows/기존-이름-분석.md |
-| 수리·음양·발음오행 | docs/04-성명학-규칙.md | knowledge/01-근거-등급.md |
+| 한자 후보 검색 | data/hanja/normalized/reading-index.json | data/hanja/enriched/hanja-master-enriched.csv |
+| 한자 뜻·훈 | data/hanja/enriched/hanja-master-enriched.csv | knowledge/13-한자-뜻-획수-데이터원칙.md |
+| 인명용 한자 법적 판정 | knowledge/05-인명용한자-법적판정.md | sources/공식-인명용한자-근거-2026-11.md |
+| 사주·오행 | data/myeongri/ | knowledge/16-사주-분석레이어.md |
+| 수리·음양·발음오행 | docs/04-성명학-규칙.md | knowledge/12-성명학-학파별-분리원칙.md |
 | 후보 비교 | workflows/후보-비교.md | templates/분석-출력-형식.md |
+| 출생 전 후보 | workflows/출생전-후보와-출생후-확정.md | knowledge/14-출생일시-입력규격.md |
+| 데이터 상태/개수 | data/meta/dataset-stats.json | data/meta/schema-version.json |
+| 외부 출처 | data/meta/sources.csv | sources/명리학-작명-자료맵.md |
 
-## 검색 키워드
-- '뜻', '훈', '음', '한자': 한자 분석
-- '인명용', '등록', '법원': 법적 허용 여부
-- '획수', '원격', '형격', '이격', '정격', '81수리': 수리성명학
-- '발음오행', '자원오행', '음양': 학파별 성명학
-- '사주', '만세력', '절기', '간지': 사주 계산
-- '추천', '작명', '이름 후보': 추천 절차
+## 한자 데이터
+- 독음 관계: `data/hanja/normalized/by-reading.csv`
+- 한자별 독음: `data/hanja/normalized/characters.csv`
+- 빠른 조회: `data/hanja/normalized/reading-index.json`
+- 통합 검색 마스터: `data/hanja/enriched/hanja-master-enriched.csv`
+- 마스터 설명: `data/hanja/enriched/MASTER_README.md`
+- 공식/보조 데이터 상태: `data/hanja/SOURCE_STATUS.md`, `SECONDARY_MIRROR.md`
 
-## 근거 부족 시
-현재 저장소는 **완성된 인명용 한자 전체 사전이 아니다**. 실제 원자료가 없으면 추측하지 말고 미확인으로 표시하고 최신 공식 자료를 조회한다. 해석과 검증 가능한 사실을 구분한다.
-
-## 공식 인명용 한자 확인
-법적 허용 여부는 `knowledge/05-인명용한자-법적판정.md` → `sources/공식-인명용한자-근거-2026-11.md` 순서로 확인한다.
-
-## 심화 탐색
-- 한글 독음으로 한자 후보 찾기: `knowledge/07-한자-동음-후보-탐색.md`
-- 획수 기준 불일치: `knowledge/08-획수-충돌-처리.md`
-- 사주 계산 검증: `knowledge/09-사주-계산-검증.md`
-- AI 품질 테스트: `tests/AI-응답-검증-시나리오.md`
-- 출처 등록: `sources/출처-등록-규칙.md`
-
-## 명리학·작명 심화 자료
-- 출처 지도: `sources/명리학-작명-자료맵.md`
-- 사주명리 기초: `knowledge/10-사주명리-기초체계.md`
-- 절기·달력 경계: `knowledge/11-절기-달력-사주경계.md`
-- 성명학 학파 분리: `knowledge/12-성명학-학파별-분리원칙.md`
-- 한자 뜻·획수 원칙: `knowledge/13-한자-뜻-획수-데이터원칙.md`
-- 사주 기반 작명 절차: `workflows/사주기반-작명.md`
-- 천간 표: `data/rules/천간_음양오행.csv`
-- 오행 관계: `data/rules/오행_상생상극.csv`
-
-## 출생일시·실사용성
-- 출생일시 입력 규격: `knowledge/14-출생일시-입력규격.md`
-- 시주·시간보정: `knowledge/15-시주-시간보정-방법론.md`
-- 사주 분석 레이어: `knowledge/16-사주-분석레이어.md`
-- 이름 실사용성: `knowledge/17-이름-실사용성-평가.md`
-- 이름 통계·유행도: `knowledge/18-이름-통계와-유행도.md`
-- 출생 전/후 작명: `workflows/출생전-후보와-출생후-확정.md`
-- 2026 절기: `data/time/2026_24절기_KASI.csv`
-- 2027 절기: `data/time/2027_24절기_KASI.csv`
-- 한국 표준시 이력: `data/time/대한민국_표준시_역사.csv`
-- 한국 DST 이력: `data/time/대한민국_DST_rules.csv`
-
-## 계산용 명리 데이터
-- 명리 데이터 안내: `data/myeongri/README.md`
+## 명리 계산 데이터
 - 천간·지지·육십갑자: `data/myeongri/천간.csv`, `지지.csv`, `육십갑자.csv`
 - 지장간: `data/myeongri/지장간.csv`
 - 십성 100관계: `data/myeongri/십성_천간100.csv`
 - 합·충·형·파·해: `data/myeongri/천간합.csv`, `지지*.csv`
-- 월지 절기·오호둔·오서둔: `data/myeongri/월지_절기경계.csv`, `오호둔_월간.csv`, `오서둔_시간.csv`
+- 월지 절기·오호둔·오서둔: `월지_절기경계.csv`, `오호둔_월간.csv`, `오서둔_시간.csv`
 - 십이운성: `data/myeongri/십이운성_화토동궁.csv`
 - 용신 방법론: `data/myeongri/용신_방법론_카탈로그.csv`
-- 인명용 한자 훈음: `data/hanja/enriched/`
+
+## 출생일시·시간
+- 입력 규격: `knowledge/14-출생일시-입력규격.md`
+- 시주·시간보정: `knowledge/15-시주-시간보정-방법론.md`
+- 2026/2027 절기: `data/time/*_24절기_KASI.csv`
+- 한국 표준시 이력: `data/time/대한민국_표준시_역사.csv`
+- 한국 DST: `data/time/대한민국_DST_rules.csv`
+
+## 검증
+- 대표 데이터 사례: `tests/명리-한자-데이터-대표검증.csv`
+- AI 응답 실패 사례: `tests/AI-응답-검증-시나리오.md`
+- 자동 무결성 검사: `scripts/validate/validate-data.mjs`
+
+## 검색 키워드
+- 뜻/훈/한자 → 한자 마스터
+- 인명용/등록/법원 → 법적 판정
+- 획수/원격/형격/이격/정격/81수리 → 성명학
+- 발음오행/자원오행/음양 → method별 성명학
+- 사주/만세력/절기/간지 → 명리 계산
+- 추천/작명/후보 → workflow
+
+## 근거 부족 시
+확인되지 않은 값은 생성하지 않는다. 법적 사실, 기술 계산, 전통적 해석을 구분하고 최신 공식 확인이 필요한 경우 이를 명시한다.
