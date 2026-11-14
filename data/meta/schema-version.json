@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.1.0",
+  "updated_at": "2026-11-14",
+  "compatibility": "additive metadata and normalization update",
+  "conventions": {
+    "source_reference": "Prefer source_id values registered in data/meta/sources.csv for new structured datasets.",
+    "method_reference": "Use method_id for school- or author-dependent naming and myeongri rules.",
+    "legal_hanja": "Candidate search data and final legal verification are separate layers.",
+    "stroke_counts": "Unicode technical strokes and naming-school stroke counts are separate fields.",
+    "null_policy": "Unknown values remain null/empty; do not infer unsupported facts."
+  }
+}
