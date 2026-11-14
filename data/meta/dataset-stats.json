@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-11-14",
-  "schema_version": "1.3.0",
+  "schema_version": "1.4.0",
   "authoritative_for": "repository dataset counts and normalization status",
   "hanja": {
     "upstream_crawl_date": "2024-07-16",
@@ -33,21 +33,25 @@
     "README files should reference this file instead of maintaining independent counts.",
     "U+25874 is present in the character master but has no reading in the secondary mirror.",
     "Traditional naming stroke counts must not be inferred from Unicode kTotalStrokes.",
-    "Surname data currently starts with 徐 as the reference record; do not infer coverage of all Korean surnames."
+    "Surname core data now covers 2015 census ranks 1-31 (31 records total); the user-requested expansion file contains 30 records excluding already-built 徐(rank 13).",
+    "representative-clans-2015.csv is a partial official representative-clan table, not a complete bongwan list for each surname."
   ],
   "surnames": {
-    "master_records": 1,
-    "detailed_entries": 1,
+    "master_records": 31,
+    "detailed_entries": 31,
     "census_reference_date": "2015-11-01",
-    "clan_rows": 8,
-    "explicit_clans": 7,
-    "aggregate_rows": 1,
-    "initial_reference_surname": "徐",
-    "status": "pilot_dataset; expand surname-by-surname with source verification",
-    "pronunciation_profiles": 1,
-    "pronunciation_heuristics": 4,
-    "clan_history_rows": 3,
-    "stroke_policy_entries": 1,
+    "coverage_rule": "2015 census ranks 1-31, giving 31 total records; 徐 rank 13 is the original reference record and the other 30 are the top30 expansion set",
+    "top30_expansion_records": 30,
+    "top30_selection_file": "data/surnames/top30-excluding-xu-2015.csv",
+    "pronunciation_profiles": 31,
+    "stroke_policy_rows": 31,
+    "homophone_disambiguation_rows": 5,
+    "representative_clan_rows": 20,
+    "representative_clan_surnames": 15,
+    "full_clan_rows_for_xu": 8,
+    "clan_history_rows_for_xu": 3,
+    "detailed_reference_surname": "徐",
+    "status": "common_surname_core_coverage; genealogy and full clan coverage remain incremental",
     "ci_validation": true
   }
 }
