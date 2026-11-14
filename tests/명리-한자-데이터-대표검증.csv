@@ -1,0 +1,22 @@
+﻿category,input,expected,source,notes
+지장간,子,癸,https://github.com/6tail/lunar-python/blob/1645ad3b3653635e5cb31b0c6df22b5e4298f8ce/lunar_python/util/LunarUtil.py,배열 첫값부터 보존
+지장간,丑,己|癸|辛,https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002596264,구성 교차검증
+지장간,寅,甲|丙|戊,https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002596264,구성 교차검증
+십성,甲+甲,비견,https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002810441,동일오행 동일음양
+십성,甲+乙,겁재,https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002810441,동일오행 이성음양
+십성,甲+丙,식신,https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002810441,일간이 생함 동일음양
+십성,甲+丁,상관,https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002810441,일간이 생함 이성음양
+십성,甲+戊,편재,https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002810441,일간이 극함 동일음양
+십성,甲+辛,정관,https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002810441,상대가 일간을 극함 이성음양
+십성,甲+壬,편인,https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002810441,상대가 일간을 생함 동일음양
+지지충,子+午,충,https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART001802048,대표 대충
+지지충,寅+申,충,https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART001802048,대표 대충
+육합,子+丑,육합,https://kci.go.kr/kciportal/landing/article.kci?arti_id=ART002788509,합화 여부 별도
+삼합,申+子+辰,수국,https://kci.go.kr/kciportal/landing/article.kci?arti_id=ART002788509,성립 조건 별도
+방합,寅+卯+辰,목,https://kci.go.kr/kciportal/landing/article.kci?arti_id=ART002788509,방법론별 적용
+월지경계,寅월,입춘부터,https://astro.kasi.re.kr/life/post/calendarData,날짜가 아니라 실제 절입 시각
+오호둔,甲年+寅月,丙寅,internal:data/myeongri/오호둔_월간.csv,통용 계산표
+오서둔,甲日+子時,甲子,internal:data/myeongri/오서둔_시간.csv,통용 계산표
+십이운성,甲+亥,장생,https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002722234,화토동궁·양순음역 method
+한자훈음,가+可,옳을 가,https://github.com/libhangul/libhangul,정확 독음-한자 매칭
+한자훈음,가+家,집 가,https://github.com/libhangul/libhangul,정확 독음-한자 매칭
