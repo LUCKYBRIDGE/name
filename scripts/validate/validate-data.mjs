@@ -32,9 +32,12 @@ const requiredNoticeFiles=[
   "LICENSES/BSD-3-Clause-libhangul-hanja.txt",
   "LICENSES/Unicode-3.0.txt",
   "data/meta/license-map.csv",
+  "COPYRIGHT.md",
   "COPYRIGHT_AND_DATA_USE.md",
+  "CONTRIBUTING.md",
   "APP_ATTRIBUTION.md",
-  "data/meta/distribution-policy.csv"
+  "data/meta/distribution-policy.csv",
+  "data/meta/source-rights.csv"
 ];
 for (const p of requiredNoticeFiles) if (!exists(p)) fail(`missing third-party notice file: ${p}`);
 
@@ -46,6 +49,47 @@ for (const r of sourceRows) {
   sourceIds.add(r.source_id);
 }
 ok(`source registry unique IDs (${sourceIds.size})`);
+
+const sourceRightsRows=csvRows("data/meta/source-rights.csv");
+if (sourceRightsRows.length!==sourceRows.length) fail("source-rights row count mismatch");
+const sourceRightsIds=new Set();
+const allowedRightsClasses=new Set([
+  "embedded_open_license",
+  "reference_only_open_source",
+  "official_statistics_reuse_policy",
+  "public_text_KOGL_type1",
+  "public_calendar_KOGL_type1_scoped",
+  "statutory_official_text",
+  "official_reference_bulk_reuse_unverified",
+  "academic_reference_only",
+  "secondary_reference_only",
+  "reference_terms_not_item_verified"
+]);
+for (const rr of sourceRightsRows) {
+  if (!sourceIds.has(rr.source_id)) fail(`source-rights unknown source: ${rr.source_id}`);
+  if (sourceRightsIds.has(rr.source_id)) fail(`duplicate source-rights row: ${rr.source_id}`);
+  sourceRightsIds.add(rr.source_id);
+  if (!allowedRightsClasses.has(rr.rights_class)) fail(`unknown rights_class: ${rr.source_id}/${rr.rights_class}`);
+  if (!rr.repository_use || !rr.app_use || !rr.redistribution_basis || !rr.broad_release_action) fail(`source-rights metadata missing: ${rr.source_id}`);
+  if (!["true","false"].includes(rr.attribution_required)) fail(`invalid attribution_required: ${rr.source_id}`);
+  if (!["true","false"].includes(rr.embedded_source_content)) fail(`invalid embedded_source_content: ${rr.source_id}`);
+  const src=sourceRows.find(s=>s.source_id===rr.source_id);
+  if (src?.license==="unknown" && !["official_reference_bulk_reuse_unverified","academic_reference_only","secondary_reference_only","reference_terms_not_item_verified"].includes(rr.rights_class)) {
+    fail(`unknown-license source classified too permissively: ${rr.source_id}/${rr.rights_class}`);
+  }
+  if (rr.embedded_source_content==="true" && !["embedded_open_license"].includes(rr.rights_class)) {
+    fail(`embedded source content lacks explicit redistributable class: ${rr.source_id}`);
+  }
+  if (rr.rights_class==="public_text_KOGL_type1" && !rr.attribution_template.includes("ⓒ한국민족문화대백과사전")) {
+    fail(`AKS attribution template missing: ${rr.source_id}`);
+  }
+}
+for (const id of sourceIds) if (!sourceRightsIds.has(id)) fail(`source missing rights row: ${id}`);
+for (const id of ["KR_COURT_HANJA","KR_COURT_HANJA_PDF"]) {
+  if (sourceRightsRows.find(r=>r.source_id===id)?.rights_class!=="official_reference_bulk_reuse_unverified") fail(`court source must remain reference-only until bulk reuse terms verified: ${id}`);
+}
+if (sourceRightsRows.find(r=>r.source_id==="YESJOKBO_CENSUS2015_APPENDIX")?.rights_class!=="secondary_reference_only") fail("YESJOKBO must remain secondary-reference-only");
+ok(`source rights registry: ${sourceRightsRows.length} classified sources`);
 const licenseMapRows=csvRows("data/meta/license-map.csv");
 for (const r of licenseMapRows) {
   for (const sid of (r.source_ids||"").split("|").filter(Boolean)) {
@@ -84,8 +128,10 @@ for (const r of distributionRows) {
 if (!distributionRows.some(r=>r.path_pattern==="data/surnames/clans-core-2015.csv" && r.distribution_status==="review_before_broad_public_release")) {
   fail("clans-core must remain review-before-broad-release");
 }
+const copyrightNotice=read("COPYRIGHT.md");
 const copyrightPolicy=read("COPYRIGHT_AND_DATA_USE.md");
 const appAttribution=read("APP_ATTRIBUTION.md");
+if (!copyrightNotice.includes("All rights reserved") || !copyrightNotice.includes("Third-party")) fail("COPYRIGHT.md must preserve first-party/third-party separation");
 if (!copyrightPolicy.includes("public") || !copyrightPolicy.includes("YESJOKBO_CENSUS2015_APPENDIX")) fail("copyright policy missing public-repository/secondary-source safeguards");
 if (!appAttribution.includes("ⓒ한국민족문화대백과사전")) fail("app attribution missing AKS required attribution form");
 if (!appAttribution.includes("KOSIS") || !appAttribution.includes("한국천문연구원")) fail("app attribution missing KOSIS/KASI source notice");
@@ -274,6 +320,7 @@ if (stats.hanja.selection_example_records!==(selectionExamples.examples||[]).len
 if (stats.hanja.build_reproducible_steps!==buildManifest.derived.length) fail("stats build step count mismatch");
 if (stats.hanja.build_reproducible_files!==reproducibleFiles) fail("stats build file count mismatch");
 if (stats.sources.registry_records!==sourceRows.length) fail("stats source registry count mismatch");
+if (stats.sources.rights_registry_records!==sourceRightsRows.length) fail("stats source rights count mismatch");
 if (stats.sources.unknown_license_metadata!==sourceRows.filter(r=>r.license==="unknown").length) fail("stats unknown license metadata count mismatch");
 ok(`semantic selection policy: ${riskRows.length} rules / ${concernRows.length} curated concerns / ${selectionExamples.examples.length} examples`);
 
