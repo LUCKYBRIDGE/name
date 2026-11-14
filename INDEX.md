@@ -95,5 +95,6 @@ AI와 앱 개발 코드는 사용자 요청의 **의도**에 따라 필요한 �
 - 출처별 감사 상태: `data/meta/source-audit.csv`
 - 경로별 라이선스: `data/meta/license-map.csv`
 - 배포 범위 정책: `data/meta/distribution-policy.csv`
+- 공식 재이용 정책 확인 기록: `sources/저작권-재이용-근거-2026-11.md`
 
 외부 자료를 새로 추가하거나 앱 공개 범위를 넓히기 전에는 위 파일을 먼저 확인한다.
