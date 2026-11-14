@@ -29,6 +29,7 @@
 
 ## 저작권·재배포 강제 규칙
 - 외부 자료를 추가하기 전에 `data/meta/sources.csv`에 source_id와 이용조건을 등록한다.
+- 등록 후 `npm run audit:rights`를 실행하여 `data/meta/source-rights.csv`에 권리 등급이 생성되게 한다. 권리 등급이 없으면 사용하지 않는다.
 - `COPYRIGHT_AND_DATA_USE.md`와 `data/meta/distribution-policy.csv`를 확인하지 않고 제3자 원문·표·이미지·PDF·데이터베이스를 저장소에 복제하지 않는다.
 - MIT/BSD/Unicode 자료는 `THIRD_PARTY_NOTICES.md`와 해당 라이선스 고지를 유지한다.
 - KOSIS 통계는 출처를 정확히 표시하고 통계수치·의미를 왜곡하지 않는다.
@@ -37,6 +38,7 @@
 - KCI 논문, YESJOKBO, SECONDARY_ROOTSINFO 및 이용조건 미확인 출처는 원문·표·도표를 복제하지 않고 참고·교차검증·자체 요약에만 사용한다.
 - `data/surnames/clans-core-2015.csv`는 광범위 공개/상업 배포 전에 KOSIS 공식 원자료만으로 재생성 또는 재검증한다.
 - 공공기관 사이트라는 이유만으로 자동으로 자유이용 자료라고 판단하지 않는다.
+- 개별 사실의 저작권과 데이터베이스제작자의 권리는 별개다. 이용근거가 없는 제3자 DB를 반복적·체계적으로 크롤링하여 실질적 부분을 복제하지 않는다.
 - 앱에 데이터를 배포할 때 `APP_ATTRIBUTION.md`의 고지를 반영한다.
 
 ## 인명용 한자
