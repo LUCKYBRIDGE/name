@@ -54,3 +54,14 @@ AI는 사용자 요청의 **의도**에 따라 아래 파일부터 읽는다. �
 - 2027 절기: `data/time/2027_24절기_KASI.csv`
 - 한국 표준시 이력: `data/time/대한민국_표준시_역사.csv`
 - 한국 DST 이력: `data/time/대한민국_DST_rules.csv`
+
+## 계산용 명리 데이터
+- 명리 데이터 안내: `data/myeongri/README.md`
+- 천간·지지·육십갑자: `data/myeongri/천간.csv`, `지지.csv`, `육십갑자.csv`
+- 지장간: `data/myeongri/지장간.csv`
+- 십성 100관계: `data/myeongri/십성_천간100.csv`
+- 합·충·형·파·해: `data/myeongri/천간합.csv`, `지지*.csv`
+- 월지 절기·오호둔·오서둔: `data/myeongri/월지_절기경계.csv`, `오호둔_월간.csv`, `오서둔_시간.csv`
+- 십이운성: `data/myeongri/십이운성_화토동궁.csv`
+- 용신 방법론: `data/myeongri/용신_방법론_카탈로그.csv`
+- 인명용 한자 훈음: `data/hanja/enriched/`
