@@ -106,6 +106,7 @@ npm run validate:data
 - 출처·재배포 검토 상태: `data/meta/sources.csv`, `data/meta/source-audit.csv`
 - 출처별 앱 사용·재배포·표시 규칙: `data/meta/source-rights.csv`
 - 저작권·데이터 이용 정책: `COPYRIGHT_AND_DATA_USE.md`
+- 현재 권리 감사 현황: `RIGHTS_AUDIT.md`
 - 새 자료 추가 시 준수 규칙: `CONTRIBUTING.md`
 - 앱 표시용 출처·라이선스 문구: `APP_ATTRIBUTION.md`
 - 배포 범위 정책표: `data/meta/distribution-policy.csv`
