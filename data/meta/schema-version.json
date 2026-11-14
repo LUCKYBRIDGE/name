@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.3.0",
+  "schema_version": "1.4.0",
   "updated_at": "2026-11-14",
-  "compatibility": "additive surname pronunciation, clan-history, stroke-policy and CI validation update",
+  "compatibility": "additive common-surname expansion: 31 master records, 30 new detailed profiles, pronunciation/stroke/disambiguation/representative-clan tables",
   "conventions": {
     "source_reference": "Prefer source_id values registered in data/meta/sources.csv for new structured datasets.",
     "method_reference": "Use method_id for school- or author-dependent naming and myeongri rules.",
@@ -12,6 +12,9 @@
     "surname_semantics": "Do not score a surname dictionary gloss as given-name semantic quality unless a selected method explicitly requires it.",
     "surname_pronunciation": "Store phonological structure separately from subjective euphony; do not treat repetition notices as hard failures.",
     "clan_history": "Store clan-history claims with evidence_level and caveat; census identity and genealogical tradition are separate.",
-    "surname_strokes": "A dictionary/technical stroke count is not a default numerology count; method_id is required for naming-school calculations."
+    "surname_strokes": "A dictionary/technical stroke count is not a default numerology count; method_id is required for naming-school calculations.",
+    "common_surname_coverage": "Core surname data covers 2015 census ranks 1-31; top30-excluding-xu-2015.csv records the 30 newly added surnames because 徐(rank 13) was already present.",
+    "representative_clans": "representative-clans-2015.csv is partial and must never be interpreted as a complete clan list.",
+    "hangul_hanja_disambiguation": "Same Hangul surname with different Hanja must remain separate surname_id records."
   }
 }
