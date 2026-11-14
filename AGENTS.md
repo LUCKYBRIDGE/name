@@ -27,6 +27,18 @@
 - 경계 사례는 한 가지 결과로 강제하지 않고 방법론별 결과를 병렬 제시한다.
 - 사용자 개인정보를 외부 서비스에 불필요하게 전송하지 않는다.
 
+## 저작권·재배포 강제 규칙
+- 외부 자료를 추가하기 전에 `data/meta/sources.csv`에 source_id와 이용조건을 등록한다.
+- `COPYRIGHT_AND_DATA_USE.md`와 `data/meta/distribution-policy.csv`를 확인하지 않고 제3자 원문·표·이미지·PDF·데이터베이스를 저장소에 복제하지 않는다.
+- MIT/BSD/Unicode 자료는 `THIRD_PARTY_NOTICES.md`와 해당 라이선스 고지를 유지한다.
+- KOSIS 통계는 출처를 정확히 표시하고 통계수치·의미를 왜곡하지 않는다.
+- `AKS_*` 텍스트를 앱 설명 근거로 쓰면 항목별로 `출처: 「항목명」, ⓒ한국민족문화대백과사전`을 표시한다. 사진·도판·영상은 별도 이용조건을 확인한다.
+- KASI 자료는 공공누리 제1유형이 확인된 달력면 천문정보 범위만 사용하고 한국천문연구원을 출처로 표시한다.
+- KCI 논문, YESJOKBO, SECONDARY_ROOTSINFO 및 이용조건 미확인 출처는 원문·표·도표를 복제하지 않고 참고·교차검증·자체 요약에만 사용한다.
+- `data/surnames/clans-core-2015.csv`는 광범위 공개/상업 배포 전에 KOSIS 공식 원자료만으로 재생성 또는 재검증한다.
+- 공공기관 사이트라는 이유만으로 자동으로 자유이용 자료라고 판단하지 않는다.
+- 앱에 데이터를 배포할 때 `APP_ATTRIBUTION.md`의 고지를 반영한다.
+
 ## 인명용 한자
 후보 탐색:
 - `data/hanja/normalized/by-reading.csv`
