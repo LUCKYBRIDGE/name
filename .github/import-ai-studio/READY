@@ -3,3 +3,4 @@ payload_sha256=2f89822459f9dd3b184e4ac782ee2b14c9faaca5c1282e6f5e74454742245d88
 snapshot_files=172
 target=ai-studio/
 retry_after_workflow_fix=2026-11-14T15:50:00+09:00
+retry_bom_fix=1
