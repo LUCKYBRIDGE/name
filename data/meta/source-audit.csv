@@ -1,67 +1,67 @@
 source_id,authority,license,license_metadata_status,redistribution_review_status,reference_use_status,audit_priority,notes
 KR_COURT_HANJA,official_service,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,high,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-KR_LAW_NAME_RULE,official_law,public_law,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 라이선스/정책 라벨의 실제 적용 범위는 재배포 전에 확인
+KR_LAW_NAME_RULE,official_law,public_law,statutory_noncopyrightable_official_law_text,official_law_text_reuse_allowed_scope_only,metadata_and_citation_reference_ok,low,저작권법 제7조상 법령·규칙 원문은 보호받지 못하는 저작물에 해당; 사이트 편집·해설·이미지는 별도
 KR_COURT_HANJA_PDF,official_document,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,high,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-KASI_CALENDAR,official_science,public_reference,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 라이선스/정책 라벨의 실제 적용 범위는 재배포 전에 확인
-IANA_TZDB_ASIA,technical_standard,public_domain_like,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 라이선스/정책 라벨의 실제 적용 범위는 재배포 전에 확인
-KR_ARCHIVES_TIME,official_archive,public_reference,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 라이선스/정책 라벨의 실제 적용 범위는 재배포 전에 확인
-LIBHANGUL_HANJA,open_source_dictionary,BSD-3-Clause,named_license,named_license_registered_scope_review_if_republishing,metadata_and_citation_reference_ok,low,등록된 라이선스/정책 라벨의 실제 적용 범위는 재배포 전에 확인
-UNICODE_UNIHAN,technical_standard,Unicode-3.0-License,named_license,named_license_registered_scope_review_if_republishing,metadata_and_citation_reference_ok,low,등록된 라이선스/정책 라벨의 실제 적용 범위는 재배포 전에 확인
-LUNAR_PYTHON,open_source_implementation,MIT,named_license,named_license_registered_scope_review_if_republishing,metadata_and_citation_reference_ok,low,등록된 라이선스/정책 라벨의 실제 적용 범위는 재배포 전에 확인
-RUTOPIO_NAME_HANJA,secondary_mirror,MIT,named_license,named_license_registered_scope_review_if_republishing,metadata_and_citation_reference_ok,low,등록된 라이선스/정책 라벨의 실제 적용 범위는 재배포 전에 확인
+KASI_CALENDAR,official_science,KOGL-1-calendar-info,verified_public_license,permitted_with_attribution_within_calendar_info_scope,metadata_and_citation_reference_ok,low,한국천문연구원 공공누리 제1유형 표시 범위의 달력면 천문정보에 한함; 사진·전체 디자인은 별도
+IANA_TZDB_ASIA,technical_standard,public_domain_like,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 정책 라벨의 실제 적용 범위는 재배포 시 다시 확인
+KR_ARCHIVES_TIME,official_archive,public_reference,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 정책 라벨의 실제 적용 범위는 재배포 시 다시 확인
+LIBHANGUL_HANJA,open_source_dictionary,BSD-3-Clause,named_license,permitted_with_registered_license_notice,metadata_and_citation_reference_ok,low,저장소의 해당 라이선스 원문·고지와 적용 범위를 함께 유지
+UNICODE_UNIHAN,technical_standard,Unicode-3.0-License,named_license,permitted_with_registered_license_notice,metadata_and_citation_reference_ok,low,저장소의 해당 라이선스 원문·고지와 적용 범위를 함께 유지
+LUNAR_PYTHON,open_source_implementation,MIT,named_license,permitted_with_registered_license_notice,metadata_and_citation_reference_ok,low,저장소의 해당 라이선스 원문·고지와 적용 범위를 함께 유지
+RUTOPIO_NAME_HANJA,secondary_mirror,MIT,named_license,permitted_with_registered_license_notice,metadata_and_citation_reference_ok,low,저장소의 해당 라이선스 원문·고지와 적용 범위를 함께 유지
 KCI_JIJANGGAN,academic,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
 KCI_TENSUNG,academic,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
 KCI_BRANCH_REL,academic,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
 KCI_BRANCH_CONFLICT,academic,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
 KCI_12STAGES,academic,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
 KCI_AI_MYEONGRI,academic,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-AKS_HANJA_XU,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-KOSTAT_CENSUS_2015,official_statistics,public_reference,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 라이선스/정책 라벨의 실제 적용 범위는 재배포 전에 확인
-KOSIS_SURNAME_2015,official_statistics,public_statistics,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 라이선스/정책 라벨의 실제 적용 범위는 재배포 전에 확인
-NIKL_ROMANIZATION,official_language_rule,public_rule,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 라이선스/정책 라벨의 실제 적용 범위는 재배포 전에 확인
-MOFA_PASSPORT_ROMANIZATION,official_service,public_reference,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 라이선스/정책 라벨의 실제 적용 범위는 재배포 전에 확인
-AKS_SEO_SINIL,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-DJJUNGGU_SEO_ROOTS,local_government_reference,public_reference,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 라이선스/정책 라벨의 실제 적용 범위는 재배포 전에 확인
-GEOJE_CITY_SEO_CLAN,local_government_history,public_reference,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 라이선스/정책 라벨의 실제 적용 범위는 재배포 전에 확인
-NIKL_STANDARD_PRON,official_language_guidance,public_reference,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 라이선스/정책 라벨의 실제 적용 범위는 재배포 전에 확인
-SGIS_SURNAME_API,official_statistics_api,public_api,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 라이선스/정책 라벨의 실제 적용 범위는 재배포 전에 확인
-AKS_SURNAME_OVERVIEW,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-AKS_JEONJU_LEE_GENEALOGY,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-AKS_WANJU_LEE_HAN,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-AKS_MIRYANG_PARK_GENEALOGY,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-AKS_CHOICHIWON,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-AKS_KANG_ISIK,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-AKS_HANYANG_JO_GENEALOGY,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-AKS_YUN_SINDAL,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-AKS_YEONGNAM_MUNHEONROK,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-AKS_NAJU_LIM_BI,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-AKS_CHEONGJU_HAN_GENEALOGY,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-AKS_HAEJU_OH_GENEALOGY,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-AKS_PYEONGSAN_SHIN,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-AKS_ANDONG_GWON,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-UIRYEONG_CHANGWON_HUANG,local_government_reference,public_reference,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 라이선스/정책 라벨의 실제 적용 범위는 재배포 전에 확인
-AKS_SUNHEUNG_AHN_GENEALOGY,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-AKS_EUNJIN_SONG_GENEALOGY,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-JEONGSEON_JEON_HISTORY,local_government_reference,public_reference,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 라이선스/정책 라벨의 실제 적용 범위는 재배포 전에 확인
-AKS_NAMYANG_HONG_GENEALOGY,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-AKS_MUNHWA_RYU,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-AKS_JEJU_GO,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-AKS_NAMPYEONG_MUN_GENEALOGY,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-UIRYEONG_NAMWON_YANG,local_government_reference,public_reference,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 라이선스/정책 라벨의 실제 적용 범위는 재배포 전에 확인
-UIRYEONG_MIRYANG_SON,local_government_reference,public_reference,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 라이선스/정책 라벨의 실제 적용 범위는 재배포 전에 확인
-AKS_SEONGJU_BAE,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-AKS_CHANGNYEONG_CHO,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-AKS_SUWON_BAEK_GENEALOGY,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-AKS_SUWON_BAEK_TOMB,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-UIRYEONG_GIMHAE_HEO,local_government_reference,public_reference,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 라이선스/정책 라벨의 실제 적용 범위는 재배포 전에 확인
-AKS_HUH_HWANGOK,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-AKS_GANGNEUNG_LIU,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-AKS_UIRYEONG_NAM_GENEALOGY,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-AKS_YANGCHEON_SEOWON,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-AKS_NAME_HISTORY,academic_reference,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
+AKS_HANJA_XU,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+KOSTAT_CENSUS_2015,official_statistics,public_reference,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 정책 라벨의 실제 적용 범위는 재배포 시 다시 확인
+KOSIS_SURNAME_2015,official_statistics,KOSIS-statistics-use-guide,verified_official_use_policy,permitted_for_KOSIS_statistics_with_source_and_integrity_conditions,metadata_and_citation_reference_ok,low,KOSIS 통계정보는 자유 이용 가능하나 출처 정확성·비왜곡·관련 법령 조건 준수
+NIKL_ROMANIZATION,official_language_rule,public_rule,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 정책 라벨의 실제 적용 범위는 재배포 시 다시 확인
+MOFA_PASSPORT_ROMANIZATION,official_service,public_reference,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 정책 라벨의 실제 적용 범위는 재배포 시 다시 확인
+AKS_SEO_SINIL,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+DJJUNGGU_SEO_ROOTS,local_government_reference,public_reference,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 정책 라벨의 실제 적용 범위는 재배포 시 다시 확인
+GEOJE_CITY_SEO_CLAN,local_government_history,public_reference,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 정책 라벨의 실제 적용 범위는 재배포 시 다시 확인
+NIKL_STANDARD_PRON,official_language_guidance,public_reference,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 정책 라벨의 실제 적용 범위는 재배포 시 다시 확인
+SGIS_SURNAME_API,official_statistics_api,public_api,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 정책 라벨의 실제 적용 범위는 재배포 시 다시 확인
+AKS_SURNAME_OVERVIEW,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+AKS_JEONJU_LEE_GENEALOGY,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+AKS_WANJU_LEE_HAN,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+AKS_MIRYANG_PARK_GENEALOGY,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+AKS_CHOICHIWON,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+AKS_KANG_ISIK,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+AKS_HANYANG_JO_GENEALOGY,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+AKS_YUN_SINDAL,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+AKS_YEONGNAM_MUNHEONROK,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+AKS_NAJU_LIM_BI,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+AKS_CHEONGJU_HAN_GENEALOGY,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+AKS_HAEJU_OH_GENEALOGY,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+AKS_PYEONGSAN_SHIN,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+AKS_ANDONG_GWON,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+UIRYEONG_CHANGWON_HUANG,local_government_reference,public_reference,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 정책 라벨의 실제 적용 범위는 재배포 시 다시 확인
+AKS_SUNHEUNG_AHN_GENEALOGY,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+AKS_EUNJIN_SONG_GENEALOGY,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+JEONGSEON_JEON_HISTORY,local_government_reference,public_reference,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 정책 라벨의 실제 적용 범위는 재배포 시 다시 확인
+AKS_NAMYANG_HONG_GENEALOGY,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+AKS_MUNHWA_RYU,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+AKS_JEJU_GO,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+AKS_NAMPYEONG_MUN_GENEALOGY,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+UIRYEONG_NAMWON_YANG,local_government_reference,public_reference,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 정책 라벨의 실제 적용 범위는 재배포 시 다시 확인
+UIRYEONG_MIRYANG_SON,local_government_reference,public_reference,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 정책 라벨의 실제 적용 범위는 재배포 시 다시 확인
+AKS_SEONGJU_BAE,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+AKS_CHANGNYEONG_CHO,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+AKS_SUWON_BAEK_GENEALOGY,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+AKS_SUWON_BAEK_TOMB,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+UIRYEONG_GIMHAE_HEO,local_government_reference,public_reference,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 정책 라벨의 실제 적용 범위는 재배포 시 다시 확인
+AKS_HUH_HWANGOK,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+AKS_GANGNEUNG_LIU,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+AKS_UIRYEONG_NAM_GENEALOGY,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+AKS_YANGCHEON_SEOWON,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
+AKS_NAME_HISTORY,academic_reference,KOGL-1-text,verified_public_license,permitted_for_text_with_required_attribution,metadata_and_citation_reference_ok,low,"한국민족문화대백과 텍스트: 공공누리 제1유형, 항목명과 ⓒ한국민족문화대백과사전 출처표시 필요; 미디어 제외"
 SECONDARY_ROOTSINFO_MIRYANG_SON,secondary_genealogy,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
 SECONDARY_ROOTSINFO_NAMWON_YANG,secondary_genealogy,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-KOSIS_SURNAME_2015_MASS,official_statistics,public_statistics,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 라이선스/정책 라벨의 실제 적용 범위는 재배포 전에 확인
+KOSIS_SURNAME_2015_MASS,official_statistics,KOSIS-statistics-use-guide,verified_official_use_policy,permitted_for_KOSIS_statistics_with_source_and_integrity_conditions,metadata_and_citation_reference_ok,low,KOSIS 통계정보는 자유 이용 가능하나 출처 정확성·비왜곡·관련 법령 조건 준수
 YESJOKBO_CENSUS2015_APPENDIX,secondary_census_mirror,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-NIKL_HANJA_INFO_SOURCES,official_language_guidance,public_reference,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 라이선스/정책 라벨의 실제 적용 범위는 재배포 전에 확인
-NIKL_INMYONG_HANJA_SCOPE,official_language_guidance,public_reference,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 라이선스/정책 라벨의 실제 적용 범위는 재배포 전에 확인
+NIKL_HANJA_INFO_SOURCES,official_language_guidance,public_reference,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 정책 라벨의 실제 적용 범위는 재배포 시 다시 확인
+NIKL_INMYONG_HANJA_SCOPE,official_language_guidance,public_reference,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 정책 라벨의 실제 적용 범위는 재배포 시 다시 확인
