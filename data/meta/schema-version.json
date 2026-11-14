@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.2.0",
+  "schema_version": "1.3.0",
   "updated_at": "2026-11-14",
-  "compatibility": "additive surname domain and validation update",
+  "compatibility": "additive surname pronunciation, clan-history, stroke-policy and CI validation update",
   "conventions": {
     "source_reference": "Prefer source_id values registered in data/meta/sources.csv for new structured datasets.",
     "method_reference": "Use method_id for school- or author-dependent naming and myeongri rules.",
@@ -9,6 +9,9 @@
     "stroke_counts": "Unicode technical strokes and naming-school stroke counts are separate fields.",
     "null_policy": "Unknown values remain null/empty; do not infer unsupported facts.",
     "surname_role": "Treat surname Hanja, given-name Hanja, bongwan, census statistics, and method-specific stroke values as separate fields.",
-    "surname_semantics": "Do not score a surname dictionary gloss as given-name semantic quality unless a selected method explicitly requires it."
+    "surname_semantics": "Do not score a surname dictionary gloss as given-name semantic quality unless a selected method explicitly requires it.",
+    "surname_pronunciation": "Store phonological structure separately from subjective euphony; do not treat repetition notices as hard failures.",
+    "clan_history": "Store clan-history claims with evidence_level and caveat; census identity and genealogical tradition are separate.",
+    "surname_strokes": "A dictionary/technical stroke count is not a default numerology count; method_id is required for naming-school calculations."
   }
 }
