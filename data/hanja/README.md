@@ -46,3 +46,13 @@
 - Unicode 총획수는 성명학 원획과 동일하지 않다.
 - 화면상 유사한 이체자·허용자체를 문자열만으로 통합하지 않는다.
 - 데이터 개수는 `data/meta/dataset-stats.json`에서 관리한다.
+
+
+## 재생성
+- `scripts/build/normalize-hanja.mjs`: raw 미러 → normalized
+- `scripts/build/build-reading-index.mjs`: 독음 인덱스
+- `scripts/build/build-meaning-senses.mjs`: 훈음 결합표 → 다중 의미
+- `data/meta/build-manifest.json`: 현재 재현 가능한 범위의 기준
+
+## 현행 법적 검증
+현행 대법원 전체 목록과의 전수 diff는 아직 완료되지 않았다. `official/`에는 정규화 입력 규격을 두고 `scripts/audit/compare-official-hanja.mjs`로 행 단위 대조한다. 전수 diff 완료 전에는 secondary mirror를 현행 공식 전체 목록으로 표현하지 않는다.

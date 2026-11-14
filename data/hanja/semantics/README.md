@@ -5,6 +5,8 @@
 ## 파일
 - `meaning-senses.csv`: 정확 훈음 관계 7,425개를 의미 단위로 전개한 전수 데이터
 - `naming-meaning-curated.csv`: 작명에서 어떤 의미를 대표 설명으로 사용할지 사람이 검토한 예시·정책 레이어
+- `name-meaning-selection.schema.json`: 실제 선택 객체의 JSON Schema draft 2020-12
+- `name-meaning-selection.policy.json`: 선택 의미·작명 의도·semantic risk의 설명 정책
 
 ## 현재 수치
 - 정확 독음-한자 훈음 관계: 7,425
@@ -41,7 +43,8 @@
 ## 선택 의미 기록
 작명 후보에서 실제로 중심으로 삼은 뜻은 전체 의미 데이터와 분리해 기록한다.
 
-- 표준 객체: `name-meaning-selection.schema.json`
+- 기계 검증 스키마: `name-meaning-selection.schema.json`
+- 설명 정책: `name-meaning-selection.policy.json`
 - 위험도 규칙: `semantic-risk-rules.csv`
 - 일부 의미의 주의 유형: `sense-concern-curated.csv`
 - 예시: `selection-examples.json`
