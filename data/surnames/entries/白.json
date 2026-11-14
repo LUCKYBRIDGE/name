@@ -5,8 +5,8 @@
     "hanja": "白",
     "unicode_hex": "0767D",
     "codepoint": "U+0767D",
-    "reading": "백",
-    "alternate_readings": [
+    "surname_reading": "백",
+    "character_readings": [
       "백"
     ],
     "role": "surname"
@@ -16,15 +16,17 @@
     "radical": "白",
     "technical_total_strokes": 5,
     "technical_stroke_status": "provisional_unicode_technical_metadata",
-    "sources": [
+    "source_ids": [
       "LIBHANGUL_HANJA",
       "UNICODE_UNIHAN"
     ],
-    "note": "기술 총획은 특정 성명학의 원획·필획과 동일시하지 않는다."
+    "rule": "기술 총획은 특정 성명학의 원획·필획과 동일시하지 않는다."
   },
   "census_2015": {
     "reference_date": "2015-11-01",
     "population": 381986,
+    "male": null,
+    "female": null,
     "share_percent": 0.7685,
     "rank": 28,
     "source_ids": [
@@ -32,7 +34,6 @@
       "KOSIS_SURNAME_2015"
     ]
   },
-  "representative_clans_2015": [],
   "pronunciation": {
     "syllable": "백",
     "onset": "ㅂ",
@@ -40,31 +41,66 @@
     "coda": "ㄱ",
     "syllable_shape": "CVC",
     "boundary_profile": "closed_syllable",
-    "source_id": "NIKL_STANDARD_PRON"
+    "source_id": "NIKL_STANDARD_PRON",
+    "status": "derived_verified",
+    "note": "성씨 종성이 있으므로 이름 첫 음절과의 경계에서 실제 표준발음 규칙을 추가 적용한다."
   },
   "romanization": {
     "rule_form": "Baek",
     "rule_source_id": "NIKL_ROMANIZATION",
     "passport_source_id": "MOFA_PASSPORT_ROMANIZATION",
-    "note": "규칙형과 실제 가족·여권 표기는 다를 수 있으므로 자동 변경하지 않는다."
+    "note": "국어의 로마자 표기법 기준형과 실제 여권·가족 사용 표기는 다를 수 있으므로 자동 변경하지 않는다."
   },
+  "representative_clans_2015": [],
+  "genealogy_research": [
+    {
+      "bongwan": "수원",
+      "claim_type": "founder_source_conflict",
+      "person": null,
+      "claim": "수원백씨 족보 항목은 백휘를 시조로 수록하지만 백천장 묘 항목은 백우경을 수원백씨 시조로 서술한다.",
+      "evidence_level": "academic_source_conflict",
+      "source_ids": [
+        "AKS_SUWON_BAEK_GENEALOGY",
+        "AKS_SUWON_BAEK_TOMB"
+      ],
+      "caveat": "시조 인식이 출처에 따라 달라 단일값으로 병합하지 않는다.",
+      "do_not_infer_beyond_source": true
+    }
+  ],
   "stroke_policy": {
     "technical_reference_count": 5,
     "numerology_default_count": null,
-    "numerology_status": "method_specific_not_registered"
+    "numerology_status": "method_specific_not_registered",
+    "rule": "원격·형격·이격·정격 등 수리 계산에 사용할 획수는 method_id별 근거가 등록된 경우에만 적용한다."
   },
   "naming_policy": {
     "surname_semantics": "성씨의 사전 뜻을 이름자 의미 품질 점수에 자동 합산하지 않는다.",
     "full_name_pronunciation": "성+이름 전체 발음·리듬·동음이의는 별도 평가한다.",
-    "clan_use": "본관은 가족·항렬 맥락으로만 사용하며 길흉 점수로 자동 변환하지 않는다.",
-    "hanja_requirement": "한글 성씨만으로 한자를 자동 확정하지 않는다."
+    "clan_use": "본관·계통 정보는 가족·항렬 맥락에 사용하며 길흉 점수로 자동 변환하지 않는다.",
+    "hanja_requirement": "같은 한글 성씨에 다른 한자가 있을 수 있으므로 실제 성씨 한자를 우선 확인한다.",
+    "repeated_syllable": "성과 이름 첫 음절이 반복되어도 자동 탈락시키지 않고 실사용성 notice로만 처리한다.",
+    "genealogy_conflict": "출처 간 시조·원류·계통 충돌이 있으면 한쪽으로 자동 확정하지 않는다."
+  },
+  "research_status": {
+    "core_identity": "complete",
+    "census_2015": "complete",
+    "pronunciation": "complete",
+    "technical_stroke_policy": "complete",
+    "romanization": "complete",
+    "clan_history_research": "curated",
+    "source_conflict_handling": "source_conflict_preserved",
+    "full_clan_population": "partial_representative",
+    "hangnyeol_generation_data": "pending",
+    "overall_status": "core_plus_genealogy_curated"
   },
   "verification": {
     "identity_status": "verified_against_2015_census_and_internal_hanja_index",
     "census_status": "verified_2015",
+    "genealogy_status": "curated_with_evidence_level",
+    "representative_clan_status": "not_yet_loaded",
     "technical_stroke_status": "provisional_unicode_technical_metadata",
     "numerology_status": "method_specific_not_registered",
-    "clan_status": "not_yet_loaded",
+    "hangnyeol_status": "pending_verified_source",
     "updated_at": "2026-11-14"
   }
 }
