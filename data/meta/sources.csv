@@ -24,3 +24,4 @@ AKS_SEO_SINIL,한국학중앙연구원,서신일,https://encykorea.aks.ac.kr/Art
 DJJUNGGU_SEO_ROOTS,대전광역시 중구,뿌리공원 성씨유래검색 서씨,https://www.djjunggu.go.kr/prog/fanmOrgn/hyo/sub03_04/view.do?orgnNo=58,local_government_reference,public_reference,2026-11-14,서씨·이천서씨·달성서씨·대구서씨 계통에 대한 공공 문화자료,족보 전승을 소개한 자료이므로 학술적 확정 사실과 구분
 GEOJE_CITY_SEO_CLAN,거제시,거제시지 제13편 조상의 얼 달성서씨 항목,https://www.geoje.go.kr/document/siji/13.pdf,local_government_history,public_reference,2026-11-14,달성서씨 시조 서진 관련 지역사 교차참고,지역 문중 전승을 수록한 자료
 NIKL_STANDARD_PRON,국립국어원,표준 발음법,https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&qna_seq=307869,official_language_guidance,public_reference,2026-11-14,받침·연음 등 표준 발음 원칙 확인,개별 인명 전체의 실제 발음을 자동 확정하는 자료는 아님
+SGIS_SURNAME_API,국가데이터처 SGIS,50대 성씨 시군구별 인구수 API,https://sgis.mods.go.kr/developer/html/newOpenApi/api/dataApi/lastName.html,official_statistics_api,public_api,2026-11-14,2015년 주요 성씨 식별 및 지역별 인구 조회,인구 총계와 본관 통계의 최종 기준은 KOSIS 인구총조사 표
