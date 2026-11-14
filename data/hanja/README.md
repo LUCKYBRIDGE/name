@@ -38,3 +38,10 @@
 - [사용 안내](excel-view/README.md)
 
 GitHub의 기준 데이터는 CSV/JSON으로 유지하고, Excel에서는 위 CSV 보기본을 열어 필터·정렬한다. XLSX는 필요 시 별도 스냅샷으로 생성한다.
+
+## 훈음·뜻 보강
+- [독음별 훈음 데이터](enriched/legal-reading-meaning.csv)
+- [한자별 훈음 요약](enriched/hanja-meaning-summary.csv)
+- [출처·결합 통계](enriched/README.md)
+
+훈음은 BSD 계열 라이선스의 libhangul 사전에서 **(법원 허용 독음, 한자)가 정확히 일치하는 경우만** 결합했다. 작명식 길상 풀이와 분리해서 사용한다.
