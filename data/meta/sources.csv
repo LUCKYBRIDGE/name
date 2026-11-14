@@ -25,3 +25,35 @@ DJJUNGGU_SEO_ROOTS,대전광역시 중구,뿌리공원 성씨유래검색 서씨
 GEOJE_CITY_SEO_CLAN,거제시,거제시지 제13편 조상의 얼 달성서씨 항목,https://www.geoje.go.kr/document/siji/13.pdf,local_government_history,public_reference,2026-11-14,달성서씨 시조 서진 관련 지역사 교차참고,지역 문중 전승을 수록한 자료
 NIKL_STANDARD_PRON,국립국어원,표준 발음법,https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&qna_seq=307869,official_language_guidance,public_reference,2026-11-14,받침·연음 등 표준 발음 원칙 확인,개별 인명 전체의 실제 발음을 자동 확정하는 자료는 아님
 SGIS_SURNAME_API,국가데이터처 SGIS,50대 성씨 시군구별 인구수 API,https://sgis.mods.go.kr/developer/html/newOpenApi/api/dataApi/lastName.html,official_statistics_api,public_api,2026-11-14,2015년 주요 성씨 식별 및 지역별 인구 조회,인구 총계와 본관 통계의 최종 기준은 KOSIS 인구총조사 표
+AKS_SURNAME_OVERVIEW,한국학중앙연구원,성씨,https://encykorea.aks.ac.kr/Article/E0029415,academic_reference,unknown,2026-11-14,한국 성씨·본관 체계와 주요 본관 역사 통계 참고,해당 항목의 인구 수치는 과거 조사 기반이므로 2015 총조사 수치와 혼용 금지
+AKS_JEONJU_LEE_GENEALOGY,한국학중앙연구원,전주이씨 족보,https://encykorea.aks.ac.kr/Article/E0049680,academic_reference,unknown,2026-11-14,전주이씨 족보 전승과 계통 문헌 참고,족보 전승과 역사적 사실을 구분
+AKS_WANJU_LEE_HAN,한국학중앙연구원,완주군,https://encykorea.aks.ac.kr/Article/E0039000,academic_reference,unknown,2026-11-14,조경묘의 전주이씨 시조 이한 위패 기록 참고,지역사 항목의 서술
+AKS_MIRYANG_PARK_GENEALOGY,한국학중앙연구원,밀양박씨 족보,https://encykorea.aks.ac.kr/Article/E0020408,academic_reference,unknown,2026-11-14,밀양박씨 분파·시조 전승 참고,족보 서술을 역사적 확정 사실과 구분
+AKS_CHOICHIWON,한국학중앙연구원,최치원,https://encykorea.aks.ac.kr/Article/E0057711,academic_reference,unknown,2026-11-14,경주최씨 역사 인물·가계 맥락 참고,대표 인물 자료이며 시조 판정 자료는 아님
+AKS_KANG_ISIK,한국학중앙연구원,강이식,https://encykorea.aks.ac.kr/Article/E0001350,academic_reference,unknown,2026-11-14,진주강씨 족보상 시조 전승과 정사 미확인 주의점,족보 전승과 정사 기록이 불일치함
+AKS_HANYANG_JO_GENEALOGY,한국학중앙연구원,한양조씨 족보,https://encykorea.aks.ac.kr/Article/E0061820,academic_reference,unknown,2026-11-14,한양조씨 족보 간행·계통 문헌 참고,시조 자체를 이 자료만으로 단정하지 않음
+AKS_YUN_SINDAL,한국학중앙연구원,윤신달,https://encykorea.aks.ac.kr/Article/E0042439,academic_reference,unknown,2026-11-14,파평윤씨 시조 윤신달 참고,공신 명단 일부 자료의 신빙성 논의가 있음
+AKS_YEONGNAM_MUNHEONROK,한국학중앙연구원,영남문헌록,https://encykorea.aks.ac.kr/Article/E0037262,academic_reference,unknown,2026-11-14,인동장씨 등 영남 씨족·인물 기록 참고,개별 성씨의 시조를 확정하는 자료는 아님
+AKS_NAJU_LIM_BI,한국학중앙연구원,임비,https://encykorea.aks.ac.kr/Article/E0070609,academic_reference,unknown,2026-11-14,나주임씨 원조 임비와 본관 형성 참고,임비는 시조가 아니라 원조로 설명됨
+AKS_CHEONGJU_HAN_GENEALOGY,한국학중앙연구원,청주한씨 세보,https://encykorea.aks.ac.kr/Article/E0056764,academic_reference,unknown,2026-11-14,청주한씨 시조 한란과 족보 전승 참고,기자 후손설 등 전승은 별도 주의
+AKS_HAEJU_OH_GENEALOGY,한국학중앙연구원,해주오씨 족보,https://encykorea.aks.ac.kr/Article/E0062762,academic_reference,unknown,2026-11-14,해주오씨 오인유 시조 등록 전승과 선계 불확실성,오인유 이전 선계 기록 가능성이 자료에 언급됨
+AKS_PYEONGSAN_SHIN,한국학중앙연구원,도계서원,https://encykorea.aks.ac.kr/Article/E0077011,academic_reference,unknown,2026-11-14,평산신씨 시조 신숭겸 참고,서원 관련 역사자료
+AKS_ANDONG_GWON,한국학중앙연구원,권행,https://encykorea.aks.ac.kr/Article/E0007131,academic_reference,unknown,2026-11-14,안동권씨 시조 권행 참고,본성 김씨 전승도 함께 기록
+UIRYEONG_CHANGWON_HUANG,의령군청,창원황씨,https://www.uiryeong.go.kr/board/view.do?boardId=BBS_0000058&dataSid=208980&menuCd=DOM_000000305002003000,local_government_reference,public_reference,2026-11-14,창원황씨 계통·다중 시조 전승 참고,문중 전승 성격이므로 단일 시조로 강제하지 않음
+AKS_SUNHEUNG_AHN_GENEALOGY,한국학중앙연구원,순흥안씨 족보,https://encykorea.aks.ac.kr/Article/E0032016,academic_reference,unknown,2026-11-14,순흥안씨 시조 안자미와 3파 체계 참고,족보 문헌 기반
+AKS_EUNJIN_SONG_GENEALOGY,한국학중앙연구원,은진송씨 족보,https://encykorea.aks.ac.kr/Article/E0042885,academic_reference,unknown,2026-11-14,은진송씨 족보 편찬 계통 참고,시조 자체는 별도 검증 필요
+JEONGSEON_JEON_HISTORY,정선군청,고려개국공신 전이갑,https://jeongseon.go.kr/portal/jeongseongun/generalsituation/greatman,local_government_reference,public_reference,2026-11-14,정선전씨 중시조 계통과 전이갑 관련 지역사 참고,중시조 계통 자료이며 최초 시조 확정용이 아님
+AKS_NAMYANG_HONG_GENEALOGY,한국학중앙연구원,남양홍씨 세보,https://encykorea.aks.ac.kr/Article/E0012017,academic_reference,unknown,2026-11-14,남양홍씨 족보·시조 명칭 참고,다른 자료의 시조 표기와 충돌 가능성 보존
+AKS_MUNHWA_RYU,한국학중앙연구원,유차달,https://encykorea.aks.ac.kr/Article/E0041873,academic_reference,unknown,2026-11-14,문화유씨 시조 유차달 참고,개국공신 전승 일부는 족보 자료에 의존
+AKS_JEJU_GO,한국학중앙연구원,고을나,https://encykorea.aks.ac.kr/Article/E0003884,academic_reference,unknown,2026-11-14,제주고씨 시조 고을나와 삼성혈 신화 참고,신화·전승의 성격을 명확히 표시
+AKS_NAMPYEONG_MUN_GENEALOGY,한국학중앙연구원,남평문씨 족보,https://encykorea.aks.ac.kr/Article/E0012224,academic_reference,unknown,2026-11-14,남평문씨 시조 문다성 및 족보 계통 참고,시조 탄생설화는 별도 전승으로 구분
+UIRYEONG_NAMWON_YANG,의령군청,남원양씨,https://www.uiryeong.go.kr/board/view.do?boardId=BBS_0000058&dataSid=208928&menuCd=DOM_000000305002003000,local_government_reference,public_reference,2026-11-14,남원양씨 계통·탐라개국설화 전승 참고,설화·문중 전승 성격
+UIRYEONG_MIRYANG_SON,의령군청,밀양손씨,https://www.uiryeong.go.kr/board/view.do?boardId=BBS_0000058&dataSid=208921&menuCd=DOM_000000305002003000,local_government_reference,public_reference,2026-11-14,밀양손씨 시조 전승 참고,다른 계보 자료와 시조 인식 충돌 가능
+AKS_SEONGJU_BAE,한국학중앙연구원,평천서원,https://encykorea.aks.ac.kr/Article/E0060076,academic_reference,unknown,2026-11-14,성주배씨 문중과 배현경 배향 기록 참고,성주배씨 시조 확정 자료는 아님
+AKS_CHANGNYEONG_CHO,한국학중앙연구원,창녕군,https://encykorea.aks.ac.kr/Article/E0055348,academic_reference,unknown,2026-11-14,창녕조씨 조계룡 득성 전설 참고,명시적으로 설화 자료
+AKS_SUWON_BAEK_GENEALOGY,한국학중앙연구원,수원백씨 족보,https://encykorea.aks.ac.kr/Article/E0031596,academic_reference,unknown,2026-11-14,수원백씨 족보상 시조 백휘 참고,다른 자료의 백우경 시조 인식과 충돌
+AKS_SUWON_BAEK_TOMB,한국학중앙연구원,백천장 선생 묘,https://encykorea.aks.ac.kr/Article/E0022413,academic_reference,unknown,2026-11-14,수원백씨 시조 백우경 서술 참고,족보 자료의 백휘 시조 인식과 충돌
+UIRYEONG_GIMHAE_HEO,의령군청,김해허씨,https://www.uiryeong.go.kr/board/view.do?boardId=BBS_0000058&dataSid=208977&menuCd=DOM_000000305002003000,local_government_reference,public_reference,2026-11-14,김해허씨 시조 허염 및 계통 전승 참고,문중·지역 문화자료 성격
+AKS_HUH_HWANGOK,한국학중앙연구원,허황옥,https://encykorea.aks.ac.kr/Article/E0063190,academic_reference,unknown,2026-11-14,김해허씨 시조모 허황옥 관련 설화·역사 인식 참고,아유타국 전승은 후대 윤색 가능성이 지적됨
+AKS_GANGNEUNG_LIU,한국학중앙연구원,송계서원,https://encykorea.aks.ac.kr/Article/E0077022,academic_reference,unknown,2026-11-14,강릉유씨 시조 유창 참고,서원 배향 자료
+AKS_UIRYEONG_NAM_GENEALOGY,한국학중앙연구원,의령남씨 족보,https://encykorea.aks.ac.kr/Article/E0043157,academic_reference,unknown,2026-11-14,의령남씨 분관·시조 남군보와 원류 남민 참고,영양남씨 족보와 상대 계통 해석이 충돌할 수 있음
