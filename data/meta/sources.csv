@@ -15,7 +15,7 @@ KCI_BRANCH_REL,KCI,지지 합충 연구,https://kci.go.kr/kciportal/landing/arti
 KCI_BRANCH_CONFLICT,KCI,충·형 근원 연구,https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART001802048,academic,unknown,2026-11-14,충·형 관계 교차검증,학파별 적용 차이 확인
 KCI_12STAGES,KCI,십이운성 연구,https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002722234,academic,unknown,2026-11-14,십이운성 방법론 교차검증,method_id 유지
 KCI_AI_MYEONGRI,KCI,생성형 AI 활용 명리해석 비교 연구,https://www.kci.go.kr/kciportal/mobile/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003361304,academic,unknown,2026-11-14,AI 명리 계산·해석 오류 유형 점검,전통 이론 자체의 과학적 타당성 근거 아님
-AKS_HANJA_XU,한국학중앙연구원,한국민족문화대백과사전 徐 한자 메타데이터,https://encykorea.aks.ac.kr/Article/E0028321,academic_reference,unknown,2026-11-14,徐의 한국어 풀이·부수·총획 교차검증,인물 항목 안의 한자 메타데이터를 사용
+AKS_HANJA_XU,한국학중앙연구원,서희 항목의 徐 한자 메타데이터,https://encykorea.aks.ac.kr/Article/E0028321,academic_reference,unknown,2026-11-14,徐의 한국어 풀이·부수·총획 교차검증,인물 항목 안의 한자 메타데이터를 사용
 KOSTAT_CENSUS_2015,국가데이터처,2015년 인구주택총조사 전수집계결과,https://mods.go.kr/board.es?act=view&bid=203&list_no=356061&mid=a10301010000,official_statistics,public_reference,2026-11-14,2015년 성씨·본관 통계의 공식 조사 기준과 공표 자료,세부 성씨 행은 KOSIS 표와 교차확인
 KOSIS_SURNAME_2015,국가통계포털 KOSIS,성씨ㆍ본관별 인구(5인 이상) 전국,https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1IN15SD,official_statistics,public_statistics,2026-11-14,2015-11-01 기준 성씨·본관별 내국인 인구,공표주기와 표 주석을 함께 확인
 NIKL_ROMANIZATION,국립국어원,국어의 로마자 표기법,https://korean.go.kr/kornorms/m/m_regltn.do?regltn_code=0004,official_language_rule,public_rule,2026-11-14,한글 음절의 로마자 표기 규칙,실제 여권 로마자 성은 기존 표기와 개인 선택을 고려
