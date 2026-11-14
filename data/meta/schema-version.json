@@ -1,12 +1,14 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "updated_at": "2026-11-14",
-  "compatibility": "additive metadata and normalization update",
+  "compatibility": "additive surname domain and validation update",
   "conventions": {
     "source_reference": "Prefer source_id values registered in data/meta/sources.csv for new structured datasets.",
     "method_reference": "Use method_id for school- or author-dependent naming and myeongri rules.",
     "legal_hanja": "Candidate search data and final legal verification are separate layers.",
     "stroke_counts": "Unicode technical strokes and naming-school stroke counts are separate fields.",
-    "null_policy": "Unknown values remain null/empty; do not infer unsupported facts."
+    "null_policy": "Unknown values remain null/empty; do not infer unsupported facts.",
+    "surname_role": "Treat surname Hanja, given-name Hanja, bongwan, census statistics, and method-specific stroke values as separate fields.",
+    "surname_semantics": "Do not score a surname dictionary gloss as given-name semantic quality unless a selected method explicitly requires it."
   }
 }
