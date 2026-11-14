@@ -1,0 +1,17 @@
+source_id,publisher,title,url,authority,license,accessed_at,scope,caveats
+KR_COURT_HANJA,대한민국 법원,인명용 한자 조회,https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010,official_service,unknown,2026-11-14,현행 인명용 한자와 허용 독음 최종 확인,자동화 재배포 조건은 별도 확인
+KR_LAW_NAME_RULE,국가법령정보센터,가족관계의 등록 등에 관한 규칙 제37조 및 별표,https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=272659,official_law,public_law,2026-11-14,인명용 한자 법적 범위와 허용자체,개정 시 현행 버전 재확인
+KR_COURT_HANJA_PDF,대한민국 법원,인명용 한자표 PDF,https://help.scourt.go.kr/nm/images/hanja/hanja.pdf,official_document,unknown,2026-11-14,독음별 기초한자·추가한자·허용자체,현행 조회와 함께 확인
+KASI_CALENDAR,한국천문연구원,달력자료 및 월력요항,https://astro.kasi.re.kr/life/post/calendarData,official_science,public_reference,2026-11-14,24절기 날짜와 시각 검증,연도별 공식 자료 확인
+IANA_TZDB_ASIA,IANA,Time Zone Database Asia,https://data.iana.org/time-zones/tzdb/asia,technical_standard,public_domain_like,2026-11-14,Asia/Seoul 과거 UTC offset 및 DST 계산,앱 계산은 tzdb 구현 우선
+KR_ARCHIVES_TIME,국가기록원,대한민국 표준시 및 서머타임 기록,https://theme.archives.go.kr/next/koreaOfRecord/summerTime.do,official_archive,public_reference,2026-11-14,대한민국 표준시 역사 설명,IANA tzdb와 교차검증
+LIBHANGUL_HANJA,libhangul project,한국어 한자 사전 hanja.txt,https://github.com/libhangul/libhangul,open_source_dictionary,BSD-3-Clause,2026-11-14,한국어 한자 훈음 결합,법적 허용 여부 근거로 사용 금지
+UNICODE_UNIHAN,Unicode Consortium,Unihan Database,https://unicode.org/reports/tr38/,technical_standard,Unicode-3.0-License,2026-11-14,Unicode 코드포인트·부수·기술 총획,성명학 원획과 동일시 금지
+LUNAR_PYTHON,6tail,lunar-python,https://github.com/6tail/lunar-python,open_source_implementation,MIT,2026-11-14,명리 고정표와 달력 구현 교차검증,단독 학술 근거가 아닌 구현 참조
+RUTOPIO_NAME_HANJA,rutopio,Korean-Name-Hanja-Charset data-gov.csv,https://github.com/rutopio/Korean-Name-Hanja-Charset,secondary_mirror,MIT,2026-11-14,2024-07-16 대법원 조회 기반 빠른 후보 검색,현행 법적 판정은 공식 조회 필요
+KCI_JIJANGGAN,KCI,지장간 구성 연구,https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002596264,academic,unknown,2026-11-14,지장간 구성과 명리 이론 교차검증,전통 이론의 과학적 예측 효력 근거 아님
+KCI_TENSUNG,KCI,십성 개념 연구,https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002810441,academic,unknown,2026-11-14,십성 관계 교차검증,전통 이론의 과학적 예측 효력 근거 아님
+KCI_BRANCH_REL,KCI,지지 합충 연구,https://kci.go.kr/kciportal/landing/article.kci?arti_id=ART002788509,academic,unknown,2026-11-14,지지 합 관계 교차검증,학파별 성립 조건 분리
+KCI_BRANCH_CONFLICT,KCI,충·형 근원 연구,https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART001802048,academic,unknown,2026-11-14,충·형 관계 교차검증,학파별 적용 차이 확인
+KCI_12STAGES,KCI,십이운성 연구,https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002722234,academic,unknown,2026-11-14,십이운성 방법론 교차검증,method_id 유지
+KCI_AI_MYEONGRI,KCI,생성형 AI 활용 명리해석 비교 연구,https://www.kci.go.kr/kciportal/mobile/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003361304,academic,unknown,2026-11-14,AI 명리 계산·해석 오류 유형 점검,전통 이론 자체의 과학적 타당성 근거 아님
