@@ -43,6 +43,16 @@
       ],
       "generator": "scripts/audit/build-source-audit.mjs",
       "reproducibility": "exact"
+    },
+    {
+      "outputs": [
+        "data/meta/source-rights.csv"
+      ],
+      "inputs": [
+        "data/meta/sources.csv"
+      ],
+      "generator": "scripts/audit/build-source-rights.mjs",
+      "reproducibility": "exact"
     }
   ],
   "not_yet_reproducible": [
