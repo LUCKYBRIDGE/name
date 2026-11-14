@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-11-14",
+  "schema_version": "1.1.0",
+  "authoritative_for": "repository dataset counts and normalization status",
+  "hanja": {
+    "upstream_crawl_date": "2024-07-16",
+    "source_row_count": 10163,
+    "raw_expanded_reading_relations": 11803,
+    "normalized_reading_relations": 10346,
+    "duplicate_reading_relations_removed": 1457,
+    "unique_codepoints": 9460,
+    "codepoints_with_readings": 9459,
+    "codepoints_without_reading": 1,
+    "distinct_readings": 486,
+    "meaning_matched_characters": 7150,
+    "meaning_matched_relations": 7425,
+    "unicode_stroke_matched_characters": 8786,
+    "status": {
+      "legal_candidates": "secondary_mirror",
+      "legal_final_verification": "required_against_current_official_source",
+      "meanings": "libhangul_exact_reading_character_match",
+      "strokes": "provisional_unicode_technical_metadata"
+    }
+  },
+  "myeongri": {
+    "heavenly_stems": 10,
+    "earthly_branches": 12,
+    "sexagenary_cycle": 60,
+    "ten_god_stem_relations": 100,
+    "status": "structured_fixed_tables_available; interpretive methods remain method-specific"
+  },
+  "notes": [
+    "README files should reference this file instead of maintaining independent counts.",
+    "U+25874 is present in the character master but has no reading in the secondary mirror.",
+    "Traditional naming stroke counts must not be inferred from Unicode kTotalStrokes."
+  ]
+}
