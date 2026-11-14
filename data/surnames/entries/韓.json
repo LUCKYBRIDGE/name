@@ -1,0 +1,77 @@
+{
+  "surname_id": "KR_SURNAME_U097D3",
+  "identity": {
+    "hangul": "한",
+    "hanja": "韓",
+    "unicode_hex": "097D3",
+    "codepoint": "U+097D3",
+    "reading": "한",
+    "alternate_readings": [
+      "한"
+    ],
+    "role": "surname"
+  },
+  "character_metadata": {
+    "dictionary_gloss": "나라 이름 한; 한나라 한",
+    "radical": "韋",
+    "technical_total_strokes": 17,
+    "technical_stroke_status": "provisional_unicode_technical_metadata",
+    "sources": [
+      "LIBHANGUL_HANJA",
+      "UNICODE_UNIHAN"
+    ],
+    "note": "기술 총획은 특정 성명학의 원획·필획과 동일시하지 않는다."
+  },
+  "census_2015": {
+    "reference_date": "2015-11-01",
+    "population": 773404,
+    "share_percent": 1.556,
+    "rank": 11,
+    "source_ids": [
+      "KOSTAT_CENSUS_2015",
+      "KOSIS_SURNAME_2015"
+    ]
+  },
+  "representative_clans_2015": [
+    {
+      "bongwan": "청주",
+      "population": 752689,
+      "source_id": "KOSTAT_CENSUS_2015",
+      "coverage": "representative_not_complete"
+    }
+  ],
+  "pronunciation": {
+    "syllable": "한",
+    "onset": "ㅎ",
+    "nucleus": "ㅏ",
+    "coda": "ㄴ",
+    "syllable_shape": "CVC",
+    "boundary_profile": "closed_syllable",
+    "source_id": "NIKL_STANDARD_PRON"
+  },
+  "romanization": {
+    "rule_form": "Han",
+    "rule_source_id": "NIKL_ROMANIZATION",
+    "passport_source_id": "MOFA_PASSPORT_ROMANIZATION",
+    "note": "규칙형과 실제 가족·여권 표기는 다를 수 있으므로 자동 변경하지 않는다."
+  },
+  "stroke_policy": {
+    "technical_reference_count": 17,
+    "numerology_default_count": null,
+    "numerology_status": "method_specific_not_registered"
+  },
+  "naming_policy": {
+    "surname_semantics": "성씨의 사전 뜻을 이름자 의미 품질 점수에 자동 합산하지 않는다.",
+    "full_name_pronunciation": "성+이름 전체 발음·리듬·동음이의는 별도 평가한다.",
+    "clan_use": "본관은 가족·항렬 맥락으로만 사용하며 길흉 점수로 자동 변환하지 않는다.",
+    "hanja_requirement": "한글 성씨만으로 한자를 자동 확정하지 않는다."
+  },
+  "verification": {
+    "identity_status": "verified_against_2015_census_and_internal_hanja_index",
+    "census_status": "verified_2015",
+    "technical_stroke_status": "provisional_unicode_technical_metadata",
+    "numerology_status": "method_specific_not_registered",
+    "clan_status": "representative_official_rows_loaded",
+    "updated_at": "2026-11-14"
+  }
+}
