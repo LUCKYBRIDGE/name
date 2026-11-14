@@ -20,3 +20,7 @@ KOSTAT_CENSUS_2015,국가데이터처,2015년 인구주택총조사 전수집계
 KOSIS_SURNAME_2015,국가통계포털 KOSIS,성씨ㆍ본관별 인구(5인 이상) 전국,https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1IN15SD,official_statistics,public_statistics,2026-11-14,2015-11-01 기준 성씨·본관별 내국인 인구,공표주기와 표 주석을 함께 확인
 NIKL_ROMANIZATION,국립국어원,국어의 로마자 표기법,https://korean.go.kr/kornorms/m/m_regltn.do?regltn_code=0004,official_language_rule,public_rule,2026-11-14,한글 음절의 로마자 표기 규칙,실제 여권 로마자 성은 기존 표기와 개인 선택을 고려
 MOFA_PASSPORT_ROMANIZATION,외교부,여권 로마자성명 표기의 기본방법,https://www.passport.go.kr/home/kor/contents.do?menuPos=37,official_service,public_reference,2026-11-14,여권 로마자성명 원칙과 변경 제한,기존 여권·가족 표기와 일치 필요 가능
+AKS_SEO_SINIL,한국학중앙연구원,서신일,https://encykorea.aks.ac.kr/Article/E0027894,academic_reference,unknown,2026-11-14,이천서씨 시조 서신일 및 이천 본관 역사 참고,개별 인물 항목이며 전체 문중 계보를 완전 증명하는 자료는 아님
+DJJUNGGU_SEO_ROOTS,대전광역시 중구,뿌리공원 성씨유래검색 서씨,https://www.djjunggu.go.kr/prog/fanmOrgn/hyo/sub03_04/view.do?orgnNo=58,local_government_reference,public_reference,2026-11-14,서씨·이천서씨·달성서씨·대구서씨 계통에 대한 공공 문화자료,족보 전승을 소개한 자료이므로 학술적 확정 사실과 구분
+GEOJE_CITY_SEO_CLAN,거제시,거제시지 제13편 조상의 얼 달성서씨 항목,https://www.geoje.go.kr/document/siji/13.pdf,local_government_history,public_reference,2026-11-14,달성서씨 시조 서진 관련 지역사 교차참고,지역 문중 전승을 수록한 자료
+NIKL_STANDARD_PRON,국립국어원,표준 발음법,https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&qna_seq=307869,official_language_guidance,public_reference,2026-11-14,받침·연음 등 표준 발음 원칙 확인,개별 인명 전체의 실제 발음을 자동 확정하는 자료는 아님
