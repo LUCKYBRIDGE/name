@@ -26,6 +26,15 @@ function csvRows(path) {
   });
 }
 
+const requiredNoticeFiles=[
+  "THIRD_PARTY_NOTICES.md",
+  "LICENSES/MIT-rutopio.txt",
+  "LICENSES/BSD-3-Clause-libhangul-hanja.txt",
+  "LICENSES/Unicode-3.0.txt",
+  "data/meta/license-map.csv"
+];
+for (const p of requiredNoticeFiles) if (!exists(p)) fail(`missing third-party notice file: ${p}`);
+
 const sourceRows=csvRows("data/meta/sources.csv");
 const sourceIds=new Set();
 for (const r of sourceRows) {
@@ -34,6 +43,24 @@ for (const r of sourceRows) {
   sourceIds.add(r.source_id);
 }
 ok(`source registry unique IDs (${sourceIds.size})`);
+const licenseMapRows=csvRows("data/meta/license-map.csv");
+for (const r of licenseMapRows) {
+  for (const sid of (r.source_ids||"").split("|").filter(Boolean)) {
+    if (sid==="multiple_source_ids") continue;
+    if (!sourceIds.has(sid)) fail(`unknown license-map source: ${sid}`);
+  }
+  if (r.notice_required==="true") {
+    const noticeFiles=(r.notice_file||"").split("|").filter(Boolean);
+    if (!noticeFiles.length) fail(`notice required without notice_file: ${r.path_pattern}`);
+    for (const p of noticeFiles) if (!exists(p)) fail(`license-map notice file missing: ${p}`);
+  }
+}
+const thirdPartyNotices=read("THIRD_PARTY_NOTICES.md");
+if (!thirdPartyNotices.includes("RUTOPIO_NAME_HANJA")) fail("third-party notices missing rutopio attribution");
+if (!thirdPartyNotices.includes("LIBHANGUL_HANJA")) fail("third-party notices missing libhangul attribution");
+if (!thirdPartyNotices.includes("UNICODE_UNIHAN")) fail("third-party notices missing Unicode attribution");
+ok(`third-party license notices: ${licenseMapRows.length} path mappings`);
+
 
 // Hanja
 const byRows=csvRows("data/hanja/normalized/by-reading.csv");

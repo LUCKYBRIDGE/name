@@ -94,3 +94,16 @@ npm run check
 ```bash
 npm run validate:data
 ```
+
+
+## 라이선스·제3자 데이터
+이 저장소는 자체 작성 자료와 제3자 데이터를 함께 사용합니다.
+
+- 제3자 고지: `THIRD_PARTY_NOTICES.md`
+- 개별 라이선스 원문: `LICENSES/`
+- 데이터 경로별 라이선스 맵: `data/meta/license-map.csv`
+- 출처·재배포 검토 상태: `data/meta/sources.csv`, `data/meta/source-audit.csv`
+
+현재 루트에는 저장소 전체에 적용되는 별도 `LICENSE`를 두지 않았습니다. 따라서
+`THIRD_PARTY_NOTICES.md`는 제3자 데이터의 사용 조건을 기록할 뿐, 저장소의
+자체 작성 코드·문서·스키마·편집 해석 전체에 별도의 오픈소스 라이선스를 부여하지 않습니다.
