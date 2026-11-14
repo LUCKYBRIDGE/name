@@ -9,3 +9,4 @@ data/time/2026_24절기_KASI.csv|data/time/2027_24절기_KASI.csv,allowed_with_k
 data/myeongri/*.csv,original_compilation_reference_only_sources,Keep KCI papers as references only and do not copy article prose/tables/figures,medium,고정표는 자체 구조화 자료로 유지하고 source_ids와 방법론 차이를 보존
 docs/*|knowledge/*|workflows/*|templates/*|scripts/*|tests/*,first_party_all_rights_reserved,No repository-wide open license is granted unless separately stated,low,제3자 인용·출처가 포함된 부분은 해당 원출처 조건 우선
 sources/*|research/*,reference_metadata_only,Do not redistribute linked source PDFs/articles merely because they are referenced,medium,링크·서지정보·자체 요약 중심
+ai-studio/**,review_before_broad_public_release,Treat as a point-in-time app snapshot; current rights decisions must use root COPYRIGHT/THIRD_PARTY/source-rights metadata,medium,앱 소스와 제3자 데이터 복사본이 함께 포함됨; ai-studio/data/luckybridge는 현재 canonical DB가 아님
