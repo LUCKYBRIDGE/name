@@ -98,6 +98,15 @@
 ## 실사용성
 법적 적합성, 발음, 의미, 한자 난이도, 디지털 표시, 이름 유행도, 항렬자, 로마자 표기와 국제 사용성을 전통 성명학과 별도 평가한다.
 
+## AI Studio 스냅샷 규칙
+- `ai-studio/`는 2026-11-14 AI Studio 내보내기본을 보존한 시점 스냅샷이다.
+- `ai-studio/data/luckybridge/`를 현재 데이터의 기준으로 사용하지 않는다. 현재 기준은 루트 `data/`, `knowledge/`, `workflows/`, `tests/`다.
+- 데이터 개선은 먼저 루트에서 수행하고 검증한다. 앱 스냅샷의 복사본을 먼저 고쳐 루트로 역전파하지 않는다.
+- AI Studio 앱 구조를 분석할 때는 `ai-studio/`를 사용하되, 사실값·출처·저작권 판단에는 루트의 최신 메타데이터를 사용한다.
+- 새 AI Studio ZIP을 받으면 기존 스냅샷과 섞어 부분 병합하기보다 전체 교체를 기본으로 하고 내보내기 날짜를 기록한다.
+- `ai-studio/.env.example` 이외의 실제 API 키·토큰·비밀변수는 커밋하지 않는다.
+- 세부 provenance는 `docs/06-AI-Studio-앱-스냅샷.md`를 따른다.
+
 ## 변경 작업
 - 파생 데이터는 가능한 경우 직접 편집하지 말고 `data/meta/build-manifest.json`의 generator로 재생성한다.
 - 구조화 데이터·규칙·workflow 변경 후 `npm run check`를 통과시킨다.
