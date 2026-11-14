@@ -107,12 +107,66 @@
     "full_name_pronunciation": "성+이름 전체 발음과 어감 평가는 수행한다.",
     "stroke_methods": "수리성명학에서 성씨 획수를 사용하는 경우 선택한 method_id의 획수 기준을 별도 조회한다.",
     "clan_use": "본관은 가족·항렬 맥락에 사용할 수 있으나 길흉 점수로 자동 변환하지 않는다.",
-    "hanja_requirement": "사용자가 한글 성씨만 제공했을 때 徐라고 임의 확정하지 않는다. 한자를 확인하거나 사용자가 제공한 가족관계 정보를 따른다."
+    "hanja_requirement": "사용자가 한글 성씨만 제공했을 때 徐라고 임의 확정하지 않는다. 한자를 확인하거나 사용자가 제공한 가족관계 정보를 따른다.",
+    "syllable_repetition": "성씨 '서'와 이름 첫 음절 '서'가 반복되면 실사용성 주의 플래그만 표시하며 자동 탈락·길흉 판정을 하지 않는다.",
+    "pronunciation_boundary": "徐/서가 열린 음절이므로 성씨 종성에 의해 유발되는 음운 변동은 없지만 전체 이름 발음은 음절 조합별로 확인한다."
   },
   "verification": {
     "core_status": "verified",
     "census_status": "verified_2015",
     "current_population_status": "not_claimed",
-    "updated_at": "2026-11-14"
+    "updated_at": "2026-11-14",
+    "pronunciation_status": "derived_from_standard_pronunciation_rules",
+    "clan_history_status": "mixed_academic_and_public_tradition_sources",
+    "stroke_numerology_status": "method_specific_not_registered"
+  },
+  "pronunciation": {
+    "syllable": "서",
+    "onset": "ㅅ",
+    "nucleus": "ㅓ",
+    "coda": null,
+    "syllable_shape": "CV",
+    "boundary_profile": "open_syllable",
+    "profile_file": "data/surnames/pronunciation-profiles.csv",
+    "heuristic_file": "data/surnames/pronunciation-heuristics.csv",
+    "note": "종성이 없어 성-이름 경계에서 종성 때문에 생기는 연음·비음화·유음화·받침 유발 경음화를 기본적으로 촉발하지 않는다. 실제 전체 이름의 발음과 어감은 개별 조합으로 평가한다."
+  },
+  "stroke_policy": {
+    "reference_file": "data/surnames/entries/徐-strokes.json",
+    "technical_reference_count": 10,
+    "numerology_default_count": null,
+    "rule": "성명학 획수는 method_id가 확인되기 전 자동 계산하지 않는다."
+  },
+  "clan_history": {
+    "file": "data/surnames/clan-history.csv",
+    "verified_or_sourced": [
+      {
+        "bongwan": "이천",
+        "type": "founder_reference",
+        "person": "서신일",
+        "hanja": "徐神逸",
+        "source_ids": [
+          "AKS_SEO_SINIL"
+        ]
+      },
+      {
+        "bongwan": "달성",
+        "type": "founder_tradition",
+        "person": "서진",
+        "hanja": "徐晋",
+        "source_ids": [
+          "DJJUNGGU_SEO_ROOTS",
+          "GEOJE_CITY_SEO_CLAN"
+        ]
+      },
+      {
+        "bongwan": "대구",
+        "type": "branch_tradition",
+        "source_ids": [
+          "DJJUNGGU_SEO_ROOTS"
+        ]
+      }
+    ],
+    "note": "본관 역사 자료는 근거 수준을 구분한다. 현대 사용자의 실제 본관은 가족관계 자료 또는 사용자 확인값을 따른다."
   }
 }
