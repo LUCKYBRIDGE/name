@@ -17,20 +17,56 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Reconstruct and verify snapshot archive
+      - name: Reconstruct and verify import payload
         shell: bash
         run: |
           set -euo pipefail
-          cat .github/import-ai-studio/chunk-* | base64 --decode > /tmp/ai-studio.tar.gz
-          echo "5c2f2797d014c969e9b88296fabb4188212ac919f59d7bae34d78d1d27bff247  /tmp/ai-studio.tar.gz" | sha256sum -c -
+          cat .github/import-ai-studio/chunk-* | base64 --decode > /tmp/ai-studio-payload.tar.gz
+          echo "2f89822459f9dd3b184e4ac782ee2b14c9faaca5c1282e6f5e74454742245d88  /tmp/ai-studio-payload.tar.gz" | sha256sum -c -
+          mkdir -p /tmp/ai-studio-payload
+          tar -xzf /tmp/ai-studio-payload.tar.gz -C /tmp/ai-studio-payload
 
-      - name: Extract into ai-studio
+      - name: Reconstruct exact AI Studio snapshot
         shell: bash
         run: |
           set -euo pipefail
           rm -rf ai-studio
           mkdir -p ai-studio
-          tar -xzf /tmp/ai-studio.tar.gz -C ai-studio
+          cp -a /tmp/ai-studio-payload/app/. ai-studio/
+
+          while IFS= read -r rel; do
+            [ -n "$rel" ] || continue
+            case "$rel" in
+              knowledge/*|tests/*|workflows/*)
+                src="$rel"
+                ;;
+              *)
+                src="data/$rel"
+                ;;
+            esac
+            if [ ! -f "$src" ]; then
+              echo "Missing repository source for snapshot data: $rel -> $src" >&2
+              exit 1
+            fi
+            dst="ai-studio/data/luckybridge/$rel"
+            mkdir -p "$(dirname "$dst")"
+            cp "$src" "$dst"
+            python - "$dst" <<'PY'
+import sys
+p=sys.argv[1]
+b=open(p,'rb').read()
+if b.startswith(b'\xef\xbb\xbf'):
+    open(p,'wb').write(b[3:])
+PY
+          done < /tmp/ai-studio-payload/data-paths.txt
+
+          cp -a /tmp/ai-studio-payload/patches/. ai-studio/
+
+          (
+            cd ai-studio
+            sha256sum -c /tmp/ai-studio-payload/snapshot.sha256
+          )
+
           rm -rf .github/import-ai-studio
 
       - name: Commit extracted snapshot
