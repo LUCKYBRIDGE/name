@@ -87,3 +87,13 @@ AI와 앱 개발 코드는 사용자 요청의 **의도**에 따라 필요한 �
 
 ## 근거 부족 시
 확인되지 않은 값은 생성하지 않는다. 법적 사실, 기술 계산, 전통적 해석을 구분하고 최신 공식 확인이 필요한 경우 이를 명시한다.
+
+## 저작권·출처·배포
+- 저장소 운영 정책: `COPYRIGHT_AND_DATA_USE.md`
+- 앱 출처 표시: `APP_ATTRIBUTION.md`
+- 출처 레지스트리: `data/meta/sources.csv`
+- 출처별 감사 상태: `data/meta/source-audit.csv`
+- 경로별 라이선스: `data/meta/license-map.csv`
+- 배포 범위 정책: `data/meta/distribution-policy.csv`
+
+외부 자료를 새로 추가하거나 앱 공개 범위를 넓히기 전에는 위 파일을 먼저 확인한다.
