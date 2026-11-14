@@ -60,6 +60,79 @@ const stats=JSON.parse(read("data/meta/dataset-stats.json"));
 if (stats.hanja.normalized_reading_relations !== byRows.length) fail("dataset-stats hanja relations mismatch");
 if (stats.hanja.unique_codepoints !== chRows.length) fail("dataset-stats hanja codepoints mismatch");
 
+// Hanja multi-sense semantics
+const senseRows=csvRows("data/hanja/semantics/meaning-senses.csv");
+const senseById=new Map();
+const sensesByRelation=new Map();
+const semanticChars=new Set();
+for (const r of senseRows) {
+  if (!r.sense_id || senseById.has(r.sense_id)) fail(`duplicate/empty sense_id: ${r.sense_id}`);
+  senseById.set(r.sense_id,r);
+  semanticChars.add(r.codepoint);
+  if (!sensesByRelation.has(r.meaning_relation_id)) sensesByRelation.set(r.meaning_relation_id,[]);
+  sensesByRelation.get(r.meaning_relation_id).push(r);
+  if (!sourceIds.has(r.meaning_source_id)) fail(`unknown meaning source: ${r.meaning_source_id}`);
+  if (!sourceIds.has(r.legal_relation_source_id)) fail(`unknown legal relation source: ${r.legal_relation_source_id}`);
+  if (r.derivation_status !== "mechanically_split_from_meaning_ko") fail(`unexpected semantic derivation: ${r.sense_id}`);
+}
+let semanticMultiRelations=0;
+for (const [relationId, rows] of sensesByRelation) {
+  rows.sort((a,b)=>Number(a.sense_order)-Number(b.sense_order));
+  const expectedCount=rows.length;
+  if (expectedCount>1) semanticMultiRelations++;
+  for (let i=0;i<rows.length;i++) {
+    if (Number(rows[i].sense_order)!==i+1) fail(`sense order gap: ${relationId}`);
+    if (Number(rows[i].relation_sense_count)!==expectedCount) fail(`relation_sense_count mismatch: ${relationId}`);
+    if ((rows[i].multi_sense_relation==="true") !== (expectedCount>1)) fail(`multi_sense flag mismatch: ${rows[i].sense_id}`);
+  }
+}
+if (senseRows.length!==13046) fail(`semantic sense rows expected 13046, got ${senseRows.length}`);
+if (sensesByRelation.size!==7425) fail(`semantic relations expected 7425, got ${sensesByRelation.size}`);
+if (semanticChars.size!==7150) fail(`semantic characters expected 7150, got ${semanticChars.size}`);
+if (semanticMultiRelations!==3492) fail(`multi-sense relations expected 3492, got ${semanticMultiRelations}`);
+ok(`hanja semantic senses: ${senseRows.length} senses / ${sensesByRelation.size} relations`);
+
+// Reading-specific example: 樂 meanings must remain separated by reading.
+const luckByReading = {};
+for (const r of senseRows.filter(r=>r.hanja==="樂")) {
+  if (!luckByReading[r.legal_reading]) luckByReading[r.legal_reading]=[];
+  luckByReading[r.legal_reading].push(r.raw_sense);
+}
+if (!luckByReading["낙"]?.includes("즐길 낙")) fail("樂/낙 semantic mapping missing");
+if (!luckByReading["락"]?.includes("즐거울 락")) fail("樂/락 semantic mapping missing");
+if (!luckByReading["악"]?.includes("풍류 악")) fail("樂/악 semantic mapping missing");
+if (!luckByReading["요"]?.includes("좋아할 요")) fail("樂/요 semantic mapping missing");
+ok("reading-specific Hanja meanings remain separated");
+
+// Curated naming meaning layer
+const curatedRows=csvRows("data/hanja/semantics/naming-meaning-curated.csv");
+const curatedChars=new Set();
+const allowedUseClasses=new Set(["preferred_name_sense","usable_name_sense","contextual_dictionary_sense","caution_other_dictionary_sense"]);
+for (const r of curatedRows) {
+  curatedChars.add(r.hanja);
+  if (!allowedUseClasses.has(r.naming_use_class)) fail(`unknown naming_use_class: ${r.naming_use_class}`);
+  if (r.interpretation_status!=="editorial_paraphrase_from_documented_sense") fail(`curated interpretation status mismatch: ${r.hanja}/${r.legal_reading}/${r.sense_order}`);
+  if (!sourceIds.has(r.dictionary_source_id)) fail(`unknown curated dictionary source: ${r.dictionary_source_id}`);
+  const matches=senseRows.filter(s=>s.hanja===r.hanja && s.legal_reading===r.legal_reading && Number(s.sense_order)===Number(r.sense_order));
+  if (matches.length!==1) fail(`curated sense lookup mismatch: ${r.hanja}/${r.legal_reading}/${r.sense_order}`);
+  else if (matches[0].raw_sense!==r.raw_sense) fail(`curated raw_sense mismatch: ${r.hanja}/${r.legal_reading}/${r.sense_order}`);
+  if (r.naming_use_class==="caution_other_dictionary_sense" && r.primary_name_explanation_allowed!=="false") fail(`caution sense cannot be primary: ${r.hanja}/${r.raw_sense}`);
+}
+if (curatedRows.length!==25) fail(`curated naming rows expected 25, got ${curatedRows.length}`);
+if (curatedChars.size!==12) fail(`curated naming characters expected 12, got ${curatedChars.size}`);
+const yu祐=senseRows.filter(r=>r.hanja==="祐"&&r.legal_reading==="우").map(r=>r.raw_sense);
+if (yu祐.length!==2 || !yu祐.includes("도울 우") || !yu祐.includes("다행할 우")) fail("祐/우 must preserve two documented senses");
+const yu優=senseRows.filter(r=>r.hanja==="優"&&r.legal_reading==="우").map(r=>r.raw_sense);
+if (yu優.length!==4 || !yu優.includes("결단성 없을 우")) fail("優/우 must preserve all four senses including caution sense");
+ok(`curated naming meanings: ${curatedRows.length} rows / ${curatedChars.size} characters`);
+
+if (stats.hanja.semantic_sense_rows!==senseRows.length) fail("stats semantic_sense_rows mismatch");
+if (stats.hanja.semantic_relations!==sensesByRelation.size) fail("stats semantic_relations mismatch");
+if (stats.hanja.multi_sense_relations!==semanticMultiRelations) fail("stats multi_sense_relations mismatch");
+if (stats.hanja.semantic_unique_characters!==semanticChars.size) fail("stats semantic_unique_characters mismatch");
+if (stats.hanja.curated_naming_sense_rows!==curatedRows.length) fail("stats curated_naming_sense_rows mismatch");
+if (stats.hanja.curated_naming_characters!==curatedChars.size) fail("stats curated_naming_characters mismatch");
+
 // Myeongri
 const rowCount=p=>read(p).trim().split(/\r?\n/).length-1;
 if (rowCount("data/myeongri/천간.csv") !== 10) fail("천간 count");
