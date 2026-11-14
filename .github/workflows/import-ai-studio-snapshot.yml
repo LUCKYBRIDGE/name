@@ -51,7 +51,7 @@ jobs:
             dst="ai-studio/data/luckybridge/$rel"
             mkdir -p "$(dirname "$dst")"
             cp "$src" "$dst"
-            python -c 'import sys; p=sys.argv[1]; b=open(p,"rb").read(); open(p,"wb").write(b[3:] if b.startswith(b"\\xef\\xbb\\xbf") else b)' "$dst"
+            python -c 'import sys; p=sys.argv[1]; b=open(p,"rb").read(); open(p,"wb").write(b[3:] if b.startswith(bytes.fromhex("efbbbf")) else b)' "$dst"
           done < /tmp/ai-studio-payload/data-paths.txt
 
           cp -a /tmp/ai-studio-payload/patches/. ai-studio/
