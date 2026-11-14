@@ -98,6 +98,7 @@
 ## 7. 관리 파일
 
 - `COPYRIGHT.md`: 자체 작성 자료의 권리 고지
+- `RIGHTS_AUDIT.md`: 현재 권리 분류와 공개 확대 전 우선 점검 대상
 - `THIRD_PARTY_NOTICES.md`: 제3자 라이선스·고지
 - `APP_ATTRIBUTION.md`: 앱 표시용 출처·고지 문구
 - `data/meta/sources.csv`: 원출처 레지스트리
