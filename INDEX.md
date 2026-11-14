@@ -91,6 +91,7 @@ AI와 앱 개발 코드는 사용자 요청의 **의도**에 따라 필요한 �
 ## 저작권·출처·배포
 - 자체 작성 자료 권리: `COPYRIGHT.md`
 - 저장소 운영 정책: `COPYRIGHT_AND_DATA_USE.md`
+- 현재 감사 현황: `RIGHTS_AUDIT.md`
 - 앱 출처 표시: `APP_ATTRIBUTION.md`
 - 앱 UI 구현 규격: `docs/05-앱-출처-저작권-표시규격.md`
 - 출처 레지스트리: `data/meta/sources.csv`
