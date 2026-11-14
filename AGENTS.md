@@ -13,6 +13,7 @@
 - 고정 계산값은 설명 문장으로 추론하지 말고 먼저 `data/`의 CSV/JSON을 조회한다.
 - 한자 후보 탐색은 `data/hanja/normalized/reading-index.json` 또는 통합 마스터를 사용한다.
 - 한자 뜻은 정확 독음-한자 결합 데이터가 있을 때만 사용한다.
+- 뜻 조회는 `(한자, legal_reading)`을 키로 `data/hanja/semantics/meaning-senses.csv`를 우선 확인한다.
 - Unicode 기술 획수는 성명학 획수로 자동 변환하지 않는다.
 - 학파별 결과는 반드시 `method_id`를 유지한다.
 
@@ -32,6 +33,20 @@
 - `data/hanja/normalized/characters.csv`
 - `data/hanja/normalized/reading-index.json`
 - `data/hanja/enriched/hanja-master-enriched.csv`
+
+다중 의미·작명 의미:
+- `data/hanja/semantics/meaning-senses.csv`: 전수 의미 항목
+- `data/hanja/semantics/naming-meaning-curated.csv`: 사람이 검토한 작명용 의미 분류
+- `knowledge/20-한자-다중의미-작명해석.md`: 의미 선택·풀이 원칙
+
+의미 처리 강제 규칙:
+- 대표 훈 하나만 보고 그 글자의 유일한 뜻이라고 말하지 않는다.
+- 같은 글자라도 독음이 다르면 의미 목록을 합치지 않는다.
+- 사용자가 이름에서 중심으로 삼을 뜻은 문서화된 의미 항목 안에서 선택한다.
+- 선택하지 않은 다른 사전형 뜻도 존재하면 숨기지 않는다.
+- `interpretation_template`은 사전 정의가 아니라 편집된 작명 풀이임을 구분한다.
+- `caution_other_dictionary_sense`는 대표 긍정 의미로 자동 사용하지 않는다.
+- 사전에 없는 길상 의미를 생성하거나 다른 한자의 뜻을 전이하지 않는다.
 
 현행 법적 판정:
 - `knowledge/05-인명용한자-법적판정.md`

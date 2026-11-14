@@ -24,11 +24,14 @@
 - `hanja-master-enriched.csv`: AI·앱 기본 조회용 통합 마스터
 - `MASTER_README.md`: 마스터 사용 규칙
 - `STROKE_STATUS.md`: 획수 데이터 출처·한계
+- `../semantics/meaning-senses.csv`: 7,425개 독음-한자 관계를 13,046개 의미 항목으로 분해한 전수 레이어
+- `../semantics/naming-meaning-curated.csv`: 작명 대표 의미 선택을 위한 검토 레이어
 
 ## 중요
 - 통합 마스터와 정규화 인덱스를 기본 조회원으로 사용한다.
 - 원출력 파일의 행 수를 정규화 독음 관계 수로 간주하지 않는다.
-- `meaning_ko`는 사전형 훈음이며 작명상의 길상 의미와 다르다.
+- `meaning_ko`는 여러 훈이 한 셀에 들어갈 수 있는 사전형 훈음이며 작명상의 길상 의미와 다르다.
+- 여러 뜻을 사용할 때는 `data/hanja/semantics/meaning-senses.csv`에서 독음별 전체 의미를 확인한다.
 - 훈음 미일치는 '뜻 없는 글자'를 뜻하지 않는다.
 - Unicode 총획은 특정 성명학 획수로 자동 사용하지 않는다.
 - 최종 법적 허용 여부는 최신 공식 법원 자료로 다시 확인한다.

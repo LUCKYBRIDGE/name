@@ -9,7 +9,7 @@ AI와 앱 개발 코드는 사용자 요청의 **의도**에 따라 필요한 �
 | 이름 분석 | workflows/기존-이름-분석.md | docs/04-성명학-규칙.md |
 | 한자 후보 검색 | data/hanja/normalized/reading-index.json | data/hanja/enriched/hanja-master-enriched.csv |
 | 성씨·본관 | data/surnames/ | knowledge/19-성씨-처리원칙.md |
-| 한자 뜻·훈 | data/hanja/enriched/hanja-master-enriched.csv | knowledge/13-한자-뜻-획수-데이터원칙.md |
+| 한자 뜻·훈 | data/hanja/semantics/meaning-senses.csv | knowledge/20-한자-다중의미-작명해석.md |
 | 인명용 한자 법적 판정 | knowledge/05-인명용한자-법적판정.md | sources/공식-인명용한자-근거-2026-11.md |
 | 사주·오행 | data/myeongri/ | knowledge/16-사주-분석레이어.md |
 | 수리·음양·발음오행 | docs/04-성명학-규칙.md | knowledge/12-성명학-학파별-분리원칙.md |
@@ -23,6 +23,9 @@ AI와 앱 개발 코드는 사용자 요청의 **의도**에 따라 필요한 �
 - 한자별 독음: `data/hanja/normalized/characters.csv`
 - 빠른 조회: `data/hanja/normalized/reading-index.json`
 - 통합 검색 마스터: `data/hanja/enriched/hanja-master-enriched.csv`
+- 다중 의미 전수 레이어: `data/hanja/semantics/meaning-senses.csv`
+- 작명 의미 검토 레이어: `data/hanja/semantics/naming-meaning-curated.csv`
+- 다중 의미 원칙: `knowledge/20-한자-다중의미-작명해석.md`
 - 마스터 설명: `data/hanja/enriched/MASTER_README.md`
 - 공식/보조 데이터 상태: `data/hanja/SOURCE_STATUS.md`, `SECONDARY_MIRROR.md`
 
@@ -62,6 +65,7 @@ AI와 앱 개발 코드는 사용자 요청의 **의도**에 따라 필요한 �
 - 대표 데이터 사례: `tests/명리-한자-데이터-대표검증.csv`
 - 徐 성씨 작명 규칙: `tests/徐-성씨-작명규칙.csv`
 - 상위 30개 확장 검증: `tests/상위30-성씨-대표검증.csv`
+- 한자 다중 의미 검증: `tests/한자-다중의미-대표검증.csv`
 - AI 응답 실패 사례: `tests/AI-응답-검증-시나리오.md`
 - 자동 무결성 검사: `scripts/validate/validate-data.mjs`
 

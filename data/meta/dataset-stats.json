@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-11-14",
-  "schema_version": "1.6.0",
+  "schema_version": "1.7.0",
   "authoritative_for": "repository dataset counts and normalization status",
   "hanja": {
     "upstream_crawl_date": "2024-07-16",
@@ -19,8 +19,17 @@
       "legal_candidates": "secondary_mirror",
       "legal_final_verification": "required_against_current_official_source",
       "meanings": "libhangul_exact_reading_character_match",
-      "strokes": "provisional_unicode_technical_metadata"
-    }
+      "strokes": "provisional_unicode_technical_metadata",
+      "semantic_senses": "derived_full_layer_unreviewed_lexicographic_split",
+      "naming_meanings": "curated_pilot_editorial_layer"
+    },
+    "semantic_sense_rows": 13046,
+    "semantic_relations": 7425,
+    "multi_sense_relations": 3492,
+    "semantic_unique_characters": 7150,
+    "curated_naming_sense_rows": 25,
+    "curated_naming_characters": 12,
+    "semantic_derivation": "mechanically split comma-delimited libhangul meaning_ko after deduplicating exact reading-character relations"
   },
   "myeongri": {
     "heavenly_stems": 10,
@@ -36,7 +45,8 @@
     "Surname core data now covers 2015 census ranks 1-31 (31 records total); the user-requested expansion file contains 30 records excluding already-built 徐(rank 13).",
     "representative-clans-2015.csv is a partial official representative-clan table, not a complete bongwan list for each surname.",
     "All 31 core surnames now have curated clan/genealogy research rows with evidence levels; this does not mean every clan or hangnyeol line is complete.",
-    "clans-core-2015.csv uses up to 7 selected major bongwan plus a computed remainder per surname; it is an exact-to-total summary, not a full copy of every 5+ person KOSIS bongwan row."
+    "clans-core-2015.csv uses up to 7 selected major bongwan plus a computed remainder per surname; it is an exact-to-total summary, not a full copy of every 5+ person KOSIS bongwan row.",
+    "Hanja can have multiple documented senses. meaning-senses.csv preserves all split senses by (hanja, legal_reading); naming interpretations are a separate editorial layer."
   ],
   "surnames": {
     "master_records": 31,
