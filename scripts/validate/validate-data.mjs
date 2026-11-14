@@ -133,6 +133,69 @@ if (stats.hanja.semantic_unique_characters!==semanticChars.size) fail("stats sem
 if (stats.hanja.curated_naming_sense_rows!==curatedRows.length) fail("stats curated_naming_sense_rows mismatch");
 if (stats.hanja.curated_naming_characters!==curatedChars.size) fail("stats curated_naming_characters mismatch");
 
+// Selected naming sense / intent / semantic-risk policy
+const selectionPolicy=JSON.parse(read("data/hanja/semantics/name-meaning-selection.schema.json"));
+if (selectionPolicy.version!=="1.0.0") fail("semantic selection policy version mismatch");
+const requiredSelectionFields=new Set(selectionPolicy.character_selection_object?.required||[]);
+for (const f of ["hanja","reading","all_sense_ids","selected_sense_ids","selection_origin","naming_intent","semantic_risk","interpretation"]) {
+  if (!requiredSelectionFields.has(f)) fail(`selection policy missing required field: ${f}`);
+}
+
+const riskRows=csvRows("data/hanja/semantics/semantic-risk-rules.csv");
+const riskIds=new Set(), validRiskLevels=new Set(["none","low","medium","high","invalid"]);
+for (const r of riskRows) {
+  if (!r.rule_id || riskIds.has(r.rule_id)) fail(`duplicate/empty semantic risk rule: ${r.rule_id}`);
+  riskIds.add(r.rule_id);
+  if (!validRiskLevels.has(r.risk_level)) fail(`invalid semantic risk level: ${r.rule_id}/${r.risk_level}`);
+  if (r.risk_level==="invalid" && r.auto_reject_character!=="true") fail(`invalid semantic rule must block selection: ${r.rule_id}`);
+  if (r.risk_level!=="invalid" && r.auto_reject_character==="true") fail(`non-invalid semantic rule must not auto reject: ${r.rule_id}`);
+}
+if (riskRows.length!==9) fail(`semantic risk rules expected 9, got ${riskRows.length}`);
+
+const concernRows=csvRows("data/hanja/semantics/sense-concern-curated.csv");
+for (const r of concernRows) {
+  if (!["low","medium","high"].includes(r.concern_level)) fail(`invalid concern level: ${r.hanja}/${r.raw_sense}`);
+  const matches=senseRows.filter(s=>s.hanja===r.hanja && s.legal_reading===r.reading && Number(s.sense_order)===Number(r.sense_order));
+  if (matches.length!==1) fail(`sense concern lookup mismatch: ${r.hanja}/${r.reading}/${r.sense_order}`);
+  else if (matches[0].raw_sense!==r.raw_sense) fail(`sense concern raw_sense mismatch: ${r.hanja}/${r.raw_sense}`);
+}
+if (concernRows.length!==5) fail(`sense concern rows expected 5, got ${concernRows.length}`);
+
+const selectionExamples=JSON.parse(read("data/hanja/semantics/selection-examples.json"));
+if (selectionExamples.version!=="1.0.0") fail("selection examples version mismatch");
+for (const ex of selectionExamples.examples||[]) {
+  const c=ex.character;
+  if (!c?.hanja || !c?.reading) fail("selection example missing Hanja/reading");
+  if (!Array.isArray(c.all_sense_ids) || !c.all_sense_ids.length) fail(`selection example all_sense_ids missing: ${c?.hanja}`);
+  if (!Array.isArray(c.selected_sense_ids) || !c.selected_sense_ids.length) fail(`selection example selected_sense_ids missing: ${c?.hanja}`);
+  const exact=senseRows.filter(s=>s.hanja===c.hanja && s.legal_reading===c.reading);
+  const exactIds=new Set(exact.map(s=>s.sense_id));
+  if (exactIds.size!==c.all_sense_ids.length || c.all_sense_ids.some(id=>!exactIds.has(id))) fail(`selection example all senses mismatch: ${c.hanja}/${c.reading}`);
+  if (c.selected_sense_ids.some(id=>!exactIds.has(id))) fail(`selected sense outside exact Hanja+reading: ${c.hanja}/${c.reading}`);
+  if (!validRiskLevels.has(c.semantic_risk?.level)) fail(`selection example risk invalid: ${c.hanja}`);
+  for (const id of c.semantic_risk?.reason_ids||[]) if (!riskIds.has(id)) fail(`unknown selection example risk rule: ${c.hanja}/${id}`);
+  if (c.semantic_risk?.level!=="invalid" && c.semantic_risk?.auto_reject_character===true) fail(`valid selection example must not auto reject: ${c.hanja}`);
+  if (c.interpretation?.status!=="editorial_paraphrase_not_dictionary_definition") fail(`selection interpretation status mismatch: ${c.hanja}`);
+}
+if ((selectionExamples.examples||[]).length!==3) fail("selection examples expected 3 records");
+
+// Explicit policy regression: 優/우 can select 넉넉할 우, but must surface the negative other sense as a notice rather than rejecting the character.
+const yuExample=(selectionExamples.examples||[]).find(ex=>ex.character?.hanja==="優"&&ex.character?.reading==="우");
+if (!yuExample?.character?.selected_sense_ids?.includes("U0512A-우-01")) fail("優 example must select 넉넉할 우");
+if (yuExample?.character?.semantic_risk?.level!=="medium" || yuExample?.character?.semantic_risk?.auto_reject_character!==false) fail("優 mixed meaning must be medium notice, not auto rejection");
+const yuConcern=concernRows.find(r=>r.hanja==="優"&&r.reading==="우"&&r.raw_sense==="결단성 없을 우");
+if (!yuConcern || yuConcern.applies_as_other_sense!=="medium") fail("優 caution other-sense policy missing");
+
+// Existing-name intent must be allowed to remain unknown rather than inferred.
+const unknownIntentRule=riskRows.find(r=>r.rule_id==="SEM009");
+if (!unknownIntentRule || unknownIntentRule.recommendation_action!=="do_not_invent_intent") fail("unknown naming-intent policy missing");
+
+if (stats.hanja.semantic_selection_policy_version!==selectionPolicy.version) fail("stats semantic selection policy version mismatch");
+if (stats.hanja.semantic_risk_rule_rows!==riskRows.length) fail("stats semantic risk rule rows mismatch");
+if (stats.hanja.curated_sense_concern_rows!==concernRows.length) fail("stats sense concern rows mismatch");
+if (stats.hanja.selection_example_records!==(selectionExamples.examples||[]).length) fail("stats selection example count mismatch");
+ok(`semantic selection policy: ${riskRows.length} rules / ${concernRows.length} curated concerns / ${selectionExamples.examples.length} examples`);
+
 // Myeongri
 const rowCount=p=>read(p).trim().split(/\r?\n/).length-1;
 if (rowCount("data/myeongri/천간.csv") !== 10) fail("천간 count");
