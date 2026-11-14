@@ -17,6 +17,7 @@ AI와 앱 개발 코드는 사용자 요청의 **의도**에 따라 필요한 �
 | 출생 전 후보 | workflows/출생전-후보와-출생후-확정.md | knowledge/14-출생일시-입력규격.md |
 | 데이터 상태/개수 | data/meta/dataset-stats.json | data/meta/schema-version.json |
 | 외부 출처 | data/meta/sources.csv | sources/명리학-작명-자료맵.md |
+| AI Studio 앱 구조 | ai-studio/ | docs/06-AI-Studio-앱-스냅샷.md |
 
 ## 한자 데이터
 - 독음 관계: `data/hanja/normalized/by-reading.csv`
