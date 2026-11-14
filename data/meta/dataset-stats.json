@@ -104,7 +104,7 @@
   },
   "sources": {
     "registry_records": 66,
-    "unknown_license_metadata": 42,
+    "unknown_license_metadata": 11,
     "named_license_records": 4,
     "policy_label_records": 20,
     "audit_file": "data/meta/source-audit.csv"
