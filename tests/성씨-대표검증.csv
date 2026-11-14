@@ -1,0 +1,9 @@
+category,input,expected,source,notes
+성씨기본,徐,서,data/surnames/surnames.csv,한글 독음
+성씨코드포인트,徐,U+5F90,data/surnames/surnames.csv,Unicode 코드포인트
+성씨훈,徐,천천할 서,LIBHANGUL_HANJA,사전형 훈음
+성씨부수,徐,彳,AKS_HANJA_XU,한국민족문화대백과 한자 메타데이터
+성씨기술총획,徐,10,AKS_HANJA_XU,성명학 원획으로 자동 사용 금지
+성씨인구2015,徐,751704,KOSIS_SURNAME_2015,2015-11-01 기준
+본관합계2015,徐,751704,data/surnames/clans-2015.csv,기타 집계행 포함 합계
+성씨로마자규칙형,서,Seo,NIKL_ROMANIZATION,실제 여권 표기와 구분
