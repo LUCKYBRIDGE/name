@@ -55,3 +55,39 @@ if (cycle !== 60) fail(`육십갑자 count: ${cycle}`); else ok("육십갑자 60
 if (tenGod !== 100) fail(`십성 관계 count: ${tenGod}`); else ok("십성 천간 관계 100");
 
 if (!process.exitCode) console.log("All integrity checks passed.");
+
+
+const surnameLines = read("data/surnames/surnames.csv").trim().split(/\r?\n/);
+const surnameRows = surnameLines.slice(1).filter(Boolean).map(line => {
+  const p = line.split(",");
+  return {
+    surname_id:p[0], hangul:p[1], hanja:p[2], codepoint:p[4],
+    population_2015:Number(p[9]), male_2015:Number(p[10]), female_2015:Number(p[11])
+  };
+});
+const surnameIds = new Set();
+for (const r of surnameRows) {
+  if (surnameIds.has(r.surname_id)) fail(`duplicate surname_id: ${r.surname_id}`);
+  surnameIds.add(r.surname_id);
+}
+const xu = surnameRows.find(r => r.surname_id === "KR_SURNAME_U5F90");
+if (!xu) fail("missing 徐 reference surname");
+else {
+  if (xu.hangul !== "서" || xu.hanja !== "徐" || xu.codepoint !== "U+05F90") fail("徐 identity mismatch");
+  else ok("徐 surname identity matches");
+  if (xu.population_2015 !== 751704) fail("徐 2015 population mismatch");
+  if (xu.male_2015 + xu.female_2015 !== xu.population_2015) fail("徐 sex totals mismatch");
+  else ok("徐 2015 population totals match");
+}
+
+const clanLines = read("data/surnames/clans-2015.csv").trim().split(/\r?\n/);
+const clanRows = clanLines.slice(1).filter(Boolean).map(line => {
+  const p = line.split(",");
+  return { surname_id:p[0], bongwan:p[1], population_2015:Number(p[2]) };
+});
+const xuClanTotal = clanRows.filter(r => r.surname_id === "KR_SURNAME_U5F90").reduce((n,r)=>n+r.population_2015,0);
+if (xu && xuClanTotal !== xu.population_2015) fail(`徐 clan total ${xuClanTotal} != surname total ${xu.population_2015}`);
+else if (xu) ok(`徐 clan totals match (${xuClanTotal})`);
+
+if (stats.surnames?.master_records !== surnameRows.length) fail("dataset-stats surname record count mismatch");
+else ok("dataset-stats surname record count matches");
