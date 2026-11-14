@@ -42,3 +42,15 @@ AI는 사용자 요청의 **의도**에 따라 아래 파일부터 읽는다. �
 - 사주 기반 작명 절차: `workflows/사주기반-작명.md`
 - 천간 표: `data/rules/천간_음양오행.csv`
 - 오행 관계: `data/rules/오행_상생상극.csv`
+
+## 출생일시·실사용성
+- 출생일시 입력 규격: `knowledge/14-출생일시-입력규격.md`
+- 시주·시간보정: `knowledge/15-시주-시간보정-방법론.md`
+- 사주 분석 레이어: `knowledge/16-사주-분석레이어.md`
+- 이름 실사용성: `knowledge/17-이름-실사용성-평가.md`
+- 이름 통계·유행도: `knowledge/18-이름-통계와-유행도.md`
+- 출생 전/후 작명: `workflows/출생전-후보와-출생후-확정.md`
+- 2026 절기: `data/time/2026_24절기_KASI.csv`
+- 2027 절기: `data/time/2027_24절기_KASI.csv`
+- 한국 표준시 이력: `data/time/대한민국_표준시_역사.csv`
+- 한국 DST 이력: `data/time/대한민국_DST_rules.csv`
