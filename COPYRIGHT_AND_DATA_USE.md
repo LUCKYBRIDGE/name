@@ -90,3 +90,4 @@
 - `data/meta/source-audit.csv`: 출처별 재배포 검토 상태
 - `data/meta/license-map.csv`: 데이터 경로별 라이선스 매핑
 - `data/meta/distribution-policy.csv`: 앱/저장소 배포 가능 범위
+- `sources/저작권-재이용-근거-2026-11.md`: 공식 재이용 정책 확인 근거
