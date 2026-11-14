@@ -2,3 +2,33 @@ surname_id,bongwan,claim_type,person_hangul,person_hanja,claim,evidence_level,so
 KR_SURNAME_U5F90,이천,founder_reference,서신일,徐神逸,"한국민족문화대백과사전은 서신일을 이천서씨의 시조로 서술한다.",academic_reference,AKS_SEO_SINIL,"역사 인물 항목에 수록된 계통 설명이다. 현대 개인의 실제 본관은 가족관계 자료로 확인한다."
 KR_SURNAME_U5F90,달성,founder_tradition,서진,徐晋,"대전 중구 뿌리공원 성씨자료와 거제시지는 달성서씨의 시조를 서진으로 소개한다.",public_cultural_crosschecked,DJJUNGGU_SEO_ROOTS|GEOJE_CITY_SEO_CLAN,"문중·지역사 전승을 소개한 자료다. 족보 계통을 유전적 또는 법적 사실로 확대 해석하지 않는다."
 KR_SURNAME_U5F90,대구,branch_tradition,,,"대전 중구 뿌리공원 자료는 달성서씨에서 대구서씨가 분파되었다는 계통 전승을 소개한다.",local_government_reference,DJJUNGGU_SEO_ROOTS,"계통 전승 자료이며 독립적인 학술 검증이 추가로 필요하다."
+KR_SURNAME_U091D1,김해,clan_reference,,,2015 공식 통계와 한국민족문화대백과의 성씨 개관은 김해김씨를 김씨의 대표적 대본관으로 확인한다.,official_plus_academic,KOSTAT_CENSUS_2015|AKS_SURNAME_OVERVIEW,이 행은 대표 본관 확인용이며 김해김씨의 시조를 별도로 확정하지 않는다.
+KR_SURNAME_U0674E,전주,founder_reference,이한,李翰,한국민족문화대백과의 완주군 항목은 조경묘에 전주이씨 시조 이한의 위패가 봉안되었다고 서술한다.,academic_reference,AKS_WANJU_LEE_HAN|AKS_JEONJU_LEE_GENEALOGY,시조 관련 내용은 문중·지역의 역사적 기억과 족보 전승 맥락을 함께 본다.
+KR_SURNAME_U06734,밀양,founder_tradition,밀성군,,밀양박씨 족보 항목은 신라 경명왕 장자를 밀성군으로 봉하고 밀양박씨의 시조가 되었다는 분파 전승을 수록한다.,academic_genealogy_reference,AKS_MIRYANG_PARK_GENEALOGY,족보의 분파 전승이며 고대사 사실로 무비판적으로 확정하지 않는다.
+KR_SURNAME_U05D14,경주,historical_clan_reference,최치원,崔致遠,한국민족문화대백과는 최치원을 본관 경주의 경주최씨 인물로 설명한다.,academic_reference,AKS_CHOICHIWON|AKS_SURNAME_OVERVIEW,대표 역사 인물 근거이며 시조 판정은 아니다.
+KR_SURNAME_U0912D,동래,clan_reference,,,한국민족문화대백과 성씨 개관은 동래정씨를 주요 대본관으로 제시한다.,academic_reference,AKS_SURNAME_OVERVIEW,시조는 현재 등록된 고신뢰 출처만으로 확정하지 않는다.
+KR_SURNAME_U059DC,진주,founder_tradition_with_caveat,강이식,姜以式,한국민족문화대백과는 강이식이 진주강씨 족보에서 시조로 알려진 인물이라고 설명한다.,academic_critical_reference,AKS_KANG_ISIK,동시에 삼국사기·구당서 등 정사에서는 확인되지 않는다고 명시하므로 역사적 실재와 시조 전승을 분리한다.
+KR_SURNAME_U08D99,한양,genealogy_documentation,,,한국민족문화대백과는 1524년 간행 한양조씨 족보와 그 이전 보첩 전승을 설명한다.,academic_reference,AKS_HANYANG_JO_GENEALOGY|AKS_SURNAME_OVERVIEW,이 자료만으로 한양조씨 시조를 확정하지 않는다.
+KR_SURNAME_U05C39,파평,founder_reference,윤신달,尹莘達,한국민족문화대백과는 윤신달을 파평윤씨의 시조로 설명한다.,academic_reference,AKS_YUN_SINDAL,공신 명단의 세부 전승에는 자료 비판이 필요하다는 원문 주의도 함께 유지한다.
+KR_SURNAME_U05F35,인동,historical_clan_reference,장안세,張安世,영남문헌록은 인동장씨 거주씨족과 장안세 계열을 수록한 문헌으로 소개된다.,academic_reference,AKS_YEONGNAM_MUNHEONROK,대표 역사 계통 참고이며 시조 확정 자료는 아니다.
+KR_SURNAME_U06797,나주,progenitor_reference,임비,林庇,한국민족문화대백과는 임비가 회진을 본관으로 받았고 이후 나주로 바뀌었다고 설명하며 나주임씨는 임비를 시조가 아니라 원조로 삼는다고 명시한다.,academic_reference,AKS_NAJU_LIM_BI|AKS_SURNAME_OVERVIEW,원조와 시조를 구분해서 저장한다.
+KR_SURNAME_U097D3,청주,founder_reference,한란,韓蘭,청주한씨 세보 항목은 한란을 시조로 수록한 계통과 관련 문헌을 설명한다.,academic_reference,AKS_CHEONGJU_HAN_GENEALOGY,기자 후손설은 전승으로 분리한다.
+KR_SURNAME_U05433,해주,founder_tradition_with_preline_caveat,오인유,吳仁裕,해주오씨 족보 항목은 오인유가 이후 족보에서 시조로 등록되었으나 오인유 이전 선계 기록이 존재했을 가능성도 함께 설명한다.,academic_critical_reference,AKS_HAEJU_OH_GENEALOGY,오인유를 절대적 최초 시조로 단정하지 않는다.
+KR_SURNAME_U07533,평산,founder_reference,신숭겸,申崇謙,한국민족문화대백과의 도계서원 항목은 신숭겸을 평산신씨 시조로 명시한다.,academic_reference,AKS_PYEONGSAN_SHIN,서원·문중 역사자료에 근거한다.
+KR_SURNAME_U06B0A,안동,founder_reference,권행,權幸,한국민족문화대백과는 권행을 안동권씨의 시조로 설명한다.,academic_reference,AKS_ANDONG_GWON,본성이 김씨였다는 전승도 원문에 함께 기록되어 있으므로 삭제하지 않는다.
+KR_SURNAME_U09EC3,창원,multiple_founder_tradition,,,의령군청 성씨 자료는 창원황씨가 시조를 달리하는 여러 파로 구성된다고 설명한다.,public_cultural_reference,UIRYEONG_CHANGWON_HUANG,단일 시조 한 명으로 통합하지 않는다.
+KR_SURNAME_U05B89,순흥,founder_reference,안자미,安子美,순흥안씨 족보 항목은 안자미를 시조로 하고 후대 3파 계통을 설명한다.,academic_reference,AKS_SUNHEUNG_AHN_GENEALOGY,족보 문헌 기반이다.
+KR_SURNAME_U05B8B,은진,genealogy_documentation,,,한국민족문화대백과는 1665년 은진송씨 족보와 그 이전 족보 편찬 기록을 설명한다.,academic_reference,AKS_EUNJIN_SONG_GENEALOGY,시조명은 이 자료만으로 별도 확정하지 않는다.
+KR_SURNAME_U05168,정선,middle_ancestor_reference,전선,,정선군청 지역사 자료는 전이갑을 정선전씨 중시조 휘선의 7세손 계통으로 소개한다.,local_government_reference,JEONGSEON_JEON_HISTORY,중시조 계통 참고이며 최초 시조 판정과 구분한다.
+KR_SURNAME_U06D2A,남양,founder_name_conflict,,,남양홍씨 세보 항목은 시조를 홍열로 서술하고 다른 한국민족문화대백과 항목은 남양홍씨 시조를 은열로 서술한다.,academic_source_conflict,AKS_NAMYANG_HONG_GENEALOGY|AKS_YANGCHEON_SEOWON,이름 표기 충돌을 임의로 합치거나 한쪽으로 확정하지 않는다.
+KR_SURNAME_U067F3,문화,founder_reference,유차달,柳車達,한국민족문화대백과는 유차달을 문화유씨 시조가 된 고려 전기 인물로 설명한다.,academic_reference,AKS_MUNHWA_RYU,개국공신 등 일부 세부는 족보 전승과 사료를 구분한다.
+KR_SURNAME_U09AD8,제주,founder_mythic_tradition,고을나,高乙那,한국민족문화대백과는 삼성혈 신화의 고을나가 제주고씨의 시조로 모셔져 온다고 설명한다.,academic_myth_reference,AKS_JEJU_GO,신화·설화 전승으로 명확히 구분한다.
+KR_SURNAME_U06587,남평,founder_reference,문다성,文多省,남평문씨 족보 항목은 문다성을 시조로 수록한다.,academic_reference,AKS_NAMPYEONG_MUN_GENEALOGY,문다성 탄생설화는 역사적 사실과 분리한다.
+KR_SURNAME_U06881,남원,origin_tradition_with_variant,,,의령군청 자료는 남원양씨를 탐라개국설화 계통과 연결해 설명하며 보조 계보자료는 양우량을 시조로 제시한다.,public_plus_secondary_conflict,UIRYEONG_NAMWON_YANG|SECONDARY_ROOTSINFO_NAMWON_YANG,梁 성씨 계통 전승이 단일하지 않아 하나의 시조로 자동 확정하지 않는다.
+KR_SURNAME_U05B6B,밀양,founder_tradition_conflict,손흥,孫興,의령군청 자료는 손흥을 시조로 소개하지만 보조 계보자료는 손순을 시조로 제시한다.,public_plus_secondary_conflict,UIRYEONG_MIRYANG_SON|SECONDARY_ROOTSINFO_MIRYANG_SON,시조 전승이 충돌하므로 앱은 한쪽을 단정하지 않는다.
+KR_SURNAME_U088F5,성주,historical_clan_reference,배극렴,裵克廉,한국민족문화대백과는 성주배씨 문중의 평천서원과 성주배씨 인물 배극렴 관련 자료를 제공한다.,academic_reference,AKS_SEONGJU_BAE,성주배씨의 시조 자체는 현재 고신뢰 자료로 확정하지 않는다.
+KR_SURNAME_U066FA,창녕,founder_legend,조계룡,曺繼龍,한국민족문화대백과 창녕군 항목은 조계룡이 창녕조씨 시조가 되었다는 득성 전설을 소개한다.,academic_folklore_reference,AKS_CHANGNYEONG_CHO,명시적인 설화 자료이므로 역사적 사실로 변환하지 않는다.
+KR_SURNAME_U0767D,수원,founder_source_conflict,,,수원백씨 족보 항목은 백휘를 시조로 수록하지만 백천장 묘 항목은 백우경을 수원백씨 시조로 서술한다.,academic_source_conflict,AKS_SUWON_BAEK_GENEALOGY|AKS_SUWON_BAEK_TOMB,시조 인식이 출처에 따라 달라 단일값으로 병합하지 않는다.
+KR_SURNAME_U08A31,김해,founder_tradition,허염,許琰,의령군청과 대전 뿌리공원 자료는 허염을 김해허씨 시조로 소개하며 한국민족문화대백과는 허황옥을 김해허씨 시조모로 설명한다.,public_cultural_crosschecked,UIRYEONG_GIMHAE_HEO|AKS_HUH_HWANGOK,허황옥 관련 아유타국 설화에는 후대 윤색 가능성이 지적되어 있다.
+KR_SURNAME_U05289,강릉,founder_reference,유창,劉敞,한국민족문화대백과 송계서원 항목은 유창을 강릉유씨 시조로 설명한다.,academic_reference,AKS_GANGNEUNG_LIU,柳와 劉를 같은 유씨로 병합하지 않는다.
+KR_SURNAME_U05357,의령,branch_founder_reference,남군보,南君甫,의령남씨 족보 항목은 남민 계통에서 고려 말 남군보가 의령남씨로 분관해 시조가 되었다고 설명한다.,academic_reference,AKS_UIRYEONG_NAM_GENEALOGY,영양남씨 족보와 상대 계통 해석이 충돌할 수 있어 원류·분관 시조를 분리한다.
