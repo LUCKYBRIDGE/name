@@ -4,10 +4,15 @@
     "upstream_source": "Supreme Court of Korea e-Family personal-name Hanja lookup",
     "upstream_crawl_date": "2024-07-16",
     "imported_at": "2026-11-14",
+    "normalized_at": "2026-11-14",
     "status": "secondary_mirror; verify legal use against current official source",
-    "row_count": 10163,
-    "expanded_reading_relations": 11803,
+    "source_row_count": 10163,
+    "raw_expanded_reading_relations": 11803,
+    "normalized_reading_relations": 10346,
+    "duplicate_relations_removed": 1457,
     "unique_codepoints": 9460,
+    "codepoints_with_readings": 9459,
+    "codepoints_without_reading": 1,
     "distinct_readings": 486
   },
   "readings": {
