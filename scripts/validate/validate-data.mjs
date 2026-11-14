@@ -31,7 +31,10 @@ const requiredNoticeFiles=[
   "LICENSES/MIT-rutopio.txt",
   "LICENSES/BSD-3-Clause-libhangul-hanja.txt",
   "LICENSES/Unicode-3.0.txt",
-  "data/meta/license-map.csv"
+  "data/meta/license-map.csv",
+  "COPYRIGHT_AND_DATA_USE.md",
+  "APP_ATTRIBUTION.md",
+  "data/meta/distribution-policy.csv"
 ];
 for (const p of requiredNoticeFiles) if (!exists(p)) fail(`missing third-party notice file: ${p}`);
 
@@ -60,6 +63,33 @@ if (!thirdPartyNotices.includes("RUTOPIO_NAME_HANJA")) fail("third-party notices
 if (!thirdPartyNotices.includes("LIBHANGUL_HANJA")) fail("third-party notices missing libhangul attribution");
 if (!thirdPartyNotices.includes("UNICODE_UNIHAN")) fail("third-party notices missing Unicode attribution");
 ok(`third-party license notices: ${licenseMapRows.length} path mappings`);
+
+const distributionRows=csvRows("data/meta/distribution-policy.csv");
+const allowedDistributionStatuses=new Set([
+  "allowed_with_third_party_notices",
+  "allowed_with_source_attribution",
+  "review_before_broad_public_release",
+  "row_level_source_check_required",
+  "allowed_with_kasi_attribution_if_scope_verified",
+  "original_compilation_reference_only_sources",
+  "first_party_all_rights_reserved",
+  "reference_metadata_only"
+]);
+for (const r of distributionRows) {
+  if (!r.path_pattern) fail("distribution policy missing path_pattern");
+  if (!allowedDistributionStatuses.has(r.distribution_status)) fail(`unknown distribution status: ${r.path_pattern}/${r.distribution_status}`);
+  if (!r.required_action || !r.risk_level || !r.notes) fail(`distribution policy metadata missing: ${r.path_pattern}`);
+  if (!["low","medium","high"].includes(r.risk_level)) fail(`invalid distribution risk: ${r.path_pattern}/${r.risk_level}`);
+}
+if (!distributionRows.some(r=>r.path_pattern==="data/surnames/clans-core-2015.csv" && r.distribution_status==="review_before_broad_public_release")) {
+  fail("clans-core must remain review-before-broad-release");
+}
+const copyrightPolicy=read("COPYRIGHT_AND_DATA_USE.md");
+const appAttribution=read("APP_ATTRIBUTION.md");
+if (!copyrightPolicy.includes("public") || !copyrightPolicy.includes("YESJOKBO_CENSUS2015_APPENDIX")) fail("copyright policy missing public-repository/secondary-source safeguards");
+if (!appAttribution.includes("ⓒ한국민족문화대백과사전")) fail("app attribution missing AKS required attribution form");
+if (!appAttribution.includes("KOSIS") || !appAttribution.includes("한국천문연구원")) fail("app attribution missing KOSIS/KASI source notice");
+ok(`distribution policy: ${distributionRows.length} path rules`);
 
 
 // Hanja
