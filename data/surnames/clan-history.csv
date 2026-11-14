@@ -1,4 +1,4 @@
 surname_id,bongwan,claim_type,person_hangul,person_hanja,claim,evidence_level,source_ids,caveat
 KR_SURNAME_U5F90,이천,founder_reference,서신일,徐神逸,"한국민족문화대백과사전은 서신일을 이천서씨의 시조로 서술한다.",academic_reference,AKS_SEO_SINIL,"역사 인물 항목에 수록된 계통 설명이다. 현대 개인의 실제 본관은 가족관계 자료로 확인한다."
 KR_SURNAME_U5F90,달성,founder_tradition,서진,徐晋,"대전 중구 뿌리공원 성씨자료와 거제시지는 달성서씨의 시조를 서진으로 소개한다.",public_cultural_crosschecked,DJJUNGGU_SEO_ROOTS|GEOJE_CITY_SEO_CLAN,"문중·지역사 전승을 소개한 자료다. 족보 계통을 유전적 또는 법적 사실로 확대 해석하지 않는다."
-KR_SURNAME_U5F90,대구,branch_tradition,,, "대전 중구 뿌리공원 자료는 달성서씨에서 대구서씨가 분파되었다는 계통 전승을 소개한다.",local_government_reference,DJJUNGGU_SEO_ROOTS,"계통 전승 자료이며 독립적인 학술 검증이 추가로 필요하다."
+KR_SURNAME_U5F90,대구,branch_tradition,,,"대전 중구 뿌리공원 자료는 달성서씨에서 대구서씨가 분파되었다는 계통 전승을 소개한다.",local_government_reference,DJJUNGGU_SEO_ROOTS,"계통 전승 자료이며 독립적인 학술 검증이 추가로 필요하다."
