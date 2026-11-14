@@ -1,0 +1,44 @@
+name: Import AI Studio snapshot
+
+on:
+  push:
+    paths:
+      - ".github/import-ai-studio/READY"
+
+permissions:
+  contents: write
+
+jobs:
+  unpack:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Reconstruct and verify snapshot archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .github/import-ai-studio/chunk-* | base64 --decode > /tmp/ai-studio.tar.gz
+          echo "5c2f2797d014c969e9b88296fabb4188212ac919f59d7bae34d78d1d27bff247  /tmp/ai-studio.tar.gz" | sha256sum -c -
+
+      - name: Extract into ai-studio
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf ai-studio
+          mkdir -p ai-studio
+          tar -xzf /tmp/ai-studio.tar.gz -C ai-studio
+          rm -rf .github/import-ai-studio
+
+      - name: Commit extracted snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A ai-studio .github/import-ai-studio
+          git commit -m "feat: add AI Studio app snapshot"
+          git push
