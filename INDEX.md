@@ -27,13 +27,16 @@ AI와 앱 개발 코드는 사용자 요청의 **의도**에 따라 필요한 �
 - 공식/보조 데이터 상태: `data/hanja/SOURCE_STATUS.md`, `SECONDARY_MIRROR.md`
 
 ## 성씨 데이터
-- 성씨 마스터: `data/surnames/surnames.csv`
-- 2015 본관 통계: `data/surnames/clans-2015.csv`
-- 徐 상세: `data/surnames/entries/徐.json`
-- 徐 획수 정책: `data/surnames/entries/徐-strokes.json`
-- 발음 프로필: `data/surnames/pronunciation-profiles.csv`
-- 발음·평가 안전 규칙: `data/surnames/pronunciation-heuristics.csv`
-- 본관 역사 참고: `data/surnames/clan-history.csv`
+- 31개 성씨 마스터: `data/surnames/surnames.csv`
+- 이번 확장 30개: `data/surnames/top30-excluding-xu-2015.csv`
+- 성씨별 상세: `data/surnames/entries/<한자>.json`
+- 상세 스키마: `data/surnames/entries/README.md`
+- 31개 발음 프로필: `data/surnames/pronunciation-profiles.csv`
+- 획수 안전 정책: `data/surnames/stroke-policies.csv`
+- 동음·두음법칙 구분: `data/surnames/hangul-hanja-disambiguation.csv`
+- 대표 본관 통계: `data/surnames/representative-clans-2015.csv`
+- 徐 전체 본관 통계: `data/surnames/clans-2015.csv`
+- 徐 본관 역사 참고: `data/surnames/clan-history.csv`
 - 처리 원칙: `knowledge/19-성씨-처리원칙.md`
 
 ## 명리 계산 데이터
@@ -55,12 +58,13 @@ AI와 앱 개발 코드는 사용자 요청의 **의도**에 따라 필요한 �
 ## 검증
 - 대표 데이터 사례: `tests/명리-한자-데이터-대표검증.csv`
 - 徐 성씨 작명 규칙: `tests/徐-성씨-작명규칙.csv`
+- 상위 30개 확장 검증: `tests/상위30-성씨-대표검증.csv`
 - AI 응답 실패 사례: `tests/AI-응답-검증-시나리오.md`
 - 자동 무결성 검사: `scripts/validate/validate-data.mjs`
 
 ## 검색 키워드
 - 뜻/훈/한자 → 한자 마스터
-- 성씨/본관/徐/서씨 → 성씨 데이터
+- 성씨/본관/김·이·박·최·정·서 등 → 성씨 마스터와 개별 entries
 - 인명용/등록/법원 → 법적 판정
 - 획수/원격/형격/이격/정격/81수리 → 성명학
 - 발음오행/자원오행/음양 → method별 성명학
