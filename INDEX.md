@@ -8,6 +8,7 @@ AI와 앱 개발 코드는 사용자 요청의 **의도**에 따라 필요한 �
 | 이름 추천 | workflows/이름-추천.md | knowledge/17-이름-실사용성-평가.md |
 | 이름 분석 | workflows/기존-이름-분석.md | docs/04-성명학-규칙.md |
 | 한자 후보 검색 | data/hanja/normalized/reading-index.json | data/hanja/enriched/hanja-master-enriched.csv |
+| 성씨·본관 | data/surnames/ | knowledge/19-성씨-처리원칙.md |
 | 한자 뜻·훈 | data/hanja/enriched/hanja-master-enriched.csv | knowledge/13-한자-뜻-획수-데이터원칙.md |
 | 인명용 한자 법적 판정 | knowledge/05-인명용한자-법적판정.md | sources/공식-인명용한자-근거-2026-11.md |
 | 사주·오행 | data/myeongri/ | knowledge/16-사주-분석레이어.md |
@@ -24,6 +25,12 @@ AI와 앱 개발 코드는 사용자 요청의 **의도**에 따라 필요한 �
 - 통합 검색 마스터: `data/hanja/enriched/hanja-master-enriched.csv`
 - 마스터 설명: `data/hanja/enriched/MASTER_README.md`
 - 공식/보조 데이터 상태: `data/hanja/SOURCE_STATUS.md`, `SECONDARY_MIRROR.md`
+
+## 성씨 데이터
+- 성씨 마스터: `data/surnames/surnames.csv`
+- 2015 본관 통계: `data/surnames/clans-2015.csv`
+- 徐 상세: `data/surnames/entries/徐.json`
+- 처리 원칙: `knowledge/19-성씨-처리원칙.md`
 
 ## 명리 계산 데이터
 - 천간·지지·육십갑자: `data/myeongri/천간.csv`, `지지.csv`, `육십갑자.csv`
@@ -48,6 +55,7 @@ AI와 앱 개발 코드는 사용자 요청의 **의도**에 따라 필요한 �
 
 ## 검색 키워드
 - 뜻/훈/한자 → 한자 마스터
+- 성씨/본관/徐/서씨 → 성씨 데이터
 - 인명용/등록/법원 → 법적 판정
 - 획수/원격/형격/이격/정격/81수리 → 성명학
 - 발음오행/자원오행/음양 → method별 성명학
