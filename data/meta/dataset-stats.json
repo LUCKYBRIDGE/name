@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-11-14",
-  "schema_version": "1.7.0",
+  "schema_version": "1.8.0",
   "authoritative_for": "repository dataset counts and normalization status",
   "hanja": {
     "upstream_crawl_date": "2024-07-16",
@@ -21,7 +21,8 @@
       "meanings": "libhangul_exact_reading_character_match",
       "strokes": "provisional_unicode_technical_metadata",
       "semantic_senses": "derived_full_layer_unreviewed_lexicographic_split",
-      "naming_meanings": "curated_pilot_editorial_layer"
+      "naming_meanings": "curated_pilot_editorial_layer",
+      "semantic_selection": "structured_policy_with_risk_not_auto_rejection"
     },
     "semantic_sense_rows": 13046,
     "semantic_relations": 7425,
@@ -29,7 +30,11 @@
     "semantic_unique_characters": 7150,
     "curated_naming_sense_rows": 25,
     "curated_naming_characters": 12,
-    "semantic_derivation": "mechanically split comma-delimited libhangul meaning_ko after deduplicating exact reading-character relations"
+    "semantic_derivation": "mechanically split comma-delimited libhangul meaning_ko after deduplicating exact reading-character relations",
+    "semantic_selection_policy_version": "1.0.0",
+    "semantic_risk_rule_rows": 9,
+    "curated_sense_concern_rows": 5,
+    "selection_example_records": 3
   },
   "myeongri": {
     "heavenly_stems": 10,
@@ -46,7 +51,8 @@
     "representative-clans-2015.csv is a partial official representative-clan table, not a complete bongwan list for each surname.",
     "All 31 core surnames now have curated clan/genealogy research rows with evidence levels; this does not mean every clan or hangnyeol line is complete.",
     "clans-core-2015.csv uses up to 7 selected major bongwan plus a computed remainder per surname; it is an exact-to-total summary, not a full copy of every 5+ person KOSIS bongwan row.",
-    "Hanja can have multiple documented senses. meaning-senses.csv preserves all split senses by (hanja, legal_reading); naming interpretations are a separate editorial layer."
+    "Hanja can have multiple documented senses. meaning-senses.csv preserves all split senses by (hanja, legal_reading); naming interpretations are a separate editorial layer.",
+    "Selected naming sense, naming intent, and semantic-risk notices are separate from dictionary senses; semantic risk is not a fortune score and only invalid evidence/readings are blocked by default."
   ],
   "surnames": {
     "master_records": 31,

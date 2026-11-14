@@ -1,0 +1,10 @@
+rule_id,condition,risk_level,recommendation_action,existing_name_action,auto_reject_character,notice_required,notes
+SEM001,selected_sense_id_not_in_exact_hanja_reading,invalid,block_selection,flag_invalid_semantic_claim,true,true,선택 뜻이 해당 한자+독음의 문서화된 뜻이 아님
+SEM002,meaning_taken_from_different_reading,invalid,block_selection,flag_reading_mismatch,true,true,같은 한자라도 다른 독음의 뜻을 가져오면 안 됨
+SEM003,selected_sense_class_is_caution,high,do_not_recommend_as_primary,explain_without_rewriting_character,false,true,사전 뜻 자체는 존재하므로 기존 이름 분석에서는 삭제하지 않음
+SEM004,nonselected_same_reading_negative_descriptive_sense,medium,allow_with_prominent_notice,explain_selected_and_other_sense,false,true,선택 의미가 긍정적이어도 같은 독음의 직접 부정 뜻은 함께 안내
+SEM005,nonselected_same_reading_unrelated_or_contextual_sense,low,allow_with_optional_notice,explain_context,false,false,문법적·별개 어휘 의미는 이름 의미와 직접 충돌한다고 단정하지 않음
+SEM006,selected_sense_class_is_contextual,medium,allow_only_with_context_explanation,explain_context,false,true,문맥 설명 없이 대표 뜻으로 단순화하지 않음
+SEM007,multiple_positive_or_compatible_senses,none,allow,explain_if_useful,false,false,복수 긍정 의미는 충돌이 아니라 의미 폭으로 취급
+SEM008,caution_sense_exists_only_under_different_reading,none,allow,mention_only_if_user_asks,false,false,현재 이름 독음과 다른 의미는 semantic risk로 합산하지 않음
+SEM009,naming_intent_unknown,low,do_not_invent_intent,state_intent_unknown,false,false,기존 이름의 작명 의도를 추정해서 부모 의도처럼 단정하지 않음

@@ -1,0 +1,6 @@
+hanja,unicode,reading,sense_order,raw_sense,concern_type,concern_level,applies_when_selected,applies_as_other_sense,notes
+優,0512A,우,4,결단성 없을 우,negative_descriptive,medium,high,medium,선택 의미로 추천하지 않으며 다른 뜻으로 존재할 때는 명시적 주의
+賢,08CE2,현,3,구멍 현,unrelated_lexical,low,high,low,이름의 어질다 의미와 직접 반대되는 뜻은 아니나 다른 사전 뜻으로 안내
+有,06709,유,3,과연 유,grammatical_contextual,low,high,low,부사적·문맥적 의미로 대표 작명 뜻에 부적합
+有,06709,유,4,또 유,grammatical_contextual,low,high,low,문법적·문맥적 의미로 대표 작명 뜻에 부적합
+宥,05BA5,유,2,죄 사할 유,contextual_lexical,low,medium,low,용서 의미권으로 해석 가능하나 문맥 설명이 필요

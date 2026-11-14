@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.7.0",
+  "schema_version": "1.8.0",
   "updated_at": "2026-11-14",
-  "compatibility": "additive multi-sense Hanja semantics layer and naming-meaning editorial layer",
+  "compatibility": "additive selected-sense, naming-intent and semantic-risk policy for Hanja naming",
   "conventions": {
     "source_reference": "Prefer source_id values registered in data/meta/sources.csv for new structured datasets.",
     "method_reference": "Use method_id for school- or author-dependent naming and myeongri rules.",
@@ -25,6 +25,10 @@
     "hanja_meaning_layers": "Keep source meaning string, split senses, selected naming sense, and natural-language naming interpretation as separate layers.",
     "hanja_meaning_noninvent": "Do not invent auspicious meanings not supported by a registered sense source.",
     "hanja_meaning_other_senses": "Selecting one naming sense does not erase other documented senses; keep them available to users.",
-    "naming_interpretation": "Interpretation templates are editorial paraphrases, not dictionary definitions."
+    "naming_interpretation": "Interpretation templates are editorial paraphrases, not dictionary definitions.",
+    "selected_sense": "Store selected_sense_ids separately from all documented sense IDs; selection does not alter dictionary senses.",
+    "selection_origin": "Record whether the intended sense came from user/parent declaration, editorial suggestion, historical record, or is unknown.",
+    "semantic_risk": "Semantic risk is an explanatory notice level, not auspiciousness and not automatic rejection; invalid is reserved for unsupported sense or reading mismatch.",
+    "unknown_naming_intent": "Do not invent a parent's original naming intention for an existing name when it is unknown."
   }
 }

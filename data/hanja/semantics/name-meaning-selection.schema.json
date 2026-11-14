@@ -1,0 +1,54 @@
+{
+  "version": "1.0.0",
+  "purpose": "Store which documented Hanja sense is intended in a particular name without erasing other senses.",
+  "character_selection_object": {
+    "required": [
+      "hanja",
+      "reading",
+      "all_sense_ids",
+      "selected_sense_ids",
+      "selection_origin",
+      "naming_intent",
+      "semantic_risk",
+      "interpretation"
+    ],
+    "fields": {
+      "hanja": "Actual Hanja character used in the given name.",
+      "reading": "Actual name reading; semantic lookup key is (hanja, reading).",
+      "all_sense_ids": "All documented sense IDs for this Hanja+reading.",
+      "selected_sense_ids": "One or more documented sense IDs chosen as the naming intention.",
+      "selection_origin": [
+        "user_declared",
+        "parent_declared",
+        "editorial_default_suggestion",
+        "historical_record",
+        "unknown"
+      ],
+      "naming_intent": "Plain-language intention for why the selected sense was chosen. Null when unknown.",
+      "semantic_risk": {
+        "level": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "invalid"
+        ],
+        "reason_ids": "Rule IDs from semantic-risk-rules.csv.",
+        "other_sense_notice_required": "Whether non-selected senses should be shown prominently.",
+        "auto_reject_character": "Normally false; only invalid evidence/readings block a recommendation."
+      },
+      "interpretation": {
+        "text": "Natural-language naming explanation derived from selected documented senses.",
+        "status": "editorial_paraphrase_not_dictionary_definition"
+      }
+    }
+  },
+  "principles": [
+    "Selecting a sense does not change the dictionary meaning of the character.",
+    "Other documented senses remain attached to the character.",
+    "A negative or awkward non-selected sense is a notice, not an automatic rejection.",
+    "A selected sense must belong to the exact Hanja+reading relation.",
+    "Undocumented auspicious meanings are invalid.",
+    "Traditional stroke/phonetic/resource calculations remain separate from selected semantic intention."
+  ]
+}

@@ -37,3 +37,15 @@
 6. 다른 사전 의미가 있으면 숨기지 않고 '다른 뜻'으로 함께 제공
 
 사전에 없는 의미를 좋은 뜻처럼 새로 생성해서는 안 된다.
+
+## 선택 의미 기록
+작명 후보에서 실제로 중심으로 삼은 뜻은 전체 의미 데이터와 분리해 기록한다.
+
+- 표준 객체: `name-meaning-selection.schema.json`
+- 위험도 규칙: `semantic-risk-rules.csv`
+- 일부 의미의 주의 유형: `sense-concern-curated.csv`
+- 예시: `selection-examples.json`
+
+핵심 필드는 `selected_sense_ids`, `selection_origin`, `naming_intent`, `semantic_risk`, `interpretation`이다.
+
+**semantic_risk는 글자의 길흉 점수가 아니다.** 선택 근거가 유효한지, 같은 독음에 주의할 다른 뜻이 있는지 설명하기 위한 정보다. 부정적 다른 뜻이 하나 있다는 이유만으로 글자를 자동 탈락시키지 않는다.

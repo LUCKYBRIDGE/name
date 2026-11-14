@@ -25,6 +25,9 @@ AI와 앱 개발 코드는 사용자 요청의 **의도**에 따라 필요한 �
 - 통합 검색 마스터: `data/hanja/enriched/hanja-master-enriched.csv`
 - 다중 의미 전수 레이어: `data/hanja/semantics/meaning-senses.csv`
 - 작명 의미 검토 레이어: `data/hanja/semantics/naming-meaning-curated.csv`
+- 선택 의미 표준 객체: `data/hanja/semantics/name-meaning-selection.schema.json`
+- 의미 주의 규칙: `data/hanja/semantics/semantic-risk-rules.csv`
+- 주의 의미 검토표: `data/hanja/semantics/sense-concern-curated.csv`
 - 다중 의미 원칙: `knowledge/20-한자-다중의미-작명해석.md`
 - 마스터 설명: `data/hanja/enriched/MASTER_README.md`
 - 공식/보조 데이터 상태: `data/hanja/SOURCE_STATUS.md`, `SECONDARY_MIRROR.md`
