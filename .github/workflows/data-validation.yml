@@ -15,6 +15,8 @@ on:
       - "README.md"
       - "INDEX.md"
       - "AGENTS.md"
+      - "COPYRIGHT_AND_DATA_USE.md"
+      - "APP_ATTRIBUTION.md"
       - "package.json"
       - ".github/workflows/data-validation.yml"
   pull_request:
@@ -31,6 +33,8 @@ on:
       - "README.md"
       - "INDEX.md"
       - "AGENTS.md"
+      - "COPYRIGHT_AND_DATA_USE.md"
+      - "APP_ATTRIBUTION.md"
       - "package.json"
       - ".github/workflows/data-validation.yml"
 
