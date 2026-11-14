@@ -33,6 +33,7 @@ const requiredNoticeFiles=[
   "LICENSES/Unicode-3.0.txt",
   "data/meta/license-map.csv",
   "COPYRIGHT.md",
+  "RIGHTS_AUDIT.md",
   "COPYRIGHT_AND_DATA_USE.md",
   "CONTRIBUTING.md",
   "APP_ATTRIBUTION.md",
