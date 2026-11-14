@@ -119,7 +119,9 @@
     "updated_at": "2026-11-14",
     "pronunciation_status": "derived_from_standard_pronunciation_rules",
     "clan_history_status": "mixed_academic_and_public_tradition_sources",
-    "stroke_numerology_status": "method_specific_not_registered"
+    "stroke_numerology_status": "method_specific_not_registered",
+    "clan_summary_status": "validated_exact_total_2015",
+    "sex_total_status": "verified_2015"
   },
   "pronunciation": {
     "syllable": "서",
@@ -169,5 +171,106 @@
       }
     ],
     "note": "본관 역사 자료는 근거 수준을 구분한다. 현대 사용자의 실제 본관은 가족관계 자료 또는 사용자 확인값을 따른다."
+  },
+  "clans_2015_summary": {
+    "reference_date": "2015-11-01",
+    "selection_method": "up_to_7_major_bongwan_plus_computed_remainder",
+    "coverage": "summary_complete_to_surname_total_not_raw_all_5plus_bongwan",
+    "rows": [
+      {
+        "bongwan": "달성",
+        "population": 407431,
+        "male": 203940,
+        "female": 203491,
+        "national_share_percent": 0.8197,
+        "share_of_surname_percent": 54.201,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 1
+      },
+      {
+        "bongwan": "이천",
+        "population": 199792,
+        "male": 101256,
+        "female": 98536,
+        "national_share_percent": 0.402,
+        "share_of_surname_percent": 26.5785,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 2
+      },
+      {
+        "bongwan": "대구",
+        "population": 97866,
+        "male": 48424,
+        "female": 49442,
+        "national_share_percent": 0.1969,
+        "share_of_surname_percent": 13.0192,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 3
+      },
+      {
+        "bongwan": "부여",
+        "population": 17145,
+        "male": 8680,
+        "female": 8465,
+        "national_share_percent": 0.0345,
+        "share_of_surname_percent": 2.2808,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 4
+      },
+      {
+        "bongwan": "장성",
+        "population": 10137,
+        "male": 4666,
+        "female": 5471,
+        "national_share_percent": 0.0204,
+        "share_of_surname_percent": 1.3485,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 5
+      },
+      {
+        "bongwan": "연산",
+        "population": 7510,
+        "male": 3757,
+        "female": 3753,
+        "national_share_percent": 0.0151,
+        "share_of_surname_percent": 0.9991,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 6
+      },
+      {
+        "bongwan": "남양",
+        "population": 1725,
+        "male": 871,
+        "female": 854,
+        "national_share_percent": 0.0035,
+        "share_of_surname_percent": 0.2295,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 7
+      },
+      {
+        "bongwan": "상위 본관 외 나머지",
+        "population": 10098,
+        "male": 3637,
+        "female": 6461,
+        "national_share_percent": 0.0203,
+        "share_of_surname_percent": 1.3433,
+        "is_aggregate": true,
+        "aggregation_type": "computed_remainder_after_selected_major_bongwan",
+        "selection_rank": null
+      }
+    ],
+    "source_ids": [
+      "KOSIS_SURNAME_2015",
+      "KOSIS_SURNAME_2015_MASS",
+      "YESJOKBO_CENSUS2015_APPENDIX"
+    ],
+    "note": "주요 본관을 최대 7개 수록하고 성씨 전체 인구와 정확히 일치하도록 나머지를 계산했다. 계산 나머지는 원자료의 '기타'와 동일하다고 가정하지 않는다."
   }
 }

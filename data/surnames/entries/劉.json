@@ -26,8 +26,8 @@
   "census_2015": {
     "reference_date": "2015-11-01",
     "population": 302511,
-    "male": null,
-    "female": null,
+    "male": 151216,
+    "female": 151295,
     "share_percent": 0.6086,
     "rank": 30,
     "source_ids": [
@@ -53,6 +53,96 @@
     "note": "국어의 로마자 표기법 기준형과 실제 여권·가족 사용 표기는 다를 수 있으므로 자동 변경하지 않는다."
   },
   "representative_clans_2015": [],
+  "clans_2015_summary": {
+    "reference_date": "2015-11-01",
+    "selection_method": "up_to_7_major_bongwan_plus_computed_remainder",
+    "coverage": "summary_complete_to_surname_total_not_raw_all_5plus_bongwan",
+    "rows": [
+      {
+        "bongwan": "강릉",
+        "population": 236871,
+        "male": 119360,
+        "female": 117511,
+        "national_share_percent": 0.4765,
+        "share_of_surname_percent": 78.3016,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 1
+      },
+      {
+        "bongwan": "거창",
+        "population": 27756,
+        "male": 14044,
+        "female": 13712,
+        "national_share_percent": 0.0558,
+        "share_of_surname_percent": 9.1752,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 2
+      },
+      {
+        "bongwan": "백천",
+        "population": 8773,
+        "male": 4517,
+        "female": 4256,
+        "national_share_percent": 0.0176,
+        "share_of_surname_percent": 2.9001,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 3
+      },
+      {
+        "bongwan": "강능",
+        "population": 8754,
+        "male": 4265,
+        "female": 4489,
+        "national_share_percent": 0.0176,
+        "share_of_surname_percent": 2.8938,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 4
+      },
+      {
+        "bongwan": "경주",
+        "population": 3231,
+        "male": 1533,
+        "female": 1698,
+        "national_share_percent": 0.0065,
+        "share_of_surname_percent": 1.0681,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 5
+      },
+      {
+        "bongwan": "충주",
+        "population": 2544,
+        "male": 1288,
+        "female": 1256,
+        "national_share_percent": 0.0051,
+        "share_of_surname_percent": 0.841,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 6
+      },
+      {
+        "bongwan": "상위 본관 외 나머지",
+        "population": 14582,
+        "male": 6209,
+        "female": 8373,
+        "national_share_percent": 0.0293,
+        "share_of_surname_percent": 4.8203,
+        "is_aggregate": true,
+        "aggregation_type": "computed_remainder_after_selected_major_bongwan",
+        "selection_rank": null
+      }
+    ],
+    "source_ids": [
+      "KOSIS_SURNAME_2015",
+      "KOSIS_SURNAME_2015_MASS",
+      "YESJOKBO_CENSUS2015_APPENDIX"
+    ],
+    "note": "주요 본관을 최대 7개 수록하고 성씨 전체 인구와 정확히 일치하도록 나머지를 계산했다. 계산 나머지는 원자료의 '기타'와 동일하다고 가정하지 않는다."
+  },
   "genealogy_research": [
     {
       "bongwan": "강릉",
@@ -92,15 +182,17 @@
     "romanization": "complete",
     "clan_history_research": "curated",
     "source_conflict_handling": "ready",
-    "full_clan_population": "partial_representative",
+    "full_clan_population": "summary_complete_2015_raw_5plus_not_embedded",
     "hangnyeol_generation_data": "pending",
-    "overall_status": "core_plus_genealogy_curated"
+    "overall_status": "core_plus_genealogy_plus_clan_summary"
   },
   "verification": {
     "identity_status": "verified_against_2015_census_and_internal_hanja_index",
     "census_status": "verified_2015",
+    "sex_total_status": "verified_2015",
     "genealogy_status": "curated_with_evidence_level",
     "representative_clan_status": "not_yet_loaded",
+    "clan_summary_status": "validated_exact_total_2015",
     "technical_stroke_status": "provisional_unicode_technical_metadata",
     "numerology_status": "method_specific_not_registered",
     "hangnyeol_status": "pending_verified_source",

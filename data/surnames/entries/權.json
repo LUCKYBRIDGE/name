@@ -25,8 +25,8 @@
   "census_2015": {
     "reference_date": "2015-11-01",
     "population": 705941,
-    "male": null,
-    "female": null,
+    "male": 355301,
+    "female": 350640,
     "share_percent": 1.4202,
     "rank": 15,
     "source_ids": [
@@ -60,6 +60,52 @@
       "source_id": "KOSTAT_CENSUS_2015"
     }
   ],
+  "clans_2015_summary": {
+    "reference_date": "2015-11-01",
+    "selection_method": "up_to_7_major_bongwan_plus_computed_remainder",
+    "coverage": "summary_complete_to_surname_total_not_raw_all_5plus_bongwan",
+    "rows": [
+      {
+        "bongwan": "안동",
+        "population": 696317,
+        "male": 351435,
+        "female": 344882,
+        "national_share_percent": 1.4009,
+        "share_of_surname_percent": 98.6367,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 1
+      },
+      {
+        "bongwan": "예천",
+        "population": 4531,
+        "male": 2334,
+        "female": 2197,
+        "national_share_percent": 0.0091,
+        "share_of_surname_percent": 0.6418,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 2
+      },
+      {
+        "bongwan": "상위 본관 외 나머지",
+        "population": 5093,
+        "male": 1532,
+        "female": 3561,
+        "national_share_percent": 0.0102,
+        "share_of_surname_percent": 0.7214,
+        "is_aggregate": true,
+        "aggregation_type": "computed_remainder_after_selected_major_bongwan",
+        "selection_rank": null
+      }
+    ],
+    "source_ids": [
+      "KOSIS_SURNAME_2015",
+      "KOSIS_SURNAME_2015_MASS",
+      "YESJOKBO_CENSUS2015_APPENDIX"
+    ],
+    "note": "주요 본관을 최대 7개 수록하고 성씨 전체 인구와 정확히 일치하도록 나머지를 계산했다. 계산 나머지는 원자료의 '기타'와 동일하다고 가정하지 않는다."
+  },
   "genealogy_research": [
     {
       "bongwan": "안동",
@@ -99,15 +145,17 @@
     "romanization": "complete",
     "clan_history_research": "curated",
     "source_conflict_handling": "ready",
-    "full_clan_population": "partial_representative",
+    "full_clan_population": "summary_complete_2015_raw_5plus_not_embedded",
     "hangnyeol_generation_data": "pending",
-    "overall_status": "core_plus_genealogy_curated"
+    "overall_status": "core_plus_genealogy_plus_clan_summary"
   },
   "verification": {
     "identity_status": "verified_against_2015_census_and_internal_hanja_index",
     "census_status": "verified_2015",
+    "sex_total_status": "verified_2015",
     "genealogy_status": "curated_with_evidence_level",
     "representative_clan_status": "partial_official_rows_loaded",
+    "clan_summary_status": "validated_exact_total_2015",
     "technical_stroke_status": "provisional_unicode_technical_metadata",
     "numerology_status": "method_specific_not_registered",
     "hangnyeol_status": "pending_verified_source",

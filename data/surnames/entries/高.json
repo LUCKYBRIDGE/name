@@ -25,8 +25,8 @@
   "census_2015": {
     "reference_date": "2015-11-01",
     "population": 471396,
-    "male": null,
-    "female": null,
+    "male": 235672,
+    "female": 235724,
     "share_percent": 0.9484,
     "rank": 22,
     "source_ids": [
@@ -52,6 +52,107 @@
     "note": "국어의 로마자 표기법 기준형과 실제 여권·가족 사용 표기는 다를 수 있으므로 자동 변경하지 않는다."
   },
   "representative_clans_2015": [],
+  "clans_2015_summary": {
+    "reference_date": "2015-11-01",
+    "selection_method": "up_to_7_major_bongwan_plus_computed_remainder",
+    "coverage": "summary_complete_to_surname_total_not_raw_all_5plus_bongwan",
+    "rows": [
+      {
+        "bongwan": "제주",
+        "population": 310542,
+        "male": 156663,
+        "female": 153879,
+        "national_share_percent": 0.6248,
+        "share_of_surname_percent": 65.8771,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 1
+      },
+      {
+        "bongwan": "장흥",
+        "population": 75517,
+        "male": 38101,
+        "female": 37416,
+        "national_share_percent": 0.1519,
+        "share_of_surname_percent": 16.0199,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 2
+      },
+      {
+        "bongwan": "장택",
+        "population": 38539,
+        "male": 19178,
+        "female": 19361,
+        "national_share_percent": 0.0775,
+        "share_of_surname_percent": 8.1755,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 3
+      },
+      {
+        "bongwan": "개성",
+        "population": 18247,
+        "male": 9322,
+        "female": 8925,
+        "national_share_percent": 0.0367,
+        "share_of_surname_percent": 3.8708,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 4
+      },
+      {
+        "bongwan": "횡성",
+        "population": 9996,
+        "male": 4661,
+        "female": 5335,
+        "national_share_percent": 0.0201,
+        "share_of_surname_percent": 2.1205,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 5
+      },
+      {
+        "bongwan": "청주",
+        "population": 6300,
+        "male": 2592,
+        "female": 3708,
+        "national_share_percent": 0.0127,
+        "share_of_surname_percent": 1.3365,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 6
+      },
+      {
+        "bongwan": "안동",
+        "population": 2279,
+        "male": 1180,
+        "female": 1099,
+        "national_share_percent": 0.0046,
+        "share_of_surname_percent": 0.4835,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 7
+      },
+      {
+        "bongwan": "상위 본관 외 나머지",
+        "population": 9976,
+        "male": 3975,
+        "female": 6001,
+        "national_share_percent": 0.0201,
+        "share_of_surname_percent": 2.1163,
+        "is_aggregate": true,
+        "aggregation_type": "computed_remainder_after_selected_major_bongwan",
+        "selection_rank": null
+      }
+    ],
+    "source_ids": [
+      "KOSIS_SURNAME_2015",
+      "KOSIS_SURNAME_2015_MASS",
+      "YESJOKBO_CENSUS2015_APPENDIX"
+    ],
+    "note": "주요 본관을 최대 7개 수록하고 성씨 전체 인구와 정확히 일치하도록 나머지를 계산했다. 계산 나머지는 원자료의 '기타'와 동일하다고 가정하지 않는다."
+  },
   "genealogy_research": [
     {
       "bongwan": "제주",
@@ -91,15 +192,17 @@
     "romanization": "complete",
     "clan_history_research": "curated",
     "source_conflict_handling": "myth_preserved_as_myth",
-    "full_clan_population": "partial_representative",
+    "full_clan_population": "summary_complete_2015_raw_5plus_not_embedded",
     "hangnyeol_generation_data": "pending",
-    "overall_status": "core_plus_genealogy_curated"
+    "overall_status": "core_plus_genealogy_plus_clan_summary"
   },
   "verification": {
     "identity_status": "verified_against_2015_census_and_internal_hanja_index",
     "census_status": "verified_2015",
+    "sex_total_status": "verified_2015",
     "genealogy_status": "curated_with_evidence_level",
     "representative_clan_status": "not_yet_loaded",
+    "clan_summary_status": "validated_exact_total_2015",
     "technical_stroke_status": "provisional_unicode_technical_metadata",
     "numerology_status": "method_specific_not_registered",
     "hangnyeol_status": "pending_verified_source",

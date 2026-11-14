@@ -25,8 +25,8 @@
   "census_2015": {
     "reference_date": "2015-11-01",
     "population": 773404,
-    "male": null,
-    "female": null,
+    "male": 385247,
+    "female": 388157,
     "share_percent": 1.556,
     "rank": 11,
     "source_ids": [
@@ -60,6 +60,85 @@
       "source_id": "KOSTAT_CENSUS_2015"
     }
   ],
+  "clans_2015_summary": {
+    "reference_date": "2015-11-01",
+    "selection_method": "up_to_7_major_bongwan_plus_computed_remainder",
+    "coverage": "summary_complete_to_surname_total_not_raw_all_5plus_bongwan",
+    "rows": [
+      {
+        "bongwan": "청주",
+        "population": 752689,
+        "male": 377115,
+        "female": 375574,
+        "national_share_percent": 1.5143,
+        "share_of_surname_percent": 97.3216,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 1
+      },
+      {
+        "bongwan": "곡산",
+        "population": 6266,
+        "male": 3200,
+        "female": 3066,
+        "national_share_percent": 0.0126,
+        "share_of_surname_percent": 0.8102,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 2
+      },
+      {
+        "bongwan": "금계",
+        "population": 1405,
+        "male": 680,
+        "female": 725,
+        "national_share_percent": 0.0028,
+        "share_of_surname_percent": 0.1817,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 3
+      },
+      {
+        "bongwan": "제주",
+        "population": 1375,
+        "male": 443,
+        "female": 932,
+        "national_share_percent": 0.0028,
+        "share_of_surname_percent": 0.1778,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 4
+      },
+      {
+        "bongwan": "금산",
+        "population": 1122,
+        "male": 544,
+        "female": 578,
+        "national_share_percent": 0.0023,
+        "share_of_surname_percent": 0.1451,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 5
+      },
+      {
+        "bongwan": "상위 본관 외 나머지",
+        "population": 10547,
+        "male": 3265,
+        "female": 7282,
+        "national_share_percent": 0.0212,
+        "share_of_surname_percent": 1.3637,
+        "is_aggregate": true,
+        "aggregation_type": "computed_remainder_after_selected_major_bongwan",
+        "selection_rank": null
+      }
+    ],
+    "source_ids": [
+      "KOSIS_SURNAME_2015",
+      "KOSIS_SURNAME_2015_MASS",
+      "YESJOKBO_CENSUS2015_APPENDIX"
+    ],
+    "note": "주요 본관을 최대 7개 수록하고 성씨 전체 인구와 정확히 일치하도록 나머지를 계산했다. 계산 나머지는 원자료의 '기타'와 동일하다고 가정하지 않는다."
+  },
   "genealogy_research": [
     {
       "bongwan": "청주",
@@ -99,15 +178,17 @@
     "romanization": "complete",
     "clan_history_research": "curated",
     "source_conflict_handling": "ready",
-    "full_clan_population": "partial_representative",
+    "full_clan_population": "summary_complete_2015_raw_5plus_not_embedded",
     "hangnyeol_generation_data": "pending",
-    "overall_status": "core_plus_genealogy_curated"
+    "overall_status": "core_plus_genealogy_plus_clan_summary"
   },
   "verification": {
     "identity_status": "verified_against_2015_census_and_internal_hanja_index",
     "census_status": "verified_2015",
+    "sex_total_status": "verified_2015",
     "genealogy_status": "curated_with_evidence_level",
     "representative_clan_status": "partial_official_rows_loaded",
+    "clan_summary_status": "validated_exact_total_2015",
     "technical_stroke_status": "provisional_unicode_technical_metadata",
     "numerology_status": "method_specific_not_registered",
     "hangnyeol_status": "pending_verified_source",
