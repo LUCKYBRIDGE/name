@@ -73,31 +73,106 @@ as Korean naming-numerology stroke counts.
 
 Full license text: `LICENSES/Unicode-3.0.txt`
 
-## 4. Official statistics, laws, public reference pages, and academic sources
+## 4. KOSIS statistics
 
-The repository also contains factual values and short editorial summaries
-derived from sources such as KOSIS, Korean court materials, KASI, government
-and local-government pages, the Academy of Korean Studies, KCI, and other
-references.
+Source IDs:
+- `KOSIS_SURNAME_2015`
+- `KOSIS_SURNAME_2015_MASS`
 
-These sources do **not** receive a blanket open-data license from this notice.
-Their individual source metadata and current internal redistribution review
-state are tracked in:
-- `data/meta/sources.csv`
+The repository uses 2015 surname and clan statistics from the Korean Statistical
+Information Service (KOSIS). KOSIS's statistics-use guide permits use of its
+statistical information subject to conditions including accurate source
+identification and no arbitrary alteration or distortion of the statistics.
+
+Repository policy:
+- retain KOSIS attribution in the app and documentation;
+- distinguish KOSIS source values from repository-computed derivatives;
+- do not describe `상위 본관 외 나머지` as a KOSIS-native `기타` row.
+
+The secondary source `YESJOKBO_CENSUS2015_APPENDIX` is retained only as an
+extraction/cross-check reference. Its presence is **not** treated as the legal
+basis for redistribution. Before broad public or commercial release,
+`data/surnames/clans-core-2015.csv` should be rebuilt or reverified directly
+against KOSIS official data.
+
+## 5. Academy of Korean Studies / Encyclopedia of Korean Culture text
+
+Source IDs beginning with `AKS_` refer to textual material from the
+Encyclopedia of Korean Culture (한국민족문화대백과사전), operated by the Academy
+of Korean Studies.
+
+The encyclopedia's textual content is provided under Korea Open Government
+License Type 1 (공공누리 제1유형). When the repository or an application uses
+that text or a summary grounded in a specific article, preserve article-level
+attribution in the following form:
+
+> 출처: 「항목명」, ⓒ한국민족문화대백과사전
+
+This permission is **not** automatically extended to photographs, illustrations,
+video, or other media attached to an article; those items may carry separate
+use conditions.
+
+Repository files such as `data/surnames/clan-history.csv` and
+`data/surnames/entries/*.json` contain independently written factual
+summaries and caveats rather than bulk copies of encyclopedia prose.
+
+## 6. Korea Astronomy and Space Science Institute calendar information
+
+Source ID:
+- `KASI_CALENDAR`
+
+The 2026/2027 solar-term files use factual calendar-face astronomical
+information from the Korea Astronomy and Space Science Institute (KASI).
+Where the relevant KASI material carries Korea Open Government License Type 1,
+source attribution must be retained.
+
+Repository policy:
+- use only the needed calendar/astronomical facts such as solar-term date/time;
+- identify KASI as the source;
+- do not reproduce KASI photographs, page design, or the complete almanac as a
+  substitute publication merely because the factual calendar data is used.
+
+## 7. Official Korean laws and rules
+
+Source ID:
+- `KR_LAW_NAME_RULE`
+
+Constitutional, statutory, treaty, decree, ordinance, and rule texts falling
+within Article 7 of the Korean Copyright Act are not treated as copyrighted
+works. This does not mean that third-party commentary, site design, editorial
+annotations, or images surrounding the law text are free of copyright.
+
+## 8. Reference-only or unresolved sources
+
+The following categories do **not** receive a blanket redistribution license
+from this notice:
+
+- KCI academic papers and their tables/figures;
+- `YESJOKBO_CENSUS2015_APPENDIX`;
+- `SECONDARY_ROOTSINFO_*`;
+- local-government or institutional pages for which an item-level KOGL or
+  equivalent reuse condition has not been verified;
+- Korean court pages/PDFs whose bulk redistribution terms remain unresolved.
+
+For these sources, repository use defaults to:
+- source metadata and citations;
+- independently verifiable factual values;
+- independently written summaries and caveats;
+- cross-checking against official or clearly licensed sources.
+
+Do not copy substantial source prose, tables, figures, PDFs, or databases into
+this repository unless a separate permission or applicable license supports it.
+
+Detailed operational policy:
+- `COPYRIGHT_AND_DATA_USE.md`
+- `APP_ATTRIBUTION.md`
 - `data/meta/source-audit.csv`
 - `data/meta/license-map.csv`
+- `data/meta/distribution-policy.csv`
 
-General repository policy:
-- store factual values and independently written summaries rather than copying
-  substantial source prose;
-- preserve source IDs and caveats;
-- do not redistribute source PDFs, articles, tables, or other substantial
-  source content unless the applicable terms permit it;
-- where a source license or reuse condition is unresolved, use it as a
-  reference/citation source rather than assuming redistribution permission.
+## 9. No endorsement
 
-## 5. No endorsement
-
-Names of third-party copyright holders or projects are used for attribution
-and source identification only. Their inclusion does not imply endorsement of
-this repository, its naming methods, or any future application built from it.
+Names of third-party copyright holders, institutions, or projects are used for
+attribution and source identification only. Their inclusion does not imply
+endorsement of this repository, its naming methods, or any application built
+from it.
