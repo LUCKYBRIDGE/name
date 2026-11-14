@@ -1,0 +1,2 @@
+surname_id,hangul,hanja,unicode_hex,codepoint,reading,dictionary_gloss,radical,technical_total_strokes,population_2015,male_2015,female_2015,population_share_percent_2015,rank_2015,romanization_rule_form,role,meaning_scoring_policy,source_ids,verification_status
+KR_SURNAME_U5F90,서,徐,05F90,U+05F90,서,천천할 서,彳,10,751704,375231,376473,1.51,13,Seo,surname,do_not_score_as_given_name_meaning,LIBHANGUL_HANJA|AKS_HANJA_XU|KOSIS_SURNAME_2015|NIKL_ROMANIZATION,verified_core_2015
