@@ -35,7 +35,8 @@
     "share_percent": 1.51,
     "rank_among_hanja_distinguished_surnames": 13,
     "source_id": "KOSIS_SURNAME_2015",
-    "official_context_source_id": "KOSTAT_CENSUS_2015"
+    "official_context_source_id": "KOSTAT_CENSUS_2015",
+    "rank": 13
   },
   "clans_2015": [
     {
