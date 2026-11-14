@@ -1,0 +1,7 @@
+category,input,expected,source,notes
+성씨의미,徐,이름자의미점수에합산하지않음,knowledge/19-성씨-처리원칙.md,천천할 서라는 훈을 부정적 의미로 감점하지 않음
+발음경계,서+진우,종성유발음운변동없음,data/surnames/pronunciation-profiles.csv,서가 CV 열린 음절이므로 성씨 종성에 의한 변동 없음
+발음반복,서+서준,반복주의플래그,data/surnames/pronunciation-heuristics.csv,탈락이나 흉 판정 금지
+획수,徐,기술총획10_수리기본값아님,data/surnames/entries/徐-strokes.json,method_id 없으면 수리 계산 보류
+본관역사,이천+徐,서신일시조참고,AKS_SEO_SINIL,현대 개인 본관은 별도 확인
+본관역사,달성+徐,서진시조전승,DJJUNGGU_SEO_ROOTS|GEOJE_CITY_SEO_CLAN,문중·지역사 전승으로 표시
