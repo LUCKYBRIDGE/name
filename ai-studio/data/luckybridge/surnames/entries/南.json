@@ -1,0 +1,211 @@
+{
+  "surname_id": "KR_SURNAME_U05357",
+  "identity": {
+    "hangul": "남",
+    "hanja": "南",
+    "unicode_hex": "05357",
+    "codepoint": "U+05357",
+    "surname_reading": "남",
+    "character_readings": [
+      "남"
+    ],
+    "role": "surname"
+  },
+  "character_metadata": {
+    "dictionary_gloss": "남녘 남",
+    "radical": "十",
+    "technical_total_strokes": 9,
+    "technical_stroke_status": "provisional_unicode_technical_metadata",
+    "source_ids": [
+      "LIBHANGUL_HANJA",
+      "UNICODE_UNIHAN"
+    ],
+    "rule": "기술 총획은 특정 성명학의 원획·필획과 동일시하지 않는다."
+  },
+  "census_2015": {
+    "reference_date": "2015-11-01",
+    "population": 275648,
+    "male": 138291,
+    "female": 137357,
+    "share_percent": 0.5546,
+    "rank": 31,
+    "source_ids": [
+      "KOSTAT_CENSUS_2015",
+      "KOSIS_SURNAME_2015"
+    ]
+  },
+  "pronunciation": {
+    "syllable": "남",
+    "onset": "ㄴ",
+    "nucleus": "ㅏ",
+    "coda": "ㅁ",
+    "syllable_shape": "CVC",
+    "boundary_profile": "closed_syllable",
+    "source_id": "NIKL_STANDARD_PRON",
+    "status": "derived_verified",
+    "note": "성씨 종성이 있으므로 이름 첫 음절과의 경계에서 실제 표준발음 규칙을 추가 적용한다."
+  },
+  "romanization": {
+    "rule_form": "Nam",
+    "rule_source_id": "NIKL_ROMANIZATION",
+    "passport_source_id": "MOFA_PASSPORT_ROMANIZATION",
+    "note": "국어의 로마자 표기법 기준형과 실제 여권·가족 사용 표기는 다를 수 있으므로 자동 변경하지 않는다."
+  },
+  "representative_clans_2015": [],
+  "clans_2015_summary": {
+    "reference_date": "2015-11-01",
+    "selection_method": "up_to_7_major_bongwan_plus_computed_remainder",
+    "coverage": "summary_complete_to_surname_total_not_raw_all_5plus_bongwan",
+    "rows": [
+      {
+        "bongwan": "의령",
+        "population": 162729,
+        "male": 83042,
+        "female": 79687,
+        "national_share_percent": 0.3274,
+        "share_of_surname_percent": 59.0351,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 1
+      },
+      {
+        "bongwan": "영양",
+        "population": 82272,
+        "male": 41570,
+        "female": 40702,
+        "national_share_percent": 0.1655,
+        "share_of_surname_percent": 29.8468,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 2
+      },
+      {
+        "bongwan": "고성",
+        "population": 10801,
+        "male": 5492,
+        "female": 5309,
+        "national_share_percent": 0.0217,
+        "share_of_surname_percent": 3.9184,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 3
+      },
+      {
+        "bongwan": "의녕",
+        "population": 7955,
+        "male": 3757,
+        "female": 4198,
+        "national_share_percent": 0.016,
+        "share_of_surname_percent": 2.8859,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 4
+      },
+      {
+        "bongwan": "선영",
+        "population": 2452,
+        "male": 882,
+        "female": 1570,
+        "national_share_percent": 0.0049,
+        "share_of_surname_percent": 0.8895,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 5
+      },
+      {
+        "bongwan": "선녕",
+        "population": 1583,
+        "male": 588,
+        "female": 995,
+        "national_share_percent": 0.0032,
+        "share_of_surname_percent": 0.5743,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 6
+      },
+      {
+        "bongwan": "의영",
+        "population": 1206,
+        "male": 528,
+        "female": 678,
+        "national_share_percent": 0.0024,
+        "share_of_surname_percent": 0.4375,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 7
+      },
+      {
+        "bongwan": "상위 본관 외 나머지",
+        "population": 6650,
+        "male": 2432,
+        "female": 4218,
+        "national_share_percent": 0.0134,
+        "share_of_surname_percent": 2.4125,
+        "is_aggregate": true,
+        "aggregation_type": "computed_remainder_after_selected_major_bongwan",
+        "selection_rank": null
+      }
+    ],
+    "source_ids": [
+      "KOSIS_SURNAME_2015",
+      "KOSIS_SURNAME_2015_MASS",
+      "YESJOKBO_CENSUS2015_APPENDIX"
+    ],
+    "note": "주요 본관을 최대 7개 수록하고 성씨 전체 인구와 정확히 일치하도록 나머지를 계산했다. 계산 나머지는 원자료의 '기타'와 동일하다고 가정하지 않는다."
+  },
+  "genealogy_research": [
+    {
+      "bongwan": "의령",
+      "claim_type": "branch_founder_reference",
+      "person": {
+        "hangul": "남군보",
+        "hanja": "南君甫"
+      },
+      "claim": "의령남씨 족보 항목은 남민 계통에서 고려 말 남군보가 의령남씨로 분관해 시조가 되었다고 설명한다.",
+      "evidence_level": "academic_reference",
+      "source_ids": [
+        "AKS_UIRYEONG_NAM_GENEALOGY"
+      ],
+      "caveat": "영양남씨 족보와 상대 계통 해석이 충돌할 수 있어 원류·분관 시조를 분리한다.",
+      "do_not_infer_beyond_source": true
+    }
+  ],
+  "stroke_policy": {
+    "technical_reference_count": 9,
+    "numerology_default_count": null,
+    "numerology_status": "method_specific_not_registered",
+    "rule": "원격·형격·이격·정격 등 수리 계산에 사용할 획수는 method_id별 근거가 등록된 경우에만 적용한다."
+  },
+  "naming_policy": {
+    "surname_semantics": "성씨의 사전 뜻을 이름자 의미 품질 점수에 자동 합산하지 않는다.",
+    "full_name_pronunciation": "성+이름 전체 발음·리듬·동음이의는 별도 평가한다.",
+    "clan_use": "본관·계통 정보는 가족·항렬 맥락에 사용하며 길흉 점수로 자동 변환하지 않는다.",
+    "hanja_requirement": "같은 한글 성씨에 다른 한자가 있을 수 있으므로 실제 성씨 한자를 우선 확인한다.",
+    "repeated_syllable": "성과 이름 첫 음절이 반복되어도 자동 탈락시키지 않고 실사용성 notice로만 처리한다.",
+    "genealogy_conflict": "출처 간 시조·원류·계통 충돌이 있으면 한쪽으로 자동 확정하지 않는다."
+  },
+  "research_status": {
+    "core_identity": "complete",
+    "census_2015": "complete",
+    "pronunciation": "complete",
+    "technical_stroke_policy": "complete",
+    "romanization": "complete",
+    "clan_history_research": "curated",
+    "source_conflict_handling": "origin_and_branch_founder_distinguished",
+    "full_clan_population": "summary_complete_2015_raw_5plus_not_embedded",
+    "hangnyeol_generation_data": "pending",
+    "overall_status": "core_plus_genealogy_plus_clan_summary"
+  },
+  "verification": {
+    "identity_status": "verified_against_2015_census_and_internal_hanja_index",
+    "census_status": "verified_2015",
+    "sex_total_status": "verified_2015",
+    "genealogy_status": "curated_with_evidence_level",
+    "representative_clan_status": "not_yet_loaded",
+    "clan_summary_status": "validated_exact_total_2015",
+    "technical_stroke_status": "provisional_unicode_technical_metadata",
+    "numerology_status": "method_specific_not_registered",
+    "hangnyeol_status": "pending_verified_source",
+    "updated_at": "2026-11-14"
+  }
+}

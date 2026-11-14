@@ -1,0 +1,198 @@
+{
+  "surname_id": "KR_SURNAME_U0767D",
+  "identity": {
+    "hangul": "백",
+    "hanja": "白",
+    "unicode_hex": "0767D",
+    "codepoint": "U+0767D",
+    "surname_reading": "백",
+    "character_readings": [
+      "백"
+    ],
+    "role": "surname"
+  },
+  "character_metadata": {
+    "dictionary_gloss": "흰 백",
+    "radical": "白",
+    "technical_total_strokes": 5,
+    "technical_stroke_status": "provisional_unicode_technical_metadata",
+    "source_ids": [
+      "LIBHANGUL_HANJA",
+      "UNICODE_UNIHAN"
+    ],
+    "rule": "기술 총획은 특정 성명학의 원획·필획과 동일시하지 않는다."
+  },
+  "census_2015": {
+    "reference_date": "2015-11-01",
+    "population": 381986,
+    "male": 191300,
+    "female": 190686,
+    "share_percent": 0.7685,
+    "rank": 28,
+    "source_ids": [
+      "KOSTAT_CENSUS_2015",
+      "KOSIS_SURNAME_2015"
+    ]
+  },
+  "pronunciation": {
+    "syllable": "백",
+    "onset": "ㅂ",
+    "nucleus": "ㅐ",
+    "coda": "ㄱ",
+    "syllable_shape": "CVC",
+    "boundary_profile": "closed_syllable",
+    "source_id": "NIKL_STANDARD_PRON",
+    "status": "derived_verified",
+    "note": "성씨 종성이 있으므로 이름 첫 음절과의 경계에서 실제 표준발음 규칙을 추가 적용한다."
+  },
+  "romanization": {
+    "rule_form": "Baek",
+    "rule_source_id": "NIKL_ROMANIZATION",
+    "passport_source_id": "MOFA_PASSPORT_ROMANIZATION",
+    "note": "국어의 로마자 표기법 기준형과 실제 여권·가족 사용 표기는 다를 수 있으므로 자동 변경하지 않는다."
+  },
+  "representative_clans_2015": [],
+  "clans_2015_summary": {
+    "reference_date": "2015-11-01",
+    "selection_method": "up_to_7_major_bongwan_plus_computed_remainder",
+    "coverage": "summary_complete_to_surname_total_not_raw_all_5plus_bongwan",
+    "rows": [
+      {
+        "bongwan": "수원",
+        "population": 354428,
+        "male": 178579,
+        "female": 175849,
+        "national_share_percent": 0.7131,
+        "share_of_surname_percent": 92.7856,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 1
+      },
+      {
+        "bongwan": "남포",
+        "population": 10907,
+        "male": 5265,
+        "female": 5642,
+        "national_share_percent": 0.0219,
+        "share_of_surname_percent": 2.8553,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 2
+      },
+      {
+        "bongwan": "대흥",
+        "population": 4041,
+        "male": 2063,
+        "female": 1978,
+        "national_share_percent": 0.0081,
+        "share_of_surname_percent": 1.0579,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 3
+      },
+      {
+        "bongwan": "부여",
+        "population": 2120,
+        "male": 1101,
+        "female": 1019,
+        "national_share_percent": 0.0043,
+        "share_of_surname_percent": 0.555,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 4
+      },
+      {
+        "bongwan": "청도",
+        "population": 1479,
+        "male": 748,
+        "female": 731,
+        "national_share_percent": 0.003,
+        "share_of_surname_percent": 0.3872,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 5
+      },
+      {
+        "bongwan": "태인",
+        "population": 1228,
+        "male": 641,
+        "female": 587,
+        "national_share_percent": 0.0025,
+        "share_of_surname_percent": 0.3215,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 6
+      },
+      {
+        "bongwan": "상위 본관 외 나머지",
+        "population": 7783,
+        "male": 2903,
+        "female": 4880,
+        "national_share_percent": 0.0157,
+        "share_of_surname_percent": 2.0375,
+        "is_aggregate": true,
+        "aggregation_type": "computed_remainder_after_selected_major_bongwan",
+        "selection_rank": null
+      }
+    ],
+    "source_ids": [
+      "KOSIS_SURNAME_2015",
+      "KOSIS_SURNAME_2015_MASS",
+      "YESJOKBO_CENSUS2015_APPENDIX"
+    ],
+    "note": "주요 본관을 최대 7개 수록하고 성씨 전체 인구와 정확히 일치하도록 나머지를 계산했다. 계산 나머지는 원자료의 '기타'와 동일하다고 가정하지 않는다."
+  },
+  "genealogy_research": [
+    {
+      "bongwan": "수원",
+      "claim_type": "founder_source_conflict",
+      "person": null,
+      "claim": "수원백씨 족보 항목은 백휘를 시조로 수록하지만 백천장 묘 항목은 백우경을 수원백씨 시조로 서술한다.",
+      "evidence_level": "academic_source_conflict",
+      "source_ids": [
+        "AKS_SUWON_BAEK_GENEALOGY",
+        "AKS_SUWON_BAEK_TOMB"
+      ],
+      "caveat": "시조 인식이 출처에 따라 달라 단일값으로 병합하지 않는다.",
+      "do_not_infer_beyond_source": true
+    }
+  ],
+  "stroke_policy": {
+    "technical_reference_count": 5,
+    "numerology_default_count": null,
+    "numerology_status": "method_specific_not_registered",
+    "rule": "원격·형격·이격·정격 등 수리 계산에 사용할 획수는 method_id별 근거가 등록된 경우에만 적용한다."
+  },
+  "naming_policy": {
+    "surname_semantics": "성씨의 사전 뜻을 이름자 의미 품질 점수에 자동 합산하지 않는다.",
+    "full_name_pronunciation": "성+이름 전체 발음·리듬·동음이의는 별도 평가한다.",
+    "clan_use": "본관·계통 정보는 가족·항렬 맥락에 사용하며 길흉 점수로 자동 변환하지 않는다.",
+    "hanja_requirement": "같은 한글 성씨에 다른 한자가 있을 수 있으므로 실제 성씨 한자를 우선 확인한다.",
+    "repeated_syllable": "성과 이름 첫 음절이 반복되어도 자동 탈락시키지 않고 실사용성 notice로만 처리한다.",
+    "genealogy_conflict": "출처 간 시조·원류·계통 충돌이 있으면 한쪽으로 자동 확정하지 않는다."
+  },
+  "research_status": {
+    "core_identity": "complete",
+    "census_2015": "complete",
+    "pronunciation": "complete",
+    "technical_stroke_policy": "complete",
+    "romanization": "complete",
+    "clan_history_research": "curated",
+    "source_conflict_handling": "source_conflict_preserved",
+    "full_clan_population": "summary_complete_2015_raw_5plus_not_embedded",
+    "hangnyeol_generation_data": "pending",
+    "overall_status": "core_plus_genealogy_plus_clan_summary"
+  },
+  "verification": {
+    "identity_status": "verified_against_2015_census_and_internal_hanja_index",
+    "census_status": "verified_2015",
+    "sex_total_status": "verified_2015",
+    "genealogy_status": "curated_with_evidence_level",
+    "representative_clan_status": "not_yet_loaded",
+    "clan_summary_status": "validated_exact_total_2015",
+    "technical_stroke_status": "provisional_unicode_technical_metadata",
+    "numerology_status": "method_specific_not_registered",
+    "hangnyeol_status": "pending_verified_source",
+    "updated_at": "2026-11-14"
+  }
+}

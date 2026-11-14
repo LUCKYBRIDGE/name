@@ -1,0 +1,6 @@
+{
+  "name": "놀사주",
+  "description": "LUCKYBRIDGE/name 데이터 기반 31대 성씨 사주·성명학·인명용한자·획수·음양오행 개명·작명 및 비교 분석 서비스",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

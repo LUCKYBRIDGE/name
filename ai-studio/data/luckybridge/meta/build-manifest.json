@@ -1,0 +1,66 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-11-14",
+  "derived": [
+    {
+      "outputs": [
+        "data/hanja/normalized/by-reading.csv",
+        "data/hanja/normalized/characters.csv"
+      ],
+      "inputs": [
+        "data/hanja/raw/rutopio-data-gov-2024-07-16.csv"
+      ],
+      "generator": "scripts/build/normalize-hanja.mjs",
+      "reproducibility": "exact"
+    },
+    {
+      "outputs": [
+        "data/hanja/normalized/reading-index.json"
+      ],
+      "inputs": [
+        "data/hanja/normalized/by-reading.csv",
+        "data/meta/dataset-stats.json"
+      ],
+      "generator": "scripts/build/build-reading-index.mjs",
+      "reproducibility": "exact"
+    },
+    {
+      "outputs": [
+        "data/hanja/semantics/meaning-senses.csv"
+      ],
+      "inputs": [
+        "data/hanja/enriched/legal-reading-meaning.csv"
+      ],
+      "generator": "scripts/build/build-meaning-senses.mjs",
+      "reproducibility": "exact"
+    },
+    {
+      "outputs": [
+        "data/meta/source-audit.csv"
+      ],
+      "inputs": [
+        "data/meta/sources.csv"
+      ],
+      "generator": "scripts/audit/build-source-audit.mjs",
+      "reproducibility": "exact"
+    }
+  ],
+  "not_yet_reproducible": [
+    {
+      "output": "data/hanja/enriched/legal-reading-meaning.csv",
+      "reason": "libhangul upstream extraction/join script not yet stored"
+    },
+    {
+      "output": "data/hanja/enriched/unihan-radical-strokes-provisional.csv",
+      "reason": "Unihan upstream extraction script/input snapshot not yet stored"
+    },
+    {
+      "output": "data/hanja/enriched/hanja-master-enriched.csv",
+      "reason": "depends on enriched inputs whose full build lineage is not yet scripted"
+    },
+    {
+      "output": "data/surnames/clans-core-2015.csv",
+      "reason": "KOSIS raw extraction is not yet stored as a reproducible source snapshot"
+    }
+  ]
+}

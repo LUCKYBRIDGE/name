@@ -1,0 +1,227 @@
+{
+  "surname_id": "KR_SURNAME_U05D14",
+  "identity": {
+    "hangul": "최",
+    "hanja": "崔",
+    "unicode_hex": "05D14",
+    "codepoint": "U+05D14",
+    "surname_reading": "최",
+    "character_readings": [
+      "최"
+    ],
+    "role": "surname"
+  },
+  "character_metadata": {
+    "dictionary_gloss": "산 우뚝할 최; 성씨 최",
+    "radical": "山",
+    "technical_total_strokes": 11,
+    "technical_stroke_status": "provisional_unicode_technical_metadata",
+    "source_ids": [
+      "LIBHANGUL_HANJA",
+      "UNICODE_UNIHAN"
+    ],
+    "rule": "기술 총획은 특정 성명학의 원획·필획과 동일시하지 않는다."
+  },
+  "census_2015": {
+    "reference_date": "2015-11-01",
+    "population": 2333927,
+    "male": 1164830,
+    "female": 1169097,
+    "share_percent": 4.6955,
+    "rank": 4,
+    "source_ids": [
+      "KOSTAT_CENSUS_2015",
+      "KOSIS_SURNAME_2015"
+    ]
+  },
+  "pronunciation": {
+    "syllable": "최",
+    "onset": "ㅊ",
+    "nucleus": "ㅚ",
+    "coda": null,
+    "syllable_shape": "CV",
+    "boundary_profile": "open_syllable",
+    "source_id": "NIKL_STANDARD_PRON",
+    "status": "derived_verified",
+    "note": "성씨 종성이 없으므로 성씨 종성 자체가 유발하는 경계 음운 변동은 없다. 전체 이름은 별도 평가한다."
+  },
+  "romanization": {
+    "rule_form": "Choe",
+    "rule_source_id": "NIKL_ROMANIZATION",
+    "passport_source_id": "MOFA_PASSPORT_ROMANIZATION",
+    "note": "국어의 로마자 표기법 기준형과 실제 여권·가족 사용 표기는 다를 수 있으므로 자동 변경하지 않는다."
+  },
+  "representative_clans_2015": [
+    {
+      "bongwan": "경주",
+      "population": 945005,
+      "selection_basis": "official_top20_surname_clan_chart",
+      "coverage": "representative_not_complete",
+      "source_id": "KOSTAT_CENSUS_2015"
+    },
+    {
+      "bongwan": "전주",
+      "population": 458191,
+      "selection_basis": "official_top20_surname_clan_chart",
+      "coverage": "representative_not_complete",
+      "source_id": "KOSTAT_CENSUS_2015"
+    }
+  ],
+  "clans_2015_summary": {
+    "reference_date": "2015-11-01",
+    "selection_method": "up_to_7_major_bongwan_plus_computed_remainder",
+    "coverage": "summary_complete_to_surname_total_not_raw_all_5plus_bongwan",
+    "rows": [
+      {
+        "bongwan": "경주",
+        "population": 945005,
+        "male": 474048,
+        "female": 470957,
+        "national_share_percent": 1.9012,
+        "share_of_surname_percent": 40.4899,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 1
+      },
+      {
+        "bongwan": "전주",
+        "population": 458191,
+        "male": 229591,
+        "female": 228600,
+        "national_share_percent": 0.9218,
+        "share_of_surname_percent": 19.6318,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 2
+      },
+      {
+        "bongwan": "해주",
+        "population": 201625,
+        "male": 101350,
+        "female": 100275,
+        "national_share_percent": 0.4056,
+        "share_of_surname_percent": 8.6389,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 3
+      },
+      {
+        "bongwan": "강릉",
+        "population": 145335,
+        "male": 72630,
+        "female": 72705,
+        "national_share_percent": 0.2924,
+        "share_of_surname_percent": 6.2271,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 4
+      },
+      {
+        "bongwan": "탐진",
+        "population": 89943,
+        "male": 45182,
+        "female": 44761,
+        "national_share_percent": 0.181,
+        "share_of_surname_percent": 3.8537,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 5
+      },
+      {
+        "bongwan": "월성",
+        "population": 82843,
+        "male": 41856,
+        "female": 40987,
+        "national_share_percent": 0.1667,
+        "share_of_surname_percent": 3.5495,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 6
+      },
+      {
+        "bongwan": "수성",
+        "population": 61231,
+        "male": 31693,
+        "female": 29538,
+        "national_share_percent": 0.1232,
+        "share_of_surname_percent": 2.6235,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 7
+      },
+      {
+        "bongwan": "상위 본관 외 나머지",
+        "population": 349754,
+        "male": 168480,
+        "female": 181274,
+        "national_share_percent": 0.7037,
+        "share_of_surname_percent": 14.9856,
+        "is_aggregate": true,
+        "aggregation_type": "computed_remainder_after_selected_major_bongwan",
+        "selection_rank": null
+      }
+    ],
+    "source_ids": [
+      "KOSIS_SURNAME_2015",
+      "KOSIS_SURNAME_2015_MASS",
+      "YESJOKBO_CENSUS2015_APPENDIX"
+    ],
+    "note": "주요 본관을 최대 7개 수록하고 성씨 전체 인구와 정확히 일치하도록 나머지를 계산했다. 계산 나머지는 원자료의 '기타'와 동일하다고 가정하지 않는다."
+  },
+  "genealogy_research": [
+    {
+      "bongwan": "경주",
+      "claim_type": "historical_clan_reference",
+      "person": {
+        "hangul": "최치원",
+        "hanja": "崔致遠"
+      },
+      "claim": "한국민족문화대백과는 최치원을 본관 경주의 경주최씨 인물로 설명한다.",
+      "evidence_level": "academic_reference",
+      "source_ids": [
+        "AKS_CHOICHIWON",
+        "AKS_SURNAME_OVERVIEW"
+      ],
+      "caveat": "대표 역사 인물 근거이며 시조 판정은 아니다.",
+      "do_not_infer_beyond_source": true
+    }
+  ],
+  "stroke_policy": {
+    "technical_reference_count": 11,
+    "numerology_default_count": null,
+    "numerology_status": "method_specific_not_registered",
+    "rule": "원격·형격·이격·정격 등 수리 계산에 사용할 획수는 method_id별 근거가 등록된 경우에만 적용한다."
+  },
+  "naming_policy": {
+    "surname_semantics": "성씨의 사전 뜻을 이름자 의미 품질 점수에 자동 합산하지 않는다.",
+    "full_name_pronunciation": "성+이름 전체 발음·리듬·동음이의는 별도 평가한다.",
+    "clan_use": "본관·계통 정보는 가족·항렬 맥락에 사용하며 길흉 점수로 자동 변환하지 않는다.",
+    "hanja_requirement": "같은 한글 성씨에 다른 한자가 있을 수 있으므로 실제 성씨 한자를 우선 확인한다.",
+    "repeated_syllable": "성과 이름 첫 음절이 반복되어도 자동 탈락시키지 않고 실사용성 notice로만 처리한다.",
+    "genealogy_conflict": "출처 간 시조·원류·계통 충돌이 있으면 한쪽으로 자동 확정하지 않는다."
+  },
+  "research_status": {
+    "core_identity": "complete",
+    "census_2015": "complete",
+    "pronunciation": "complete",
+    "technical_stroke_policy": "complete",
+    "romanization": "complete",
+    "clan_history_research": "curated",
+    "source_conflict_handling": "ready",
+    "full_clan_population": "summary_complete_2015_raw_5plus_not_embedded",
+    "hangnyeol_generation_data": "pending",
+    "overall_status": "core_plus_genealogy_plus_clan_summary"
+  },
+  "verification": {
+    "identity_status": "verified_against_2015_census_and_internal_hanja_index",
+    "census_status": "verified_2015",
+    "sex_total_status": "verified_2015",
+    "genealogy_status": "curated_with_evidence_level",
+    "representative_clan_status": "partial_official_rows_loaded",
+    "clan_summary_status": "validated_exact_total_2015",
+    "technical_stroke_status": "provisional_unicode_technical_metadata",
+    "numerology_status": "method_specific_not_registered",
+    "hangnyeol_status": "pending_verified_source",
+    "updated_at": "2026-11-14"
+  }
+}

@@ -1,0 +1,58 @@
+# 인명용 한자 데이터
+
+이 폴더는 **후보 검색용 데이터**, **뜻·기술 메타데이터**, **현행 법적 판정 근거**를 분리한다.
+
+정확한 최신 수치는 `../meta/dataset-stats.json`을 단일 기준으로 사용한다.
+
+## 계층
+### raw
+원자료 또는 제3자 미러를 가능한 한 원형에 가깝게 보존한다.
+
+### normalized
+- `normalized/by-reading.csv`: 독음-한자 관계. `(reading, codepoint)` 중복 제거
+- `normalized/characters.csv`: 한자별 독음 요약
+- `normalized/reading-index.json`: 앱·AI 빠른 조회용 인덱스
+
+현재 정규화 결과:
+- 원 확장 독음 관계: 11,803
+- 제거한 중복 관계: 1,457
+- 정규화 독음 관계: 10,346
+- 고유 코드포인트: 9,460
+- 독음이 있는 코드포인트: 9,459
+- 독음이 없는 코드포인트: 1
+- 개별 독음: 486
+
+### enriched
+- libhangul 기반 정확 독음-한자 훈음
+- Unicode Unihan 파생 부수·기술 총획
+- 통합 마스터 `enriched/hanja-master-enriched.csv`
+
+## 법적 판정
+현재 후보 목록의 기반은 2024-07-16 대법원 조회 기반 제3자 미러다. **현행 출생신고 가능 여부는 이 데이터만으로 확정하지 않는다.**
+
+최종 판정은:
+1. 현행 「가족관계의 등록 등에 관한 규칙」 제37조·별표
+2. 대법원 전자가족관계등록시스템 인명용 한자 조회
+를 사용한다.
+
+## AI/앱 사용 순서
+1. `reading-index.json`으로 독음 후보 탐색
+2. 통합 마스터에서 훈음·기술 메타데이터 결합
+3. 최신 공식 자료로 법적 허용 독음·자형 확인
+4. 성명학 획수는 별도 method 데이터가 있을 때만 적용
+
+## 주의
+- 사전형 훈음과 작명식 의미 해석을 섞지 않는다.
+- Unicode 총획수는 성명학 원획과 동일하지 않다.
+- 화면상 유사한 이체자·허용자체를 문자열만으로 통합하지 않는다.
+- 데이터 개수는 `data/meta/dataset-stats.json`에서 관리한다.
+
+
+## 재생성
+- `scripts/build/normalize-hanja.mjs`: raw 미러 → normalized
+- `scripts/build/build-reading-index.mjs`: 독음 인덱스
+- `scripts/build/build-meaning-senses.mjs`: 훈음 결합표 → 다중 의미
+- `data/meta/build-manifest.json`: 현재 재현 가능한 범위의 기준
+
+## 현행 법적 검증
+현행 대법원 전체 목록과의 전수 diff는 아직 완료되지 않았다. `official/`에는 정규화 입력 규격을 두고 `scripts/audit/compare-official-hanja.mjs`로 행 단위 대조한다. 전수 diff 완료 전에는 secondary mirror를 현행 공식 전체 목록으로 표현하지 않는다.

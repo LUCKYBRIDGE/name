@@ -1,0 +1,93 @@
+{
+  "version": "1.0.0",
+  "examples": [
+    {
+      "full_name_example": "○祐",
+      "character": {
+        "hanja": "祐",
+        "reading": "우",
+        "all_sense_ids": [
+          "U07950-우-01",
+          "U07950-우-02"
+        ],
+        "selected_sense_ids": [
+          "U07950-우-01"
+        ],
+        "selection_origin": "parent_declared",
+        "naming_intent": "도움을 베풀며 살아가는 사람",
+        "semantic_risk": {
+          "level": "none",
+          "reason_ids": [
+            "SEM007"
+          ],
+          "other_sense_notice_required": false,
+          "auto_reject_character": false
+        },
+        "interpretation": {
+          "text": "주변과 서로 도우며 따뜻하게 살아가기를 바라는 뜻",
+          "status": "editorial_paraphrase_not_dictionary_definition"
+        }
+      }
+    },
+    {
+      "full_name_example": "○優",
+      "character": {
+        "hanja": "優",
+        "reading": "우",
+        "all_sense_ids": [
+          "U0512A-우-01",
+          "U0512A-우-02",
+          "U0512A-우-03",
+          "U0512A-우-04"
+        ],
+        "selected_sense_ids": [
+          "U0512A-우-01"
+        ],
+        "selection_origin": "editorial_default_suggestion",
+        "naming_intent": "마음과 삶이 넉넉한 사람",
+        "semantic_risk": {
+          "level": "medium",
+          "reason_ids": [
+            "SEM004"
+          ],
+          "other_sense_notice_required": true,
+          "auto_reject_character": false
+        },
+        "interpretation": {
+          "text": "마음이 넉넉하고 여유로운 사람으로 성장하기를 바라는 뜻",
+          "status": "editorial_paraphrase_not_dictionary_definition"
+        }
+      },
+      "other_sense_notice": "같은 우 독음에 '결단성 없을 우'라는 사전형 뜻도 있어 함께 안내하되 글자를 자동 탈락시키지는 않는다."
+    },
+    {
+      "full_name_example": "○賢",
+      "character": {
+        "hanja": "賢",
+        "reading": "현",
+        "all_sense_ids": [
+          "U08CE2-현-01",
+          "U08CE2-현-02",
+          "U08CE2-현-03"
+        ],
+        "selected_sense_ids": [
+          "U08CE2-현-01"
+        ],
+        "selection_origin": "user_declared",
+        "naming_intent": "어진 사람",
+        "semantic_risk": {
+          "level": "low",
+          "reason_ids": [
+            "SEM005"
+          ],
+          "other_sense_notice_required": false,
+          "auto_reject_character": false
+        },
+        "interpretation": {
+          "text": "어진 품성과 바른 마음을 지닌 사람으로 성장하기를 바라는 뜻",
+          "status": "editorial_paraphrase_not_dictionary_definition"
+        }
+      }
+    }
+  ]
+}

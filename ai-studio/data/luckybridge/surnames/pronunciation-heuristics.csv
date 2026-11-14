@@ -1,0 +1,5 @@
+rule_id,scope,condition,result,severity,hard_filter,source_basis,notes
+SURNAME_OPEN_CODA_NONE,surname_given_boundary,surname_coda_is_empty,no_coda_triggered_assimilation_expected,info,false,NIKL_STANDARD_PRON,"종성 기반 음운 변동만 다룬다. 다른 음운 현상까지 없다고 단정하지 않는다."
+SURNAME_FIRST_GIVEN_REPEAT,full_name,given_first_syllable_equals_surname,flag_syllable_repetition,notice,false,internal_usability_heuristic,"예: 서+서준. 오류나 흉으로 처리하지 않고 발음·어감 확인용 플래그만 제공한다."
+SURNAME_MEANING_NOT_GIVEN_SCORE,semantic_scoring,character_role_is_surname,exclude_from_given_name_semantic_score,required,true,knowledge_19,"徐의 훈 '천천할 서'를 이름자 의미 품질 점수처럼 가감하지 않는다."
+SURNAME_STROKE_METHOD_REQUIRED,numerology,calculation_requires_surname_strokes,require_method_specific_stroke_count,required,true,knowledge_08,"기술 총획 10을 method 확인 없이 수리성명학 입력값으로 사용하지 않는다."

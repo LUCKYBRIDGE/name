@@ -1,0 +1,9 @@
+from_year,to_year,start_rule,end_rule,save,source,status
+1948,1948,Jun 1 00:00,Sep 12 24:00,+01:00,IANA tzdb Asia/Seoul,기술적 시간대 이력
+1949,1949,Apr 3 00:00,Sep Sat>=7 24:00,+01:00,IANA tzdb Asia/Seoul,기술적 시간대 이력
+1950,1950,Apr 1 00:00,Sep Sat>=7 24:00,+01:00,IANA tzdb Asia/Seoul,기술적 시간대 이력
+1951,1951,May 6 00:00,Sep Sat>=7 24:00,+01:00,IANA tzdb Asia/Seoul,기술적 시간대 이력
+1955,1955,May 5 00:00,Sep 8 24:00,+01:00,IANA tzdb Asia/Seoul,기술적 시간대 이력
+1956,1956,May 20 00:00,Sep 29 24:00,+01:00,IANA tzdb Asia/Seoul,기술적 시간대 이력
+1957,1960,May Sun>=1 00:00,Sep Sat>=17 24:00,+01:00,IANA tzdb Asia/Seoul,기술적 시간대 이력
+1987,1988,May Sun>=8 02:00,Oct Sun>=8 03:00,+01:00,IANA tzdb Asia/Seoul,기술적 시간대 이력

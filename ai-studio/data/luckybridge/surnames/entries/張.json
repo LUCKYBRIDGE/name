@@ -1,0 +1,219 @@
+{
+  "surname_id": "KR_SURNAME_U05F35",
+  "identity": {
+    "hangul": "장",
+    "hanja": "張",
+    "unicode_hex": "05F35",
+    "codepoint": "U+05F35",
+    "surname_reading": "장",
+    "character_readings": [
+      "장"
+    ],
+    "role": "surname"
+  },
+  "character_metadata": {
+    "dictionary_gloss": "베풀 장",
+    "radical": "弓",
+    "technical_total_strokes": 11,
+    "technical_stroke_status": "provisional_unicode_technical_metadata",
+    "source_ids": [
+      "LIBHANGUL_HANJA",
+      "UNICODE_UNIHAN"
+    ],
+    "rule": "기술 총획은 특정 성명학의 원획·필획과 동일시하지 않는다."
+  },
+  "census_2015": {
+    "reference_date": "2015-11-01",
+    "population": 992721,
+    "male": 495646,
+    "female": 497075,
+    "share_percent": 1.9972,
+    "rank": 9,
+    "source_ids": [
+      "KOSTAT_CENSUS_2015",
+      "KOSIS_SURNAME_2015"
+    ]
+  },
+  "pronunciation": {
+    "syllable": "장",
+    "onset": "ㅈ",
+    "nucleus": "ㅏ",
+    "coda": "ㅇ",
+    "syllable_shape": "CVC",
+    "boundary_profile": "closed_syllable",
+    "source_id": "NIKL_STANDARD_PRON",
+    "status": "derived_verified",
+    "note": "성씨 종성이 있으므로 이름 첫 음절과의 경계에서 실제 표준발음 규칙을 추가 적용한다."
+  },
+  "romanization": {
+    "rule_form": "Jang",
+    "rule_source_id": "NIKL_ROMANIZATION",
+    "passport_source_id": "MOFA_PASSPORT_ROMANIZATION",
+    "note": "국어의 로마자 표기법 기준형과 실제 여권·가족 사용 표기는 다를 수 있으므로 자동 변경하지 않는다."
+  },
+  "representative_clans_2015": [
+    {
+      "bongwan": "인동",
+      "population": 666652,
+      "selection_basis": "official_top20_surname_clan_chart",
+      "coverage": "representative_not_complete",
+      "source_id": "KOSTAT_CENSUS_2015"
+    }
+  ],
+  "clans_2015_summary": {
+    "reference_date": "2015-11-01",
+    "selection_method": "up_to_7_major_bongwan_plus_computed_remainder",
+    "coverage": "summary_complete_to_surname_total_not_raw_all_5plus_bongwan",
+    "rows": [
+      {
+        "bongwan": "인동",
+        "population": 666652,
+        "male": 333508,
+        "female": 333144,
+        "national_share_percent": 1.3412,
+        "share_of_surname_percent": 67.154,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 1
+      },
+      {
+        "bongwan": "단양",
+        "population": 44334,
+        "male": 22360,
+        "female": 21974,
+        "national_share_percent": 0.0892,
+        "share_of_surname_percent": 4.4659,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 2
+      },
+      {
+        "bongwan": "안동",
+        "population": 39939,
+        "male": 20522,
+        "female": 19417,
+        "national_share_percent": 0.0804,
+        "share_of_surname_percent": 4.0232,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 3
+      },
+      {
+        "bongwan": "흥덕",
+        "population": 37423,
+        "male": 18841,
+        "female": 18582,
+        "national_share_percent": 0.0753,
+        "share_of_surname_percent": 3.7697,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 4
+      },
+      {
+        "bongwan": "울진",
+        "population": 26374,
+        "male": 13187,
+        "female": 13187,
+        "national_share_percent": 0.0531,
+        "share_of_surname_percent": 2.6567,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 5
+      },
+      {
+        "bongwan": "결성",
+        "population": 24921,
+        "male": 12746,
+        "female": 12175,
+        "national_share_percent": 0.0501,
+        "share_of_surname_percent": 2.5104,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 6
+      },
+      {
+        "bongwan": "덕수",
+        "population": 24185,
+        "male": 12246,
+        "female": 11939,
+        "national_share_percent": 0.0487,
+        "share_of_surname_percent": 2.4362,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 7
+      },
+      {
+        "bongwan": "상위 본관 외 나머지",
+        "population": 128893,
+        "male": 62236,
+        "female": 66657,
+        "national_share_percent": 0.2593,
+        "share_of_surname_percent": 12.9838,
+        "is_aggregate": true,
+        "aggregation_type": "computed_remainder_after_selected_major_bongwan",
+        "selection_rank": null
+      }
+    ],
+    "source_ids": [
+      "KOSIS_SURNAME_2015",
+      "KOSIS_SURNAME_2015_MASS",
+      "YESJOKBO_CENSUS2015_APPENDIX"
+    ],
+    "note": "주요 본관을 최대 7개 수록하고 성씨 전체 인구와 정확히 일치하도록 나머지를 계산했다. 계산 나머지는 원자료의 '기타'와 동일하다고 가정하지 않는다."
+  },
+  "genealogy_research": [
+    {
+      "bongwan": "인동",
+      "claim_type": "historical_clan_reference",
+      "person": {
+        "hangul": "장안세",
+        "hanja": "張安世"
+      },
+      "claim": "영남문헌록은 인동장씨 거주씨족과 장안세 계열을 수록한 문헌으로 소개된다.",
+      "evidence_level": "academic_reference",
+      "source_ids": [
+        "AKS_YEONGNAM_MUNHEONROK"
+      ],
+      "caveat": "대표 역사 계통 참고이며 시조 확정 자료는 아니다.",
+      "do_not_infer_beyond_source": true
+    }
+  ],
+  "stroke_policy": {
+    "technical_reference_count": 11,
+    "numerology_default_count": null,
+    "numerology_status": "method_specific_not_registered",
+    "rule": "원격·형격·이격·정격 등 수리 계산에 사용할 획수는 method_id별 근거가 등록된 경우에만 적용한다."
+  },
+  "naming_policy": {
+    "surname_semantics": "성씨의 사전 뜻을 이름자 의미 품질 점수에 자동 합산하지 않는다.",
+    "full_name_pronunciation": "성+이름 전체 발음·리듬·동음이의는 별도 평가한다.",
+    "clan_use": "본관·계통 정보는 가족·항렬 맥락에 사용하며 길흉 점수로 자동 변환하지 않는다.",
+    "hanja_requirement": "같은 한글 성씨에 다른 한자가 있을 수 있으므로 실제 성씨 한자를 우선 확인한다.",
+    "repeated_syllable": "성과 이름 첫 음절이 반복되어도 자동 탈락시키지 않고 실사용성 notice로만 처리한다.",
+    "genealogy_conflict": "출처 간 시조·원류·계통 충돌이 있으면 한쪽으로 자동 확정하지 않는다."
+  },
+  "research_status": {
+    "core_identity": "complete",
+    "census_2015": "complete",
+    "pronunciation": "complete",
+    "technical_stroke_policy": "complete",
+    "romanization": "complete",
+    "clan_history_research": "curated",
+    "source_conflict_handling": "ready",
+    "full_clan_population": "summary_complete_2015_raw_5plus_not_embedded",
+    "hangnyeol_generation_data": "pending",
+    "overall_status": "core_plus_genealogy_plus_clan_summary"
+  },
+  "verification": {
+    "identity_status": "verified_against_2015_census_and_internal_hanja_index",
+    "census_status": "verified_2015",
+    "sex_total_status": "verified_2015",
+    "genealogy_status": "curated_with_evidence_level",
+    "representative_clan_status": "partial_official_rows_loaded",
+    "clan_summary_status": "validated_exact_total_2015",
+    "technical_stroke_status": "provisional_unicode_technical_metadata",
+    "numerology_status": "method_specific_not_registered",
+    "hangnyeol_status": "pending_verified_source",
+    "updated_at": "2026-11-14"
+  }
+}

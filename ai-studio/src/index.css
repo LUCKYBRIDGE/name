@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif-kr: "Noto Serif KR", Georgia, serif;
+  --font-sans-kr: "Plus Jakarta Sans", "Noto Sans KR", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --bg-hanji: #fbf9f5;
+  --bg-surface: #ffffff;
+  --bg-subtle: #f4efe6;
+  --border-hairline: #e7e2d8;
+  --border-strong: #d6cebe;
+  --ink-primary: #1c1917;
+  --ink-secondary: #57534e;
+  --ink-muted: #78716c;
+  --accent-seal: #9a3412;
+  --accent-seal-hover: #7c2d12;
+  --accent-lapis: #1e3a8a;
+  --accent-forest: #14532d;
+}
+
+@layer base {
+  html {
+    background-color: var(--bg-hanji);
+    color: var(--ink-primary);
+    font-family: var(--font-sans-kr);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
+  }
+
+  body {
+    background-color: var(--bg-hanji);
+    color: var(--ink-primary);
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: clip;
+  }
+
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+}
+
+.font-serif-kr {
+  font-family: var(--font-serif-kr);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+

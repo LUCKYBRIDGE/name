@@ -1,0 +1,276 @@
+{
+  "surname_id": "KR_SURNAME_U5F90",
+  "identity": {
+    "hangul": "서",
+    "hanja": "徐",
+    "unicode_hex": "05F90",
+    "codepoint": "U+05F90",
+    "reading": "서",
+    "role": "surname"
+  },
+  "character_metadata": {
+    "dictionary_glosses": [
+      {
+        "value": "천천할 서",
+        "source_id": "LIBHANGUL_HANJA"
+      },
+      {
+        "value": "천천히 하다",
+        "source_id": "AKS_HANJA_XU"
+      }
+    ],
+    "radical": "彳",
+    "technical_total_strokes": 10,
+    "technical_stroke_note": "기술/사전 참고값이다. 특정 성명학 원획·필획으로 자동 사용하지 않는다.",
+    "sources": [
+      "AKS_HANJA_XU",
+      "UNICODE_UNIHAN"
+    ]
+  },
+  "census_2015": {
+    "reference_date": "2015-11-01",
+    "population": 751704,
+    "male": 375231,
+    "female": 376473,
+    "share_percent": 1.51,
+    "rank_among_hanja_distinguished_surnames": 13,
+    "source_id": "KOSIS_SURNAME_2015",
+    "official_context_source_id": "KOSTAT_CENSUS_2015",
+    "rank": 13
+  },
+  "clans_2015": [
+    {
+      "bongwan": "남양",
+      "population": 1725,
+      "male": 871,
+      "female": 854,
+      "share_percent": 0
+    },
+    {
+      "bongwan": "달성",
+      "population": 407431,
+      "male": 203940,
+      "female": 203491,
+      "share_percent": 0.82
+    },
+    {
+      "bongwan": "대구",
+      "population": 97866,
+      "male": 48424,
+      "female": 49442,
+      "share_percent": 0.2
+    },
+    {
+      "bongwan": "부여",
+      "population": 17145,
+      "male": 8680,
+      "female": 8465,
+      "share_percent": 0.03
+    },
+    {
+      "bongwan": "연산",
+      "population": 7510,
+      "male": 3757,
+      "female": 3753,
+      "share_percent": 0.02
+    },
+    {
+      "bongwan": "이천",
+      "population": 199792,
+      "male": 101256,
+      "female": 98536,
+      "share_percent": 0.4
+    },
+    {
+      "bongwan": "장성",
+      "population": 10137,
+      "male": 4666,
+      "female": 5471,
+      "share_percent": 0.02
+    },
+    {
+      "bongwan": "기타",
+      "population": 10098,
+      "male": 3637,
+      "female": 6461,
+      "share_percent": 0.02,
+      "is_aggregate": true
+    }
+  ],
+  "romanization": {
+    "rule_form": "Seo",
+    "rule_source_id": "NIKL_ROMANIZATION",
+    "passport_source_id": "MOFA_PASSPORT_ROMANIZATION",
+    "note": "작명 앱은 Seo를 규칙형 참고값으로 제시할 수 있으나 실제 여권상의 성 표기는 기존 사용 표기와 가족 표기 등을 고려해야 하며 자동 교체하지 않는다."
+  },
+  "naming_policy": {
+    "surname_semantics": "徐의 사전적 뜻은 참고 정보로 표시하되 이름자의 의미 품질 점수에 합산하지 않는다.",
+    "full_name_pronunciation": "성+이름 전체 발음과 어감 평가는 수행한다.",
+    "stroke_methods": "수리성명학에서 성씨 획수를 사용하는 경우 선택한 method_id의 획수 기준을 별도 조회한다.",
+    "clan_use": "본관은 가족·항렬 맥락에 사용할 수 있으나 길흉 점수로 자동 변환하지 않는다.",
+    "hanja_requirement": "사용자가 한글 성씨만 제공했을 때 徐라고 임의 확정하지 않는다. 한자를 확인하거나 사용자가 제공한 가족관계 정보를 따른다.",
+    "syllable_repetition": "성씨 '서'와 이름 첫 음절 '서'가 반복되면 실사용성 주의 플래그만 표시하며 자동 탈락·길흉 판정을 하지 않는다.",
+    "pronunciation_boundary": "徐/서가 열린 음절이므로 성씨 종성에 의해 유발되는 음운 변동은 없지만 전체 이름 발음은 음절 조합별로 확인한다."
+  },
+  "verification": {
+    "core_status": "verified",
+    "census_status": "verified_2015",
+    "current_population_status": "not_claimed",
+    "updated_at": "2026-11-14",
+    "pronunciation_status": "derived_from_standard_pronunciation_rules",
+    "clan_history_status": "mixed_academic_and_public_tradition_sources",
+    "stroke_numerology_status": "method_specific_not_registered",
+    "clan_summary_status": "validated_exact_total_2015",
+    "sex_total_status": "verified_2015"
+  },
+  "pronunciation": {
+    "syllable": "서",
+    "onset": "ㅅ",
+    "nucleus": "ㅓ",
+    "coda": null,
+    "syllable_shape": "CV",
+    "boundary_profile": "open_syllable",
+    "profile_file": "data/surnames/pronunciation-profiles.csv",
+    "heuristic_file": "data/surnames/pronunciation-heuristics.csv",
+    "note": "종성이 없어 성-이름 경계에서 종성 때문에 생기는 연음·비음화·유음화·받침 유발 경음화를 기본적으로 촉발하지 않는다. 실제 전체 이름의 발음과 어감은 개별 조합으로 평가한다."
+  },
+  "stroke_policy": {
+    "reference_file": "data/surnames/entries/徐-strokes.json",
+    "technical_reference_count": 10,
+    "numerology_default_count": null,
+    "rule": "성명학 획수는 method_id가 확인되기 전 자동 계산하지 않는다."
+  },
+  "clan_history": {
+    "file": "data/surnames/clan-history.csv",
+    "verified_or_sourced": [
+      {
+        "bongwan": "이천",
+        "type": "founder_reference",
+        "person": "서신일",
+        "hanja": "徐神逸",
+        "source_ids": [
+          "AKS_SEO_SINIL"
+        ]
+      },
+      {
+        "bongwan": "달성",
+        "type": "founder_tradition",
+        "person": "서진",
+        "hanja": "徐晋",
+        "source_ids": [
+          "DJJUNGGU_SEO_ROOTS",
+          "GEOJE_CITY_SEO_CLAN"
+        ]
+      },
+      {
+        "bongwan": "대구",
+        "type": "branch_tradition",
+        "source_ids": [
+          "DJJUNGGU_SEO_ROOTS"
+        ]
+      }
+    ],
+    "note": "본관 역사 자료는 근거 수준을 구분한다. 현대 사용자의 실제 본관은 가족관계 자료 또는 사용자 확인값을 따른다."
+  },
+  "clans_2015_summary": {
+    "reference_date": "2015-11-01",
+    "selection_method": "up_to_7_major_bongwan_plus_computed_remainder",
+    "coverage": "summary_complete_to_surname_total_not_raw_all_5plus_bongwan",
+    "rows": [
+      {
+        "bongwan": "달성",
+        "population": 407431,
+        "male": 203940,
+        "female": 203491,
+        "national_share_percent": 0.8197,
+        "share_of_surname_percent": 54.201,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 1
+      },
+      {
+        "bongwan": "이천",
+        "population": 199792,
+        "male": 101256,
+        "female": 98536,
+        "national_share_percent": 0.402,
+        "share_of_surname_percent": 26.5785,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 2
+      },
+      {
+        "bongwan": "대구",
+        "population": 97866,
+        "male": 48424,
+        "female": 49442,
+        "national_share_percent": 0.1969,
+        "share_of_surname_percent": 13.0192,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 3
+      },
+      {
+        "bongwan": "부여",
+        "population": 17145,
+        "male": 8680,
+        "female": 8465,
+        "national_share_percent": 0.0345,
+        "share_of_surname_percent": 2.2808,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 4
+      },
+      {
+        "bongwan": "장성",
+        "population": 10137,
+        "male": 4666,
+        "female": 5471,
+        "national_share_percent": 0.0204,
+        "share_of_surname_percent": 1.3485,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 5
+      },
+      {
+        "bongwan": "연산",
+        "population": 7510,
+        "male": 3757,
+        "female": 3753,
+        "national_share_percent": 0.0151,
+        "share_of_surname_percent": 0.9991,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 6
+      },
+      {
+        "bongwan": "남양",
+        "population": 1725,
+        "male": 871,
+        "female": 854,
+        "national_share_percent": 0.0035,
+        "share_of_surname_percent": 0.2295,
+        "is_aggregate": false,
+        "aggregation_type": "selected_major_bongwan",
+        "selection_rank": 7
+      },
+      {
+        "bongwan": "상위 본관 외 나머지",
+        "population": 10098,
+        "male": 3637,
+        "female": 6461,
+        "national_share_percent": 0.0203,
+        "share_of_surname_percent": 1.3433,
+        "is_aggregate": true,
+        "aggregation_type": "computed_remainder_after_selected_major_bongwan",
+        "selection_rank": null
+      }
+    ],
+    "source_ids": [
+      "KOSIS_SURNAME_2015",
+      "KOSIS_SURNAME_2015_MASS",
+      "YESJOKBO_CENSUS2015_APPENDIX"
+    ],
+    "note": "주요 본관을 최대 7개 수록하고 성씨 전체 인구와 정확히 일치하도록 나머지를 계산했다. 계산 나머지는 원자료의 '기타'와 동일하다고 가정하지 않는다."
+  }
+}

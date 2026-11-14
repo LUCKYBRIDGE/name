@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/LUCKYBRIDGE/name/data/hanja/semantics/name-meaning-selection.schema.json",
+  "title": "Hanja naming sense selection",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "hanja",
+    "reading",
+    "all_sense_ids",
+    "selected_sense_ids",
+    "selection_origin",
+    "naming_intent",
+    "semantic_risk",
+    "interpretation"
+  ],
+  "properties": {
+    "hanja": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reading": {
+      "type": "string",
+      "minLength": 1
+    },
+    "all_sense_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "selected_sense_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "selection_origin": {
+      "enum": [
+        "user_declared",
+        "parent_declared",
+        "editorial_default_suggestion",
+        "historical_record",
+        "unknown"
+      ]
+    },
+    "naming_intent": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "semantic_risk": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "level",
+        "reason_ids",
+        "other_sense_notice_required",
+        "auto_reject_character"
+      ],
+      "properties": {
+        "level": {
+          "enum": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "invalid"
+          ]
+        },
+        "reason_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^SEM[0-9]{3}$"
+          }
+        },
+        "other_sense_notice_required": {
+          "type": "boolean"
+        },
+        "auto_reject_character": {
+          "type": "boolean"
+        }
+      }
+    },
+    "interpretation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "text",
+        "status"
+      ],
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "status": {
+          "const": "editorial_paraphrase_not_dictionary_definition"
+        }
+      }
+    }
+  },
+  "$comment": "Subset selected_sense_ids ⊆ all_sense_ids and exact Hanja+reading membership are enforced by repository validation."
+}

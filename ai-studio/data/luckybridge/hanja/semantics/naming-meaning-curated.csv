@@ -1,0 +1,26 @@
+hanja,unicode,legal_reading,sense_order,raw_sense,naming_use_class,primary_name_explanation_allowed,interpretation_template,interpretation_status,dictionary_source_id,notes
+祐,07950,우,1,도울 우,preferred_name_sense,true,도움을 베풀고 서로 돕는 삶을 바라는 뜻으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,작명 해석은 사전 정의가 아니라 문서화된 의미를 바탕으로 한 편집 해석
+祐,07950,우,2,다행할 우,usable_name_sense,true,좋은 일이 함께하기를 바라는 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,작명 해석은 사전 정의가 아니라 문서화된 의미를 바탕으로 한 편집 해석
+佑,04F51,우,1,도울 우,preferred_name_sense,true,도움을 주고받는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,작명 해석은 사전 정의가 아니라 문서화된 의미를 바탕으로 한 편집 해석
+優,0512A,우,1,넉넉할 우,preferred_name_sense,true,마음과 삶이 넉넉하기를 바라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,작명 해석은 사전 정의가 아니라 문서화된 의미를 바탕으로 한 편집 해석
+優,0512A,우,2,부드러울 우,preferred_name_sense,true,부드럽고 온화한 성품을 바라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,작명 해석은 사전 정의가 아니라 문서화된 의미를 바탕으로 한 편집 해석
+優,0512A,우,3,나을 우,preferred_name_sense,true,뛰어나고 나은 모습을 바라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,작명 해석은 사전 정의가 아니라 문서화된 의미를 바탕으로 한 편집 해석
+優,0512A,우,4,결단성 없을 우,caution_other_dictionary_sense,false,작명 설명의 대표 긍정 의미로 내세우지 않음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,작명 해석은 사전 정의가 아니라 문서화된 의미를 바탕으로 한 편집 해석
+宥,05BA5,유,1,너그러울 유,preferred_name_sense,true,너그러운 마음을 지닌 사람으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,작명 해석은 사전 정의가 아니라 문서화된 의미를 바탕으로 한 편집 해석
+宥,05BA5,유,2,죄 사할 유,contextual_dictionary_sense,false,용서의 의미권으로 연결할 수 있으나 대표 작명 뜻으로는 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,작명 해석은 사전 정의가 아니라 문서화된 의미를 바탕으로 한 편집 해석
+宥,05BA5,유,3,도울 유,preferred_name_sense,true,다른 이를 돕는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,작명 해석은 사전 정의가 아니라 문서화된 의미를 바탕으로 한 편집 해석
+裕,088D5,유,1,넉넉할 유,preferred_name_sense,true,넉넉하고 여유로운 삶을 바라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,작명 해석은 사전 정의가 아니라 문서화된 의미를 바탕으로 한 편집 해석
+裕,088D5,유,2,너그러울 유,preferred_name_sense,true,마음이 너그러운 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,작명 해석은 사전 정의가 아니라 문서화된 의미를 바탕으로 한 편집 해석
+智,0667A,지,1,슬기 지,preferred_name_sense,true,슬기롭게 판단하는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,작명 해석은 사전 정의가 아니라 문서화된 의미를 바탕으로 한 편집 해석
+智,0667A,지,2,지혜 지,preferred_name_sense,true,지혜로운 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,작명 해석은 사전 정의가 아니라 문서화된 의미를 바탕으로 한 편집 해석
+賢,08CE2,현,1,어질 현,preferred_name_sense,true,어진 품성을 지닌 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,작명 해석은 사전 정의가 아니라 문서화된 의미를 바탕으로 한 편집 해석
+賢,08CE2,현,2,좋을 현,usable_name_sense,true,좋은 품성과 삶을 바라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,작명 해석은 사전 정의가 아니라 문서화된 의미를 바탕으로 한 편집 해석
+賢,08CE2,현,3,구멍 현,caution_other_dictionary_sense,false,작명 설명의 대표 긍정 의미로 내세우지 않음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,작명 해석은 사전 정의가 아니라 문서화된 의미를 바탕으로 한 편집 해석
+敏,0654F,민,1,민첩할 민,preferred_name_sense,true,생각과 행동이 민첩한 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,작명 해석은 사전 정의가 아니라 문서화된 의미를 바탕으로 한 편집 해석
+俊,04FCA,준,1,준걸 준,preferred_name_sense,true,재능과 품격이 뛰어난 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,작명 해석은 사전 정의가 아니라 문서화된 의미를 바탕으로 한 편집 해석
+瑞,0745E,서,1,상서 서,preferred_name_sense,true,상서롭고 좋은 징조를 담는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,작명 해석은 사전 정의가 아니라 문서화된 의미를 바탕으로 한 편집 해석
+珍,073CD,진,1,보배 진,preferred_name_sense,true,소중하고 귀한 존재라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,작명 해석은 사전 정의가 아니라 문서화된 의미를 바탕으로 한 편집 해석
+有,06709,유,1,있을 유,contextual_dictionary_sense,true,무언가를 갖추고 존재한다는 의미로 문맥에 맞게 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,작명 해석은 사전 정의가 아니라 문서화된 의미를 바탕으로 한 편집 해석
+有,06709,유,2,얻을 유,usable_name_sense,true,좋은 것을 얻고 이루기를 바라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,작명 해석은 사전 정의가 아니라 문서화된 의미를 바탕으로 한 편집 해석
+有,06709,유,3,과연 유,caution_other_dictionary_sense,false,부사적·문맥적 의미이므로 대표 작명 뜻으로 쓰지 않음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,작명 해석은 사전 정의가 아니라 문서화된 의미를 바탕으로 한 편집 해석
+有,06709,유,4,또 유,caution_other_dictionary_sense,false,문법적·문맥적 의미이므로 대표 작명 뜻으로 쓰지 않음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,작명 해석은 사전 정의가 아니라 문서화된 의미를 바탕으로 한 편집 해석
