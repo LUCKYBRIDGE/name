@@ -25,20 +25,18 @@ jobs:
         run: pip install --disable-pip-version-check lunar-python==1.4.9
       - name: Generate crosscheck vectors
         run: python scripts/build/build-saju-golden-vectors.py
-      - name: Refresh source audit metadata
-        run: |
-          node scripts/audit/build-source-audit.mjs
-          node scripts/audit/build-source-rights.mjs
+      - name: Refresh reproducible derived data
+        run: node scripts/build/build-derived.mjs
       - name: Commit generated vectors
         shell: bash
         run: |
           set -euo pipefail
-          if [ -z "$(git status --porcelain -- tests/사주-팔자-교차검증-lunar-python-1.4.9.csv data/meta/source-audit.csv data/meta/source-rights.csv)" ]; then
+          if [ -z "$(git status --porcelain -- tests/사주-팔자-교차검증-lunar-python-1.4.9.csv data/hanja/normalized data/hanja/semantics/meaning-senses.csv data/meta/source-audit.csv data/meta/source-rights.csv tests/사주-절기경계-검증.csv)" ]; then
             echo "Crosscheck vectors and source audit are already current."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add tests/사주-팔자-교차검증-lunar-python-1.4.9.csv data/meta/source-audit.csv data/meta/source-rights.csv
+          git add tests/사주-팔자-교차검증-lunar-python-1.4.9.csv data/hanja/normalized data/hanja/semantics/meaning-senses.csv data/meta/source-audit.csv data/meta/source-rights.csv tests/사주-절기경계-검증.csv
           git commit -m "tests: add pinned lunar-python saju crosscheck vectors"
           git push origin HEAD:saju-golden-vectors-20261122
