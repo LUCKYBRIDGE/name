@@ -1,0 +1,22 @@
+evidence_id,method_id,source_id,evidence_role,claim_scope,evidence_status,app_effect,notes
+ME001,pronunciation_onset_common,KCI_NAMING_PRON_2015,method_context_and_critique,"현대 한국의 발음오행 활용과 후음·순음 배속 착종, 중성·종성 미반영 문제",supports_method_existence_not_fortune_validity,통용형 재현 + 한계 표시,전통 성명학의 과학적 예측 효력을 의미하지 않음
+ME002,pronunciation_onset_common,KCI_PRON_LABIAL_GUTTURAL_2018,mapping_variant_and_critique,순음·후음의 통용 배속과 훈민정음해례 계열 대안의 충돌,source_bound_variant,순음·후음 충돌 경고,전통 성명학의 과학적 예측 효력을 의미하지 않음
+ME003,pronunciation_onset_common,KCI_PRON_APPLICATION_2019,critical_method_review,한글 발음오행 작명법의 역사·적용상 문제,critical_evidence,유일 표준/과학적 효력 주장 금지,전통 성명학의 과학적 예측 효력을 의미하지 않음
+ME004,pronunciation_onset_common,KCI_KUMASAKI_MYSTERY_2025,historical_critique,구마사키 1929 작명법과 순음=수·후음=토 전래 해석,critical_historical_evidence,역사 provenance 경고,전통 성명학의 과학적 예측 효력을 의미하지 않음
+ME005,pronunciation_full_syllable_yongshin_2017,KCI_NAMING_YONGSHIN_2017,published_proposal,초·중·종성 및 용신을 함께 반영하는 제안,proposal_evidence,opt-in만 허용,전통 성명학의 과학적 예측 효력을 의미하지 않음
+ME006,resource_element_school_family,KCI_NAMING_YONGSHIN_2017,method_family_context,자원오행을 성명학에 적용하는 계열의 존재와 문제의식,family_level_evidence,구체 배속표 없이는 계산 금지,전통 성명학의 과학적 예측 효력을 의미하지 않음
+ME007,resource_element_yongshin_2017,KCI_NAMING_YONGSHIN_2017,published_proposal,성씨 한자를 포함한 자원오행·용신 결합 제안,proposal_evidence,opt-in만 허용,전통 성명학의 과학적 예측 효력을 의미하지 않음
+ME008,numerology_81_wonhyeongijeong_family,KCI_NAMING_81_2023,method_family_research,81수리의 표의·표음 및 이론 계보 검토,academic_context,legacy 표를 보편 표준으로 승격 금지,전통 성명학의 과학적 예측 효력을 의미하지 않음
+ME009,numerology_81_wonhyeongijeong_family,KNOLNAME_LEGACY_81,legacy_implementation,기존 앱 81행 구현,regression_only,외부 근거가 아님,전통 성명학의 과학적 예측 효력을 의미하지 않음
+ME010,yongshin_naming_bridge_2017,KCI_NAMING_YONGSHIN_2017,published_proposal,사주 용신과 발음·자원오행을 연결하는 제안,proposal_evidence,사주 method와 성명학 method 동시 기록,전통 성명학의 과학적 예측 효력을 의미하지 않음
+ME011,stroke_kangxi_rs_reconstruction_v1,UNICODE_UNIHAN,technical_source,kRSKangXi 부수번호·잔획 기반 기술 재구성,source_bound_technical,성명학 원획과 자동 동일시 금지,전통 성명학의 과학적 예측 효력을 의미하지 않음
+ME012,resource_element_knolname2_legacy_v0_3,KNOLNAME2_DATALOADER_LEGACY,legacy_implementation,214부수 및 84자 override의 기존 구현,regression_only,확정 점수 금지,전통 성명학의 과학적 예측 효력을 의미하지 않음
+ME013,stroke_wonhoek_knolname2_legacy_v0_3,KNOLNAME2_DATALOADER_LEGACY,legacy_implementation,11종 원획 delta 보정의 기존 구현,regression_only,완전 원획법으로 취급 금지,전통 성명학의 과학적 예측 효력을 의미하지 않음
+ME014,numerology_81_kumasaki_historical,NDL_KUMASAKI_SEIMEI_NO_SHINPI_1929,primary_historical_bibliography,1929 『姓名の神秘』 1차 서지 원전,primary_source_identified_access_restricted,원문 전사 전 표 생성 금지,전통 성명학의 과학적 예측 효력을 의미하지 않음
+ME015,numerology_81_kumasaki_historical,NDL_KUMASAKI_SEIMEI_TETSURI_1933,supplementary_primary_historical_source,1933 『姓名の哲理』 후속 원전,primary_source_reference,1929 원전과 동일 표라고 가정 금지,전통 성명학의 과학적 예측 효력을 의미하지 않음
+ME016,numerology_81_kumasaki_historical,KCI_KUMASAKI_81_2019,comparative_critique,구마사키와 채침 홍범81수 비교; 27/81 길흉 상반,comparative_academic_evidence,method 분리 강제,전통 성명학의 과학적 예측 효력을 의미하지 않음
+ME017,numerology_81_kumasaki_historical,KCI_KUMASAKI_MYSTERY_2025,critical_historical_study,1929 5격·81수 작명법의 역사·비판 검토,critical_academic_evidence,과학적 효력 주장 금지,전통 성명학의 과학적 예측 효력을 의미하지 않음
+ME018,numerology_81_caishen_hongfan_historical,KCI_KUMASAKI_81_2019,comparative_historical_study,채침 홍범81수와 구마사키 계열의 비교,secondary_academic_evidence,원전표 확보 전 계산 금지,전통 성명학의 과학적 예측 효력을 의미하지 않음
+ME019,resource_element_radical_lee_2024,KCI_RESOURCE_ELEMENT_214_2024,published_method,214부수 자원오행 및 강·중·약·불명 분류,published_table_rights_restricted,표 원문 미복제; 독립 재구성/허가 필요,전통 성명학의 과학적 예측 효력을 의미하지 않음
+ME020,pronunciation_labial_guttural_haerye_2018,KCI_PRON_LABIAL_GUTTURAL_2018,published_alternative_mapping,훈민정음해례 계열 순음=토·후음=수 대안,source_bound_partial_mapping,충돌 범위만 구조화,전통 성명학의 과학적 예측 효력을 의미하지 않음
+ME021,pronunciation_labial_guttural_haerye_2018,KCI_PRON_APPLICATION_2019,critical_support,훈민정음 기반 발음오행 적용 논점,critical_academic_evidence,14초성 전체표로 임의 확장 금지,전통 성명학의 과학적 예측 효력을 의미하지 않음
