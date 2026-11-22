@@ -93,14 +93,17 @@
     {
       "gate_id": "SAJU_CALCULATION_ENGINE",
       "priority": "P1",
-      "status": "boundary_vectors_added_engine_golden_pending",
+      "status": "boundary_vectors_and_independent_crosscheck_added_full_golden_pending",
       "blocking_for": [
         "repository_native_verified_saju_generation"
       ],
-      "next_action": "Add independently verified full four-pillar golden vectors, including lunar/leap-month, DST, historical standard-time and zi-hour cases.",
+      "next_action": "Build Korea-timezone-aware full four-pillar golden vectors from independently verified sources; include lunar/leap-month, DST, historical UTC+8:30, true-solar-time and zi-hour method cases. Do not promote raw lunar-python local-clock output to Korean golden truth.",
       "evidence": [
         "tests/사주-절기경계-검증.csv",
-        "data/myeongri/월지_절기경계.csv"
+        "tests/사주-팔자-교차검증-lunar-python-1.4.9.csv",
+        "data/time/reference-implementation-time-basis.csv",
+        "data/myeongri/월지_절기경계.csv",
+        "LUNAR_PYTHON"
       ]
     },
     {
