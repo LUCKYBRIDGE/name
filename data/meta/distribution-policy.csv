@@ -10,3 +10,7 @@ data/myeongri/*.csv,original_compilation_reference_only_sources,Keep KCI papers 
 docs/*|knowledge/*|workflows/*|templates/*|scripts/*|tests/*,first_party_all_rights_reserved,No repository-wide open license is granted unless separately stated,low,제3자 인용·출처가 포함된 부분은 해당 원출처 조건 우선
 sources/*|research/*,reference_metadata_only,Do not redistribute linked source PDFs/articles merely because they are referenced,medium,링크·서지정보·자체 요약 중심
 ai-studio/**,review_before_broad_public_release,Treat as a point-in-time app snapshot; current rights decisions must use root COPYRIGHT/THIRD_PARTY/source-rights metadata,medium,앱 소스와 제3자 데이터 복사본이 함께 포함됨; ai-studio/data/luckybridge는 현재 canonical DB가 아님
+data/hanja/semantics/semantic-source-issues.csv,allowed_with_third_party_notices,Keep libhangul/BSD notice for raw_sense excerpts and preserve issue-status context,low,오류 의심 문자열을 수정본처럼 재배포하지 않고 검토 보류 상태를 유지
+data/methods/*,original_compilation_reference_only_sources,Keep KCI papers as references only and distribute only original method summaries,medium,논문 원문·표·도표를 복제하지 않고 method_id와 자체 요약만 제공
+data/legal/*,first_party_all_rights_reserved,Keep official legal/service source_id and verification date with each summary,low,법령·공식 조회의 사실 요약과 앱 자체 설명을 구분
+tests/사주-절기경계-검증.csv,allowed_with_kasi_attribution_if_scope_verified,Display KASI source when exposed outside tests and keep within calendar astronomical facts scope,low,KASI 절기 시각에서 파생한 회귀 테스트 벡터
