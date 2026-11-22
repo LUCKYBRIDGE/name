@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "method_id": "stroke_kangxi_rs_reconstruction_v1",
+  "source_id": "UNICODE_UNIHAN",
+  "formula": "reconstructed_strokes = canonical_kangxi_radical_strokes(radical_no) + residual_strokes",
+  "input_field_basis": "Unihan kRSKangXi radical-stroke index",
+  "authoritative_for": "technical Kangxi radical-stroke reconstruction",
+  "not_authoritative_for": [
+    "a universal Korean naming-school wonhoek standard",
+    "school-specific numeral-character exceptions",
+    "variant-form legal identity"
+  ],
+  "app_policy": "Prefer this over ad-hoc delta patches for technical reconstruction; keep final naming numerology method_id explicit.",
+  "examples_expected": [
+    "氵/水 radical 85 uses canonical radical stroke count 4",
+    "艹/艸 radical 140 uses canonical radical stroke count 6",
+    "阝 right/邑 radical 163 uses 7",
+    "阝 left/阜 radical 170 uses 8"
+  ],
+  "reviewed_on": "2026-11-22"
+}
