@@ -46,14 +46,14 @@
       "priority": "P0",
       "status": "core_expanding",
       "coverage": {
-        "characters_curated": 42,
-        "senses_curated": 98,
+        "characters_curated": 95,
+        "senses_curated": 202,
         "semantic_characters": 7150
       },
       "blocking_for": [
         "claim_full_curated_naming_semantics"
       ],
-      "next_action": "Continue human curation in priority batches; target 100+ frequently used naming Hanja before claiming broad coverage."
+      "next_action": "Continue human curation in priority batches; exceed 100 frequent naming Hanja, then expand toward a 300-character core."
     },
     {
       "gate_id": "NAMING_METHOD_DATA",
