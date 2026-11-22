@@ -1,4 +1,4 @@
 method_id,variant_id,historical_basis,primary_source_id,comparison_source_ids,table_status,authoritative_for_scoring,known_difference,notes
 numerology_81_wonhyeongijeong_family,legacy_knolname_v0_2_0,LUCKYBRIDGE 기존 앱 구현,KNOLNAME_LEGACY_81,,81_rows_embedded_quarantined,false,외부 원전과 전수 대조 전,회귀용
-numerology_81_kumasaki_historical,kumasaki_1933_reference,熊崎健翁 근대 일본 성명학,NDL_KUMASAKI_SEIMEI_TETSURI_1933,KCI_KUMASAKI_81_2019,primary_source_identified_row_transcription_pending,false,채침 홍범81수와 81개 중 27개 길흉 상반(KCI 2019),페이지 단위 원전 전사·교차대조 후 별도 81행 표 생성
+numerology_81_kumasaki_historical,kumasaki_1929_primary,熊崎健翁 근대 일본 성명학,NDL_KUMASAKI_SEIMEI_NO_SHINPI_1929,KCI_KUMASAKI_81_2019|KCI_KUMASAKI_MYSTERY_2025|NDL_KUMASAKI_SEIMEI_TETSURI_1933,1929_primary_source_identified_row_transcription_pending,false,채침 홍범81수와 81개 중 27개 길흉 상반(KCI 2019),1929 『姓名の神秘』를 직접 provenance로 사용; 일반 인터넷 공개 본문이 아니므로 서지 확인과 원전 접근을 구분하고 81행은 별도 페이지 검증 후 생성
 numerology_81_caishen_hongfan_historical,caishen_hongfan_reference,蔡沈 洪範皇極內篇 계열,,KCI_KUMASAKI_81_2019,primary_table_pending,false,구마사키 81수와 81개 중 27개 길흉 상반(KCI 2019),구마사키 계열과 병합 금지
