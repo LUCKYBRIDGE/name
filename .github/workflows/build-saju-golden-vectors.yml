@@ -25,16 +25,20 @@ jobs:
         run: pip install --disable-pip-version-check lunar-python==1.4.9
       - name: Generate golden vectors
         run: python scripts/build/build-saju-golden-vectors.py
+      - name: Refresh source audit metadata
+        run: |
+          node scripts/audit/build-source-audit.mjs
+          node scripts/audit/build-source-rights.mjs
       - name: Commit generated vectors
         shell: bash
         run: |
           set -euo pipefail
-          if git diff --quiet -- tests/사주-팔자-golden-vectors-lunar-python-1.4.9.csv; then
-            echo "Golden vectors already current."
+          if [ -z "$(git status --porcelain -- tests/사주-팔자-golden-vectors-lunar-python-1.4.9.csv data/meta/source-audit.csv data/meta/source-rights.csv)" ]; then
+            echo "Golden vectors and source audit are already current."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add tests/사주-팔자-golden-vectors-lunar-python-1.4.9.csv
+          git add tests/사주-팔자-golden-vectors-lunar-python-1.4.9.csv data/meta/source-audit.csv data/meta/source-rights.csv
           git commit -m "tests: add pinned lunar-python saju golden vectors"
           git push origin HEAD:saju-golden-vectors-20261122
