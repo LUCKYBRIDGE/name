@@ -97,3 +97,107 @@ hanja,unicode,legal_reading,sense_order,raw_sense,naming_use_class,primary_name_
 泰,06CF0,태,5,괘 이름 태,contextual_dictionary_sense,false,주역의 괘 이름이라는 사전 뜻으로 확인하되 대표 작명 뜻으로는 우선하지 않음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,고유 명칭 의미
 泰,06CF0,태,6,타이,caution_other_dictionary_sense,false,외래어 표기·음역 성격의 사전 뜻으로 대표 작명 의미에 사용하지 않음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,작명 중심 뜻 비권장
 浩,06D69,호,1,클 호,preferred_name_sense,true,크고 넓은 뜻을 품은 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미 기반
+玟,0739F,민,1,옥돌 민,preferred_name_sense,true,옥돌처럼 귀하고 단단한 가치를 지닌 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+珉,073C9,민,1,아름다운돌 민,preferred_name_sense,true,아름다운 돌이라는 뜻을 중심으로 귀하고 아름다운 가치를 지닌 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+珉,073C9,민,2,옥돌 민,preferred_name_sense,true,옥돌처럼 귀하고 단단한 가치를 지닌 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+眞,0771E,진,1,참 진,preferred_name_sense,true,참되고 진실한 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+正,06B63,정,1,바를 정,preferred_name_sense,true,바르고 곧은 기준을 지닌 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+正,06B63,정,5,분별할 정,usable_name_sense,true,옳고 그름을 분별하는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+成,06210,성,1,이룰 성,preferred_name_sense,true,뜻한 바를 이루어 가는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+成,06210,성,4,화목할 성,preferred_name_sense,true,사람들과 화목하게 어울리는 삶을 바라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+承,0627F,승,1,받들 승,usable_name_sense,true,소중한 뜻과 가치를 받들어 이어 가는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+承,0627F,승,2,이을 승,preferred_name_sense,true,좋은 뜻과 가치를 이어 가는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+承,0627F,승,3,도울 승,preferred_name_sense,true,다른 이를 돕고 함께하는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+善,05584,선,1,착할 선,preferred_name_sense,true,착하고 선한 품성을 지닌 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+宣,05BA3,선,1,베풀 선,preferred_name_sense,true,좋은 뜻을 널리 베푸는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+世,04E16,세,1,세상 세,usable_name_sense,true,세상과 더불어 살아가는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+修,04FEE,수,1,닦을 수,preferred_name_sense,true,자신을 꾸준히 닦고 성장하는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+修,04FEE,수,2,옳게할 수,preferred_name_sense,true,바르고 옳게 행하는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+修,04FEE,수,3,정리할 수,usable_name_sense,true,일과 생각을 잘 정돈하는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+現,073FE,현,1,나타날 현,usable_name_sense,true,자신의 좋은 역량과 뜻을 드러내는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+現,073FE,현,3,옥빛 현,preferred_name_sense,true,옥빛처럼 맑고 귀한 모습을 바라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+憲,061B2,헌,1,법 헌,usable_name_sense,true,원칙과 기준을 소중히 여기는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+憲,061B2,헌,2,표준될 헌,preferred_name_sense,true,바른 기준이 되는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+憲,061B2,헌,4,기뻐할 헌,preferred_name_sense,true,기쁨을 알고 나누는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+赫,08D6B,혁,2,빛날 혁,preferred_name_sense,true,밝게 빛나는 재능과 모습을 펼치기를 바라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+赫,08D6B,혁,3,성할 혁,preferred_name_sense,true,힘차고 번성하는 모습을 바라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+赫,08D6B,혁,4,밝을 혁,preferred_name_sense,true,밝고 환한 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+玄,07384,현,3,하늘 현,usable_name_sense,true,하늘이라는 뜻을 중심으로 넓고 깊은 마음을 바라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+玄,07384,현,5,고요할 현,preferred_name_sense,true,고요하고 침착한 마음을 지닌 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+元,05143,원,1,으뜸 원,preferred_name_sense,true,으뜸이 되는 역량과 품성을 지향하는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+元,05143,원,2,착하고 어질 원,preferred_name_sense,true,착하고 어진 품성을 지닌 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+原,0539F,원,1,근본 원,preferred_name_sense,true,근본과 바탕을 소중히 여기는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+源,06E90,원,1,근원 원,preferred_name_sense,true,좋은 가치의 근원이 되는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+源,06E90,원,2,샘 원,usable_name_sense,true,샘처럼 맑고 끊임없이 솟아나는 힘을 바라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+源,06E90,원,3,계속할 원,preferred_name_sense,true,좋은 뜻을 꾸준히 이어 가는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+園,05712,원,1,동산 원,usable_name_sense,true,동산이라는 뜻을 중심으로 평온하고 넉넉한 공간의 이미지를 담는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+媛,05A9B,원,1,아리따운 여자 원,preferred_name_sense,true,아름답고 단정한 모습을 바라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+演,06F14,연,1,펼칠 연,preferred_name_sense,true,재능과 뜻을 널리 펼치는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+演,06F14,연,3,통할 연,preferred_name_sense,true,사람과 뜻이 잘 통하는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+演,06F14,연,4,윤택할 연,preferred_name_sense,true,삶을 윤택하게 가꾸는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+演,06F14,연,5,넓힐 연,preferred_name_sense,true,배움과 가능성을 넓혀 가는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+然,07136,연,2,그러할 연,usable_name_sense,true,있는 그대로의 이치와 자연스러움을 담는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+然,07136,연,3,허락할 연,usable_name_sense,true,받아들이고 허락하는 뜻을 중심으로 포용의 의미를 담는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+悅,06085,열,1,즐거울 열,preferred_name_sense,true,즐거움을 알고 나누는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+悅,06085,열,4,기뻐할 열,preferred_name_sense,true,기쁨이 함께하는 삶을 바라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+仁,04EC1,인,1,어질 인,preferred_name_sense,true,어진 마음으로 사람을 대하는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+雅,096C5,아,1,아담할 아,preferred_name_sense,true,단정하고 품위 있는 모습을 바라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+藝,085DD,예,1,재주 예,preferred_name_sense,true,재능과 기예를 잘 펼치는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+藝,085DD,예,4,극진할 예,preferred_name_sense,true,일과 사람을 극진히 대하는 마음을 바라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+藝,085DD,예,5,심을 예,usable_name_sense,true,좋은 뜻과 재능을 심고 가꾸는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+禮,079AE,례,1,예도 례,preferred_name_sense,true,예의를 알고 바르게 행동하는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+禮,079AE,예,1,예도 례,preferred_name_sense,true,예의를 알고 바르게 행동하는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+禮,079AE,예,2,인사 례,usable_name_sense,true,사람을 공손히 대하고 예를 갖추는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+叡,053E1,예,1,밝을 예,preferred_name_sense,true,밝은 지혜와 판단력을 지닌 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+叡,053E1,예,3,어질 예,preferred_name_sense,true,어진 품성을 지닌 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+羽,07FBD,우,1,깃 우,usable_name_sense,true,깃이라는 뜻을 중심으로 가볍고 자유롭게 뜻을 펼치는 모습을 바라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+雨,096E8,우,1,비 우,usable_name_sense,true,비라는 뜻을 중심으로 생명과 세상을 적시는 이미지를 담는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+友,053CB,우,1,벗 우,preferred_name_sense,true,좋은 벗이 되고 사람들과 우정을 나누는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+友,053CB,우,2,합할 우,preferred_name_sense,true,사람들과 잘 어울리고 화합하는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+胤,080E4,윤,3,이을 윤,preferred_name_sense,true,좋은 뜻과 가치를 이어 가는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+胤,080E4,윤,2,익힐 윤,usable_name_sense,true,배움과 능력을 꾸준히 익히는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+律,05F8B,률,1,법 률,preferred_name_sense,true,원칙과 질서를 지키는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+律,05F8B,율,1,법 률,preferred_name_sense,true,원칙과 질서를 지키는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+律,05F8B,율,3,지을 률,usable_name_sense,true,질서 있게 만들고 세워 가는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+溫,06EAB,온,1,따뜻할 온,preferred_name_sense,true,따뜻한 마음을 지닌 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+溫,06EAB,온,2,부드러울 온,preferred_name_sense,true,부드럽고 온화한 품성을 지닌 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+辰,08FB0,신,1,날 신,usable_name_sense,true,날과 때의 뜻을 중심으로 소중한 시간을 살아가는 의미를 담는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+辰,08FB0,진,2,날 진,usable_name_sense,true,날과 때의 뜻을 중심으로 소중한 시간을 살아가는 의미를 담는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+健,05065,건,1,굳셀 건,preferred_name_sense,true,굳세고 건강한 힘을 지닌 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+健,05065,건,2,병 없을 건,preferred_name_sense,true,건강하고 평안한 삶을 바라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+旻,065FB,민,1,하늘 민,preferred_name_sense,true,하늘처럼 넓은 마음을 바라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+旻,065FB,민,2,가을하늘 민,preferred_name_sense,true,맑은 가을하늘처럼 맑고 넓은 모습을 바라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+民,06C11,민,1,백성 민,usable_name_sense,true,사람들과 더불어 살아가는 마음을 담는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+斌,0658C,빈,1,빛날 빈,preferred_name_sense,true,밝게 빛나는 재능과 모습을 펼치기를 바라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+斌,0658C,빈,2,문채날 빈,preferred_name_sense,true,문채와 재능이 돋보이는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+皓,07693,호,1,흴 호,usable_name_sense,true,흰빛의 맑고 깨끗한 이미지를 담는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+皓,07693,호,2,깨끗할 호,preferred_name_sense,true,깨끗하고 맑은 품성을 지닌 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+昊,0660A,호,1,하늘 호,preferred_name_sense,true,하늘처럼 넓고 큰 마음을 바라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+昊,0660A,호,2,큰 모양 호,preferred_name_sense,true,크고 넉넉한 기상을 지닌 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+昊,0660A,호,3,여름하늘 호,usable_name_sense,true,여름하늘처럼 밝고 넓은 모습을 바라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+峻,05CFB,준,1,높을 준,preferred_name_sense,true,높은 뜻과 기준을 지향하는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+濬,06FEC,준,2,깊을 준,preferred_name_sense,true,생각과 배움이 깊은 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+浚,06D5A,준,1,깊을 준,preferred_name_sense,true,생각과 배움이 깊은 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+勳,052F3,훈,1,공 훈,preferred_name_sense,true,좋은 공과 성취를 이루는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+薰,085B0,훈,2,향풀 훈,usable_name_sense,true,향풀의 향기로운 이미지를 중심으로 좋은 향기를 남기는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+誠,08AA0,성,1,미쁠 성,preferred_name_sense,true,믿음직하고 성실한 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+誠,08AA0,성,2,공경할 성,preferred_name_sense,true,사람을 공경하는 마음을 지닌 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+誠,08AA0,성,3,살필 성,usable_name_sense,true,일과 사람을 세심하게 살피는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+誠,08AA0,성,4,진실 성,preferred_name_sense,true,진실하고 정직한 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+誠,08AA0,성,5,정성 성,preferred_name_sense,true,정성을 다하는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+晟,0665F,성,1,밝을 성,preferred_name_sense,true,밝고 환한 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+晟,0665F,성,2,햇살 퍼질 성,preferred_name_sense,true,햇살처럼 밝은 기운을 널리 펼치는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+星,0661F,성,1,별 성,preferred_name_sense,true,별처럼 빛나는 꿈과 재능을 지닌 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+貞,08C9E,정,1,곧을 정,preferred_name_sense,true,곧고 바른 마음을 지닌 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+貞,08C9E,정,2,굳을 정,preferred_name_sense,true,굳은 뜻과 신념을 지닌 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+晶,06676,정,1,수정 정,usable_name_sense,true,수정처럼 맑고 투명한 이미지를 담는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+晶,06676,정,2,맑을 정,preferred_name_sense,true,맑고 깨끗한 마음을 지닌 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+晶,06676,정,3,빛날 정,preferred_name_sense,true,밝게 빛나는 모습을 바라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+靜,0975C,정,1,고요할 정,preferred_name_sense,true,고요하고 침착한 마음을 지닌 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+靜,0975C,정,2,조용할 정,preferred_name_sense,true,차분하고 안정된 품성을 지닌 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+靜,0975C,정,3,쉴 정,usable_name_sense,true,쉼과 여유를 알고 균형 있게 살아가는 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+靜,0975C,정,4,편안할 정,preferred_name_sense,true,편안하고 평온한 삶을 바라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+廷,05EF7,정,2,바를 정,preferred_name_sense,true,바르고 곧은 기준을 지닌 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+廷,05EF7,정,3,곧을 정,preferred_name_sense,true,곧은 뜻을 지닌 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+庭,05EAD,정,1,뜰 정,usable_name_sense,true,뜰처럼 편안하고 열린 공간의 이미지를 담는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+庭,05EAD,정,2,곧을 정,preferred_name_sense,true,곧고 바른 품성을 지닌 사람이라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
