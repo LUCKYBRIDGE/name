@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "table_id": "legacy_knolname_v0_2_0",
+  "method_id": "numerology_81_wonhyeongijeong_family",
+  "updated_at": "2026-11-22",
+  "status": "legacy_app_table_source_unverified",
+  "authoritative_for_scoring": false,
+  "purpose": "기존 앱의 81수리 가정을 보존하여 향후 출처별 검증표와 행 단위 diff하기 위한 격리 데이터",
+  "rules": [
+    "이 표를 검증 완료 81수리표 또는 보편 표준으로 표현하지 않는다.",
+    "전문 작명 판정의 최종 길흉 근거로 사용하지 않는다.",
+    "획수 계산법과 원형이정 공식도 같은 method/source 묶음으로 검증되기 전에는 완전한 방법론으로 보지 않는다.",
+    "새 검증표가 들어오면 number별 title/grade/summary 차이를 별도 conflict 데이터로 남긴다.",
+    "기존 knolname의 결과 재현이 필요한 경우에만 legacy compatibility 모드에서 사용할 수 있다."
+  ]
+}

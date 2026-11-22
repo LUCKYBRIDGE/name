@@ -46,23 +46,25 @@
       "priority": "P0",
       "status": "core_expanding",
       "coverage": {
-        "characters_curated": 150,
-        "senses_curated": 327,
+        "characters_curated": 202,
+        "senses_curated": 457,
         "semantic_characters": 7150
       },
       "blocking_for": [
         "claim_full_curated_naming_semantics"
       ],
-      "next_action": "Expand the reviewed core toward 300 frequently used naming Hanja while preserving exact Hanja+reading senses and source-quality holds."
+      "next_action": "Expand the reviewed core toward 300 frequently used naming Hanja; continue source-quality holds and exact Hanja+reading review."
     },
     {
       "gate_id": "NAMING_METHOD_DATA",
       "priority": "P0",
-      "status": "one_source_bound_mapping_table_added_other_tables_partial",
+      "status": "pronunciation_mapping_source_bound_legacy_81_quarantined_other_tables_partial",
       "coverage": {
         "registered_methods": 7,
         "source_bound_mapping_tables": 1,
         "pronunciation_onset_rows": 14,
+        "legacy_numerology_81_rows": 81,
+        "authoritative_numerology_81_tables": 0,
         "fully_implemented_method_tables": 0
       },
       "blocking_for": [
@@ -74,10 +76,13 @@
         "data/methods/evaluation-axis-policy.json",
         "data/methods/pronunciation-onset-common.csv",
         "data/methods/pronunciation-onset-common.policy.json",
+        "data/methods/numerology-81-legacy-knolname.csv",
+        "data/methods/numerology-81-legacy-knolname.policy.json",
         "ACADEMIC_KAIS_PRON_2011",
-        "KCI_NAMING_PRON_2015"
+        "KCI_NAMING_PRON_2015",
+        "KNOLNAME_LEGACY_81"
       ],
-      "next_action": "Add source-bound resource-element mappings, stroke/original-stroke rules and 81-number interpretation tables per method_id; keep full-syllable pronunciation method separate."
+      "next_action": "Add an independently source-bound 81-number table and stroke/original-stroke rules, then diff them against the quarantined legacy app table before enabling authoritative numerology scoring."
     },
     {
       "gate_id": "SOLAR_TERMS_2026_2027",
@@ -147,7 +152,7 @@
       "priority": "P2",
       "status": "metadata_audit_complete_manual_review_pending",
       "coverage": {
-        "sources": 71,
+        "sources": 72,
         "unknown_license_metadata": 16
       },
       "evidence": [

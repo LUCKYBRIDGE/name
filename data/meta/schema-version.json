@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.11.0",
+  "schema_version": "1.12.0",
   "updated_at": "2026-11-22",
-  "compatibility": "additive 150-character naming semantic core, source-bound pronunciation mapping, and official name-trend source registry",
+  "compatibility": "additive 202-character naming semantic core plus quarantined legacy 81-numerology implementation",
   "conventions": {
     "source_reference": "Prefer source_id values registered in data/meta/sources.csv for new structured datasets.",
     "method_reference": "Use method_id for school- or author-dependent naming and myeongri rules.",
@@ -41,6 +41,8 @@
     "reference_implementation_time_basis": "Record timezone/clock basis for external calendar implementations; never compare raw clock fields across KST/CST as if they were the same instant.",
     "saju_crosscheck_not_golden": "Independent implementation output is crosscheck evidence, not a Korean golden vector, unless timezone and method assumptions are independently verified.",
     "pronunciation_mapping": "Pronunciation-five-elements mappings are method-specific tables; unsupported onsets remain unsupported rather than silently normalized.",
-    "trend_data": "Birth-name and rename-name statistics are separate datasets; popularity is not auspiciousness and requires period/sex/source metadata."
+    "trend_data": "Birth-name and rename-name statistics are separate datasets; popularity is not auspiciousness and requires period/sex/source metadata.",
+    "legacy_numerology_table": "Historical app numerology tables may be preserved for regression only; authoritative_for_scoring must remain false until source-bound method data is independently verified.",
+    "numerology_method_bundle": "An authoritative 81-numerology method requires a source-bound stroke standard, grid formula, 1-81 interpretation table, reduction rule, and method_id as one bundle."
   }
 }

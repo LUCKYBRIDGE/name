@@ -21,6 +21,18 @@ function classify(r) {
       broad_release_action:"keep_license_and_copyright_notices"
     };
   }
+  if (id==="KNOLNAME_LEGACY_81") {
+    return {
+      rights_class:"first_party_legacy_implementation",
+      repository_use:"embedded_for_regression_and_migration",
+      app_use:"allowed_but_not_authoritative_for_scoring",
+      redistribution_basis:"LUCKYBRIDGE first-party historical implementation",
+      attribution_required:"false",
+      attribution_template:"LUCKYBRIDGE/knolname legacy implementation",
+      embedded_source_content:"true",
+      broad_release_action:"keep_non_authoritative_status_and_do_not_present_as_external_evidence"
+    };
+  }
   if (id==="LUNAR_PYTHON") {
     return {
       rights_class:"reference_only_open_source",
