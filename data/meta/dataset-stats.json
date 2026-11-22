@@ -64,7 +64,7 @@
     "Every registered external source has a machine-readable rights/use classification in data/meta/source-rights.csv; unverified sources default to reference/summary-only handling.",
     "Naming semantic curation expanded from 12 characters/25 senses to 42 characters/98 reviewed senses; this remains partial coverage, not a full naming dictionary.",
     "Four suspicious semantic source rows are explicitly held for source recheck rather than silently corrected.",
-    "Six naming-method families are now registered separately so pronunciation, resource-element, numerology, stroke, and yongshin approaches are not collapsed into one score.",
+    "Seven naming-method families are now registered separately so pronunciation, resource-element, numerology, stroke, and yongshin approaches are not collapsed into one score.",
     "48 KASI-backed month-branch boundary vectors cover the exact minute before/at each 2026-2027 monthly start solar term."
   ],
   "surnames": {
@@ -119,7 +119,7 @@
     "rights_file": "data/meta/source-rights.csv"
   },
   "methods": {
-    "naming_method_registry_rows": 6,
+    "naming_method_registry_rows": 7,
     "evaluation_axes": 8,
     "status": "method families separated; calculation tables remain incremental"
   },
