@@ -237,8 +237,8 @@ for (const r of curatedRows) {
   else if (matches[0].raw_sense!==r.raw_sense) fail(`curated raw_sense mismatch: ${r.hanja}/${r.legal_reading}/${r.sense_order}`);
   if (r.naming_use_class==="caution_other_dictionary_sense" && r.primary_name_explanation_allowed!=="false") fail(`caution sense cannot be primary: ${r.hanja}/${r.raw_sense}`);
 }
-if (curatedRows.length!==98) fail(`curated naming rows expected 98, got ${curatedRows.length}`);
-if (curatedChars.size!==42) fail(`curated naming characters expected 42, got ${curatedChars.size}`);
+if (curatedRows.length!==202) fail(`curated naming rows expected 202, got ${curatedRows.length}`);
+if (curatedChars.size!==95) fail(`curated naming characters expected 95, got ${curatedChars.size}`);
 const yu祐=senseRows.filter(r=>r.hanja==="祐"&&r.legal_reading==="우").map(r=>r.raw_sense);
 if (yu祐.length!==2 || !yu祐.includes("도울 우") || !yu祐.includes("다행할 우")) fail("祐/우 must preserve two documented senses");
 const yu優=senseRows.filter(r=>r.hanja==="優"&&r.legal_reading==="우").map(r=>r.raw_sense);
