@@ -16,8 +16,15 @@
 
 `naming-method-registry.csv`는 **방법론 카탈로그**다. 계산표가 검증되지 않은 method는 `table_pending` 또는 `method_definition_pending` 상태로 유지하며 앱에서 확정 점수에 사용하지 않는다.
 
+## 판정 안전장치
+
+- `method-evidence.csv`: 출처가 해당 method의 원전인지, 제안인지, 비판인지, legacy 구현인지 역할을 분리한다.
+- `method-readiness.csv`: 표가 존재한다는 이유만으로 최종 점수에 승격하지 않도록 계산 준비도를 기계적으로 관리한다.
+- 현재 14개 method 레코드 모두 `final_scoring_ready=false`다.
+
 현재 추가된 구조:
 - `pronunciation-onset-common.csv`: 출처 연결 초성 발음오행 통용형
+- `pronunciation-labial-guttural-variants.csv`: 순음·후음의 통용형과 훈민정음해례 기반 대안 배속을 충돌 상태 그대로 보존
 - `kangxi-radical-stroke-ranges.csv`: Unihan `kRSKangXi`용 강희 214부수 정규 획수 구간
 - `stroke-kangxi-rs-reconstruction.policy.json`: 부수 정규획 + residual strokes 기술 재구성 규칙
 - `resource-element-radical-legacy-knolname2.csv`: 기존 앱 214부수 자원오행 하드코딩의 비권위 legacy 이전본
@@ -25,7 +32,7 @@
 - `wonhoek-adjustments-legacy-knolname2.csv`: 기존 앱 11종 원획 delta 보정의 비권위 legacy 이전본
 - `numerology-81-method-provenance.csv`: legacy·구마사키·채침/홍범 계열의 출처와 검증상태 분리
 
-출처가 확인된 미내장 method:
+### 출처가 확인된 미내장 method:
 - `resource_element_radical_lee_2024`: 214부수 자원오행 및 강·중·약·불명 분류 연구. 학회 저작권으로 표 원문은 미복제.
 
 다음 우선순위:
