@@ -65,3 +65,6 @@ KOSIS_SURNAME_2015_MASS,official_statistics,KOSIS-statistics-use-guide,verified_
 YESJOKBO_CENSUS2015_APPENDIX,secondary_census_mirror,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
 NIKL_HANJA_INFO_SOURCES,official_language_guidance,public_reference,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 정책 라벨의 실제 적용 범위는 재배포 시 다시 확인
 NIKL_INMYONG_HANJA_SCOPE,official_language_guidance,public_reference,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 정책 라벨의 실제 적용 범위는 재배포 시 다시 확인
+KCI_NAMING_PRON_2015,academic,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
+KCI_NAMING_YONGSHIN_2017,academic,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
+KCI_NAMING_81_2023,academic,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
