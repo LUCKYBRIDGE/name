@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.13.0",
-  "updated_at": "2026-11-22",
-  "compatibility": "additive 300-character naming semantic core + DB-migrated legacy resource/stroke tables + source-bound Kangxi radical-stroke reconstruction + separated 81-numerology historical methods",
+  "schema_version": "1.14.0",
+  "updated_at": "2026-11-23",
+  "compatibility": "additive method evidence/readiness layer, corrected pronunciation-source provenance, explicit labial/guttural variants, and schema-ready official court name-trend ingestion",
   "conventions": {
     "source_reference": "Prefer source_id values registered in data/meta/sources.csv for new structured datasets.",
     "method_reference": "Use method_id for school- or author-dependent naming and myeongri rules.",
@@ -47,6 +47,11 @@
     "naming_core_registry": "data/hanja/semantics/naming-core-characters.csv is an editorial priority core, not an official usage-frequency ranking.",
     "kangxi_rs_reconstruction": "Use method_id stroke_kangxi_rs_reconstruction_v1 to derive a technical Kangxi radical-stroke count from Unihan kRSKangXi; do not silently equate it with every naming school's wonhoek standard.",
     "legacy_method_migration": "Legacy app hardcodes moved under data/methods remain authoritative_for_scoring=false until source-bound school tables replace them.",
-    "numerology_variants": "Kumasaki and Cai Shen/Hongfan 81-number traditions are separate method variants; never merge conflicting judgments into one universal table."
+    "numerology_variants": "Kumasaki and Cai Shen/Hongfan 81-number traditions are separate method variants; never merge conflicting judgments into one universal table.",
+    "method_evidence_roles": "Method sources must declare evidence_role; a citation may document existence, criticize a method, provide a primary source, or preserve legacy behavior without making the method authoritative.",
+    "method_readiness": "data/methods/method-readiness.csv is the machine-readable gate for calculation readiness; final_scoring_ready must not be inferred from the existence of a table alone.",
+    "pronunciation_variant_scope": "Conflicting labial/guttural mappings remain separate method variants; partial evidence must not be expanded into an unsupported full consonant table.",
+    "trend_snapshot_schema": "Official birth/rename TOP20 facts must follow data/trends/name-trend-snapshot.schema.json and preserve query scope, registration-date basis, provisional status, retrieval date and attribution.",
+    "source_relevance": "A source must materially address the claimed method or fact; incidental appearance of a traditional table in an unrelated study is insufficient as a primary method source."
   }
 }
