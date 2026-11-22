@@ -60,7 +60,7 @@
       "priority": "P0",
       "status": "method_registry_added_tables_partial",
       "coverage": {
-        "registered_methods": 6,
+        "registered_methods": 7,
         "fully_implemented_method_tables": 0
       },
       "blocking_for": [
