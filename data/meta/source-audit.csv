@@ -71,3 +71,6 @@ KCI_NAMING_81_2023,academic,unknown,unknown,manual_review_before_bulk_redistribu
 ACADEMIC_KAIS_PRON_2011,academic,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
 KR_COURT_FAMILY_STATS,official_service,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,high,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
 KNOLNAME_LEGACY_81,first_party_legacy_implementation,first_party_all_rights_reserved,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 정책 라벨의 실제 적용 범위는 재배포 시 다시 확인
+KNOLNAME2_DATALOADER_LEGACY,first_party_implementation,first_party_all_rights_reserved,first_party,first_party_repository_use_allowed,regression_and_migration_only,low,외부 근거가 아닌 기존 구현 자체의 역사적 기록; method 출처 검증 전 확정 점수에 사용 금지
+KCI_KUMASAKI_81_2019,academic,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,81수 method 차이의 학술 근거로 인용; 논문 표·도표·장문은 내장하지 않음
+NDL_KUMASAKI_SEIMEI_TETSURI_1933,primary_historical_source,PDM,item_marked_pdm,page_level_review_before_bulk_transcription,metadata_and_primary_source_reference_ok,medium,1933년 공개 원전; 실제 81행 전사 시 페이지별 대조와 재이용 조건을 다시 확인
