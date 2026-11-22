@@ -3,3 +3,4 @@ SEM-2026-001,潤,윤,1,불을,suspected_truncated_or_malformed_gloss,high,원 �
 SEM-2026-002,洙,수,2,물읾 수,suspected_text_corruption,medium,원 사전 표기 재확인 전 대표 작명 뜻 자동 사용 금지,hold_for_source_recheck,LIBHANGUL_HANJA,오탈자처럼 보여도 자동 수정하지 않음
 SEM-2026-003,準,준,1,수준기 준,suspected_segmentation_or_gloss_quality,medium,원 사전의 훈·뜻 구조 재확인,needs_review,LIBHANGUL_HANJA,법 준과 별개 의미로 유지하되 현재 문자열의 정확한 해석은 보류
 SEM-2026-004,晉,진,1,進과 同字,cross_reference_not_semantic_gloss,medium,동자 관계 정보와 작명 의미를 분리하고 이 행 자체를 대표 작명 뜻으로 사용하지 않음,needs_review,LIBHANGUL_HANJA,나아갈 진 의미는 별도 sense_order 2에 존재
+SEM-2026-005,詩,시,1,귀글 시,suspected_transposition_or_typo,medium,원 사전 표기 재확인 전 대표 작명 뜻 자동 사용 금지,hold_for_source_recheck,LIBHANGUL_HANJA,동일 관계에 글귀 시가 별도 sense_order 4로 존재하므로 자동 교정·병합하지 않음
