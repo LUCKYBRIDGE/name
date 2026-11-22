@@ -44,28 +44,36 @@
     {
       "gate_id": "HANJA_SEMANTIC_CURATION",
       "priority": "P0",
-      "status": "core_expanding",
+      "status": "core_300_reached_expanding",
       "coverage": {
-        "characters_curated": 202,
-        "senses_curated": 457,
+        "characters_curated": 300,
+        "senses_curated": 652,
         "semantic_characters": 7150
       },
       "blocking_for": [
         "claim_full_curated_naming_semantics"
       ],
-      "next_action": "Expand the reviewed core toward 300 frequently used naming Hanja; continue source-quality holds and exact Hanja+reading review."
+      "next_action": "Maintain the 300-character reviewed core, refine wording/risk labels from usage feedback, and expand only where request frequency or verified usage data justifies it.",
+      "evidence": [
+        "data/hanja/semantics/naming-core-characters.csv"
+      ]
     },
     {
       "gate_id": "NAMING_METHOD_DATA",
       "priority": "P0",
-      "status": "pronunciation_mapping_source_bound_legacy_81_quarantined_other_tables_partial",
+      "status": "pronunciation_and_kangxi_stroke_source_bound_legacy_resource_and_stroke_tables_migrated_81_variants_provenance_added",
       "coverage": {
-        "registered_methods": 7,
-        "source_bound_mapping_tables": 1,
+        "registered_methods": 12,
+        "source_bound_mapping_tables": 2,
         "pronunciation_onset_rows": 14,
         "legacy_numerology_81_rows": 81,
         "authoritative_numerology_81_tables": 0,
-        "fully_implemented_method_tables": 0
+        "fully_implemented_method_tables": 0,
+        "legacy_resource_element_radical_rows": 214,
+        "legacy_resource_element_override_rows": 84,
+        "legacy_wonhoek_adjustment_rows": 11,
+        "kangxi_radical_stroke_ranges": 17,
+        "numerology_method_provenance_rows": 3
       },
       "blocking_for": [
         "single_authoritative_naming_score",
@@ -80,9 +88,17 @@
         "data/methods/numerology-81-legacy-knolname.policy.json",
         "ACADEMIC_KAIS_PRON_2011",
         "KCI_NAMING_PRON_2015",
-        "KNOLNAME_LEGACY_81"
+        "KNOLNAME_LEGACY_81",
+        "data/methods/kangxi-radical-stroke-ranges.csv",
+        "data/methods/stroke-kangxi-rs-reconstruction.policy.json",
+        "data/methods/resource-element-radical-legacy-knolname2.csv",
+        "data/methods/resource-element-overrides-legacy-knolname2.csv",
+        "data/methods/wonhoek-adjustments-legacy-knolname2.csv",
+        "data/methods/numerology-81-method-provenance.csv",
+        "KCI_KUMASAKI_81_2019",
+        "NDL_KUMASAKI_SEIMEI_TETSURI_1933"
       ],
-      "next_action": "Add an independently source-bound 81-number table and stroke/original-stroke rules, then diff them against the quarantined legacy app table before enabling authoritative numerology scoring."
+      "next_action": "Transcribe and row-by-row verify the Kumasaki primary-source 1-81 table, independently source a second comparison table, and add source-bound resource-element school mappings before enabling authoritative scoring."
     },
     {
       "gate_id": "SOLAR_TERMS_2026_2027",
