@@ -50,6 +50,11 @@ for (const r of sourceRows) {
   sourceIds.add(r.source_id);
 }
 ok(`source registry unique IDs (${sourceIds.size})`);
+if (sourceIds.has("ACADEMIC_KAIS_PRON_2011")) fail("irrelevant 2011 auricular-acupuncture paper must not be a pronunciation naming source");
+for (const id of ["KCI_PRON_LABIAL_GUTTURAL_2018","KCI_PRON_APPLICATION_2019","KCI_KUMASAKI_MYSTERY_2025","NDL_KUMASAKI_SEIMEI_NO_SHINPI_1929"]) {
+  if (!sourceIds.has(id)) fail(`required naming-method source missing: ${id}`);
+}
+
 
 const sourceRightsRows=csvRows("data/meta/source-rights.csv");
 if (sourceRightsRows.length!==sourceRows.length) fail("source-rights row count mismatch");
@@ -364,13 +369,48 @@ for (const r of methodRows) {
   if (!r.domain || !r.method_name || !r.status || !r.implementation_policy || !r.caveat) fail(`naming method metadata missing: ${r.method_id}`);
   for (const sid of (r.source_ids||"").split("|").filter(Boolean)) if (!sourceIds.has(sid)) fail(`unknown naming method source: ${r.method_id}/${sid}`);
 }
-if (methodRows.length!==13) fail(`naming method registry expected 13, got ${methodRows.length}`);
+if (methodRows.length!==14) fail(`naming method registry expected 14, got ${methodRows.length}`);
 const axisPolicy=JSON.parse(read("data/methods/evaluation-axis-policy.json"));
 if (axisPolicy.version!=="1.0.0" || !Array.isArray(axisPolicy.axes) || axisPolicy.axes.length!==8) fail("evaluation axis policy shape/count");
 if (new Set(axisPolicy.axes.map(a=>a.axis_id)).size!==axisPolicy.axes.length) fail("duplicate evaluation axis_id");
 if (stats.methods?.naming_method_registry_rows!==methodRows.length) fail("stats naming method count mismatch");
 if (stats.methods?.evaluation_axes!==axisPolicy.axes.length) fail("stats evaluation axis count mismatch");
 ok(`naming method registry: ${methodRows.length} methods / ${axisPolicy.axes.length} evidence axes`);
+
+// Evidence-role registry: a citation can support existence, criticize, document a primary source,
+// or preserve legacy behavior without becoming authoritative evidence.
+const methodEvidenceRows=csvRows("data/methods/method-evidence.csv");
+if (methodEvidenceRows.length!==21) fail(`method evidence rows expected 21, got ${methodEvidenceRows.length}`);
+const methodEvidenceIds=new Set();
+for (const r of methodEvidenceRows) {
+  if (!r.evidence_id || methodEvidenceIds.has(r.evidence_id)) fail(`duplicate/empty method evidence_id: ${r.evidence_id}`);
+  methodEvidenceIds.add(r.evidence_id);
+  if (!methodIds.has(r.method_id)) fail(`method evidence unknown method: ${r.evidence_id}/${r.method_id}`);
+  if (!sourceIds.has(r.source_id)) fail(`method evidence unknown source: ${r.evidence_id}/${r.source_id}`);
+  if (!r.evidence_role || !r.claim_scope || !r.evidence_status || !r.app_effect) fail(`method evidence metadata missing: ${r.evidence_id}`);
+}
+if (methodEvidenceRows.some(r=>r.source_id==="ACADEMIC_KAIS_PRON_2011")) fail("irrelevant 2011 source leaked into method evidence");
+if (stats.methods?.method_evidence_rows!==methodEvidenceRows.length) fail("stats method evidence count mismatch");
+
+// Readiness is a separate gate from table existence.
+const methodReadinessRows=csvRows("data/methods/method-readiness.csv");
+if (methodReadinessRows.length!==methodRows.length) fail(`method readiness rows expected ${methodRows.length}, got ${methodReadinessRows.length}`);
+const readinessIds=new Set();
+let finalReadyCount=0;
+for (const r of methodReadinessRows) {
+  if (!r.method_id || readinessIds.has(r.method_id)) fail(`duplicate/empty method readiness id: ${r.method_id}`);
+  readinessIds.add(r.method_id);
+  if (!methodIds.has(r.method_id)) fail(`readiness unknown method: ${r.method_id}`);
+  if (!r.calculation_readiness || !r.blocking_reason) fail(`readiness metadata missing: ${r.method_id}`);
+  if (!["true","false"].includes(r.final_scoring_ready)) fail(`invalid final_scoring_ready: ${r.method_id}`);
+  if (r.final_scoring_ready==="true") finalReadyCount++;
+}
+for (const id of methodIds) if (!readinessIds.has(id)) fail(`method missing readiness row: ${id}`);
+if (finalReadyCount!==0) fail(`no naming method may be final-scoring ready yet; got ${finalReadyCount}`);
+if (stats.methods?.method_readiness_rows!==methodReadinessRows.length) fail("stats method readiness count mismatch");
+if (stats.methods?.final_scoring_ready_methods!==finalReadyCount) fail("stats final-scoring-ready count mismatch");
+ok(`method evidence/readiness: ${methodEvidenceRows.length} evidence rows / ${methodReadinessRows.length} methods / final-ready ${finalReadyCount}`);
+
 
 // Source-bound common onset pronunciation-five-elements table.
 const onsetRows=csvRows("data/methods/pronunciation-onset-common.csv");
@@ -389,16 +429,42 @@ for (const r of onsetRows) {
   onsetSeen.add(r.onset);
   if (expectedOnsets[r.onset]!==r.element) fail(`pronunciation onset element mismatch: ${r.onset}/${r.element}`);
   for (const sid of (r.source_ids||"").split("|").filter(Boolean)) if (!sourceIds.has(sid)) fail(`unknown pronunciation mapping source: ${r.onset}/${sid}`);
-  if (r.evidence_status!=="source_table_supported") fail(`pronunciation onset evidence status mismatch: ${r.onset}`);
+  if (r.evidence_status!=="source_bound_common_mapping_reconstructed") fail(`pronunciation onset evidence status mismatch: ${r.onset}`);
 }
 for (const [onset,element] of Object.entries(expectedOnsets)) if (!onsetSeen.has(onset)) fail(`missing pronunciation onset: ${onset}/${element}`);
 const onsetPolicy=JSON.parse(read("data/methods/pronunciation-onset-common.policy.json"));
-if (onsetPolicy.version!=="1.0.0" || onsetPolicy.method_id!=="pronunciation_onset_common") fail("pronunciation onset policy identity");
+if (onsetPolicy.version!=="1.1.0" || onsetPolicy.method_id!=="pronunciation_onset_common") fail("pronunciation onset policy identity");
 if ((onsetPolicy.supported_onsets||[]).length!==14) fail("pronunciation onset policy supported count");
 if ((onsetPolicy.unsupported_without_explicit_method_rule||[]).length!==5) fail("pronunciation onset policy tense-consonant count");
 if (stats.methods?.pronunciation_onset_mapping_rows!==onsetRows.length) fail("stats pronunciation onset row count mismatch");
 if (stats.methods?.source_bound_mapping_tables!==2) fail("stats source-bound mapping table count mismatch");
 ok(`pronunciation onset mapping: ${onsetRows.length} source-bound rows; tense consonants explicitly unsupported`);
+if (!Array.isArray(onsetPolicy.source_ids) || onsetPolicy.source_ids.includes("ACADEMIC_KAIS_PRON_2011")) fail("pronunciation policy source provenance invalid");
+if (onsetPolicy.conflicting_variant_method_id!=="pronunciation_labial_guttural_haerye_2018") fail("pronunciation conflict method missing");
+
+const pronunciationVariantRows=csvRows("data/methods/pronunciation-labial-guttural-variants.csv");
+if (pronunciationVariantRows.length!==4) fail(`pronunciation variant rows expected 4, got ${pronunciationVariantRows.length}`);
+const variantById=new Map();
+for(const r of pronunciationVariantRows){
+  if(!r.variant_id || variantById.has(r.variant_id)) fail(`duplicate/empty pronunciation variant: ${r.variant_id}`);
+  variantById.set(r.variant_id,r);
+  if(!methodIds.has(r.method_id)) fail(`pronunciation variant unknown method: ${r.variant_id}/${r.method_id}`);
+  if(r.authoritative_for_universal_standard!=="false") fail(`pronunciation variant cannot be universal: ${r.variant_id}`);
+  for(const sid of (r.source_ids||"").split("|").filter(Boolean)) if(!sourceIds.has(sid)) fail(`pronunciation variant unknown source: ${r.variant_id}/${sid}`);
+}
+const expectedVariants={
+  common_labial:["ㅁ|ㅂ|ㅍ","수"],
+  common_guttural:["ㅇ|ㅎ","토"],
+  haerye_labial:["ㅁ|ㅂ|ㅍ","토"],
+  haerye_guttural:["ㅇ|ㅎ","수"]
+};
+for(const [id,[onsets,element]] of Object.entries(expectedVariants)){
+  const r=variantById.get(id);
+  if(!r || r.onsets!==onsets || r.element!==element) fail(`pronunciation variant mismatch: ${id}`);
+}
+if(stats.methods?.pronunciation_variant_rows!==pronunciationVariantRows.length) fail("stats pronunciation variant count mismatch");
+ok("pronunciation labial/guttural conflict preserved as four explicit variant rows");
+
 
 // 300-character editorial naming core must be a unique subset of curated semantic characters.
 const namingCoreRows=csvRows("data/hanja/semantics/naming-core-characters.csv");
@@ -563,6 +629,15 @@ const gateIds=new Set((quality.gates||[]).map(g=>g.gate_id));
 for (const id of ["LEGAL_HANJA_OFFICIAL_FULL_DIFF","LEGAL_NAMING_RULES","DERIVED_DATA_REPRODUCIBILITY","HANJA_SEMANTIC_CURATION","NAMING_METHOD_DATA","SOLAR_TERMS_2026_2027","SAJU_CALCULATION_ENGINE","NAME_TREND_DATA","SURNAME_HANGNYEOL","SOURCE_LICENSE_AUDIT"]) if (!gateIds.has(id)) fail(`missing quality gate: ${id}`);
 if (quality.gates.find(g=>g.gate_id==="LEGAL_HANJA_OFFICIAL_FULL_DIFF")?.status!=="pending_official_extraction") fail("legal Hanja gate must remain pending");
 if (quality.gates.find(g=>g.gate_id==="SOLAR_TERMS_2026_2027")?.status!=="verified_official") fail("solar-term quality gate mismatch");
+const methodGate=quality.gates.find(g=>g.gate_id==="NAMING_METHOD_DATA");
+if (methodGate?.coverage?.registered_methods!==methodRows.length) fail("quality gate method count mismatch");
+if (methodGate?.coverage?.method_evidence_rows!==methodEvidenceRows.length) fail("quality gate method evidence count mismatch");
+if (methodGate?.coverage?.method_readiness_rows!==methodReadinessRows.length) fail("quality gate method readiness count mismatch");
+if (methodGate?.coverage?.final_scoring_ready_methods!==0) fail("quality gate final-scoring-ready count must be zero");
+const sourceAuditGate=quality.gates.find(g=>g.gate_id==="SOURCE_LICENSE_AUDIT");
+if (sourceAuditGate?.coverage?.sources!==sourceRows.length) fail("quality gate source count mismatch");
+if (sourceAuditGate?.coverage?.unknown_license_metadata!==sourceRows.filter(r=>r.license==="unknown").length) fail("quality gate unknown-license count mismatch");
+
 // Official name-trend source registry; ranking values are not yet embedded.
 const trendRows=csvRows("data/trends/name-trend-source-registry.csv");
 if (trendRows.length!==2) fail(`name-trend source rows expected 2, got ${trendRows.length}`);
@@ -576,6 +651,15 @@ for (const r of trendRows) {
 if (!trendIds.has("birth_top_names") || !trendIds.has("rename_top_names")) fail("required court name-trend datasets missing");
 if (stats.trends?.registered_official_datasets!==trendRows.length) fail("stats trend dataset count mismatch");
 if (stats.trends?.extracted_ranking_rows!==0) fail("trend ranking rows must remain zero until extraction is verified");
+const trendSnapshotSchema=JSON.parse(read("data/trends/name-trend-snapshot.schema.json"));
+if (trendSnapshotSchema["$schema"]!=="https://json-schema.org/draft/2020-12/schema") fail("trend snapshot schema draft mismatch");
+if (trendSnapshotSchema.properties?.rows?.maxItems!==20) fail("trend snapshot rows must be capped at official TOP20");
+if (!trendSnapshotSchema.properties?.dataset_id?.enum?.includes("birth_top_names") || !trendSnapshotSchema.properties?.dataset_id?.enum?.includes("rename_top_names")) fail("trend snapshot dataset enum mismatch");
+const trendIngestionPolicy=JSON.parse(read("data/trends/name-trend-ingestion-policy.json"));
+if (trendIngestionPolicy.version!=="1.0.0" || trendIngestionPolicy.source_id!=="KR_COURT_FAMILY_STATS") fail("trend ingestion policy identity");
+if (!String(trendIngestionPolicy.ingestion_status||"").includes("extraction_pending")) fail("trend ingestion must remain extraction-pending");
+if (stats.trends?.snapshot_schema_ready!==true) fail("stats trend snapshot schema readiness mismatch");
+if (stats.trends?.ingestion_policy_version!==trendIngestionPolicy.version) fail("stats trend ingestion policy version mismatch");
 ok(`name-trend registry: ${trendRows.length} official datasets / extraction pending`);
 
 ok("quality gates present and conservative");
