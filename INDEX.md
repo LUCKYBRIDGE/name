@@ -53,6 +53,9 @@ AI와 앱 개발 코드는 사용자 요청의 **의도**에 따라 필요한 �
 
 ## 성명학 방법론 데이터
 - method 카탈로그: `data/methods/naming-method-registry.csv`
+- method 근거 역할: `data/methods/method-evidence.csv`
+- method 계산 준비도: `data/methods/method-readiness.csv`
+- 순음·후음 학파별 충돌표: `data/methods/pronunciation-labial-guttural-variants.csv`
 - 초성 발음오행 통용 배속표: `data/methods/pronunciation-onset-common.csv`
 - 초성 발음오행 적용정책: `data/methods/pronunciation-onset-common.policy.json`
 - 81수리 기존 앱 격리표: `data/methods/numerology-81-legacy-knolname.csv`
@@ -67,6 +70,8 @@ AI와 앱 개발 코드는 사용자 요청의 **의도**에 따라 필요한 �
 
 ## 이름 유행 데이터
 - 공식 출처 레지스트리: `data/trends/name-trend-source-registry.csv`
+- 공식 TOP20 스냅샷 스키마: `data/trends/name-trend-snapshot.schema.json`
+- 수집·파생 정책: `data/trends/name-trend-ingestion-policy.json`
 - 사용 원칙: `data/trends/README.md`
 
 ## 법적 이름 등록 데이터
