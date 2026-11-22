@@ -81,6 +81,8 @@ AI와 앱 개발 코드는 사용자 요청의 **의도**에 따라 필요한 �
 - 상위 30개 확장 검증: `tests/상위30-성씨-대표검증.csv`
 - 한자 다중 의미 검증: `tests/한자-다중의미-대표검증.csv`
 - 사주 절기 경계 회귀검증: `tests/사주-절기경계-검증.csv`
+- 독립 구현 교차검증: `tests/사주-팔자-교차검증-lunar-python-1.4.9.csv`
+- 외부 구현 시간기준: `data/time/reference-implementation-time-basis.csv`
 - AI 응답 실패 사례: `tests/AI-응답-검증-시나리오.md`
 - 파생 데이터 빌드 계보: `data/meta/build-manifest.json`, `scripts/build/`
 - 품질 게이트: `data/meta/quality-gates.json`

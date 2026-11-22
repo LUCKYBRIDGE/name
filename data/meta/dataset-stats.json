@@ -46,8 +46,13 @@
     "earthly_branches": 12,
     "sexagenary_cycle": 60,
     "ten_god_stem_relations": 100,
-    "status": "structured_fixed_tables_available; interpretive methods remain method-specific",
-    "solar_term_boundary_test_vectors": 48
+    "status": "structured fixed tables + KASI boundary vectors + pinned independent implementation crosscheck; Korea-specific full-pillar golden set still pending",
+    "solar_term_boundary_test_vectors": 48,
+    "crosscheck_vector_rows": 64,
+    "lunar_python_reference_version": "1.4.9",
+    "lunar_python_reference_commit": "1645ad3",
+    "lunar_python_kasi_boundary_raw_clock_matches": 24,
+    "reference_time_basis_rows": 1
   },
   "notes": [
     "README files should reference this file instead of maintaining independent counts.",
@@ -65,7 +70,8 @@
     "Naming semantic curation expanded from 12 characters/25 senses to 95 characters/202 reviewed senses; this remains partial coverage, not a full naming dictionary.",
     "Four suspicious semantic source rows are explicitly held for source recheck rather than silently corrected.",
     "Seven naming-method families are now registered separately so pronunciation, resource-element, numerology, stroke, and yongshin approaches are not collapsed into one score.",
-    "48 KASI-backed month-branch boundary vectors cover the exact minute before/at each 2026-2027 monthly start solar term."
+    "48 KASI-backed month-branch boundary vectors cover the exact minute before/at each 2026-2027 monthly start solar term.",
+    "lunar-python 1.4.9 crosscheck found its solar-term table is Beijing-time based; raw Korean local-clock fields switch month branch about one hour earlier than KASI Korea-local boundaries, so the library output is not treated as Korean golden truth."
   ],
   "surnames": {
     "master_records": 31,

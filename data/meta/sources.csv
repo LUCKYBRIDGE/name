@@ -7,7 +7,7 @@ IANA_TZDB_ASIA,IANA,Time Zone Database Asia,https://data.iana.org/time-zones/tzd
 KR_ARCHIVES_TIME,국가기록원,대한민국 표준시 및 서머타임 기록,https://theme.archives.go.kr/next/koreaOfRecord/summerTime.do,official_archive,public_reference,2026-11-14,대한민국 표준시 역사 설명,IANA tzdb와 교차검증
 LIBHANGUL_HANJA,libhangul project,한국어 한자 사전 hanja.txt,https://github.com/libhangul/libhangul,open_source_dictionary,BSD-3-Clause,2026-11-14,한국어 한자 훈음 결합,법적 허용 여부 근거로 사용 금지
 UNICODE_UNIHAN,Unicode Consortium,Unihan Database,https://unicode.org/reports/tr38/,technical_standard,Unicode-3.0-License,2026-11-14,Unicode 코드포인트·부수·기술 총획,성명학 원획과 동일시 금지
-LUNAR_PYTHON,6tail,lunar-python,https://github.com/6tail/lunar-python,open_source_implementation,MIT,2026-11-14,명리 고정표와 달력 구현 교차검증,단독 학술 근거가 아닌 구현 참조
+LUNAR_PYTHON,6tail,lunar-python v1.4.9 (commit 1645ad3),https://github.com/6tail/lunar-python/tree/1645ad3,open_source_implementation,MIT,2026-11-22,명리 고정표·달력·사주팔자 구현 교차검증,소스가 절기 시각을 北京时间으로 계산함을 명시하므로 한국 출생시각에 raw local-clock 결과를 정답으로 직접 사용하지 않음
 RUTOPIO_NAME_HANJA,rutopio,Korean-Name-Hanja-Charset data-gov.csv,https://github.com/rutopio/Korean-Name-Hanja-Charset,secondary_mirror,MIT,2026-11-14,2024-07-16 대법원 조회 기반 빠른 후보 검색,현행 법적 판정은 공식 조회 필요
 KCI_JIJANGGAN,KCI,지장간 구성 연구,https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002596264,academic,unknown,2026-11-14,지장간 구성과 명리 이론 교차검증,전통 이론의 과학적 예측 효력 근거 아님
 KCI_TENSUNG,KCI,십성 개념 연구,https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002810441,academic,unknown,2026-11-14,십성 관계 교차검증,전통 이론의 과학적 예측 효력 근거 아님

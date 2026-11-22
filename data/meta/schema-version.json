@@ -37,6 +37,8 @@
     "method_registry": "Traditional naming calculations require a registered method_id and must not be merged into a universal score.",
     "semantic_source_hold": "Suspicious or malformed source senses are held for recheck and must not be silently corrected or promoted to naming meanings.",
     "legal_rule_layer": "Current legal naming rules are stored separately from candidate Hanja mirrors and traditional naming interpretations.",
-    "saju_boundary_vectors": "Solar-term month-branch changes are regression-tested at one minute before and exactly at verified boundaries."
+    "saju_boundary_vectors": "Solar-term month-branch changes are regression-tested at one minute before and exactly at verified boundaries.",
+    "reference_implementation_time_basis": "Record timezone/clock basis for external calendar implementations; never compare raw clock fields across KST/CST as if they were the same instant.",
+    "saju_crosscheck_not_golden": "Independent implementation output is crosscheck evidence, not a Korean golden vector, unless timezone and method assumptions are independently verified."
   }
 }
