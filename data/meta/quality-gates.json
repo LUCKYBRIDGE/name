@@ -63,7 +63,7 @@
       "priority": "P0",
       "status": "pronunciation_and_kangxi_stroke_source_bound_legacy_resource_and_stroke_tables_migrated_81_variants_provenance_added",
       "coverage": {
-        "registered_methods": 12,
+        "registered_methods": 13,
         "source_bound_mapping_tables": 2,
         "pronunciation_onset_rows": 14,
         "legacy_numerology_81_rows": 81,
@@ -73,7 +73,9 @@
         "legacy_resource_element_override_rows": 84,
         "legacy_wonhoek_adjustment_rows": 11,
         "kangxi_radical_stroke_ranges": 17,
-        "numerology_method_provenance_rows": 3
+        "numerology_method_provenance_rows": 3,
+        "source_bound_resource_element_method_sources": 1,
+        "embedded_source_bound_resource_element_mapping_rows": 0
       },
       "blocking_for": [
         "single_authoritative_naming_score",
@@ -96,9 +98,10 @@
         "data/methods/wonhoek-adjustments-legacy-knolname2.csv",
         "data/methods/numerology-81-method-provenance.csv",
         "KCI_KUMASAKI_81_2019",
-        "NDL_KUMASAKI_SEIMEI_TETSURI_1933"
+        "NDL_KUMASAKI_SEIMEI_TETSURI_1933",
+        "KCI_RESOURCE_ELEMENT_214_2024"
       ],
-      "next_action": "Transcribe and row-by-row verify the Kumasaki primary-source 1-81 table, independently source a second comparison table, and add source-bound resource-element school mappings before enabling authoritative scoring."
+      "next_action": "Independently reconstruct or obtain permission for a source-bound 214-radical resource-element table, transcribe and row-verify the Kumasaki 1-81 primary-source table, and add school-specific stroke exceptions before enabling authoritative composite scoring."
     },
     {
       "gate_id": "SOLAR_TERMS_2026_2027",
@@ -136,14 +139,15 @@
     {
       "gate_id": "NAME_TREND_DATA",
       "priority": "P1",
-      "status": "official_source_registered_extraction_pending",
+      "status": "official_reuse_policy_verified_extraction_pending",
       "blocking_for": [
         "data_backed_popularity_score"
       ],
-      "next_action": "Verify automated extraction and redistribution terms, then ingest dated birth-name and rename-name ranking snapshots with sex/period metadata.",
+      "next_action": "Extract direct official birth-name and rename-name TOP20 snapshots with query type, period, region, sex, registration-date basis and retrieval date; never infer ranks outside the published TOP20.",
       "coverage": {
         "official_datasets_registered": 2,
-        "ranking_rows_embedded": 0
+        "ranking_rows_embedded": 0,
+        "reuse_policy_verified": true
       },
       "evidence": [
         "data/trends/name-trend-source-registry.csv",
