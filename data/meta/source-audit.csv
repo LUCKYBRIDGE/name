@@ -70,3 +70,4 @@ KCI_NAMING_YONGSHIN_2017,academic,unknown,unknown,manual_review_before_bulk_redi
 KCI_NAMING_81_2023,academic,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
 ACADEMIC_KAIS_PRON_2011,academic,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
 KR_COURT_FAMILY_STATS,official_service,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,high,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
+KNOLNAME_LEGACY_81,first_party_legacy_implementation,first_party_all_rights_reserved,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 정책 라벨의 실제 적용 범위는 재배포 시 다시 확인
