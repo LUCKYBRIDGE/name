@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-11-22",
-  "schema_version": "1.12.0",
+  "schema_version": "1.13.0",
   "authoritative_for": "repository dataset counts and normalization status",
   "hanja": {
     "upstream_crawl_date": "2024-07-16",
@@ -21,7 +21,7 @@
       "meanings": "libhangul_exact_reading_character_match",
       "strokes": "provisional_unicode_technical_metadata",
       "semantic_senses": "derived_full_layer_unreviewed_lexicographic_split",
-      "naming_meanings": "curated_core_expanding_editorial_layer",
+      "naming_meanings": "curated_core_300_editorial_layer",
       "semantic_selection": "structured_policy_with_risk_not_auto_rejection",
       "legal_official_full_diff": "pending_official_extraction"
     },
@@ -29,8 +29,8 @@
     "semantic_relations": 7425,
     "multi_sense_relations": 3492,
     "semantic_unique_characters": 7150,
-    "curated_naming_sense_rows": 457,
-    "curated_naming_characters": 202,
+    "curated_naming_sense_rows": 652,
+    "curated_naming_characters": 300,
     "semantic_derivation": "mechanically split comma-delimited libhangul meaning_ko after deduplicating exact reading-character relations",
     "semantic_selection_policy_version": "1.0.0",
     "semantic_risk_rule_rows": 9,
@@ -67,14 +67,17 @@
     "Core Hanja normalization/index/semantic-sense files and source-audit.csv have exact regeneration scripts checked by CI.",
     "2026 and 2027 solar-term rows were verified against KASI calendar/almanac pages on 2026-11-14.",
     "Every registered external source has a machine-readable rights/use classification in data/meta/source-rights.csv; unverified sources default to reference/summary-only handling.",
-    "Naming semantic curation expanded from 12 characters/25 senses to 202 characters/457 reviewed senses; this remains partial coverage, not a full naming dictionary.",
+    "Naming semantic curation reached 300 characters / 652 reviewed sense rows; this is an editorial priority core, not an official popularity ranking.",
     "Seven suspicious semantic source rows are explicitly held for source recheck rather than silently corrected.",
     "Seven naming-method families are now registered separately so pronunciation, resource-element, numerology, stroke, and yongshin approaches are not collapsed into one score.",
     "48 KASI-backed month-branch boundary vectors cover the exact minute before/at each 2026-2027 monthly start solar term.",
     "lunar-python 1.4.9 crosscheck found its solar-term table is Beijing-time based; raw Korean local-clock fields switch month branch about one hour earlier than KASI Korea-local boundaries, so the library output is not treated as Korean golden truth.",
     "Common onset pronunciation-five-elements mapping now has 14 source-bound basic consonant rows; tense-consonant normalization remains intentionally unsupported until a method-specific source is registered.",
     "Official court birth-name and rename-name ranking services are registered as trend sources, but ranking values are not bulk embedded until extraction and redistribution conditions are reviewed.",
-    "The 81-row numerology table previously hardcoded in knolname is preserved as legacy_knolname_v0_2_0 with authoritative_for_scoring=false; it is regression evidence, not a verified numerology source."
+    "The 81-row numerology table previously hardcoded in knolname is preserved as legacy_knolname_v0_2_0 with authoritative_for_scoring=false; it is regression evidence, not a verified numerology source.",
+    "knolname2 server/dataLoader.ts resource-element 214-radical map, 84 semantic overrides, and 11 wonhoek delta rules are now preserved in data/methods as explicit non-authoritative legacy method tables.",
+    "Unihan kRSKangXi radical number + residual stroke data now has a source-bound 17-range Kangxi radical stroke reconstruction method; this replaces ad-hoc delta patches for technical reconstruction but is not automatically a universal naming-school wonhoek standard.",
+    "Kumasaki and Cai Shen/Hongfan 81-number traditions are registered as separate historical methods; KCI 2019 reports 27/81 opposing good/bad judgments, so no universal 81 table is claimed."
   ],
   "surnames": {
     "master_records": 31,
@@ -119,22 +122,27 @@
     "status": "official_calendar_data_verified_2026_2027"
   },
   "sources": {
-    "registry_records": 72,
-    "unknown_license_metadata": 16,
+    "registry_records": 75,
+    "unknown_license_metadata": 17,
     "named_license_records": 4,
     "policy_label_records": 20,
     "audit_file": "data/meta/source-audit.csv",
-    "rights_registry_records": 72,
+    "rights_registry_records": 75,
     "rights_file": "data/meta/source-rights.csv"
   },
   "methods": {
-    "naming_method_registry_rows": 7,
+    "naming_method_registry_rows": 12,
     "evaluation_axes": 8,
-    "status": "method families separated; common onset pronunciation mapping source-bound; legacy knolname 81 table quarantined and non-authoritative; other calculation tables remain incremental",
+    "status": "method families separated; 300-character semantic core; Unihan kRSKangXi stroke reconstruction added; knolname2 resource-element/wonhoek hardcodes migrated as non-authoritative legacy tables; Kumasaki/Cai Shen 81 variants separated with primary-source provenance",
     "pronunciation_onset_mapping_rows": 14,
-    "source_bound_mapping_tables": 1,
+    "source_bound_mapping_tables": 2,
     "legacy_numerology_81_rows": 81,
-    "authoritative_numerology_81_tables": 0
+    "authoritative_numerology_81_tables": 0,
+    "legacy_resource_element_radical_rows": 214,
+    "legacy_resource_element_override_rows": 84,
+    "legacy_wonhoek_adjustment_rows": 11,
+    "kangxi_radical_stroke_ranges": 17,
+    "numerology_method_provenance_rows": 3
   },
   "legal": {
     "name_registration_rule_rows": 6,
