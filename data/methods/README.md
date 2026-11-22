@@ -25,6 +25,9 @@
 - `wonhoek-adjustments-legacy-knolname2.csv`: 기존 앱 11종 원획 delta 보정의 비권위 legacy 이전본
 - `numerology-81-method-provenance.csv`: legacy·구마사키·채침/홍범 계열의 출처와 검증상태 분리
 
+출처가 확인된 미내장 method:
+- `resource_element_radical_lee_2024`: 214부수 자원오행 및 강·중·약·불명 분류 연구. 학회 저작권으로 표 원문은 미복제.
+
 다음 우선순위:
 - 출처가 확인된 자원오행 학파별 한자 배속표
 - 구마사키 1차 원전의 1~81행 페이지 단위 전사 및 독립 대조
