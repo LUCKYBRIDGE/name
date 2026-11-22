@@ -56,6 +56,7 @@ if (sourceRightsRows.length!==sourceRows.length) fail("source-rights row count m
 const sourceRightsIds=new Set();
 const allowedRightsClasses=new Set([
   "embedded_open_license",
+  "first_party_legacy_implementation",
   "reference_only_open_source",
   "official_statistics_reuse_policy",
   "public_text_KOGL_type1",
@@ -78,7 +79,7 @@ for (const rr of sourceRightsRows) {
   if (src?.license==="unknown" && !["official_reference_bulk_reuse_unverified","academic_reference_only","secondary_reference_only","reference_terms_not_item_verified"].includes(rr.rights_class)) {
     fail(`unknown-license source classified too permissively: ${rr.source_id}/${rr.rights_class}`);
   }
-  if (rr.embedded_source_content==="true" && !["embedded_open_license"].includes(rr.rights_class)) {
+  if (rr.embedded_source_content==="true" && !["embedded_open_license","first_party_legacy_implementation"].includes(rr.rights_class)) {
     fail(`embedded source content lacks explicit redistributable class: ${rr.source_id}`);
   }
   if (rr.rights_class==="public_text_KOGL_type1" && !rr.attribution_template.includes("ⓒ한국민족문화대백과사전")) {
