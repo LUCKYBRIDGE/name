@@ -1,0 +1,42 @@
+name: Refresh derived data for content depth 4
+
+on:
+  push:
+    branches:
+      - content-depth-4-20261122
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-derived-content-depth-4
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: content-depth-4-20261122
+          fetch-depth: 0
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+      - name: Refresh reproducible derived files
+        run: node scripts/build/build-derived.mjs
+      - name: Commit derived changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain -- data/hanja/normalized data/hanja/semantics/meaning-senses.csv data/meta/source-audit.csv data/meta/source-rights.csv tests/사주-절기경계-검증.csv)" ]; then
+            echo "Derived files are already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/hanja/normalized data/hanja/semantics/meaning-senses.csv data/meta/source-audit.csv data/meta/source-rights.csv tests/사주-절기경계-검증.csv
+          git commit -m "build: refresh derived data [skip refresh]"
+          git push origin HEAD:content-depth-4-20261122
