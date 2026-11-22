@@ -1,0 +1,12 @@
+method_id,radical_no,label,delta,source_id,evidence_status,authoritative_for_scoring,notes
+stroke_wonhoek_knolname2_legacy_v0_3,85,氵→水,1,KNOLNAME2_DATALOADER_LEGACY,legacy_app_hardcode_unverified,false,삼수변(3획)을 원획 水(4획)로 산정하는 전통 원획 보정
+stroke_wonhoek_knolname2_legacy_v0_3,64,扌→手,1,KNOLNAME2_DATALOADER_LEGACY,legacy_app_hardcode_unverified,false,재방변(3획)을 원획 手(4획)로 산정하는 전통 원획 보정
+stroke_wonhoek_knolname2_legacy_v0_3,61,忄→心,1,KNOLNAME2_DATALOADER_LEGACY,legacy_app_hardcode_unverified,false,심방변(3획)을 원획 心(4획)로 산정하는 전통 원획 보정
+stroke_wonhoek_knolname2_legacy_v0_3,94,犭→犬,1,KNOLNAME2_DATALOADER_LEGACY,legacy_app_hardcode_unverified,false,개사슴록변(3획)을 원획 犬(4획)로 산정하는 전통 원획 보정
+stroke_wonhoek_knolname2_legacy_v0_3,96,王→玉,1,KNOLNAME2_DATALOADER_LEGACY,legacy_app_hardcode_unverified,false,구슬옥변(4획)을 원획 玉(5획)로 산정하는 전통 원획 보정
+stroke_wonhoek_knolname2_legacy_v0_3,113,礻→示,1,KNOLNAME2_DATALOADER_LEGACY,legacy_app_hardcode_unverified,false,보일시변(4획)을 원획 示(5획)로 산정하는 전통 원획 보정
+stroke_wonhoek_knolname2_legacy_v0_3,145,衤→衣,1,KNOLNAME2_DATALOADER_LEGACY,legacy_app_hardcode_unverified,false,옷의변(5획)을 원획 衣(6획)로 산정하는 전통 원획 보정
+stroke_wonhoek_knolname2_legacy_v0_3,140,艹→艸,3,KNOLNAME2_DATALOADER_LEGACY,legacy_app_hardcode_unverified,false,초두머리(3획)를 원획 艸(6획)로 산정하는 전통 원획 보정
+stroke_wonhoek_knolname2_legacy_v0_3,162,辶→辵,4,KNOLNAME2_DATALOADER_LEGACY,legacy_app_hardcode_unverified,false,책받침(3획)을 원획 辵(7획)로 산정하는 전통 원획 보정
+stroke_wonhoek_knolname2_legacy_v0_3,163,阝(우)→邑,4,KNOLNAME2_DATALOADER_LEGACY,legacy_app_hardcode_unverified,false,우부방(3획)을 원획 邑(7획)으로 산정하는 전통 원획 보정
+stroke_wonhoek_knolname2_legacy_v0_3,170,阝(좌)→阜,5,KNOLNAME2_DATALOADER_LEGACY,legacy_app_hardcode_unverified,false,좌부방(3획)을 원획 阜(8획)로 산정하는 전통 원획 보정
