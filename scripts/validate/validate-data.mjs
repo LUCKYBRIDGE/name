@@ -364,7 +364,7 @@ for (const r of methodRows) {
   if (!r.domain || !r.method_name || !r.status || !r.implementation_policy || !r.caveat) fail(`naming method metadata missing: ${r.method_id}`);
   for (const sid of (r.source_ids||"").split("|").filter(Boolean)) if (!sourceIds.has(sid)) fail(`unknown naming method source: ${r.method_id}/${sid}`);
 }
-if (methodRows.length!==12) fail(`naming method registry expected 12, got ${methodRows.length}`);
+if (methodRows.length!==13) fail(`naming method registry expected 13, got ${methodRows.length}`);
 const axisPolicy=JSON.parse(read("data/methods/evaluation-axis-policy.json"));
 if (axisPolicy.version!=="1.0.0" || !Array.isArray(axisPolicy.axes) || axisPolicy.axes.length!==8) fail("evaluation axis policy shape/count");
 if (new Set(axisPolicy.axes.map(a=>a.axis_id)).size!==axisPolicy.axes.length) fail("duplicate evaluation axis_id");
@@ -571,7 +571,7 @@ for (const r of trendRows) {
   if (!r.dataset_id || trendIds.has(r.dataset_id)) fail(`duplicate/empty trend dataset: ${r.dataset_id}`);
   trendIds.add(r.dataset_id);
   if (!sourceIds.has(r.source_id)) fail(`unknown trend source: ${r.dataset_id}/${r.source_id}`);
-  if (r.status!=="source_registered_extraction_pending") fail(`unexpected trend status: ${r.dataset_id}/${r.status}`);
+  if (r.status!=="reuse_policy_verified_extraction_pending") fail(`unexpected trend status: ${r.dataset_id}/${r.status}`);
 }
 if (!trendIds.has("birth_top_names") || !trendIds.has("rename_top_names")) fail("required court name-trend datasets missing");
 if (stats.trends?.registered_official_datasets!==trendRows.length) fail("stats trend dataset count mismatch");
