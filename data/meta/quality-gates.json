@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14",
+  "generated_at": "2026-11-22",
   "gates": [
     {
       "gate_id": "LEGAL_HANJA_OFFICIAL_FULL_DIFF",
@@ -16,6 +16,22 @@
       "next_action": "Normalize current court rows and run compare-official-hanja.mjs."
     },
     {
+      "gate_id": "LEGAL_NAMING_RULES",
+      "priority": "P0",
+      "status": "current_rule_summary_verified",
+      "coverage": {
+        "rule_rows": 6,
+        "verified_on": "2026-11-22"
+      },
+      "blocking_for": [],
+      "evidence": [
+        "data/legal/name-registration-rules.csv",
+        "KR_LAW_NAME_RULE",
+        "KR_COURT_HANJA"
+      ],
+      "next_action": "Keep rules under change monitoring and complete official full Hanja diff for bulk legal flags."
+    },
+    {
       "gate_id": "DERIVED_DATA_REPRODUCIBILITY",
       "priority": "P0",
       "status": "partial_pass",
@@ -28,15 +44,34 @@
     {
       "gate_id": "HANJA_SEMANTIC_CURATION",
       "priority": "P0",
-      "status": "pilot",
+      "status": "core_expanding",
       "coverage": {
-        "characters_curated": 12,
+        "characters_curated": 42,
+        "senses_curated": 98,
         "semantic_characters": 7150
       },
       "blocking_for": [
         "claim_full_curated_naming_semantics"
       ],
-      "next_action": "Curate frequent naming Hanja and classify sense types."
+      "next_action": "Continue human curation in priority batches; target 100+ frequently used naming Hanja before claiming broad coverage."
+    },
+    {
+      "gate_id": "NAMING_METHOD_DATA",
+      "priority": "P0",
+      "status": "method_registry_added_tables_partial",
+      "coverage": {
+        "registered_methods": 6,
+        "fully_implemented_method_tables": 0
+      },
+      "blocking_for": [
+        "single_authoritative_naming_score",
+        "claim_method_complete_numerology_or_element_scoring"
+      ],
+      "evidence": [
+        "data/methods/naming-method-registry.csv",
+        "data/methods/evaluation-axis-policy.json"
+      ],
+      "next_action": "Add source-bound pronunciation mappings, resource-element mappings, stroke rules and 81-number interpretation tables per method_id."
     },
     {
       "gate_id": "SOLAR_TERMS_2026_2027",
@@ -47,21 +82,26 @@
           2026,
           2027
         ],
-        "rows": 48
+        "rows": 48,
+        "boundary_vectors": 48
       },
       "evidence": [
         "KASI_CALENDAR"
       ],
-      "next_action": "Extend years and boundary regression vectors."
+      "next_action": "Extend official/verified term coverage to more birth years and add full pillar golden vectors."
     },
     {
       "gate_id": "SAJU_CALCULATION_ENGINE",
       "priority": "P1",
-      "status": "pending",
+      "status": "boundary_vectors_added_engine_golden_pending",
       "blocking_for": [
         "repository_native_verified_saju_generation"
       ],
-      "next_action": "Implement calendar/pillars engine and golden vectors."
+      "next_action": "Add independently verified full four-pillar golden vectors, including lunar/leap-month, DST, historical standard-time and zi-hour cases.",
+      "evidence": [
+        "tests/사주-절기경계-검증.csv",
+        "data/myeongri/월지_절기경계.csv"
+      ]
     },
     {
       "gate_id": "NAME_TREND_DATA",
@@ -90,8 +130,8 @@
       "priority": "P2",
       "status": "metadata_audit_complete_manual_review_pending",
       "coverage": {
-        "sources": 66,
-        "unknown_license_metadata": 42
+        "sources": 69,
+        "unknown_license_metadata": 14
       },
       "evidence": [
         "data/meta/source-audit.csv"
