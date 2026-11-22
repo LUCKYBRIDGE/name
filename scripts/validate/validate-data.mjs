@@ -238,8 +238,8 @@ for (const r of curatedRows) {
   else if (matches[0].raw_sense!==r.raw_sense) fail(`curated raw_sense mismatch: ${r.hanja}/${r.legal_reading}/${r.sense_order}`);
   if (r.naming_use_class==="caution_other_dictionary_sense" && r.primary_name_explanation_allowed!=="false") fail(`caution sense cannot be primary: ${r.hanja}/${r.raw_sense}`);
 }
-if (curatedRows.length!==457) fail(`curated naming rows expected 457, got ${curatedRows.length}`);
-if (curatedChars.size!==202) fail(`curated naming characters expected 202, got ${curatedChars.size}`);
+if (curatedRows.length!==652) fail(`curated naming rows expected 652, got ${curatedRows.length}`);
+if (curatedChars.size!==300) fail(`curated naming characters expected 300, got ${curatedChars.size}`);
 const yu祐=senseRows.filter(r=>r.hanja==="祐"&&r.legal_reading==="우").map(r=>r.raw_sense);
 if (yu祐.length!==2 || !yu祐.includes("도울 우") || !yu祐.includes("다행할 우")) fail("祐/우 must preserve two documented senses");
 const yu優=senseRows.filter(r=>r.hanja==="優"&&r.legal_reading==="우").map(r=>r.raw_sense);
@@ -364,7 +364,7 @@ for (const r of methodRows) {
   if (!r.domain || !r.method_name || !r.status || !r.implementation_policy || !r.caveat) fail(`naming method metadata missing: ${r.method_id}`);
   for (const sid of (r.source_ids||"").split("|").filter(Boolean)) if (!sourceIds.has(sid)) fail(`unknown naming method source: ${r.method_id}/${sid}`);
 }
-if (methodRows.length!==7) fail(`naming method registry expected 7, got ${methodRows.length}`);
+if (methodRows.length!==12) fail(`naming method registry expected 12, got ${methodRows.length}`);
 const axisPolicy=JSON.parse(read("data/methods/evaluation-axis-policy.json"));
 if (axisPolicy.version!=="1.0.0" || !Array.isArray(axisPolicy.axes) || axisPolicy.axes.length!==8) fail("evaluation axis policy shape/count");
 if (new Set(axisPolicy.axes.map(a=>a.axis_id)).size!==axisPolicy.axes.length) fail("duplicate evaluation axis_id");
@@ -397,8 +397,81 @@ if (onsetPolicy.version!=="1.0.0" || onsetPolicy.method_id!=="pronunciation_onse
 if ((onsetPolicy.supported_onsets||[]).length!==14) fail("pronunciation onset policy supported count");
 if ((onsetPolicy.unsupported_without_explicit_method_rule||[]).length!==5) fail("pronunciation onset policy tense-consonant count");
 if (stats.methods?.pronunciation_onset_mapping_rows!==onsetRows.length) fail("stats pronunciation onset row count mismatch");
-if (stats.methods?.source_bound_mapping_tables!==1) fail("stats source-bound mapping table count mismatch");
+if (stats.methods?.source_bound_mapping_tables!==2) fail("stats source-bound mapping table count mismatch");
 ok(`pronunciation onset mapping: ${onsetRows.length} source-bound rows; tense consonants explicitly unsupported`);
+
+// 300-character editorial naming core must be a unique subset of curated semantic characters.
+const namingCoreRows=csvRows("data/hanja/semantics/naming-core-characters.csv");
+if (namingCoreRows.length!==300) fail(`naming core expected 300 rows, got ${namingCoreRows.length}`);
+const namingCoreChars=new Set();
+for (const r of namingCoreRows) {
+  if (!r.hanja || namingCoreChars.has(r.hanja)) fail(`duplicate/empty naming core Hanja: ${r.hanja}`);
+  namingCoreChars.add(r.hanja);
+  if (!curatedChars.has(r.hanja)) fail(`naming core Hanja lacks curated semantics: ${r.hanja}`);
+  if (!r.core_tier || !r.selection_basis || r.semantic_curation_status!=="curated") fail(`naming core metadata missing: ${r.hanja}`);
+}
+if (namingCoreChars.size!==300) fail("naming core unique count mismatch");
+ok(`naming core registry: ${namingCoreChars.size} editorial-priority Hanja`);
+
+// Source-bound technical Kangxi radical-stroke reconstruction.
+const kangxiRangeRows=csvRows("data/methods/kangxi-radical-stroke-ranges.csv");
+if (kangxiRangeRows.length!==17) fail(`Kangxi stroke ranges expected 17, got ${kangxiRangeRows.length}`);
+const radicalStrokeByNo=new Map();
+for (const r of kangxiRangeRows) {
+  if (r.method_id!=="stroke_kangxi_rs_reconstruction_v1" || r.source_id!=="UNICODE_UNIHAN") fail(`Kangxi range identity mismatch: ${r.radical_no_start}-${r.radical_no_end}`);
+  const a=Number(r.radical_no_start), b=Number(r.radical_no_end), strokes=Number(r.canonical_radical_strokes);
+  if (!Number.isInteger(a)||!Number.isInteger(b)||!Number.isInteger(strokes)||a<1||b>214||a>b) fail(`invalid Kangxi range: ${a}-${b}`);
+  for(let n=a;n<=b;n++){ if(radicalStrokeByNo.has(n)) fail(`overlapping Kangxi radical range: ${n}`); radicalStrokeByNo.set(n,strokes); }
+}
+if (radicalStrokeByNo.size!==214) fail(`Kangxi radical coverage expected 214, got ${radicalStrokeByNo.size}`);
+const kangxiPolicy=JSON.parse(read("data/methods/stroke-kangxi-rs-reconstruction.policy.json"));
+if (kangxiPolicy.method_id!=="stroke_kangxi_rs_reconstruction_v1" || kangxiPolicy.source_id!=="UNICODE_UNIHAN") fail("Kangxi reconstruction policy identity");
+if (stats.methods?.kangxi_radical_stroke_ranges!==kangxiRangeRows.length) fail("stats Kangxi range count mismatch");
+ok("Kangxi radical-stroke reconstruction: 214 radicals covered");
+
+// Legacy knolname2 hardcodes are migrated to DB but remain non-authoritative.
+const legacyResourceRows=csvRows("data/methods/resource-element-radical-legacy-knolname2.csv");
+if (legacyResourceRows.length!==214) fail(`legacy resource radical rows expected 214, got ${legacyResourceRows.length}`);
+const legacyRadicals=new Set();
+for(const r of legacyResourceRows){
+  const n=Number(r.radical_no);
+  if(!Number.isInteger(n)||n<1||n>214||legacyRadicals.has(n)) fail(`invalid/duplicate legacy resource radical: ${r.radical_no}`);
+  legacyRadicals.add(n);
+  if(r.method_id!=="resource_element_knolname2_legacy_v0_3"||r.source_id!=="KNOLNAME2_DATALOADER_LEGACY"||r.authoritative_for_scoring!=="false") fail(`legacy resource radical metadata mismatch: ${r.radical_no}`);
+  if(!["목","화","토","금","수"].includes(r.element)) fail(`invalid legacy resource element: ${r.radical_no}/${r.element}`);
+}
+const legacyOverrideRows=csvRows("data/methods/resource-element-overrides-legacy-knolname2.csv");
+if (legacyOverrideRows.length!==84) fail(`legacy resource override rows expected 84, got ${legacyOverrideRows.length}`);
+const legacyOverrideChars=new Set();
+for(const r of legacyOverrideRows){
+  if(!r.hanja||legacyOverrideChars.has(r.hanja)) fail(`duplicate/empty legacy resource override: ${r.hanja}`);
+  legacyOverrideChars.add(r.hanja);
+  if(r.method_id!=="resource_element_knolname2_legacy_v0_3"||r.source_id!=="KNOLNAME2_DATALOADER_LEGACY"||r.authoritative_for_scoring!=="false") fail(`legacy resource override metadata mismatch: ${r.hanja}`);
+}
+const legacyWonhoekRows=csvRows("data/methods/wonhoek-adjustments-legacy-knolname2.csv");
+if (legacyWonhoekRows.length!==11) fail(`legacy wonhoek adjustments expected 11, got ${legacyWonhoekRows.length}`);
+for(const r of legacyWonhoekRows){
+  if(r.method_id!=="stroke_wonhoek_knolname2_legacy_v0_3"||r.source_id!=="KNOLNAME2_DATALOADER_LEGACY"||r.authoritative_for_scoring!=="false") fail(`legacy wonhoek metadata mismatch: ${r.radical_no}`);
+}
+const legacyMethodPolicy=JSON.parse(read("data/methods/resource-element-legacy-knolname2.policy.json"));
+if(legacyMethodPolicy.authoritative_for_scoring!==false) fail("legacy knolname2 migrated policy must remain non-authoritative");
+if(stats.methods?.legacy_resource_element_radical_rows!==legacyResourceRows.length) fail("stats legacy resource radical count mismatch");
+if(stats.methods?.legacy_resource_element_override_rows!==legacyOverrideRows.length) fail("stats legacy resource override count mismatch");
+if(stats.methods?.legacy_wonhoek_adjustment_rows!==legacyWonhoekRows.length) fail("stats legacy wonhoek count mismatch");
+ok(`knolname2 hardcode migration: ${legacyResourceRows.length} radicals / ${legacyOverrideRows.length} overrides / ${legacyWonhoekRows.length} wonhoek adjustments`);
+
+// 81-numerology variants remain method-separated and non-authoritative until full source-bound tables are verified.
+const numerologyProvRows=csvRows("data/methods/numerology-81-method-provenance.csv");
+if(numerologyProvRows.length!==3) fail(`numerology method provenance expected 3, got ${numerologyProvRows.length}`);
+const provIds=new Set();
+for(const r of numerologyProvRows){
+  if(!r.variant_id||provIds.has(r.variant_id)) fail(`duplicate/empty numerology variant: ${r.variant_id}`);
+  provIds.add(r.variant_id);
+  if(r.authoritative_for_scoring!=="false") fail(`unverified numerology variant cannot be authoritative: ${r.variant_id}`);
+  for(const sid of [r.primary_source_id,...(r.comparison_source_ids||"").split("|")].filter(Boolean)) if(!sourceIds.has(sid)) fail(`unknown numerology provenance source: ${r.variant_id}/${sid}`);
+}
+if(stats.methods?.numerology_method_provenance_rows!==numerologyProvRows.length) fail("stats numerology provenance count mismatch");
+ok(`81-numerology provenance: ${numerologyProvRows.length} separated non-authoritative variants`);
 
 // Legacy knolname 81-numerology table is preserved for regression only.
 const legacy81Rows=csvRows("data/methods/numerology-81-legacy-knolname.csv");
