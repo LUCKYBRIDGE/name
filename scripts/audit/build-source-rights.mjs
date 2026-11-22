@@ -93,7 +93,7 @@ function classify(r) {
       broad_release_action:"manual_review_before_bulk_embedding_or_redistribution"
     };
   }
-  if (id.startsWith("KCI_")) {
+  if (r.authority==="academic") {
     return {
       rights_class:"academic_reference_only",
       repository_use:"citation_crosscheck_and_original_summary_only",

@@ -237,8 +237,8 @@ for (const r of curatedRows) {
   else if (matches[0].raw_sense!==r.raw_sense) fail(`curated raw_sense mismatch: ${r.hanja}/${r.legal_reading}/${r.sense_order}`);
   if (r.naming_use_class==="caution_other_dictionary_sense" && r.primary_name_explanation_allowed!=="false") fail(`caution sense cannot be primary: ${r.hanja}/${r.raw_sense}`);
 }
-if (curatedRows.length!==202) fail(`curated naming rows expected 202, got ${curatedRows.length}`);
-if (curatedChars.size!==95) fail(`curated naming characters expected 95, got ${curatedChars.size}`);
+if (curatedRows.length!==327) fail(`curated naming rows expected 327, got ${curatedRows.length}`);
+if (curatedChars.size!==150) fail(`curated naming characters expected 150, got ${curatedChars.size}`);
 const yu祐=senseRows.filter(r=>r.hanja==="祐"&&r.legal_reading==="우").map(r=>r.raw_sense);
 if (yu祐.length!==2 || !yu祐.includes("도울 우") || !yu祐.includes("다행할 우")) fail("祐/우 must preserve two documented senses");
 const yu優=senseRows.filter(r=>r.hanja==="優"&&r.legal_reading==="우").map(r=>r.raw_sense);
@@ -269,7 +269,7 @@ for (const r of semanticIssueRows) {
     if (promoted) fail(`held semantic source issue promoted to naming meaning: ${r.issue_id}`);
   }
 }
-if (semanticIssueRows.length!==4) fail(`semantic source issues expected 4, got ${semanticIssueRows.length}`);
+if (semanticIssueRows.length!==5) fail(`semantic source issues expected 5, got ${semanticIssueRows.length}`);
 if (stats.hanja.semantic_source_issue_rows!==semanticIssueRows.length) fail("stats semantic source issue count mismatch");
 ok(`semantic source-quality holds: ${semanticIssueRows.length} rows`);
 
@@ -371,6 +371,34 @@ if (stats.methods?.naming_method_registry_rows!==methodRows.length) fail("stats 
 if (stats.methods?.evaluation_axes!==axisPolicy.axes.length) fail("stats evaluation axis count mismatch");
 ok(`naming method registry: ${methodRows.length} methods / ${axisPolicy.axes.length} evidence axes`);
 
+// Source-bound common onset pronunciation-five-elements table.
+const onsetRows=csvRows("data/methods/pronunciation-onset-common.csv");
+const expectedOnsets={
+  "ㄱ":"목","ㅋ":"목",
+  "ㄴ":"화","ㄷ":"화","ㄹ":"화","ㅌ":"화",
+  "ㅇ":"토","ㅎ":"토",
+  "ㅅ":"금","ㅈ":"금","ㅊ":"금",
+  "ㅁ":"수","ㅂ":"수","ㅍ":"수"
+};
+if (onsetRows.length!==14) fail(`pronunciation onset rows expected 14, got ${onsetRows.length}`);
+const onsetSeen=new Set();
+for (const r of onsetRows) {
+  if (r.method_id!=="pronunciation_onset_common") fail(`pronunciation onset method mismatch: ${r.onset}`);
+  if (onsetSeen.has(r.onset)) fail(`duplicate pronunciation onset: ${r.onset}`);
+  onsetSeen.add(r.onset);
+  if (expectedOnsets[r.onset]!==r.element) fail(`pronunciation onset element mismatch: ${r.onset}/${r.element}`);
+  for (const sid of (r.source_ids||"").split("|").filter(Boolean)) if (!sourceIds.has(sid)) fail(`unknown pronunciation mapping source: ${r.onset}/${sid}`);
+  if (r.evidence_status!=="source_table_supported") fail(`pronunciation onset evidence status mismatch: ${r.onset}`);
+}
+for (const [onset,element] of Object.entries(expectedOnsets)) if (!onsetSeen.has(onset)) fail(`missing pronunciation onset: ${onset}/${element}`);
+const onsetPolicy=JSON.parse(read("data/methods/pronunciation-onset-common.policy.json"));
+if (onsetPolicy.version!=="1.0.0" || onsetPolicy.method_id!=="pronunciation_onset_common") fail("pronunciation onset policy identity");
+if ((onsetPolicy.supported_onsets||[]).length!==14) fail("pronunciation onset policy supported count");
+if ((onsetPolicy.unsupported_without_explicit_method_rule||[]).length!==5) fail("pronunciation onset policy tense-consonant count");
+if (stats.methods?.pronunciation_onset_mapping_rows!==onsetRows.length) fail("stats pronunciation onset row count mismatch");
+if (stats.methods?.source_bound_mapping_tables!==1) fail("stats source-bound mapping table count mismatch");
+ok(`pronunciation onset mapping: ${onsetRows.length} source-bound rows; tense consonants explicitly unsupported`);
+
 // Current legal naming-rule summary stays separate from the Hanja candidate mirror.
 const legalRows=csvRows("data/legal/name-registration-rules.csv");
 const legalIds=new Set();
@@ -439,6 +467,21 @@ const gateIds=new Set((quality.gates||[]).map(g=>g.gate_id));
 for (const id of ["LEGAL_HANJA_OFFICIAL_FULL_DIFF","LEGAL_NAMING_RULES","DERIVED_DATA_REPRODUCIBILITY","HANJA_SEMANTIC_CURATION","NAMING_METHOD_DATA","SOLAR_TERMS_2026_2027","SAJU_CALCULATION_ENGINE","NAME_TREND_DATA","SURNAME_HANGNYEOL","SOURCE_LICENSE_AUDIT"]) if (!gateIds.has(id)) fail(`missing quality gate: ${id}`);
 if (quality.gates.find(g=>g.gate_id==="LEGAL_HANJA_OFFICIAL_FULL_DIFF")?.status!=="pending_official_extraction") fail("legal Hanja gate must remain pending");
 if (quality.gates.find(g=>g.gate_id==="SOLAR_TERMS_2026_2027")?.status!=="verified_official") fail("solar-term quality gate mismatch");
+// Official name-trend source registry; ranking values are not yet embedded.
+const trendRows=csvRows("data/trends/name-trend-source-registry.csv");
+if (trendRows.length!==2) fail(`name-trend source rows expected 2, got ${trendRows.length}`);
+const trendIds=new Set();
+for (const r of trendRows) {
+  if (!r.dataset_id || trendIds.has(r.dataset_id)) fail(`duplicate/empty trend dataset: ${r.dataset_id}`);
+  trendIds.add(r.dataset_id);
+  if (!sourceIds.has(r.source_id)) fail(`unknown trend source: ${r.dataset_id}/${r.source_id}`);
+  if (r.status!=="source_registered_extraction_pending") fail(`unexpected trend status: ${r.dataset_id}/${r.status}`);
+}
+if (!trendIds.has("birth_top_names") || !trendIds.has("rename_top_names")) fail("required court name-trend datasets missing");
+if (stats.trends?.registered_official_datasets!==trendRows.length) fail("stats trend dataset count mismatch");
+if (stats.trends?.extracted_ranking_rows!==0) fail("trend ranking rows must remain zero until extraction is verified");
+ok(`name-trend registry: ${trendRows.length} official datasets / extraction pending`);
+
 ok("quality gates present and conservative");
 
 // Surname master

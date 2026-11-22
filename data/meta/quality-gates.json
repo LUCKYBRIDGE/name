@@ -46,21 +46,23 @@
       "priority": "P0",
       "status": "core_expanding",
       "coverage": {
-        "characters_curated": 95,
-        "senses_curated": 202,
+        "characters_curated": 150,
+        "senses_curated": 327,
         "semantic_characters": 7150
       },
       "blocking_for": [
         "claim_full_curated_naming_semantics"
       ],
-      "next_action": "Continue human curation in priority batches; exceed 100 frequent naming Hanja, then expand toward a 300-character core."
+      "next_action": "Expand the reviewed core toward 300 frequently used naming Hanja while preserving exact Hanja+reading senses and source-quality holds."
     },
     {
       "gate_id": "NAMING_METHOD_DATA",
       "priority": "P0",
-      "status": "method_registry_added_tables_partial",
+      "status": "one_source_bound_mapping_table_added_other_tables_partial",
       "coverage": {
         "registered_methods": 7,
+        "source_bound_mapping_tables": 1,
+        "pronunciation_onset_rows": 14,
         "fully_implemented_method_tables": 0
       },
       "blocking_for": [
@@ -69,9 +71,13 @@
       ],
       "evidence": [
         "data/methods/naming-method-registry.csv",
-        "data/methods/evaluation-axis-policy.json"
+        "data/methods/evaluation-axis-policy.json",
+        "data/methods/pronunciation-onset-common.csv",
+        "data/methods/pronunciation-onset-common.policy.json",
+        "ACADEMIC_KAIS_PRON_2011",
+        "KCI_NAMING_PRON_2015"
       ],
-      "next_action": "Add source-bound pronunciation mappings, resource-element mappings, stroke rules and 81-number interpretation tables per method_id."
+      "next_action": "Add source-bound resource-element mappings, stroke/original-stroke rules and 81-number interpretation tables per method_id; keep full-syllable pronunciation method separate."
     },
     {
       "gate_id": "SOLAR_TERMS_2026_2027",
@@ -109,11 +115,19 @@
     {
       "gate_id": "NAME_TREND_DATA",
       "priority": "P1",
-      "status": "pending",
+      "status": "official_source_registered_extraction_pending",
       "blocking_for": [
         "data_backed_popularity_score"
       ],
-      "next_action": "Add court-based yearly name ranking data."
+      "next_action": "Verify automated extraction and redistribution terms, then ingest dated birth-name and rename-name ranking snapshots with sex/period metadata.",
+      "coverage": {
+        "official_datasets_registered": 2,
+        "ranking_rows_embedded": 0
+      },
+      "evidence": [
+        "data/trends/name-trend-source-registry.csv",
+        "KR_COURT_FAMILY_STATS"
+      ]
     },
     {
       "gate_id": "SURNAME_HANGNYEOL",
@@ -133,8 +147,8 @@
       "priority": "P2",
       "status": "metadata_audit_complete_manual_review_pending",
       "coverage": {
-        "sources": 69,
-        "unknown_license_metadata": 14
+        "sources": 71,
+        "unknown_license_metadata": 16
       },
       "evidence": [
         "data/meta/source-audit.csv"

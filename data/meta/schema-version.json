@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.10.0",
+  "schema_version": "1.11.0",
   "updated_at": "2026-11-22",
-  "compatibility": "additive naming-method/legal-rule layers, expanded curated semantics, source-quality holds, and reproducible solar-term boundary vectors",
+  "compatibility": "additive 150-character naming semantic core, source-bound pronunciation mapping, and official name-trend source registry",
   "conventions": {
     "source_reference": "Prefer source_id values registered in data/meta/sources.csv for new structured datasets.",
     "method_reference": "Use method_id for school- or author-dependent naming and myeongri rules.",
@@ -39,6 +39,8 @@
     "legal_rule_layer": "Current legal naming rules are stored separately from candidate Hanja mirrors and traditional naming interpretations.",
     "saju_boundary_vectors": "Solar-term month-branch changes are regression-tested at one minute before and exactly at verified boundaries.",
     "reference_implementation_time_basis": "Record timezone/clock basis for external calendar implementations; never compare raw clock fields across KST/CST as if they were the same instant.",
-    "saju_crosscheck_not_golden": "Independent implementation output is crosscheck evidence, not a Korean golden vector, unless timezone and method assumptions are independently verified."
+    "saju_crosscheck_not_golden": "Independent implementation output is crosscheck evidence, not a Korean golden vector, unless timezone and method assumptions are independently verified.",
+    "pronunciation_mapping": "Pronunciation-five-elements mappings are method-specific tables; unsupported onsets remain unsupported rather than silently normalized.",
+    "trend_data": "Birth-name and rename-name statistics are separate datasets; popularity is not auspiciousness and requires period/sex/source metadata."
   }
 }

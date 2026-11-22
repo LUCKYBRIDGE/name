@@ -52,8 +52,14 @@ AI와 앱 개발 코드는 사용자 요청의 **의도**에 따라 필요한 �
 
 ## 성명학 방법론 데이터
 - method 카탈로그: `data/methods/naming-method-registry.csv`
+- 초성 발음오행 통용 배속표: `data/methods/pronunciation-onset-common.csv`
+- 초성 발음오행 적용정책: `data/methods/pronunciation-onset-common.policy.json`
 - 평가축 분리 정책: `data/methods/evaluation-axis-policy.json`
 - 원칙 설명: `data/methods/README.md`
+
+## 이름 유행 데이터
+- 공식 출처 레지스트리: `data/trends/name-trend-source-registry.csv`
+- 사용 원칙: `data/trends/README.md`
 
 ## 법적 이름 등록 데이터
 - 현행 규칙 요약: `data/legal/name-registration-rules.csv`
