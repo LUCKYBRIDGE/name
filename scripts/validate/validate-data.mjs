@@ -363,7 +363,7 @@ for (const r of methodRows) {
   if (!r.domain || !r.method_name || !r.status || !r.implementation_policy || !r.caveat) fail(`naming method metadata missing: ${r.method_id}`);
   for (const sid of (r.source_ids||"").split("|").filter(Boolean)) if (!sourceIds.has(sid)) fail(`unknown naming method source: ${r.method_id}/${sid}`);
 }
-if (methodRows.length!==6) fail(`naming method registry expected 6, got ${methodRows.length}`);
+if (methodRows.length!==7) fail(`naming method registry expected 7, got ${methodRows.length}`);
 const axisPolicy=JSON.parse(read("data/methods/evaluation-axis-policy.json"));
 if (axisPolicy.version!=="1.0.0" || !Array.isArray(axisPolicy.axes) || axisPolicy.axes.length!==8) fail("evaluation axis policy shape/count");
 if (new Set(axisPolicy.axes.map(a=>a.axis_id)).size!==axisPolicy.axes.length) fail("duplicate evaluation axis_id");
@@ -380,7 +380,7 @@ for (const r of legalRows) {
   if (!r.category || !r.rule_summary || !r.effective_status || !r.verified_on || !r.app_policy) fail(`legal naming metadata missing: ${r.rule_id}`);
   if (!sourceIds.has(r.source_id)) fail(`unknown legal naming source: ${r.rule_id}/${r.source_id}`);
 }
-if (legalRows.length!==6) fail(`legal naming rules expected 6, got ${legalRows.length}`);
+if (legalRows.length!==6) fail(`legal naming rules expected 7, got ${legalRows.length}`);
 if (stats.legal?.name_registration_rule_rows!==legalRows.length) fail("stats legal naming rule count mismatch");
 ok(`legal naming rules: ${legalRows.length} current rule/service summaries`);
 
