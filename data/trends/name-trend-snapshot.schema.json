@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/LUCKYBRIDGE/name/data/trends/name-trend-snapshot.schema.json",
+  "title": "Korean Court Name Trend Snapshot",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "snapshot_id",
+    "dataset_id",
+    "source_id",
+    "retrieved_at",
+    "query",
+    "registration_basis",
+    "provisional",
+    "rows",
+    "source_url",
+    "attribution",
+    "complete_top20"
+  ],
+  "properties": {
+    "snapshot_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9._-]+$"
+    },
+    "dataset_id": {
+      "enum": [
+        "birth_top_names",
+        "rename_top_names"
+      ]
+    },
+    "source_id": {
+      "const": "KR_COURT_FAMILY_STATS"
+    },
+    "retrieved_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "query": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "period_start",
+        "period_end",
+        "region",
+        "sex"
+      ],
+      "properties": {
+        "period_start": {
+          "type": "string",
+          "format": "date"
+        },
+        "period_end": {
+          "type": "string",
+          "format": "date"
+        },
+        "region": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sex": {
+          "enum": [
+            "all",
+            "male",
+            "female",
+            "unknown"
+          ]
+        },
+        "official_query_label": {
+          "type": "string"
+        }
+      }
+    },
+    "registration_basis": {
+      "const": "registration_date"
+    },
+    "provisional": {
+      "type": "boolean"
+    },
+    "rows": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "rank",
+          "name_hangul",
+          "count"
+        ],
+        "properties": {
+          "rank": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 20
+          },
+          "name_hangul": {
+            "type": "string",
+            "minLength": 1
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "official_display_text": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "other_count": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "total_count": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "attribution": {
+      "type": "string",
+      "minLength": 1
+    },
+    "complete_top20": {
+      "type": "boolean"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}
