@@ -14,3 +14,4 @@ data/hanja/semantics/semantic-source-issues.csv,allowed_with_third_party_notices
 data/methods/*,original_compilation_reference_only_sources,Keep KCI papers as references only and distribute only original method summaries,medium,논문 원문·표·도표를 복제하지 않고 method_id와 자체 요약만 제공
 data/legal/*,first_party_all_rights_reserved,Keep official legal/service source_id and verification date with each summary,low,법령·공식 조회의 사실 요약과 앱 자체 설명을 구분
 tests/사주-절기경계-검증.csv,allowed_with_kasi_attribution_if_scope_verified,Display KASI source when exposed outside tests and keep within calendar astronomical facts scope,low,KASI 절기 시각에서 파생한 회귀 테스트 벡터
+tests/사주-팔자-교차검증-lunar-python-1.4.9.csv|data/time/reference-implementation-time-basis.csv,allowed_with_open_source_reference_notice,Keep LUNAR_PYTHON source/version/commit and MIT reference; label as crosscheck not official Korean truth,low,벡터는 자체 생성 결과이며 원 소스 코드 복사본이 아님; 시간대 차이를 숨기지 않음
