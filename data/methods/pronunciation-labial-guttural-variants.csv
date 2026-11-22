@@ -1,0 +1,5 @@
+method_id,variant_id,sound_class,onsets,element,source_ids,evidence_role,authoritative_for_universal_standard,notes
+pronunciation_onset_common,common_labial,순음,ㅁ|ㅂ|ㅍ,수,KCI_NAMING_PRON_2015|KCI_PRON_LABIAL_GUTTURAL_2018|KCI_KUMASAKI_MYSTERY_2025,documented_common_or_historical_usage,false,현대 성명학 통용형을 재현하기 위한 값; 훈민정음해례 계열과 반대
+pronunciation_onset_common,common_guttural,후음,ㅇ|ㅎ,토,KCI_NAMING_PRON_2015|KCI_PRON_LABIAL_GUTTURAL_2018|KCI_KUMASAKI_MYSTERY_2025,documented_common_or_historical_usage,false,현대 성명학 통용형을 재현하기 위한 값; 훈민정음해례 계열과 반대
+pronunciation_labial_guttural_haerye_2018,haerye_labial,순음,ㅁ|ㅂ|ㅍ,토,KCI_PRON_LABIAL_GUTTURAL_2018|KCI_PRON_APPLICATION_2019,published_alternative_mapping,false,훈민정음해례를 기준으로 제안된 대안
+pronunciation_labial_guttural_haerye_2018,haerye_guttural,후음,ㅇ|ㅎ,수,KCI_PRON_LABIAL_GUTTURAL_2018|KCI_PRON_APPLICATION_2019,published_alternative_mapping,false,훈민정음해례를 기준으로 제안된 대안
