@@ -16,9 +16,17 @@
 
 `naming-method-registry.csv`는 **방법론 카탈로그**다. 계산표가 검증되지 않은 method는 `table_pending` 또는 `method_definition_pending` 상태로 유지하며 앱에서 확정 점수에 사용하지 않는다.
 
-향후 추가할 핵심 파일:
-- method별 발음오행 자모 배속표
-- method별 자원오행 한자 배속표
-- method별 원획수 규칙과 예외표
-- method별 81수리 1~81 해석표
+현재 추가된 구조:
+- `pronunciation-onset-common.csv`: 출처 연결 초성 발음오행 통용형
+- `kangxi-radical-stroke-ranges.csv`: Unihan `kRSKangXi`용 강희 214부수 정규 획수 구간
+- `stroke-kangxi-rs-reconstruction.policy.json`: 부수 정규획 + residual strokes 기술 재구성 규칙
+- `resource-element-radical-legacy-knolname2.csv`: 기존 앱 214부수 자원오행 하드코딩의 비권위 legacy 이전본
+- `resource-element-overrides-legacy-knolname2.csv`: 기존 앱 84자 자의 override의 비권위 legacy 이전본
+- `wonhoek-adjustments-legacy-knolname2.csv`: 기존 앱 11종 원획 delta 보정의 비권위 legacy 이전본
+- `numerology-81-method-provenance.csv`: legacy·구마사키·채침/홍범 계열의 출처와 검증상태 분리
+
+다음 우선순위:
+- 출처가 확인된 자원오행 학파별 한자 배속표
+- 구마사키 1차 원전의 1~81행 페이지 단위 전사 및 독립 대조
+- 원획수의 학파별 숫자한자·이체자·예외표
 - 서로 다른 method 결과를 병렬 비교하는 테스트 벡터
