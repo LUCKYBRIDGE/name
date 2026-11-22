@@ -26,6 +26,7 @@ AI와 앱 개발 코드는 사용자 요청의 **의도**에 따라 필요한 �
 - 통합 검색 마스터: `data/hanja/enriched/hanja-master-enriched.csv`
 - 다중 의미 전수 레이어: `data/hanja/semantics/meaning-senses.csv`
 - 작명 의미 검토 레이어: `data/hanja/semantics/naming-meaning-curated.csv`
+- 300자 편집 우선 코어: `data/hanja/semantics/naming-core-characters.csv`
 - 선택 의미 표준 객체: `data/hanja/semantics/name-meaning-selection.schema.json`
 - 의미 주의 규칙: `data/hanja/semantics/semantic-risk-rules.csv`
 - 주의 의미 검토표: `data/hanja/semantics/sense-concern-curated.csv`
@@ -56,6 +57,11 @@ AI와 앱 개발 코드는 사용자 요청의 **의도**에 따라 필요한 �
 - 초성 발음오행 적용정책: `data/methods/pronunciation-onset-common.policy.json`
 - 81수리 기존 앱 격리표: `data/methods/numerology-81-legacy-knolname.csv`
 - 81수리 격리정책: `data/methods/numerology-81-legacy-knolname.policy.json`
+- 81수리 method 계보/검증상태: `data/methods/numerology-81-method-provenance.csv`
+- Unihan 강희 부수-잔획 재구성: `data/methods/kangxi-radical-stroke-ranges.csv`, `data/methods/stroke-kangxi-rs-reconstruction.policy.json`
+- knolname2 legacy 자원오행 214부수: `data/methods/resource-element-radical-legacy-knolname2.csv`
+- knolname2 legacy 자원오행 84자 override: `data/methods/resource-element-overrides-legacy-knolname2.csv`
+- knolname2 legacy 원획 11종 보정: `data/methods/wonhoek-adjustments-legacy-knolname2.csv`
 - 평가축 분리 정책: `data/methods/evaluation-axis-policy.json`
 - 원칙 설명: `data/methods/README.md`
 
