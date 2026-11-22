@@ -237,8 +237,8 @@ for (const r of curatedRows) {
   else if (matches[0].raw_sense!==r.raw_sense) fail(`curated raw_sense mismatch: ${r.hanja}/${r.legal_reading}/${r.sense_order}`);
   if (r.naming_use_class==="caution_other_dictionary_sense" && r.primary_name_explanation_allowed!=="false") fail(`caution sense cannot be primary: ${r.hanja}/${r.raw_sense}`);
 }
-if (curatedRows.length!==25) fail(`curated naming rows expected 25, got ${curatedRows.length}`);
-if (curatedChars.size!==12) fail(`curated naming characters expected 12, got ${curatedChars.size}`);
+if (curatedRows.length!==98) fail(`curated naming rows expected 98, got ${curatedRows.length}`);
+if (curatedChars.size!==42) fail(`curated naming characters expected 42, got ${curatedChars.size}`);
 const yu祐=senseRows.filter(r=>r.hanja==="祐"&&r.legal_reading==="우").map(r=>r.raw_sense);
 if (yu祐.length!==2 || !yu祐.includes("도울 우") || !yu祐.includes("다행할 우")) fail("祐/우 must preserve two documented senses");
 const yu優=senseRows.filter(r=>r.hanja==="優"&&r.legal_reading==="우").map(r=>r.raw_sense);
@@ -251,6 +251,27 @@ if (stats.hanja.multi_sense_relations!==semanticMultiRelations) fail("stats mult
 if (stats.hanja.semantic_unique_characters!==semanticChars.size) fail("stats semantic_unique_characters mismatch");
 if (stats.hanja.curated_naming_sense_rows!==curatedRows.length) fail("stats curated_naming_sense_rows mismatch");
 if (stats.hanja.curated_naming_characters!==curatedChars.size) fail("stats curated_naming_characters mismatch");
+
+// Semantic source-quality holds: suspicious source strings are never silently repaired or promoted.
+const semanticIssueRows=csvRows("data/hanja/semantics/semantic-source-issues.csv");
+const semanticIssueIds=new Set();
+const allowedIssueStatuses=new Set(["hold_for_source_recheck","needs_review","resolved"]);
+for (const r of semanticIssueRows) {
+  if (!r.issue_id || semanticIssueIds.has(r.issue_id)) fail(`duplicate/empty semantic source issue: ${r.issue_id}`);
+  semanticIssueIds.add(r.issue_id);
+  if (!allowedIssueStatuses.has(r.status)) fail(`unknown semantic source issue status: ${r.issue_id}/${r.status}`);
+  if (!sourceIds.has(r.source_id)) fail(`unknown semantic issue source: ${r.issue_id}/${r.source_id}`);
+  const matches=senseRows.filter(s=>s.hanja===r.hanja && s.legal_reading===r.legal_reading && Number(s.sense_order)===Number(r.sense_order));
+  if (matches.length!==1) fail(`semantic source issue lookup mismatch: ${r.issue_id}`);
+  else if (matches[0].raw_sense!==r.raw_sense) fail(`semantic source issue raw_sense mismatch: ${r.issue_id}`);
+  if (r.status==="hold_for_source_recheck") {
+    const promoted=curatedRows.find(x=>x.hanja===r.hanja && x.legal_reading===r.legal_reading && Number(x.sense_order)===Number(r.sense_order) && x.primary_name_explanation_allowed==="true");
+    if (promoted) fail(`held semantic source issue promoted to naming meaning: ${r.issue_id}`);
+  }
+}
+if (semanticIssueRows.length!==4) fail(`semantic source issues expected 4, got ${semanticIssueRows.length}`);
+if (stats.hanja.semantic_source_issue_rows!==semanticIssueRows.length) fail("stats semantic source issue count mismatch");
+ok(`semantic source-quality holds: ${semanticIssueRows.length} rows`);
 
 // Selected naming sense / intent / semantic-risk policy
 const selectionPolicy=JSON.parse(read("data/hanja/semantics/name-meaning-selection.policy.json"));
@@ -333,6 +354,36 @@ if (rowCount("data/myeongri/육십갑자.csv") !== 60) fail("육십갑자 count"
 if (rowCount("data/myeongri/십성_천간100.csv") !== 100) fail("십성 count");
 ok("myeongri fixed table counts");
 
+// Naming-method registry: different schools/methods stay separate.
+const methodRows=csvRows("data/methods/naming-method-registry.csv");
+const methodIds=new Set();
+for (const r of methodRows) {
+  if (!r.method_id || methodIds.has(r.method_id)) fail(`duplicate/empty naming method_id: ${r.method_id}`);
+  methodIds.add(r.method_id);
+  if (!r.domain || !r.method_name || !r.status || !r.implementation_policy || !r.caveat) fail(`naming method metadata missing: ${r.method_id}`);
+  for (const sid of (r.source_ids||"").split("|").filter(Boolean)) if (!sourceIds.has(sid)) fail(`unknown naming method source: ${r.method_id}/${sid}`);
+}
+if (methodRows.length!==6) fail(`naming method registry expected 6, got ${methodRows.length}`);
+const axisPolicy=JSON.parse(read("data/methods/evaluation-axis-policy.json"));
+if (axisPolicy.version!=="1.0.0" || !Array.isArray(axisPolicy.axes) || axisPolicy.axes.length!==8) fail("evaluation axis policy shape/count");
+if (new Set(axisPolicy.axes.map(a=>a.axis_id)).size!==axisPolicy.axes.length) fail("duplicate evaluation axis_id");
+if (stats.methods?.naming_method_registry_rows!==methodRows.length) fail("stats naming method count mismatch");
+if (stats.methods?.evaluation_axes!==axisPolicy.axes.length) fail("stats evaluation axis count mismatch");
+ok(`naming method registry: ${methodRows.length} methods / ${axisPolicy.axes.length} evidence axes`);
+
+// Current legal naming-rule summary stays separate from the Hanja candidate mirror.
+const legalRows=csvRows("data/legal/name-registration-rules.csv");
+const legalIds=new Set();
+for (const r of legalRows) {
+  if (!r.rule_id || legalIds.has(r.rule_id)) fail(`duplicate/empty legal naming rule: ${r.rule_id}`);
+  legalIds.add(r.rule_id);
+  if (!r.category || !r.rule_summary || !r.effective_status || !r.verified_on || !r.app_policy) fail(`legal naming metadata missing: ${r.rule_id}`);
+  if (!sourceIds.has(r.source_id)) fail(`unknown legal naming source: ${r.rule_id}/${r.source_id}`);
+}
+if (legalRows.length!==6) fail(`legal naming rules expected 6, got ${legalRows.length}`);
+if (stats.legal?.name_registration_rule_rows!==legalRows.length) fail("stats legal naming rule count mismatch");
+ok(`legal naming rules: ${legalRows.length} current rule/service summaries`);
+
 const solarRows=[...csvRows("data/time/2026_24절기_KASI.csv"),...csvRows("data/time/2027_24절기_KASI.csv")];
 if (solarRows.length!==48) fail(`solar term rows expected 48, got ${solarRows.length}`);
 for (const r of solarRows) {
@@ -342,9 +393,27 @@ for (const r of solarRows) {
 if (stats.time.solar_term_rows!==solarRows.length || stats.time.official_calendar_verified_rows!==solarRows.length) fail("stats solar term count mismatch");
 ok("KASI 2026/2027 solar terms verified metadata");
 
+// Exact minute-before / at-boundary regression vectors for month-branch switching.
+const boundaryRows=csvRows("tests/사주-절기경계-검증.csv");
+if (boundaryRows.length!==48) fail(`solar-term boundary vectors expected 48, got ${boundaryRows.length}`);
+const boundaryPairs=new Map();
+for (const r of boundaryRows) {
+  if (r.source_id!=="KASI_CALENDAR" || r.status!=="verified_boundary_vector") fail(`boundary vector source/status mismatch: ${r.year}/${r.term}`);
+  const key=`${r.year}|${r.term}|${r.boundary_local}`;
+  if (!boundaryPairs.has(key)) boundaryPairs.set(key,[]);
+  boundaryPairs.get(key).push(r);
+}
+if (boundaryPairs.size!==24) fail(`expected 24 solar-term boundary pairs, got ${boundaryPairs.size}`);
+for (const [key,rows] of boundaryPairs) {
+  if (rows.length!==2) fail(`boundary pair row count: ${key}`);
+  if (!rows.some(r=>r.relation_to_boundary==="one_minute_before") || !rows.some(r=>r.relation_to_boundary==="at_boundary")) fail(`boundary pair relation missing: ${key}`);
+}
+if (stats.myeongri?.solar_term_boundary_test_vectors!==boundaryRows.length) fail("stats solar-term boundary vector count mismatch");
+ok(`saju boundary regression vectors: ${boundaryRows.length} rows / ${boundaryPairs.size} boundaries`);
+
 const quality=JSON.parse(read("data/meta/quality-gates.json"));
 const gateIds=new Set((quality.gates||[]).map(g=>g.gate_id));
-for (const id of ["LEGAL_HANJA_OFFICIAL_FULL_DIFF","DERIVED_DATA_REPRODUCIBILITY","HANJA_SEMANTIC_CURATION","SOLAR_TERMS_2026_2027","SAJU_CALCULATION_ENGINE","NAME_TREND_DATA","SURNAME_HANGNYEOL","SOURCE_LICENSE_AUDIT"]) if (!gateIds.has(id)) fail(`missing quality gate: ${id}`);
+for (const id of ["LEGAL_HANJA_OFFICIAL_FULL_DIFF","LEGAL_NAMING_RULES","DERIVED_DATA_REPRODUCIBILITY","HANJA_SEMANTIC_CURATION","NAMING_METHOD_DATA","SOLAR_TERMS_2026_2027","SAJU_CALCULATION_ENGINE","NAME_TREND_DATA","SURNAME_HANGNYEOL","SOURCE_LICENSE_AUDIT"]) if (!gateIds.has(id)) fail(`missing quality gate: ${id}`);
 if (quality.gates.find(g=>g.gate_id==="LEGAL_HANJA_OFFICIAL_FULL_DIFF")?.status!=="pending_official_extraction") fail("legal Hanja gate must remain pending");
 if (quality.gates.find(g=>g.gate_id==="SOLAR_TERMS_2026_2027")?.status!=="verified_official") fail("solar-term quality gate mismatch");
 ok("quality gates present and conservative");
