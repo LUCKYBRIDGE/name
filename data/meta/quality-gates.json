@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22",
+  "generated_at": "2026-11-23",
   "gates": [
     {
       "gate_id": "LEGAL_HANJA_OFFICIAL_FULL_DIFF",
@@ -61,9 +61,9 @@
     {
       "gate_id": "NAMING_METHOD_DATA",
       "priority": "P0",
-      "status": "pronunciation_and_kangxi_stroke_source_bound_legacy_resource_and_stroke_tables_migrated_81_variants_provenance_added",
+      "status": "evidence_and_readiness_registry_added_pronunciation_sources_corrected",
       "coverage": {
-        "registered_methods": 13,
+        "registered_methods": 14,
         "source_bound_mapping_tables": 2,
         "pronunciation_onset_rows": 14,
         "legacy_numerology_81_rows": 81,
@@ -75,7 +75,11 @@
         "kangxi_radical_stroke_ranges": 17,
         "numerology_method_provenance_rows": 3,
         "source_bound_resource_element_method_sources": 1,
-        "embedded_source_bound_resource_element_mapping_rows": 0
+        "embedded_source_bound_resource_element_mapping_rows": 0,
+        "method_evidence_rows": 21,
+        "method_readiness_rows": 14,
+        "pronunciation_variant_rows": 4,
+        "final_scoring_ready_methods": 0
       },
       "blocking_for": [
         "single_authoritative_naming_score",
@@ -88,7 +92,6 @@
         "data/methods/pronunciation-onset-common.policy.json",
         "data/methods/numerology-81-legacy-knolname.csv",
         "data/methods/numerology-81-legacy-knolname.policy.json",
-        "ACADEMIC_KAIS_PRON_2011",
         "KCI_NAMING_PRON_2015",
         "KNOLNAME_LEGACY_81",
         "data/methods/kangxi-radical-stroke-ranges.csv",
@@ -99,9 +102,16 @@
         "data/methods/numerology-81-method-provenance.csv",
         "KCI_KUMASAKI_81_2019",
         "NDL_KUMASAKI_SEIMEI_TETSURI_1933",
-        "KCI_RESOURCE_ELEMENT_214_2024"
+        "KCI_RESOURCE_ELEMENT_214_2024",
+        "data/methods/method-evidence.csv",
+        "data/methods/method-readiness.csv",
+        "data/methods/pronunciation-labial-guttural-variants.csv",
+        "KCI_PRON_LABIAL_GUTTURAL_2018",
+        "KCI_PRON_APPLICATION_2019",
+        "KCI_KUMASAKI_MYSTERY_2025",
+        "NDL_KUMASAKI_SEIMEI_NO_SHINPI_1929"
       ],
-      "next_action": "Independently reconstruct or obtain permission for a source-bound 214-radical resource-element table, transcribe and row-verify the Kumasaki 1-81 primary-source table, and add school-specific stroke exceptions before enabling authoritative composite scoring."
+      "next_action": "Complete lawful page-level verification of Kumasaki primary-source formulas/1-81 rows, independently reconstruct or license a source-bound resource-element table, and add method-specific test vectors before any universal scoring claim."
     },
     {
       "gate_id": "SOLAR_TERMS_2026_2027",
@@ -139,19 +149,23 @@
     {
       "gate_id": "NAME_TREND_DATA",
       "priority": "P1",
-      "status": "official_reuse_policy_verified_extraction_pending",
+      "status": "official_reuse_policy_verified_schema_ready_extraction_pending",
       "blocking_for": [
         "data_backed_popularity_score"
       ],
-      "next_action": "Extract direct official birth-name and rename-name TOP20 snapshots with query type, period, region, sex, registration-date basis and retrieval date; never infer ranks outside the published TOP20.",
+      "next_action": "Extract direct official TOP20 birth-name and rename-name snapshots into schema-valid records with period, region, sex, registration-date basis, retrieval date and attribution.",
       "coverage": {
         "official_datasets_registered": 2,
         "ranking_rows_embedded": 0,
-        "reuse_policy_verified": true
+        "reuse_policy_verified": true,
+        "snapshot_schema_ready": true,
+        "ingestion_policy_version": "1.0.0"
       },
       "evidence": [
         "data/trends/name-trend-source-registry.csv",
-        "KR_COURT_FAMILY_STATS"
+        "KR_COURT_FAMILY_STATS",
+        "data/trends/name-trend-snapshot.schema.json",
+        "data/trends/name-trend-ingestion-policy.json"
       ]
     },
     {
@@ -170,15 +184,17 @@
     {
       "gate_id": "SOURCE_LICENSE_AUDIT",
       "priority": "P2",
-      "status": "metadata_audit_complete_manual_review_pending",
+      "status": "generators_reproducible_manual_review_pending",
       "coverage": {
-        "sources": 72,
-        "unknown_license_metadata": 16
+        "sources": 79,
+        "unknown_license_metadata": 20
       },
       "evidence": [
-        "data/meta/source-audit.csv"
+        "data/meta/source-audit.csv",
+        "scripts/audit/build-source-audit.mjs",
+        "scripts/audit/build-source-rights.mjs"
       ],
-      "next_action": "Review high-priority unknown licenses before bulk redistribution."
+      "next_action": "Continue item-level rights review for high-priority academic/official references; generated source-audit and source-rights must remain reproducible from sources.csv."
     }
   ]
 }
