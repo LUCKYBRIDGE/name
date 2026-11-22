@@ -11,7 +11,13 @@ OUT = ROOT / "tests" / "사주-팔자-golden-vectors-lunar-python-1.4.9.csv"
 REF_IMPL = "6tail/lunar-python"
 REF_VERSION = "1.4.9"
 REF_COMMIT = "1645ad3"
-TIME_BASIS = "Asia/Seoul local civil clock; no historical DST/standard-time correction in reference library"
+TIME_BASIS = "Asia/Seoul local civil clock supplied as plain fields; reference library itself does not receive a timezone argument"
+
+TERM_CN = {
+    "입춘": "立春", "경칩": "惊蛰", "청명": "清明", "입하": "立夏",
+    "망종": "芒种", "소서": "小暑", "입추": "立秋", "백로": "白露",
+    "한로": "寒露", "입동": "立冬", "대설": "大雪", "소한": "小寒",
+}
 
 GENERAL_CASES = [
     ("GEN-2000-NEWYEAR-NOON", "general_modern", "2000-01-01T12:00:00+09:00", ""),
@@ -31,9 +37,12 @@ ZI_CASES = [
     ("ZI-2026-0602-0000", "zi_hour_method_probe", "2026-06-02T00:00:00+09:00"),
 ]
 
-def pillars(local_iso: str, sect: int):
+def lunar_for(local_iso: str):
     dt = datetime.fromisoformat(local_iso)
-    lunar = Solar.fromYmdHms(dt.year, dt.month, dt.day, dt.hour, dt.minute, dt.second).getLunar()
+    return Solar.fromYmdHms(dt.year, dt.month, dt.day, dt.hour, dt.minute, dt.second).getLunar()
+
+def pillars(local_iso: str, sect: int):
+    lunar = lunar_for(local_iso)
     ec = lunar.getEightChar()
     ec.setSect(sect)
     return {
@@ -52,6 +61,10 @@ rows = []
 with BOUNDARY.open(encoding="utf-8-sig", newline="") as f:
     for i, r in enumerate(csv.DictReader(f), start=1):
         p = pillars(r["probe_local"], 2)
+        ref_term_text = lunar_for(r["probe_local"]).getJieQiTable()[TERM_CN[r["term"]]].toYmdHms()
+        ref_term_dt = datetime.strptime(ref_term_text, "%Y-%m-%d %H:%M:%S")
+        kasi_term_dt = datetime.fromisoformat(r["boundary_local"]).replace(tzinfo=None)
+        term_delta_minutes = round((ref_term_dt - kasi_term_dt).total_seconds() / 60, 3)
         rows.append({
             "case_id": f"KASI-BND-{i:02d}",
             "category": "kasi_month_branch_boundary",
@@ -66,6 +79,9 @@ with BOUNDARY.open(encoding="utf-8-sig", newline="") as f:
             "official_expected_month_branch": r["expected_month_branch"],
             "official_expected_month_branch_hangul": r["expected_month_branch_hangul"],
             "reference_month_branch_matches_official": str(p["month_branch"] == r["expected_month_branch"]).lower(),
+            "reference_term_clock": ref_term_text,
+            "reference_term_delta_minutes_vs_kasi": term_delta_minutes,
+            "clock_basis_warning": "reference solar-term clock is library-local; do not assume Asia/Seoul without normalization",
             "notes": f"KASI boundary={r['boundary_local']}; relation={r['relation_to_boundary']}",
         })
 
@@ -85,6 +101,9 @@ for case_id, category, local_iso, note in GENERAL_CASES:
         "official_expected_month_branch": "",
         "official_expected_month_branch_hangul": "",
         "reference_month_branch_matches_official": "",
+        "reference_term_clock": "",
+        "reference_term_delta_minutes_vs_kasi": "",
+        "clock_basis_warning": "",
         "notes": note or "general modern-date crosscheck vector",
     })
 
@@ -105,6 +124,9 @@ for case_id, category, local_iso in ZI_CASES:
             "official_expected_month_branch": "",
             "official_expected_month_branch_hangul": "",
             "reference_month_branch_matches_official": "",
+            "reference_term_clock": "",
+            "reference_term_delta_minutes_vs_kasi": "",
+            "clock_basis_warning": "",
             "notes": "sect 1/2 comparison for day-pillar boundary handling; reference library defaults to sect 2",
         })
 
@@ -115,7 +137,9 @@ fields = [
     "month_branch","day_stem","day_branch","time_branch",
     "official_boundary_term","official_expected_month_branch",
     "official_expected_month_branch_hangul",
-    "reference_month_branch_matches_official","notes"
+    "reference_month_branch_matches_official",
+    "reference_term_clock","reference_term_delta_minutes_vs_kasi",
+    "clock_basis_warning","notes"
 ]
 
 with OUT.open("w", encoding="utf-8", newline="") as f:
@@ -125,4 +149,5 @@ with OUT.open("w", encoding="utf-8", newline="") as f:
 
 boundary_rows = [r for r in rows if r["category"] == "kasi_month_branch_boundary"]
 matches = sum(r["reference_month_branch_matches_official"] == "true" for r in boundary_rows)
-print(f"wrote {len(rows)} vectors; KASI month-branch matches {matches}/{len(boundary_rows)}")
+deltas = sorted({r["reference_term_delta_minutes_vs_kasi"] for r in boundary_rows})
+print(f"wrote {len(rows)} vectors; KASI month-branch matches {matches}/{len(boundary_rows)}; term clock deltas={deltas}")
