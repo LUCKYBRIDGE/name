@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-11-22",
-  "schema_version": "1.10.0",
+  "schema_version": "1.11.0",
   "authoritative_for": "repository dataset counts and normalization status",
   "hanja": {
     "upstream_crawl_date": "2024-07-16",
@@ -29,8 +29,8 @@
     "semantic_relations": 7425,
     "multi_sense_relations": 3492,
     "semantic_unique_characters": 7150,
-    "curated_naming_sense_rows": 202,
-    "curated_naming_characters": 95,
+    "curated_naming_sense_rows": 327,
+    "curated_naming_characters": 150,
     "semantic_derivation": "mechanically split comma-delimited libhangul meaning_ko after deduplicating exact reading-character relations",
     "semantic_selection_policy_version": "1.0.0",
     "semantic_risk_rule_rows": 9,
@@ -39,7 +39,7 @@
     "build_reproducible_steps": 6,
     "build_reproducible_files": 7,
     "build_nonreproducible_key_files": 4,
-    "semantic_source_issue_rows": 4
+    "semantic_source_issue_rows": 5
   },
   "myeongri": {
     "heavenly_stems": 10,
@@ -67,11 +67,13 @@
     "Core Hanja normalization/index/semantic-sense files and source-audit.csv have exact regeneration scripts checked by CI.",
     "2026 and 2027 solar-term rows were verified against KASI calendar/almanac pages on 2026-11-14.",
     "Every registered external source has a machine-readable rights/use classification in data/meta/source-rights.csv; unverified sources default to reference/summary-only handling.",
-    "Naming semantic curation expanded from 12 characters/25 senses to 95 characters/202 reviewed senses; this remains partial coverage, not a full naming dictionary.",
-    "Four suspicious semantic source rows are explicitly held for source recheck rather than silently corrected.",
+    "Naming semantic curation expanded from 12 characters/25 senses to 150 characters/327 reviewed senses; this remains partial coverage, not a full naming dictionary.",
+    "Five suspicious semantic source rows are explicitly held for source recheck rather than silently corrected.",
     "Seven naming-method families are now registered separately so pronunciation, resource-element, numerology, stroke, and yongshin approaches are not collapsed into one score.",
     "48 KASI-backed month-branch boundary vectors cover the exact minute before/at each 2026-2027 monthly start solar term.",
-    "lunar-python 1.4.9 crosscheck found its solar-term table is Beijing-time based; raw Korean local-clock fields switch month branch about one hour earlier than KASI Korea-local boundaries, so the library output is not treated as Korean golden truth."
+    "lunar-python 1.4.9 crosscheck found its solar-term table is Beijing-time based; raw Korean local-clock fields switch month branch about one hour earlier than KASI Korea-local boundaries, so the library output is not treated as Korean golden truth.",
+    "Common onset pronunciation-five-elements mapping now has 14 source-bound basic consonant rows; tense-consonant normalization remains intentionally unsupported until a method-specific source is registered.",
+    "Official court birth-name and rename-name ranking services are registered as trend sources, but ranking values are not bulk embedded until extraction and redistribution conditions are reviewed."
   ],
   "surnames": {
     "master_records": 31,
@@ -116,21 +118,28 @@
     "status": "official_calendar_data_verified_2026_2027"
   },
   "sources": {
-    "registry_records": 69,
-    "unknown_license_metadata": 14,
+    "registry_records": 71,
+    "unknown_license_metadata": 16,
     "named_license_records": 4,
     "policy_label_records": 20,
     "audit_file": "data/meta/source-audit.csv",
-    "rights_registry_records": 69,
+    "rights_registry_records": 71,
     "rights_file": "data/meta/source-rights.csv"
   },
   "methods": {
     "naming_method_registry_rows": 7,
     "evaluation_axes": 8,
-    "status": "method families separated; calculation tables remain incremental"
+    "status": "method families separated; common onset pronunciation mapping source-bound; other calculation tables remain incremental",
+    "pronunciation_onset_mapping_rows": 14,
+    "source_bound_mapping_tables": 1
   },
   "legal": {
     "name_registration_rule_rows": 6,
     "status": "current official rule/service summary verified 2026-11-22; final legal Hanja lookup remains official-service dependent"
+  },
+  "trends": {
+    "registered_official_datasets": 2,
+    "extracted_ranking_rows": 0,
+    "status": "official court source registered; extraction/redistribution review pending"
   }
 }
