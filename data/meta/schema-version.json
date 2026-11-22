@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.9.0",
-  "updated_at": "2026-11-14",
-  "compatibility": "additive reproducible build manifest, real JSON Schema, quality gates, source audit and verified KASI time metadata",
+  "schema_version": "1.10.0",
+  "updated_at": "2026-11-22",
+  "compatibility": "additive naming-method/legal-rule layers, expanded curated semantics, source-quality holds, and reproducible solar-term boundary vectors",
   "conventions": {
     "source_reference": "Prefer source_id values registered in data/meta/sources.csv for new structured datasets.",
     "method_reference": "Use method_id for school- or author-dependent naming and myeongri rules.",
@@ -33,6 +33,10 @@
     "generated_data": "Derived files with an exact generator are registered in data/meta/build-manifest.json and checked by CI.",
     "quality_gates": "App and AI must check data/meta/quality-gates.json before presenting incomplete layers as authoritative.",
     "json_schema": "Files named *.schema.json use JSON Schema draft 2020-12; explanatory policy is stored separately.",
-    "official_hanja_diff": "Current legal Hanja full coverage is not claimed until normalized official reading-character rows are diffed against the mirror."
+    "official_hanja_diff": "Current legal Hanja full coverage is not claimed until normalized official reading-character rows are diffed against the mirror.",
+    "method_registry": "Traditional naming calculations require a registered method_id and must not be merged into a universal score.",
+    "semantic_source_hold": "Suspicious or malformed source senses are held for recheck and must not be silently corrected or promoted to naming meanings.",
+    "legal_rule_layer": "Current legal naming rules are stored separately from candidate Hanja mirrors and traditional naming interpretations.",
+    "saju_boundary_vectors": "Solar-term month-branch changes are regression-tested at one minute before and exactly at verified boundaries."
   }
 }
