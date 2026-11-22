@@ -6,7 +6,7 @@ from lunar_python import Solar
 
 ROOT = Path(__file__).resolve().parents[2]
 BOUNDARY = ROOT / "tests" / "사주-절기경계-검증.csv"
-OUT = ROOT / "tests" / "사주-팔자-golden-vectors-lunar-python-1.4.9.csv"
+OUT = ROOT / "tests" / "사주-팔자-교차검증-lunar-python-1.4.9.csv"
 
 REF_IMPL = "6tail/lunar-python"
 REF_VERSION = "1.4.9"
@@ -150,4 +150,4 @@ with OUT.open("w", encoding="utf-8", newline="") as f:
 boundary_rows = [r for r in rows if r["category"] == "kasi_month_branch_boundary"]
 matches = sum(r["reference_month_branch_matches_official"] == "true" for r in boundary_rows)
 deltas = sorted({r["reference_term_delta_minutes_vs_kasi"] for r in boundary_rows})
-print(f"wrote {len(rows)} vectors; KASI month-branch matches {matches}/{len(boundary_rows)}; term clock deltas={deltas}")
+print(f"wrote {len(rows)} crosscheck vectors; KASI month-branch matches {matches}/{len(boundary_rows)} under naive clock input; term clock deltas={deltas}")
