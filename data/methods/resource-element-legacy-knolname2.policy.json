@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "method_id": "resource_element_knolname2_legacy_v0_3",
+  "source_id": "KNOLNAME2_DATALOADER_LEGACY",
+  "status": "migrated_from_app_code_non_authoritative",
+  "files": [
+    "resource-element-radical-legacy-knolname2.csv",
+    "resource-element-overrides-legacy-knolname2.csv",
+    "wonhoek-adjustments-legacy-knolname2.csv"
+  ],
+  "counts": {
+    "radical_element_rows": 214,
+    "semantic_override_rows": 84,
+    "wonhoek_adjustment_rows": 11
+  },
+  "authoritative_for_scoring": false,
+  "app_policy": "Use only to reproduce legacy behavior until source-bound school tables replace it.",
+  "migration_goal": "Remove RADICAL_ELEMENT_MAP, SEMANTIC_ELEMENT_OVERRIDES and RADICAL_WONHOEK_ADJUSTMENTS literals from server/dataLoader.ts.",
+  "reviewed_on": "2026-11-22"
+}
