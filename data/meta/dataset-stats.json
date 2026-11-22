@@ -77,7 +77,8 @@
     "The 81-row numerology table previously hardcoded in knolname is preserved as legacy_knolname_v0_2_0 with authoritative_for_scoring=false; it is regression evidence, not a verified numerology source.",
     "knolname2 server/dataLoader.ts resource-element 214-radical map, 84 semantic overrides, and 11 wonhoek delta rules are now preserved in data/methods as explicit non-authoritative legacy method tables.",
     "Unihan kRSKangXi radical number + residual stroke data now has a source-bound 17-range Kangxi radical stroke reconstruction method; this replaces ad-hoc delta patches for technical reconstruction but is not automatically a universal naming-school wonhoek standard.",
-    "Kumasaki and Cai Shen/Hongfan 81-number traditions are registered as separate historical methods; KCI 2019 reports 27/81 opposing good/bad judgments, so no universal 81 table is claimed."
+    "Kumasaki and Cai Shen/Hongfan 81-number traditions are registered as separate historical methods; KCI 2019 reports 27/81 opposing good/bad judgments, so no universal 81 table is claimed.",
+    "Court name-statistics reuse policy is verified for court-owned public works with specific source attribution; exact normalized birth/rename snapshots still require direct query extraction with scope/date metadata."
   ],
   "surnames": {
     "master_records": 31,
@@ -122,18 +123,18 @@
     "status": "official_calendar_data_verified_2026_2027"
   },
   "sources": {
-    "registry_records": 75,
+    "registry_records": 76,
     "unknown_license_metadata": 17,
     "named_license_records": 4,
     "policy_label_records": 20,
     "audit_file": "data/meta/source-audit.csv",
-    "rights_registry_records": 75,
+    "rights_registry_records": 76,
     "rights_file": "data/meta/source-rights.csv"
   },
   "methods": {
-    "naming_method_registry_rows": 12,
+    "naming_method_registry_rows": 13,
     "evaluation_axes": 8,
-    "status": "method families separated; 300-character semantic core; Unihan kRSKangXi stroke reconstruction added; knolname2 resource-element/wonhoek hardcodes migrated as non-authoritative legacy tables; Kumasaki/Cai Shen 81 variants separated with primary-source provenance",
+    "status": "13 method families separated; 300-character semantic core; Unihan kRSKangXi stroke reconstruction source-bound; knolname2 resource-element/wonhoek hardcodes migrated as non-authoritative legacy tables; Kumasaki/Cai Shen 81 variants separated; 2024 published 214-radical resource-element method registered but table not embedded pending rights/independent reconstruction",
     "pronunciation_onset_mapping_rows": 14,
     "source_bound_mapping_tables": 2,
     "legacy_numerology_81_rows": 81,
@@ -142,7 +143,9 @@
     "legacy_resource_element_override_rows": 84,
     "legacy_wonhoek_adjustment_rows": 11,
     "kangxi_radical_stroke_ranges": 17,
-    "numerology_method_provenance_rows": 3
+    "numerology_method_provenance_rows": 3,
+    "source_bound_resource_element_method_sources": 1,
+    "embedded_source_bound_resource_element_mapping_rows": 0
   },
   "legal": {
     "name_registration_rule_rows": 6,
@@ -151,6 +154,6 @@
   "trends": {
     "registered_official_datasets": 2,
     "extracted_ranking_rows": 0,
-    "status": "official court source registered; extraction/redistribution review pending"
+    "status": "official court reuse policy verified; normalized birth/rename ranking extraction pending"
   }
 }
