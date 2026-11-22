@@ -69,7 +69,7 @@ KCI_NAMING_PRON_2015,academic,unknown,unknown,manual_review_before_bulk_redistri
 KCI_NAMING_YONGSHIN_2017,academic,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
 KCI_NAMING_81_2023,academic,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
 ACADEMIC_KAIS_PRON_2011,academic,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
-KR_COURT_FAMILY_STATS,official_service,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,high,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
+KR_COURT_FAMILY_STATS,official_statistics,public_work_free_use_with_attribution,official_copyright_policy_verified,normalized_factual_statistics_allowed_with_specific_attribution,official_statistics_reuse_verified,low,법원 저작권 보호 정책에서 법원이 저작재산권 전부를 보유한 자료의 자유이용 및 구체적 출처표시 의무 확인; 각 스냅샷은 조회조건·조회일·등록일 기준 잠정치임을 보존
 KNOLNAME_LEGACY_81,first_party_legacy_implementation,first_party_all_rights_reserved,repository_policy_label,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,low,등록된 정책 라벨의 실제 적용 범위는 재배포 시 다시 확인
 KNOLNAME2_DATALOADER_LEGACY,first_party_implementation,first_party_all_rights_reserved,first_party,first_party_repository_use_allowed,regression_and_migration_only,low,외부 근거가 아닌 기존 구현 자체의 역사적 기록; method 출처 검증 전 확정 점수에 사용 금지
 KCI_KUMASAKI_81_2019,academic,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,81수 method 차이의 학술 근거로 인용; 논문 표·도표·장문은 내장하지 않음
