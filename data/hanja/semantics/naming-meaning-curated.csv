@@ -456,3 +456,198 @@ hanja,unicode,legal_reading,sense_order,raw_sense,naming_use_class,primary_name_
 旭,065ED,욱,1,빛날 욱,preferred_name_sense,true,밝게 빛나는 재능과 모습을 펼치기를 바라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
 旭,065ED,욱,2,햇살 치밀 욱,preferred_name_sense,true,햇살이 솟듯 힘차고 밝게 성장하는 모습을 바라는 방향으로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
 旭,065ED,욱,3,교만할 욱,caution_other_dictionary_sense,false,교만하다는 뜻은 대표 작명 의미로 사용하지 않음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,문서화된 의미를 바탕으로 한 편집 작명 해석
+可,053EF,가,1,옳을 가,preferred_name_sense,true,‘옳을 가’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+歌,06B4C,가,1,노래 가,preferred_name_sense,true,‘노래 가’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+家,05BB6,가,1,집 가,preferred_name_sense,true,‘집 가’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+加,052A0,가,1,더할 가,preferred_name_sense,true,‘더할 가’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+暻,066BB,경,1,밝을 경,preferred_name_sense,true,‘밝을 경’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+暄,06684,훤,1,따뜻할 훤,preferred_name_sense,true,‘따뜻할 훤’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+暄,06684,훤,2,날따뜻할 훤,preferred_name_sense,true,‘날따뜻할 훤’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+昭,0662D,소,1,소명할 소,contextual_dictionary_sense,false,문서화된 뜻이지만 대표 작명 의미로 쓰려면 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+昭,0662D,소,2,소목 소,contextual_dictionary_sense,false,문서화된 뜻이지만 대표 작명 의미로 쓰려면 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+昭,0662D,소,3,태평세월 소,usable_name_sense,true,‘태평세월 소’의 뜻을 이름 의미로 사용할 수 있으나 전체 조합의 맥락을 함께 봄,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+昭,0662D,소,4,밝을 소,preferred_name_sense,true,‘밝을 소’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+晧,06667,호,1,밝을 호,preferred_name_sense,true,‘밝을 호’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+晧,06667,호,2,빛날 호,preferred_name_sense,true,‘빛날 호’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+晧,06667,호,3,해돋을 호,preferred_name_sense,true,‘해돋을 호’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+晙,06659,준,1,밝을 준,preferred_name_sense,true,‘밝을 준’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+晛,0665B,현,1,햇발 현,preferred_name_sense,true,‘햇발 현’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+晛,0665B,현,2,볕기운 현,preferred_name_sense,true,‘볕기운 현’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+曜,066DC,요,1,해 비칠 요,preferred_name_sense,true,‘해 비칠 요’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+曜,066DC,요,2,요일 요,contextual_dictionary_sense,false,문서화된 뜻이지만 대표 작명 의미로 쓰려면 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+曄,066C4,엽,1,빛날 엽,preferred_name_sense,true,‘빛날 엽’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+曄,066C4,엽,2,번개 번쩍거릴 엽,contextual_dictionary_sense,false,문서화된 뜻이지만 대표 작명 의미로 쓰려면 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+曦,066E6,희,1,햇빛 희,preferred_name_sense,true,‘햇빛 희’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+昇,06607,승,1,해 돋을 승,preferred_name_sense,true,‘해 돋을 승’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+昇,06607,승,2,풍년들 승,preferred_name_sense,true,‘풍년들 승’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+昇,06607,승,3,오를 승,preferred_name_sense,true,‘오를 승’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+康,05EB7,강,1,편안할 강,preferred_name_sense,true,‘편안할 강’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+康,05EB7,강,2,즐거울 강,preferred_name_sense,true,‘즐거울 강’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+康,05EB7,강,3,다섯거리 강,contextual_dictionary_sense,false,문서화된 뜻이지만 대표 작명 의미로 쓰려면 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+強,05F37,강,1,강할,preferred_name_sense,true,‘강할’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+剛,0525B,강,1,굳을 강,preferred_name_sense,true,‘굳을 강’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+剛,0525B,강,2,굳셀 강,preferred_name_sense,true,‘굳셀 강’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+剛,0525B,강,3,꼬장할 강,caution_other_dictionary_sense,false,작명 설명의 대표 긍정 의미로 내세우지 않음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+剛,0525B,강,4,바야흐로 강,contextual_dictionary_sense,false,문서화된 뜻이지만 대표 작명 의미로 쓰려면 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+雄,096C4,웅,1,수컷 웅,usable_name_sense,true,‘수컷 웅’의 뜻을 이름 의미로 사용할 수 있으나 전체 조합의 맥락을 함께 봄,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+雄,096C4,웅,2,영웅 웅,preferred_name_sense,true,‘영웅 웅’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+雄,096C4,웅,3,웅장할 웅,preferred_name_sense,true,‘웅장할 웅’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+傑,05091,걸,1,호걸 걸,preferred_name_sense,true,‘호걸 걸’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+傑,05091,걸,2,준걸 걸,preferred_name_sense,true,‘준걸 걸’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+傑,05091,걸,3,뛰어날 걸,preferred_name_sense,true,‘뛰어날 걸’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+傑,05091,걸,4,거만할 걸,caution_other_dictionary_sense,false,작명 설명의 대표 긍정 의미로 내세우지 않음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+傑,05091,걸,5,떡잎 걸,contextual_dictionary_sense,false,문서화된 뜻이지만 대표 작명 의미로 쓰려면 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+聰,08070,총,1,귀 밝을 총,preferred_name_sense,true,‘귀 밝을 총’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+聰,08070,총,2,민첩할 총,preferred_name_sense,true,‘민첩할 총’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+聰,08070,총,3,귀맑을 총,preferred_name_sense,true,‘귀맑을 총’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+忠,05FE0,충,1,충성 충,preferred_name_sense,true,‘충성 충’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+忠,05FE0,충,2,곧을 충,preferred_name_sense,true,‘곧을 충’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+慈,06148,자,1,사랑할 자,preferred_name_sense,true,‘사랑할 자’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+愛,0611B,애,1,사랑 애,preferred_name_sense,true,‘사랑 애’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+文,06587,문,1,무늬 문,usable_name_sense,true,‘무늬 문’의 뜻을 이름 의미로 사용할 수 있으나 전체 조합의 맥락을 함께 봄,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+文,06587,문,2,얼룩 문,contextual_dictionary_sense,false,문서화된 뜻이지만 대표 작명 의미로 쓰려면 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+文,06587,문,3,글월 문,preferred_name_sense,true,‘글월 문’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+學,05B78,학,1,배울 학,preferred_name_sense,true,‘배울 학’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+言,08A00,언,1,말씀 언,preferred_name_sense,true,‘말씀 언’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+言,08A00,언,2,자기 언,contextual_dictionary_sense,false,문서화된 뜻이지만 대표 작명 의미로 쓰려면 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+言,08A00,언,3,우뚝할 언,contextual_dictionary_sense,false,문서화된 뜻이지만 대표 작명 의미로 쓰려면 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+國,0570B,국,1,나라 국,preferred_name_sense,true,‘나라 국’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+天,05929,천,1,하늘 천,preferred_name_sense,true,‘하늘 천’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+山,05C71,산,1,뫼 산,preferred_name_sense,true,‘뫼 산’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+川,05DDD,천,1,내 천,preferred_name_sense,true,‘내 천’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+江,06C5F,강,1,가람 강,preferred_name_sense,true,‘가람 강’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+江,06C5F,강,2,물 강,preferred_name_sense,true,‘물 강’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+泉,06CC9,천,1,샘 천,preferred_name_sense,true,‘샘 천’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+潔,06F54,결,1,맑을 결,preferred_name_sense,true,‘맑을 결’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+潔,06F54,결,2,정결할 결,preferred_name_sense,true,‘정결할 결’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+潔,06F54,결,3,조촐할 결,preferred_name_sense,true,‘조촐할 결’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+木,06728,목,1,나무 목,preferred_name_sense,true,‘나무 목’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+森,068EE,삼,1,나무빽빽할 삼,preferred_name_sense,true,‘나무빽빽할 삼’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+柏,067CF,백,1,나무 이름 백,usable_name_sense,true,‘나무 이름 백’의 뜻을 이름 의미로 사용할 수 있으나 전체 조합의 맥락을 함께 봄,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+柏,067CF,백,2,잣나무 백,preferred_name_sense,true,‘잣나무 백’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+桐,06850,동,1,오동나무 동,preferred_name_sense,true,‘오동나무 동’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+柳,067F3,류,1,버들 류,preferred_name_sense,true,‘버들 류’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+柳,067F3,유,1,버들 류,preferred_name_sense,true,‘버들 류’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+柳,067F3,유,2,별 이름 류,contextual_dictionary_sense,false,문서화된 뜻이지만 대표 작명 의미로 쓰려면 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+竹,07AF9,죽,1,대 죽,preferred_name_sense,true,‘대 죽’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+芳,082B3,방,1,꽃다울 방,preferred_name_sense,true,‘꽃다울 방’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+芳,082B3,방,2,향기 방,preferred_name_sense,true,‘향기 방’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+花,082B1,화,1,꽃 화,preferred_name_sense,true,‘꽃 화’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+銀,09280,은,1,은 은,preferred_name_sense,true,‘은 은’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+銀,09280,은,2,돈 은,contextual_dictionary_sense,false,문서화된 뜻이지만 대표 작명 의미로 쓰려면 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+璧,074A7,벽,1,동근 옥 벽,preferred_name_sense,true,‘동근 옥 벽’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+璧,074A7,벽,2,둥근옥 벽,preferred_name_sense,true,‘둥근옥 벽’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+瑛,0745B,영,1,옥빛 영,preferred_name_sense,true,‘옥빛 영’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+瑛,0745B,영,2,수정 영,preferred_name_sense,true,‘수정 영’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+瑛,0745B,영,3,옥광채 영,preferred_name_sense,true,‘옥광채 영’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+瑾,0747E,근,1,붉은옥 근,preferred_name_sense,true,‘붉은옥 근’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+琇,07407,수,1,귀막이 수,contextual_dictionary_sense,false,문서화된 뜻이지만 대표 작명 의미로 쓰려면 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+琇,07407,수,2,옥돌 수,preferred_name_sense,true,‘옥돌 수’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+琇,07407,수,3,귀고리 수,usable_name_sense,true,‘귀고리 수’의 뜻을 이름 의미로 사용할 수 있으나 전체 조합의 맥락을 함께 봄,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+禧,079A7,희,1,복 희,preferred_name_sense,true,‘복 희’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+祿,0797F,녹,1,행복 녹,preferred_name_sense,true,‘행복 녹’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+祿,0797F,록,1,복 록,preferred_name_sense,true,‘복 록’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+祥,07965,상,1,상서로울 상,preferred_name_sense,true,‘상서로울 상’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+就,05C31,취,1,좇을 취,usable_name_sense,true,‘좇을 취’의 뜻을 이름 의미로 사용할 수 있으나 전체 조합의 맥락을 함께 봄,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+就,05C31,취,2,이룰 취,preferred_name_sense,true,‘이룰 취’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+就,05C31,취,3,곧 취,contextual_dictionary_sense,false,문서화된 뜻이지만 대표 작명 의미로 쓰려면 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+就,05C31,취,4,가령 취,contextual_dictionary_sense,false,문서화된 뜻이지만 대표 작명 의미로 쓰려면 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+就,05C31,취,5,능할 취,preferred_name_sense,true,‘능할 취’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+就,05C31,취,6,저자 취,contextual_dictionary_sense,false,문서화된 뜻이지만 대표 작명 의미로 쓰려면 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+就,05C31,취,7,나아갈 취,preferred_name_sense,true,‘나아갈 취’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+達,09054,달,1,통달할 달,preferred_name_sense,true,‘통달할 달’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+進,09032,진,1,나아갈 진,preferred_name_sense,true,‘나아갈 진’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+隆,09686,륭,1,클 륭,preferred_name_sense,true,‘클 륭’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+隆,09686,륭,2,높을 륭,preferred_name_sense,true,‘높을 륭’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+隆,09686,융,1,성할 륭,preferred_name_sense,true,‘성할 륭’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+隆,09686,융,2,높을 륭,preferred_name_sense,true,‘높을 륭’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+隆,09686,융,3,가운데 우뚝할 륭,preferred_name_sense,true,‘가운데 우뚝할 륭’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+隆,09686,융,4,괘 이름 륭,contextual_dictionary_sense,false,문서화된 뜻이지만 대표 작명 의미로 쓰려면 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+興,08208,흥,1,일 흥,contextual_dictionary_sense,false,문서화된 뜻이지만 대표 작명 의미로 쓰려면 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+興,08208,흥,2,일어날 흥,preferred_name_sense,true,‘일어날 흥’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+繼,07E7C,계,1,이을 계,preferred_name_sense,true,‘이을 계’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+立,07ACB,립,1,설 립,preferred_name_sense,true,‘설 립’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+立,07ACB,입,1,설 입,preferred_name_sense,true,‘설 입’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+定,05B9A,정,1,정할 정,preferred_name_sense,true,‘정할 정’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+定,05B9A,정,2,편안할 정,preferred_name_sense,true,‘편안할 정’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+定,05B9A,정,3,고요할 정,preferred_name_sense,true,‘고요할 정’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+宏,05B8F,굉,1,클 굉,preferred_name_sense,true,‘클 굉’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+宏,05B8F,굉,2,넓을 굉,preferred_name_sense,true,‘넓을 굉’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+大,05927,대,1,클 대,preferred_name_sense,true,‘클 대’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+大,05927,대,2,큰 대,preferred_name_sense,true,‘큰 대’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+望,0671B,망,1,바랄 망,preferred_name_sense,true,‘바랄 망’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+願,09858,원,1,하고자할 원,preferred_name_sense,true,‘하고자할 원’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+願,09858,원,2,바랄 원,preferred_name_sense,true,‘바랄 원’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+願,09858,원,3,생각할 원,contextual_dictionary_sense,false,문서화된 뜻이지만 대표 작명 의미로 쓰려면 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+願,09858,원,4,원할 원,preferred_name_sense,true,‘원할 원’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+欣,06B23,흔,1,기뻐할 흔,preferred_name_sense,true,‘기뻐할 흔’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+欣,06B23,흔,2,기쁠 흔,preferred_name_sense,true,‘기쁠 흔’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+淑,06DD1,숙,1,맑을 숙,preferred_name_sense,true,‘맑을 숙’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+淑,06DD1,숙,2,착할 숙,preferred_name_sense,true,‘착할 숙’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+淑,06DD1,숙,3,사모할 숙,contextual_dictionary_sense,false,문서화된 뜻이지만 대표 작명 의미로 쓰려면 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+嫻,05AFB,한,1,우아할 한,preferred_name_sense,true,‘우아할 한’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+暖,06696,난,1,따뜻할 난,preferred_name_sense,true,‘따뜻할 난’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+翔,07FD4,상,1,빙빙돌아날 상,preferred_name_sense,true,‘빙빙돌아날 상’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+飛,098DB,비,1,날 비,preferred_name_sense,true,‘날 비’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+勉,052C9,면,1,힘쓸 면,preferred_name_sense,true,‘힘쓸 면’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+謙,08B19,겸,1,사양할 겸,preferred_name_sense,true,‘사양할 겸’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+謙,08B19,겸,2,겸손할 겸,preferred_name_sense,true,‘겸손할 겸’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+謙,08B19,겸,3,괘 이름 겸,contextual_dictionary_sense,false,문서화된 뜻이지만 대표 작명 의미로 쓰려면 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+謹,08B39,근,1,삼갈 근,preferred_name_sense,true,‘삼갈 근’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+禎,0798E,정,1,상서로울 정,preferred_name_sense,true,‘상서로울 정’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+敦,06566,돈,1,도타울 돈,preferred_name_sense,true,‘도타울 돈’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+穆,07A46,목,1,화목할 목,preferred_name_sense,true,‘화목할 목’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+穆,07A46,목,2,화할 목,preferred_name_sense,true,‘화할 목’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+毅,06BC5,의,1,굳셀 의,preferred_name_sense,true,‘굳셀 의’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+毅,06BC5,의,2,발끈 성낼 의,caution_other_dictionary_sense,false,작명 설명의 대표 긍정 의미로 내세우지 않음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+圓,05713,원,1,둥글 원,usable_name_sense,true,‘둥글 원’의 뜻을 이름 의미로 사용할 수 있으나 전체 조합의 맥락을 함께 봄,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+圓,05713,원,2,원만할 원,preferred_name_sense,true,‘원만할 원’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+圓,05713,원,3,화폐의 단위 원,contextual_dictionary_sense,false,문서화된 뜻이지만 대표 작명 의미로 쓰려면 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+璨,074A8,찬,1,빛날 찬,preferred_name_sense,true,‘빛날 찬’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+璟,0749F,경,1,옥 빛 경,preferred_name_sense,true,‘옥 빛 경’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+璟,0749F,경,2,옥광채날 경,preferred_name_sense,true,‘옥광채날 경’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+燿,071FF,요,1,비칠 요,preferred_name_sense,true,‘비칠 요’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+燿,071FF,요,2,빛날 요,preferred_name_sense,true,‘빛날 요’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+熹,071B9,희,1,성할 희,preferred_name_sense,true,‘성할 희’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+熹,071B9,희,2,밝을 희,preferred_name_sense,true,‘밝을 희’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+錫,0932B,석,1,주석 석,usable_name_sense,true,‘주석 석’의 뜻을 이름 의미로 사용할 수 있으나 전체 조합의 맥락을 함께 봄,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+碩,078A9,석,1,클 석,preferred_name_sense,true,‘클 석’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+序,05E8F,서,1,차례 서,usable_name_sense,true,‘차례 서’의 뜻을 이름 의미로 사용할 수 있으나 전체 조합의 맥락을 함께 봄,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+曙,066D9,서,1,새벽 서,preferred_name_sense,true,‘새벽 서’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+淵,06DF5,연,1,못 연,usable_name_sense,true,‘못 연’의 뜻을 이름 의미로 사용할 수 있으나 전체 조합의 맥락을 함께 봄,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+淵,06DF5,연,2,깊을 연,preferred_name_sense,true,‘깊을 연’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+淵,06DF5,연,3,북소리 둥둥할 연,contextual_dictionary_sense,false,문서화된 뜻이지만 대표 작명 의미로 쓰려면 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+淵,06DF5,연,4,모래톱 연,contextual_dictionary_sense,false,문서화된 뜻이지만 대표 작명 의미로 쓰려면 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+悟,0609F,오,1,깨우칠 오,preferred_name_sense,true,‘깨우칠 오’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+悟,0609F,오,2,깨달을 오,preferred_name_sense,true,‘깨달을 오’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+旺,065FA,왕,1,고울 왕,preferred_name_sense,true,‘고울 왕’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+旺,065FA,왕,2,해무리 왕,contextual_dictionary_sense,false,문서화된 뜻이지만 대표 작명 의미로 쓰려면 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+旺,065FA,왕,3,성할 왕,preferred_name_sense,true,‘성할 왕’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+旺,065FA,왕,4,왕성할 왕,preferred_name_sense,true,‘왕성할 왕’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+偉,05049,위,1,클 위,preferred_name_sense,true,‘클 위’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+偉,05049,위,2,넉넉할 위,preferred_name_sense,true,‘넉넉할 위’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+偉,05049,위,3,기특할 위,preferred_name_sense,true,‘기특할 위’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+宜,05B9C,의,1,옳을 의,preferred_name_sense,true,‘옳을 의’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+宜,05B9C,의,2,마땅할 의,preferred_name_sense,true,‘마땅할 의’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+宜,05B9C,의,3,유순할 의,preferred_name_sense,true,‘유순할 의’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+逸,09038,일,1,달아날 일,caution_other_dictionary_sense,false,작명 설명의 대표 긍정 의미로 내세우지 않음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+逸,09038,일,2,편안할 일,preferred_name_sense,true,‘편안할 일’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+全,05168,전,1,온전할 전,preferred_name_sense,true,‘온전할 전’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+全,05168,전,2,갖출 전,preferred_name_sense,true,‘갖출 전’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+精,07CBE,정,1,정교할 정,preferred_name_sense,true,‘정교할 정’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+精,07CBE,정,2,세밀할 정,preferred_name_sense,true,‘세밀할 정’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+精,07CBE,정,3,정할 정,contextual_dictionary_sense,false,문서화된 뜻이지만 대표 작명 의미로 쓰려면 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+精,07CBE,정,4,성실할 정,preferred_name_sense,true,‘성실할 정’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+精,07CBE,정,5,신령 정,contextual_dictionary_sense,false,문서화된 뜻이지만 대표 작명 의미로 쓰려면 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+精,07CBE,정,6,정기 정,contextual_dictionary_sense,false,문서화된 뜻이지만 대표 작명 의미로 쓰려면 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+朝,0671D,조,1,아침 조,preferred_name_sense,true,‘아침 조’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+贊,08D0A,찬,1,도울 찬,preferred_name_sense,true,‘도울 찬’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+初,0521D,초,1,처음 초,preferred_name_sense,true,‘처음 초’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+弘,05F18,홍,1,넓을 홍,preferred_name_sense,true,‘넓을 홍’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+弘,05F18,홍,2,클 홍,preferred_name_sense,true,‘클 홍’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+歡,06B61,환,1,기뻐할 환,preferred_name_sense,true,‘기뻐할 환’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+治,06CBB,치,1,다스릴 치,preferred_name_sense,true,‘다스릴 치’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+治,06CBB,치,2,다듬을 치,preferred_name_sense,true,‘다듬을 치’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+治,06CBB,치,3,익을 치,contextual_dictionary_sense,false,문서화된 뜻이지만 대표 작명 의미로 쓰려면 문맥 설명이 필요함,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+治,06CBB,치,4,치료할 치,preferred_name_sense,true,‘치료할 치’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
+振,0632F,진,1,떨칠 진,preferred_name_sense,true,‘떨칠 진’의 문서화된 뜻을 바탕으로 이름의 중심 의미로 풀 수 있음,editorial_paraphrase_from_documented_sense,LIBHANGUL_HANJA,2026-11-22 작명 코어 300자 확장 검토; 원자료 뜻은 변경하지 않음
