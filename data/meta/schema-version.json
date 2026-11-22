@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.12.0",
+  "schema_version": "1.13.0",
   "updated_at": "2026-11-22",
-  "compatibility": "additive 202-character naming semantic core plus quarantined legacy 81-numerology implementation",
+  "compatibility": "additive 300-character naming semantic core + DB-migrated legacy resource/stroke tables + source-bound Kangxi radical-stroke reconstruction + separated 81-numerology historical methods",
   "conventions": {
     "source_reference": "Prefer source_id values registered in data/meta/sources.csv for new structured datasets.",
     "method_reference": "Use method_id for school- or author-dependent naming and myeongri rules.",
@@ -43,6 +43,10 @@
     "pronunciation_mapping": "Pronunciation-five-elements mappings are method-specific tables; unsupported onsets remain unsupported rather than silently normalized.",
     "trend_data": "Birth-name and rename-name statistics are separate datasets; popularity is not auspiciousness and requires period/sex/source metadata.",
     "legacy_numerology_table": "Historical app numerology tables may be preserved for regression only; authoritative_for_scoring must remain false until source-bound method data is independently verified.",
-    "numerology_method_bundle": "An authoritative 81-numerology method requires a source-bound stroke standard, grid formula, 1-81 interpretation table, reduction rule, and method_id as one bundle."
+    "numerology_method_bundle": "An authoritative 81-numerology method requires a source-bound stroke standard, grid formula, 1-81 interpretation table, reduction rule, and method_id as one bundle.",
+    "naming_core_registry": "data/hanja/semantics/naming-core-characters.csv is an editorial priority core, not an official usage-frequency ranking.",
+    "kangxi_rs_reconstruction": "Use method_id stroke_kangxi_rs_reconstruction_v1 to derive a technical Kangxi radical-stroke count from Unihan kRSKangXi; do not silently equate it with every naming school's wonhoek standard.",
+    "legacy_method_migration": "Legacy app hardcodes moved under data/methods remain authoritative_for_scoring=false until source-bound school tables replace them.",
+    "numerology_variants": "Kumasaki and Cai Shen/Hongfan 81-number traditions are separate method variants; never merge conflicting judgments into one universal table."
   }
 }
