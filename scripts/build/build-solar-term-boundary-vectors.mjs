@@ -1,5 +1,6 @@
 import fs from "node:fs";
 
+const check=process.argv.includes("--check");
 const root=new URL("../../", import.meta.url);
 const pad=n=>String(n).padStart(2,"0");
 const parse=p=>{
@@ -29,5 +30,16 @@ for(const year of [2026,2027]){
   }
 }
 const header="year,term,boundary_local,probe_local,relation_to_boundary,expected_month_branch_hangul,expected_month_branch,source_id,status";
-fs.writeFileSync(new URL("tests/사주-절기경계-검증.csv",root),header+"\n"+out.map(r=>r.join(",")).join("\n")+"\n","utf8");
-console.log(`wrote ${out.length} solar-term boundary vectors`);
+const target=new URL("tests/사주-절기경계-검증.csv",root);
+const next=header+"\n"+out.map(r=>r.join(",")).join("\n")+"\n";
+if(check){
+  const current=fs.readFileSync(target,"utf8");
+  if(current!==next){
+    console.error("solar-term boundary vectors are stale");
+    process.exit(1);
+  }
+  console.log(`verified ${out.length} solar-term boundary vectors`);
+}else{
+  fs.writeFileSync(target,next,"utf8");
+  console.log(`wrote ${out.length} solar-term boundary vectors`);
+}
