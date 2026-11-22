@@ -411,6 +411,29 @@ for (const [key,rows] of boundaryPairs) {
 if (stats.myeongri?.solar_term_boundary_test_vectors!==boundaryRows.length) fail("stats solar-term boundary vector count mismatch");
 ok(`saju boundary regression vectors: ${boundaryRows.length} rows / ${boundaryPairs.size} boundaries`);
 
+// Independent implementation crosscheck is explicitly not Korean golden truth.
+const crosscheckRows=csvRows("tests/사주-팔자-교차검증-lunar-python-1.4.9.csv");
+if (crosscheckRows.length!==64) fail(`lunar-python crosscheck rows expected 64, got ${crosscheckRows.length}`);
+const boundaryCross=crosscheckRows.filter(r=>r.category==="kasi_month_branch_boundary");
+if (boundaryCross.length!==48) fail(`lunar-python boundary crosschecks expected 48, got ${boundaryCross.length}`);
+const rawMatches=boundaryCross.filter(r=>r.reference_month_branch_matches_official==="true").length;
+if (rawMatches!==24) fail(`lunar-python raw clock boundary matches expected 24, got ${rawMatches}`);
+const mismatches=boundaryCross.filter(r=>r.reference_month_branch_matches_official==="false");
+if (mismatches.some(r=>!r.notes.includes("relation=one_minute_before"))) fail("lunar-python mismatch pattern changed; investigate timezone/method basis");
+for (const r of boundaryCross) {
+  if (r.reference_version!=="1.4.9" || r.reference_commit!=="1645ad3") fail(`unpinned lunar-python crosscheck: ${r.case_id}`);
+  const delta=Number(r.reference_term_delta_minutes_vs_kasi);
+  if (!(delta>-61 && delta<-59)) fail(`unexpected lunar-python/KASI term-clock delta: ${r.case_id}/${r.reference_term_delta_minutes_vs_kasi}`);
+}
+const timeBasisRows=csvRows("data/time/reference-implementation-time-basis.csv");
+if (timeBasisRows.length!==1) fail(`reference implementation time-basis rows expected 1, got ${timeBasisRows.length}`);
+if (timeBasisRows[0].source_id!=="LUNAR_PYTHON" || timeBasisRows[0].korea_offset_minutes!=="60") fail("lunar-python time-basis registry mismatch");
+if (!sourceIds.has(timeBasisRows[0].source_id)) fail("unknown reference time-basis source");
+if (stats.myeongri?.crosscheck_vector_rows!==crosscheckRows.length) fail("stats saju crosscheck vector count mismatch");
+if (stats.myeongri?.lunar_python_kasi_boundary_raw_clock_matches!==rawMatches) fail("stats lunar-python raw boundary match count mismatch");
+if (stats.myeongri?.reference_time_basis_rows!==timeBasisRows.length) fail("stats reference time-basis count mismatch");
+ok(`saju independent crosscheck: ${crosscheckRows.length} rows; raw KST-clock match ${rawMatches}/${boundaryCross.length}, Beijing-time basis documented`);
+
 const quality=JSON.parse(read("data/meta/quality-gates.json"));
 const gateIds=new Set((quality.gates||[]).map(g=>g.gate_id));
 for (const id of ["LEGAL_HANJA_OFFICIAL_FULL_DIFF","LEGAL_NAMING_RULES","DERIVED_DATA_REPRODUCIBILITY","HANJA_SEMANTIC_CURATION","NAMING_METHOD_DATA","SOLAR_TERMS_2026_2027","SAJU_CALCULATION_ENGINE","NAME_TREND_DATA","SURNAME_HANGNYEOL","SOURCE_LICENSE_AUDIT"]) if (!gateIds.has(id)) fail(`missing quality gate: ${id}`);
