@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-11-14",
+  "generated_at": "2026-11-22",
   "derived": [
     {
       "outputs": [
@@ -32,6 +32,18 @@
         "data/hanja/enriched/legal-reading-meaning.csv"
       ],
       "generator": "scripts/build/build-meaning-senses.mjs",
+      "reproducibility": "exact"
+    },
+    {
+      "outputs": [
+        "tests/사주-절기경계-검증.csv"
+      ],
+      "inputs": [
+        "data/time/2026_24절기_KASI.csv",
+        "data/time/2027_24절기_KASI.csv",
+        "data/myeongri/월지_절기경계.csv"
+      ],
+      "generator": "scripts/build/build-solar-term-boundary-vectors.mjs",
       "reproducibility": "exact"
     },
     {

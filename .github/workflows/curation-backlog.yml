@@ -1,0 +1,26 @@
+name: Build naming curation backlog
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/build/build-naming-curation-backlog.mjs'
+      - 'data/hanja/semantics/meaning-senses.csv'
+      - 'data/hanja/semantics/naming-meaning-curated.csv'
+      - '.github/workflows/curation-backlog.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+      - name: Generate review backlog
+        run: node scripts/build/build-naming-curation-backlog.mjs
+      - name: Upload review backlog
+        uses: actions/upload-artifact@v4
+        with:
+          name: naming-curation-backlog
+          path: data/hanja/semantics/naming-curation-backlog.csv

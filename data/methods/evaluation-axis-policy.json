@@ -1,0 +1,63 @@
+{
+  "version": "1.0.0",
+  "updated_at": "2026-11-22",
+  "principle": "법적 사실·사전 의미·편집 작명 해석·전통 성명학·실사용 통계를 서로 다른 축으로 유지한다.",
+  "axes": [
+    {
+      "axis_id": "legal_validity",
+      "label": "법적 사용 가능성",
+      "evidence_type": "current_official_rule_or_lookup",
+      "can_block_candidate": true,
+      "notes": "현행 법원 규칙과 조회가 최종 기준"
+    },
+    {
+      "axis_id": "dictionary_semantics",
+      "label": "사전 의미",
+      "evidence_type": "documented_hanja_reading_sense",
+      "can_block_candidate": false,
+      "notes": "한자+독음별 전체 뜻을 보존"
+    },
+    {
+      "axis_id": "naming_semantics",
+      "label": "작명 중심 뜻",
+      "evidence_type": "human_curated_editorial_selection",
+      "can_block_candidate": false,
+      "notes": "사전에 있는 뜻 중 작명에서 중심으로 선택 가능한 뜻만 별도 큐레이션"
+    },
+    {
+      "axis_id": "pronunciation_usability",
+      "label": "발음·실사용성",
+      "evidence_type": "linguistic_and_usability_review",
+      "can_block_candidate": false,
+      "notes": "동음·연음·오인 가능성 등을 전통 성명학과 분리"
+    },
+    {
+      "axis_id": "traditional_naming_methods",
+      "label": "전통 성명학",
+      "evidence_type": "method_specific_rule",
+      "can_block_candidate": false,
+      "notes": "발음오행·자원오행·81수리는 method_id별 병렬 결과"
+    },
+    {
+      "axis_id": "saju_methods",
+      "label": "사주·명리 방법론",
+      "evidence_type": "method_specific_rule",
+      "can_block_candidate": false,
+      "notes": "신강신약·용신·격국 등은 method별로 분리"
+    },
+    {
+      "axis_id": "name_trend",
+      "label": "이름 유행도",
+      "evidence_type": "official_statistics_when_available",
+      "can_block_candidate": false,
+      "notes": "인기와 길흉을 연결하지 않음"
+    },
+    {
+      "axis_id": "family_context",
+      "label": "본관·항렬·가족 선호",
+      "evidence_type": "user_declared_or_verified_clan_source",
+      "can_block_candidate": false,
+      "notes": "항렬은 본관·파별 검증 자료가 있을 때만 자동 제안"
+    }
+  ]
+}

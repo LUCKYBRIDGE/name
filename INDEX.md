@@ -10,9 +10,9 @@ AI와 앱 개발 코드는 사용자 요청의 **의도**에 따라 필요한 �
 | 한자 후보 검색 | data/hanja/normalized/reading-index.json | data/hanja/enriched/hanja-master-enriched.csv |
 | 성씨·본관 | data/surnames/ | knowledge/19-성씨-처리원칙.md |
 | 한자 뜻·훈 | data/hanja/semantics/meaning-senses.csv | knowledge/20-한자-다중의미-작명해석.md |
-| 인명용 한자 법적 판정 | knowledge/05-인명용한자-법적판정.md | sources/공식-인명용한자-근거-2026-11.md |
+| 인명용 한자 법적 판정 | data/legal/name-registration-rules.csv | knowledge/05-인명용한자-법적판정.md |
 | 사주·오행 | data/myeongri/ | knowledge/16-사주-분석레이어.md |
-| 수리·음양·발음오행 | docs/04-성명학-규칙.md | knowledge/12-성명학-학파별-분리원칙.md |
+| 수리·음양·발음오행 | data/methods/naming-method-registry.csv | knowledge/12-성명학-학파별-분리원칙.md |
 | 후보 비교 | workflows/후보-비교.md | templates/분석-출력-형식.md |
 | 출생 전 후보 | workflows/출생전-후보와-출생후-확정.md | knowledge/14-출생일시-입력규격.md |
 | 데이터 상태/개수 | data/meta/dataset-stats.json | data/meta/schema-version.json |
@@ -29,6 +29,7 @@ AI와 앱 개발 코드는 사용자 요청의 **의도**에 따라 필요한 �
 - 선택 의미 표준 객체: `data/hanja/semantics/name-meaning-selection.schema.json`
 - 의미 주의 규칙: `data/hanja/semantics/semantic-risk-rules.csv`
 - 주의 의미 검토표: `data/hanja/semantics/sense-concern-curated.csv`
+- 원자료 의미 품질 보류: `data/hanja/semantics/semantic-source-issues.csv`
 - 다중 의미 원칙: `knowledge/20-한자-다중의미-작명해석.md`
 - 마스터 설명: `data/hanja/enriched/MASTER_README.md`
 - 공식/보조 데이터 상태: `data/hanja/SOURCE_STATUS.md`, `SECONDARY_MIRROR.md`
@@ -48,6 +49,15 @@ AI와 앱 개발 코드는 사용자 요청의 **의도**에 따라 필요한 �
 - 심층 연구 진행상태: `data/surnames/research-status.csv`
 - 徐 수준 연구 기준: `data/surnames/RESEARCH_GUIDE.md`
 - 처리 원칙: `knowledge/19-성씨-처리원칙.md`
+
+## 성명학 방법론 데이터
+- method 카탈로그: `data/methods/naming-method-registry.csv`
+- 평가축 분리 정책: `data/methods/evaluation-axis-policy.json`
+- 원칙 설명: `data/methods/README.md`
+
+## 법적 이름 등록 데이터
+- 현행 규칙 요약: `data/legal/name-registration-rules.csv`
+- 처리 원칙: `data/legal/README.md`
 
 ## 명리 계산 데이터
 - 천간·지지·육십갑자: `data/myeongri/천간.csv`, `지지.csv`, `육십갑자.csv`
@@ -70,6 +80,7 @@ AI와 앱 개발 코드는 사용자 요청의 **의도**에 따라 필요한 �
 - 徐 성씨 작명 규칙: `tests/徐-성씨-작명규칙.csv`
 - 상위 30개 확장 검증: `tests/상위30-성씨-대표검증.csv`
 - 한자 다중 의미 검증: `tests/한자-다중의미-대표검증.csv`
+- 사주 절기 경계 회귀검증: `tests/사주-절기경계-검증.csv`
 - AI 응답 실패 사례: `tests/AI-응답-검증-시나리오.md`
 - 파생 데이터 빌드 계보: `data/meta/build-manifest.json`, `scripts/build/`
 - 품질 게이트: `data/meta/quality-gates.json`

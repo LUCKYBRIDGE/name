@@ -1,0 +1,7 @@
+rule_id,category,rule_summary,effective_status,source_id,verified_on,app_policy,notes
+legal_hanja_range,hanja_scope,이름 한자는 한문교육용 기초한자와 가족관계등록규칙 별표1의 한자 범위에서 사용,current_rule,KR_LAW_NAME_RULE,2026-11-22,후보 DB와 현행 법적 확정값을 분리하고 최종 신고 전 공식 조회 재확인,가족관계의 등록 등에 관한 규칙 제37조 제1항
+legal_hanja_variants,hanja_variant,동자·속자·약자는 별표2에 기재된 허용자체만 사용,current_rule,KR_LAW_NAME_RULE,2026-11-22,원자와 이체자를 임의 동등 처리하지 않음,가족관계의 등록 등에 관한 규칙 제37조 제2항
+legal_hanja_pronunciation,hanja_reading,한자는 법원 조회에 지정된 발음으로 사용하며 ㄴ·ㄹ 첫소리에는 두음 관련 예외가 안내됨,current_service_guidance,KR_COURT_HANJA,2026-11-22,한자만 맞고 독음이 다른 후보를 법적 가능으로 자동 표시하지 않음,전자가족관계등록시스템 인명용 한자 조회 안내
+legal_hanja_searchable_variants,hanja_variant,동자·속자·약자는 공식 조회되는 한자에 한해 사용할 수 있음,current_service_guidance,KR_COURT_HANJA,2026-11-22,사용자 입력 자체를 Unicode 유사자만으로 자동 교정하지 않음,공식 조회 화면 안내
+legal_hanja_out_of_range,birth_registration,허용 범위 밖 한자가 포함된 출생 이름은 등록부에 한글로 기록,current_rule,KR_LAW_NAME_RULE,2026-11-22,법적 사용 가능성 축에서 별도 경고,가족관계의 등록 등에 관한 규칙 제37조 제3항
+legal_hanja_final_check,verification,인명용 한자의 현행 가능 여부는 전자가족관계등록시스템 조회로 최종 확인,current_service,KR_COURT_HANJA,2026-11-22,정적 미러만으로 현행 법적 가능을 확정하지 않음,공식 조회를 최종 판정 계층으로 유지
