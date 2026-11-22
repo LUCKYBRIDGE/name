@@ -5,11 +5,11 @@ const check=process.argv.includes("--check");
 const rows=parseCsv(fs.readFileSync(new URL("data/meta/sources.csv",root),"utf8")).rows;
 
 const namedLicenses=new Set(["BSD-3-Clause","MIT","Unicode-3.0-License"]);
-const verifiedPublicPolicies=new Set(["KOGL-1-text","KOGL-1-calendar-info","KOSIS-statistics-use-guide","public_law"]);
 
 const output=rows.map(r=>{
   let license_metadata_status="repository_policy_label";
   let redistribution_review_status="manual_review_before_bulk_redistribution";
+  let reference_use_status="metadata_and_citation_reference_ok";
   let audit_priority="low";
   let notes="등록된 정책 라벨의 실제 적용 범위는 재배포 시 다시 확인";
 
@@ -37,13 +37,37 @@ const output=rows.map(r=>{
     license_metadata_status="statutory_noncopyrightable_official_law_text";
     redistribution_review_status="official_law_text_reuse_allowed_scope_only";
     notes="저작권법 제7조상 법령·규칙 원문은 보호받지 못하는 저작물에 해당; 사이트 편집·해설·이미지는 별도";
+  } else if(r.license==="public_work_free_use_with_attribution"){
+    license_metadata_status="official_copyright_policy_verified";
+    redistribution_review_status="normalized_factual_statistics_allowed_with_specific_attribution";
+    reference_use_status="official_statistics_reuse_verified";
+    notes="법원이 저작재산권 전부를 보유한 공공저작물의 자유이용 정책과 구체적 출처표시 의무를 적용; 조회조건·조회일·잠정치 여부를 보존";
+  } else if(r.license==="first_party_all_rights_reserved"){
+    license_metadata_status="first_party";
+    redistribution_review_status="first_party_repository_use_allowed";
+    reference_use_status="regression_and_migration_only";
+    notes="LUCKYBRIDGE 자체 역사 구현 또는 편집 자료; 외부 근거로 오인하지 않음";
+  } else if(r.license==="PDM"){
+    license_metadata_status="item_marked_pdm";
+    redistribution_review_status="page_level_review_before_bulk_transcription";
+    reference_use_status="metadata_and_primary_source_reference_ok";
+    audit_priority="medium";
+    notes="NDL 항목의 PDM 표시를 기록하되 실제 표·본문 전사 전 페이지·항목별 이용조건을 재확인";
+  }
+
+  if(r.source_id==="KCI_RESOURCE_ELEMENT_214_2024"){
+    audit_priority="high";
+    notes="214부수 전체 자원오행 배속 연구라는 점은 검증됨; 학술논문 표 원문 재배포는 하지 않으며 독립 재구성 또는 허가가 필요";
+  }
+  if(r.source_id==="NDL_KUMASAKI_SEIMEI_NO_SHINPI_1929"){
+    reference_use_status="metadata_and_primary_source_reference_ok";
+    notes="1929 1차 서지 원전. 디지털 본문은 관내·개인송신 대상이므로 일반 공개 원문으로 취급하거나 자동 전사하지 않음";
   }
 
   return {
     source_id:r.source_id, authority:r.authority, license:r.license,
     license_metadata_status, redistribution_review_status,
-    reference_use_status:"metadata_and_citation_reference_ok",
-    audit_priority, notes
+    reference_use_status, audit_priority, notes
   };
 });
 const header=["source_id","authority","license","license_metadata_status","redistribution_review_status","reference_use_status","audit_priority","notes"];
