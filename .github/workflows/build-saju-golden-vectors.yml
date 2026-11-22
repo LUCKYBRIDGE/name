@@ -1,0 +1,40 @@
+name: Build lunar-python saju golden vectors
+
+on:
+  push:
+    branches:
+      - saju-golden-vectors-20261122
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: saju-golden-vectors-20261122
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - name: Install pinned crosscheck implementation
+        run: pip install --disable-pip-version-check lunar-python==1.4.9
+      - name: Generate golden vectors
+        run: python scripts/build/build-saju-golden-vectors.py
+      - name: Commit generated vectors
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- tests/사주-팔자-golden-vectors-lunar-python-1.4.9.csv; then
+            echo "Golden vectors already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tests/사주-팔자-golden-vectors-lunar-python-1.4.9.csv
+          git commit -m "tests: add pinned lunar-python saju golden vectors"
+          git push origin HEAD:saju-golden-vectors-20261122
