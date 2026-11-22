@@ -1,16 +1,55 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "method_id": "pronunciation_onset_common",
-  "updated_at": "2026-11-22",
-  "scope": "현대 성명학에서 통용되는 초성 중심 발음오행 계열의 한 구현",
-  "supported_onsets": ["ㄱ","ㅋ","ㄴ","ㄷ","ㄹ","ㅌ","ㅇ","ㅎ","ㅅ","ㅈ","ㅊ","ㅁ","ㅂ","ㅍ"],
-  "unsupported_without_explicit_method_rule": ["ㄲ","ㄸ","ㅃ","ㅆ","ㅉ"],
+  "updated_at": "2026-11-23",
+  "scope": "현대 한국 성명학에서 통용되어 온 초성 중심 발음오행 계열을 재현하는 비교 method",
+  "source_ids": [
+    "KCI_NAMING_PRON_2015",
+    "KCI_PRON_LABIAL_GUTTURAL_2018",
+    "KCI_PRON_APPLICATION_2019",
+    "KCI_KUMASAKI_MYSTERY_2025"
+  ],
+  "supported_onsets": [
+    "ㄱ",
+    "ㅋ",
+    "ㄴ",
+    "ㄷ",
+    "ㄹ",
+    "ㅌ",
+    "ㅇ",
+    "ㅎ",
+    "ㅅ",
+    "ㅈ",
+    "ㅊ",
+    "ㅁ",
+    "ㅂ",
+    "ㅍ"
+  ],
+  "unsupported_without_explicit_method_rule": [
+    "ㄲ",
+    "ㄸ",
+    "ㅃ",
+    "ㅆ",
+    "ㅉ"
+  ],
+  "conflicting_variant_method_id": "pronunciation_labial_guttural_haerye_2018",
+  "known_conflict": {
+    "common_variant": {
+      "ㅁ·ㅂ·ㅍ": "수",
+      "ㅇ·ㅎ": "토"
+    },
+    "haerye_based_variant": {
+      "ㅁ·ㅂ·ㅍ": "토",
+      "ㅇ·ㅎ": "수"
+    }
+  },
   "rules": [
     "표에 직접 등록된 초성만 계산한다.",
-    "된소리는 예사소리와 같다고 자동 정규화하지 않는다. 해당 규칙의 출처가 등록될 때 별도 method 또는 exception으로 추가한다.",
+    "된소리는 예사소리와 같다고 자동 정규화하지 않는다.",
     "중성·종성을 무시하는 한계를 결과에 표시한다.",
-    "ㅇ·ㅎ과 ㅁ·ㅂ·ㅍ 배속은 다른 계열에서 다르게 해석될 수 있으므로 유일 표준으로 표현하지 않는다.",
+    "순음·후음은 문헌 계열에 따라 배속이 반대이므로 conflicting_variant_method_id를 함께 제시할 수 있다.",
+    "부분 근거를 이용해 대안 method의 14개 초성 전체표를 임의 생성하지 않는다.",
     "발음오행 결과는 법적 적합성·한자 의미·실사용성·사주 결과와 분리해 표시한다.",
-    "이 표는 전통 분류의 문헌 근거이며 과학적 미래예측 효력의 근거가 아니다."
+    "이 표와 참고문헌은 전통 분류의 존재·계보·비판점을 기록하며 과학적 미래예측 효력을 뜻하지 않는다."
   ]
 }
