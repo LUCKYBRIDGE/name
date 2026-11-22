@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-22",
-  "schema_version": "1.13.0",
+  "generated_at": "2026-11-23",
+  "schema_version": "1.14.0",
   "authoritative_for": "repository dataset counts and normalization status",
   "hanja": {
     "upstream_crawl_date": "2024-07-16",
@@ -69,16 +69,18 @@
     "Every registered external source has a machine-readable rights/use classification in data/meta/source-rights.csv; unverified sources default to reference/summary-only handling.",
     "Naming semantic curation reached 300 characters / 652 reviewed sense rows; this is an editorial priority core, not an official popularity ranking.",
     "Seven suspicious semantic source rows are explicitly held for source recheck rather than silently corrected.",
-    "Seven naming-method families are now registered separately so pronunciation, resource-element, numerology, stroke, and yongshin approaches are not collapsed into one score.",
     "48 KASI-backed month-branch boundary vectors cover the exact minute before/at each 2026-2027 monthly start solar term.",
     "lunar-python 1.4.9 crosscheck found its solar-term table is Beijing-time based; raw Korean local-clock fields switch month branch about one hour earlier than KASI Korea-local boundaries, so the library output is not treated as Korean golden truth.",
     "Common onset pronunciation-five-elements mapping now has 14 source-bound basic consonant rows; tense-consonant normalization remains intentionally unsupported until a method-specific source is registered.",
-    "Official court birth-name and rename-name ranking services are registered as trend sources, but ranking values are not bulk embedded until extraction and redistribution conditions are reviewed.",
     "The 81-row numerology table previously hardcoded in knolname is preserved as legacy_knolname_v0_2_0 with authoritative_for_scoring=false; it is regression evidence, not a verified numerology source.",
     "knolname2 server/dataLoader.ts resource-element 214-radical map, 84 semantic overrides, and 11 wonhoek delta rules are now preserved in data/methods as explicit non-authoritative legacy method tables.",
     "Unihan kRSKangXi radical number + residual stroke data now has a source-bound 17-range Kangxi radical stroke reconstruction method; this replaces ad-hoc delta patches for technical reconstruction but is not automatically a universal naming-school wonhoek standard.",
     "Kumasaki and Cai Shen/Hongfan 81-number traditions are registered as separate historical methods; KCI 2019 reports 27/81 opposing good/bad judgments, so no universal 81 table is claimed.",
-    "Court name-statistics reuse policy is verified for court-owned public works with specific source attribution; exact normalized birth/rename snapshots still require direct query extraction with scope/date metadata."
+    "Court name-statistics reuse policy is verified for court-owned public works with specific source attribution; exact normalized birth/rename snapshots still require direct query extraction with scope/date metadata.",
+    "Fourteen naming-method records are now separated, with 21 evidence-role rows and 14 readiness rows; no method is marked final_scoring_ready.",
+    "The irrelevant 2011 auricular-acupuncture voice-signal paper was removed from pronunciation-five-elements evidence; pronunciation sources now come from directly relevant naming studies.",
+    "Labial/guttural pronunciation-five-elements conflict is explicit: the stored common variant and a Haerye-based alternative are separate methods rather than silently merged.",
+    "Official court birth-name and rename-name statistics have a validated snapshot schema and ingestion policy; direct official TOP20 values remain pending extraction."
   ],
   "surnames": {
     "master_records": 31,
@@ -123,18 +125,18 @@
     "status": "official_calendar_data_verified_2026_2027"
   },
   "sources": {
-    "registry_records": 76,
-    "unknown_license_metadata": 17,
+    "registry_records": 79,
+    "unknown_license_metadata": 20,
     "named_license_records": 4,
     "policy_label_records": 20,
     "audit_file": "data/meta/source-audit.csv",
-    "rights_registry_records": 76,
+    "rights_registry_records": 79,
     "rights_file": "data/meta/source-rights.csv"
   },
   "methods": {
-    "naming_method_registry_rows": 13,
+    "naming_method_registry_rows": 14,
     "evaluation_axes": 8,
-    "status": "13 method families separated; 300-character semantic core; Unihan kRSKangXi stroke reconstruction source-bound; knolname2 resource-element/wonhoek hardcodes migrated as non-authoritative legacy tables; Kumasaki/Cai Shen 81 variants separated; 2024 published 214-radical resource-element method registered but table not embedded pending rights/independent reconstruction",
+    "status": "14 method records separated with machine-readable evidence roles/readiness; common pronunciation mapping corrected to relevant naming literature; labial/guttural Haerye alternative stored as a partial variant; no traditional naming method is marked ready for universal final scoring",
     "pronunciation_onset_mapping_rows": 14,
     "source_bound_mapping_tables": 2,
     "legacy_numerology_81_rows": 81,
@@ -145,7 +147,11 @@
     "kangxi_radical_stroke_ranges": 17,
     "numerology_method_provenance_rows": 3,
     "source_bound_resource_element_method_sources": 1,
-    "embedded_source_bound_resource_element_mapping_rows": 0
+    "embedded_source_bound_resource_element_mapping_rows": 0,
+    "method_evidence_rows": 21,
+    "method_readiness_rows": 14,
+    "pronunciation_variant_rows": 4,
+    "final_scoring_ready_methods": 0
   },
   "legal": {
     "name_registration_rule_rows": 6,
@@ -154,6 +160,8 @@
   "trends": {
     "registered_official_datasets": 2,
     "extracted_ranking_rows": 0,
-    "status": "official court reuse policy verified; normalized birth/rename ranking extraction pending"
+    "status": "official court reuse policy verified; normalized TOP20 snapshot schema/policy ready; direct official extraction pending",
+    "snapshot_schema_ready": true,
+    "ingestion_policy_version": "1.0.0"
   }
 }
