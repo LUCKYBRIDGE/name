@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "updated_at": "2026-11-23",
+  "source_id": "KR_COURT_FAMILY_STATS",
+  "dataset_ids": [
+    "birth_top_names",
+    "rename_top_names"
+  ],
+  "rules": [
+    "공식 화면에 표시된 순위와 건수만 저장한다.",
+    "TOP20 밖의 순위·건수는 추정하거나 보간하지 않는다.",
+    "출생신고와 개명신고 스냅샷을 절대 합쳐 하나의 인기순위로 만들지 않는다.",
+    "조회 기간·지역·성별·조회일을 스냅샷마다 보존한다.",
+    "통계 기준이 등록일이며 잠정치임을 보존한다.",
+    "파생 1년·5년·10년 추세는 원 스냅샷 ID 목록을 함께 저장하고 원자료와 분리한다.",
+    "인기·희소성은 전통 성명학의 길흉 점수와 합산하지 않는다.",
+    "공식 출처 표시문을 앱·보고서에 구체적으로 표기한다."
+  ],
+  "snapshot_schema": "data/trends/name-trend-snapshot.schema.json",
+  "default_attribution": "출처: 대한민국 법원 전자가족관계등록 통계서비스 (조회조건·조회일 병기)",
+  "ingestion_status": "schema_ready_direct_official_extraction_pending"
+}
