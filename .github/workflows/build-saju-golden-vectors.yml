@@ -1,4 +1,4 @@
-name: Build lunar-python saju golden vectors
+name: Build lunar-python saju crosscheck vectors
 
 on:
   push:
@@ -23,7 +23,7 @@ jobs:
           python-version: '3.13'
       - name: Install pinned crosscheck implementation
         run: pip install --disable-pip-version-check lunar-python==1.4.9
-      - name: Generate golden vectors
+      - name: Generate crosscheck vectors
         run: python scripts/build/build-saju-golden-vectors.py
       - name: Refresh source audit metadata
         run: |
@@ -33,12 +33,12 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if [ -z "$(git status --porcelain -- tests/사주-팔자-golden-vectors-lunar-python-1.4.9.csv data/meta/source-audit.csv data/meta/source-rights.csv)" ]; then
-            echo "Golden vectors and source audit are already current."
+          if [ -z "$(git status --porcelain -- tests/사주-팔자-교차검증-lunar-python-1.4.9.csv data/meta/source-audit.csv data/meta/source-rights.csv)" ]; then
+            echo "Crosscheck vectors and source audit are already current."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add tests/사주-팔자-golden-vectors-lunar-python-1.4.9.csv data/meta/source-audit.csv data/meta/source-rights.csv
-          git commit -m "tests: add pinned lunar-python saju golden vectors"
+          git add tests/사주-팔자-교차검증-lunar-python-1.4.9.csv data/meta/source-audit.csv data/meta/source-rights.csv
+          git commit -m "tests: add pinned lunar-python saju crosscheck vectors"
           git push origin HEAD:saju-golden-vectors-20261122
