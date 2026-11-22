@@ -237,8 +237,8 @@ for (const r of curatedRows) {
   else if (matches[0].raw_sense!==r.raw_sense) fail(`curated raw_sense mismatch: ${r.hanja}/${r.legal_reading}/${r.sense_order}`);
   if (r.naming_use_class==="caution_other_dictionary_sense" && r.primary_name_explanation_allowed!=="false") fail(`caution sense cannot be primary: ${r.hanja}/${r.raw_sense}`);
 }
-if (curatedRows.length!==327) fail(`curated naming rows expected 327, got ${curatedRows.length}`);
-if (curatedChars.size!==150) fail(`curated naming characters expected 150, got ${curatedChars.size}`);
+if (curatedRows.length!==457) fail(`curated naming rows expected 457, got ${curatedRows.length}`);
+if (curatedChars.size!==202) fail(`curated naming characters expected 202, got ${curatedChars.size}`);
 const yu祐=senseRows.filter(r=>r.hanja==="祐"&&r.legal_reading==="우").map(r=>r.raw_sense);
 if (yu祐.length!==2 || !yu祐.includes("도울 우") || !yu祐.includes("다행할 우")) fail("祐/우 must preserve two documented senses");
 const yu優=senseRows.filter(r=>r.hanja==="優"&&r.legal_reading==="우").map(r=>r.raw_sense);
@@ -269,7 +269,7 @@ for (const r of semanticIssueRows) {
     if (promoted) fail(`held semantic source issue promoted to naming meaning: ${r.issue_id}`);
   }
 }
-if (semanticIssueRows.length!==5) fail(`semantic source issues expected 5, got ${semanticIssueRows.length}`);
+if (semanticIssueRows.length!==7) fail(`semantic source issues expected 7, got ${semanticIssueRows.length}`);
 if (stats.hanja.semantic_source_issue_rows!==semanticIssueRows.length) fail("stats semantic source issue count mismatch");
 ok(`semantic source-quality holds: ${semanticIssueRows.length} rows`);
 
@@ -398,6 +398,28 @@ if ((onsetPolicy.unsupported_without_explicit_method_rule||[]).length!==5) fail(
 if (stats.methods?.pronunciation_onset_mapping_rows!==onsetRows.length) fail("stats pronunciation onset row count mismatch");
 if (stats.methods?.source_bound_mapping_tables!==1) fail("stats source-bound mapping table count mismatch");
 ok(`pronunciation onset mapping: ${onsetRows.length} source-bound rows; tense consonants explicitly unsupported`);
+
+// Legacy knolname 81-numerology table is preserved for regression only.
+const legacy81Rows=csvRows("data/methods/numerology-81-legacy-knolname.csv");
+if (legacy81Rows.length!==81) fail(`legacy 81 table expected 81 rows, got ${legacy81Rows.length}`);
+const legacyNums=new Set();
+for (const r of legacy81Rows) {
+  const n=Number(r.number);
+  if (!Number.isInteger(n) || n<1 || n>81 || legacyNums.has(n)) fail(`invalid/duplicate legacy 81 number: ${r.number}`);
+  legacyNums.add(n);
+  if (r.table_id!=="legacy_knolname_v0_2_0") fail(`legacy 81 table_id mismatch: ${r.number}`);
+  if (r.method_id!=="numerology_81_wonhyeongijeong_family") fail(`legacy 81 method mismatch: ${r.number}`);
+  if (r.evidence_status!=="legacy_app_table_source_unverified") fail(`legacy 81 evidence status mismatch: ${r.number}`);
+  if (r.authoritative_for_scoring!=="false") fail(`legacy 81 row cannot be authoritative: ${r.number}`);
+  if (r.source_id!=="KNOLNAME_LEGACY_81" || !sourceIds.has(r.source_id)) fail(`legacy 81 source mismatch: ${r.number}`);
+}
+for (let n=1;n<=81;n++) if (!legacyNums.has(n)) fail(`legacy 81 table missing number: ${n}`);
+const legacy81Policy=JSON.parse(read("data/methods/numerology-81-legacy-knolname.policy.json"));
+if (legacy81Policy.version!=="1.0.0" || legacy81Policy.table_id!=="legacy_knolname_v0_2_0") fail("legacy 81 policy identity");
+if (legacy81Policy.authoritative_for_scoring!==false) fail("legacy 81 policy must remain non-authoritative");
+if (stats.methods?.legacy_numerology_81_rows!==legacy81Rows.length) fail("stats legacy 81 row count mismatch");
+if (stats.methods?.authoritative_numerology_81_tables!==0) fail("authoritative numerology table count must remain zero");
+ok(`legacy 81 numerology quarantine: ${legacy81Rows.length} rows / authoritative=false`);
 
 // Current legal naming-rule summary stays separate from the Hanja candidate mirror.
 const legalRows=csvRows("data/legal/name-registration-rules.csv");
