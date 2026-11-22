@@ -1,0 +1,15 @@
+method_id,onset,element,traditional_sound_class,source_ids,evidence_status,app_policy,caveat
+pronunciation_onset_common,ㄱ,목,아음(牙音),ACADEMIC_KAIS_PRON_2011|KCI_NAMING_PRON_2015,source_table_supported,초성 발음오행 비교 결과에만 사용,전통 배속표이며 이름의 운명·성격을 과학적으로 예측한다는 근거가 아님
+pronunciation_onset_common,ㅋ,목,아음(牙音),ACADEMIC_KAIS_PRON_2011|KCI_NAMING_PRON_2015,source_table_supported,초성 발음오행 비교 결과에만 사용,전통 배속표이며 이름의 운명·성격을 과학적으로 예측한다는 근거가 아님
+pronunciation_onset_common,ㄴ,화,설음(舌音),ACADEMIC_KAIS_PRON_2011|KCI_NAMING_PRON_2015,source_table_supported,초성 발음오행 비교 결과에만 사용,전통 배속표이며 이름의 운명·성격을 과학적으로 예측한다는 근거가 아님
+pronunciation_onset_common,ㄷ,화,설음(舌音),ACADEMIC_KAIS_PRON_2011|KCI_NAMING_PRON_2015,source_table_supported,초성 발음오행 비교 결과에만 사용,전통 배속표이며 이름의 운명·성격을 과학적으로 예측한다는 근거가 아님
+pronunciation_onset_common,ㄹ,화,설음(舌音),ACADEMIC_KAIS_PRON_2011|KCI_NAMING_PRON_2015,source_table_supported,초성 발음오행 비교 결과에만 사용,전통 배속표이며 이름의 운명·성격을 과학적으로 예측한다는 근거가 아님
+pronunciation_onset_common,ㅌ,화,설음(舌音),ACADEMIC_KAIS_PRON_2011|KCI_NAMING_PRON_2015,source_table_supported,초성 발음오행 비교 결과에만 사용,전통 배속표이며 이름의 운명·성격을 과학적으로 예측한다는 근거가 아님
+pronunciation_onset_common,ㅇ,토,후음(喉音),ACADEMIC_KAIS_PRON_2011|KCI_NAMING_PRON_2015,source_table_supported,초성 발음오행 비교 결과에만 사용,2015년 연구가 후음·순음 배속 착종 문제를 지적하므로 다른 method와 병렬 표시
+pronunciation_onset_common,ㅎ,토,후음(喉音),ACADEMIC_KAIS_PRON_2011|KCI_NAMING_PRON_2015,source_table_supported,초성 발음오행 비교 결과에만 사용,2015년 연구가 후음·순음 배속 착종 문제를 지적하므로 다른 method와 병렬 표시
+pronunciation_onset_common,ㅅ,금,치음(齒音),ACADEMIC_KAIS_PRON_2011|KCI_NAMING_PRON_2015,source_table_supported,초성 발음오행 비교 결과에만 사용,전통 배속표이며 이름의 운명·성격을 과학적으로 예측한다는 근거가 아님
+pronunciation_onset_common,ㅈ,금,치음(齒音),ACADEMIC_KAIS_PRON_2011|KCI_NAMING_PRON_2015,source_table_supported,초성 발음오행 비교 결과에만 사용,전통 배속표이며 이름의 운명·성격을 과학적으로 예측한다는 근거가 아님
+pronunciation_onset_common,ㅊ,금,치음(齒音),ACADEMIC_KAIS_PRON_2011|KCI_NAMING_PRON_2015,source_table_supported,초성 발음오행 비교 결과에만 사용,전통 배속표이며 이름의 운명·성격을 과학적으로 예측한다는 근거가 아님
+pronunciation_onset_common,ㅁ,수,순음(脣音),ACADEMIC_KAIS_PRON_2011|KCI_NAMING_PRON_2015,source_table_supported,초성 발음오행 비교 결과에만 사용,2015년 연구가 후음·순음 배속 착종 문제를 지적하므로 다른 method와 병렬 표시
+pronunciation_onset_common,ㅂ,수,순음(脣音),ACADEMIC_KAIS_PRON_2011|KCI_NAMING_PRON_2015,source_table_supported,초성 발음오행 비교 결과에만 사용,2015년 연구가 후음·순음 배속 착종 문제를 지적하므로 다른 method와 병렬 표시
+pronunciation_onset_common,ㅍ,수,순음(脣音),ACADEMIC_KAIS_PRON_2011|KCI_NAMING_PRON_2015,source_table_supported,초성 발음오행 비교 결과에만 사용,2015년 연구가 후음·순음 배속 착종 문제를 지적하므로 다른 method와 병렬 표시
