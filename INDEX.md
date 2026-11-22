@@ -54,6 +54,8 @@ AI와 앱 개발 코드는 사용자 요청의 **의도**에 따라 필요한 �
 - method 카탈로그: `data/methods/naming-method-registry.csv`
 - 초성 발음오행 통용 배속표: `data/methods/pronunciation-onset-common.csv`
 - 초성 발음오행 적용정책: `data/methods/pronunciation-onset-common.policy.json`
+- 81수리 기존 앱 격리표: `data/methods/numerology-81-legacy-knolname.csv`
+- 81수리 격리정책: `data/methods/numerology-81-legacy-knolname.policy.json`
 - 평가축 분리 정책: `data/methods/evaluation-axis-policy.json`
 - 원칙 설명: `data/methods/README.md`
 
