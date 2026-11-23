@@ -19,7 +19,11 @@ const dataDirectories = [
   'data/time',
   'data/trends',
 ];
-const excludedPaths = new Set([targetPath, 'data/hanja/semantics/selection-examples.json']);
+const excludedPaths = new Set([
+  targetPath,
+  'data/hanja/semantics/naming-curation-backlog.csv',
+  'data/hanja/semantics/selection-examples.json',
+]);
 const paths = dataDirectories.flatMap(directory =>
   fs.readdirSync(join(root, directory), { recursive: true, withFileTypes: true })
     .filter(entry => entry.isFile() && /\.(csv|json)$/.test(entry.name))

@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import {parseCsv} from "../build/lib/csv.mjs";
 
 const root = new URL("../../", import.meta.url);
 const read = p => fs.readFileSync(new URL(p, root), "utf8").replace(/^\uFEFF/, "");
@@ -6,25 +7,7 @@ const exists = p => fs.existsSync(new URL(p, root));
 const fail = msg => { console.error("FAIL:", msg); process.exitCode = 1; };
 const ok = msg => console.log("OK:", msg);
 
-function parseCsvLine(line) {
-  const out=[]; let cur=""; let quoted=false;
-  for (let i=0;i<line.length;i++) {
-    const ch=line[i];
-    if (ch === '"') {
-      if (quoted && line[i+1] === '"') { cur += '"'; i++; } else quoted=!quoted;
-    } else if (ch === "," && !quoted) { out.push(cur); cur=""; }
-    else cur += ch;
-  }
-  out.push(cur); return out;
-}
-function csvRows(path) {
-  const lines=read(path).trim().split(/\r?\n/);
-  const header=parseCsvLine(lines[0]);
-  return lines.slice(1).filter(Boolean).map(line=>{
-    const vals=parseCsvLine(line);
-    return Object.fromEntries(header.map((h,i)=>[h,vals[i]??""]));
-  });
-}
+const csvRows = path => parseCsv(read(path)).rows;
 
 const requiredNoticeFiles=[
   "THIRD_PARTY_NOTICES.md",
@@ -353,7 +336,7 @@ if (stats.sources.unknown_license_metadata!==sourceRows.filter(r=>r.license==="u
 ok(`semantic selection policy: ${riskRows.length} rules / ${concernRows.length} curated concerns / ${selectionExamples.examples.length} examples`);
 
 // Myeongri
-const rowCount=p=>read(p).trim().split(/\r?\n/).length-1;
+const rowCount=p=>csvRows(p).length;
 if (rowCount("data/myeongri/천간.csv") !== 10) fail("천간 count");
 if (rowCount("data/myeongri/지지.csv") !== 12) fail("지지 count");
 if (rowCount("data/myeongri/육십갑자.csv") !== 60) fail("육십갑자 count");

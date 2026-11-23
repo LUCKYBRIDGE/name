@@ -1,32 +1,10 @@
 import fs from "node:fs";
+import {parseCsv, toCsv} from "./lib/csv.mjs";
 
 const root = new URL("../../", import.meta.url);
 const read = p => fs.readFileSync(new URL(p, root), "utf8").replace(/^\uFEFF/, "");
 
-function parseCsvLine(line) {
-  const out=[]; let cur=""; let quoted=false;
-  for (let i=0;i<line.length;i++) {
-    const ch=line[i];
-    if (ch === '"') {
-      if (quoted && line[i+1] === '"') { cur += '"'; i++; } else quoted=!quoted;
-    } else if (ch === "," && !quoted) { out.push(cur); cur=""; }
-    else cur += ch;
-  }
-  out.push(cur); return out;
-}
-function csvRows(path) {
-  const lines=read(path).trim().split(/\r?\n/);
-  const header=parseCsvLine(lines[0]);
-  return lines.slice(1).filter(Boolean).map(line=>{
-    const vals=parseCsvLine(line);
-    return Object.fromEntries(header.map((h,i)=>[h,vals[i]??""]));
-  });
-}
-function csvCell(v) {
-  const s=String(v??"");
-  return /[",\n]/.test(s) ? '"' + s.replaceAll('"','""') + '"' : s;
-}
-
+const csvRows = path => parseCsv(read(path)).rows;
 const PRIORITY = [
   "宇","安","恩","允","均","圭","坤","城","基","培","聖","延",
   "俊","智","知","炫","煥","熙","輝","彬","樹","秀","榮","賢",
@@ -73,8 +51,7 @@ const header=Object.keys(rows[0]||{
   priority_rank:"",hanja:"",codepoint:"",legal_reading:"",sense_order:"",raw_sense:"",
   relation_sense_count:"",already_curated:"",meaning_source_id:"",review_status:""
 });
-const out=[header.join(","),...rows.map(r=>header.map(h=>csvCell(r[h])).join(","))].join("\n")+"\n";
-fs.writeFileSync(new URL("../../data/hanja/semantics/naming-curation-backlog.csv", import.meta.url),out,"utf8");
+fs.writeFileSync(new URL("../../data/hanja/semantics/naming-curation-backlog.csv", import.meta.url),toCsv(header, rows),"utf8");
 
 const covered=new Set(rows.map(r=>r.hanja));
 const missing=PRIORITY.filter(h=>!covered.has(h));
