@@ -1,0 +1,454 @@
+{
+  "manifest_version": 1,
+  "schema_version": "1.14.0",
+  "files": {
+    "data/hanja/enriched/hanja-master-enriched.csv": {
+      "bytes": 1962387,
+      "sha256": "139444a9fa4d11bd4677264475884baca8ce14f8e3fe4bbcd365fd6f534cc6ce"
+    },
+    "data/hanja/enriched/hanja-meaning-summary.csv": {
+      "bytes": 810721,
+      "sha256": "38fd11b654de988f803e616ccd4dd54bc837d4a8d2359ccea22cbd82fe590dfa"
+    },
+    "data/hanja/enriched/legal-reading-meaning.csv": {
+      "bytes": 1748621,
+      "sha256": "6430b8ac4566aa008a5b6e35061bd7dfef4ae00d6f0fc344ffae67773366d33b"
+    },
+    "data/hanja/enriched/unihan-radical-strokes-provisional.csv": {
+      "bytes": 2487644,
+      "sha256": "5d4ef82931d0e58a5f385427b97cc77033eb800ebfcb9d8c77606399a974a432"
+    },
+    "data/hanja/normalized/by-reading.csv": {
+      "bytes": 714415,
+      "sha256": "8fe3765e41c475cffbc01a87f39e2dcccf77266a8faea4982ba682b9c6267839"
+    },
+    "data/hanja/normalized/characters.csv": {
+      "bytes": 675718,
+      "sha256": "7817f62e6e89bbcdca1bb70aa0e045ec5fd02ba9a7ffa2cd0882b32b810d0c89"
+    },
+    "data/hanja/normalized/reading-index.json": {
+      "bytes": 631170,
+      "sha256": "abafe02d2cb0bde88b9d4149cdb3c3600d0edb6e55882dfcca5c67b603a19ba6"
+    },
+    "data/hanja/semantics/meaning-senses.csv": {
+      "bytes": 2343664,
+      "sha256": "e145b9312461e74f077b825a80410ad1e5d61afaa839b16e00f64adc23f5bfb5"
+    },
+    "data/hanja/semantics/name-meaning-selection.policy.json": {
+      "bytes": 2120,
+      "sha256": "9e79214b18ba9bacd9ca06127ad7dff856e2ae7db4babed816dd4f3e9655fc70"
+    },
+    "data/hanja/semantics/name-meaning-selection.schema.json": {
+      "bytes": 2489,
+      "sha256": "1141714ba2b2fa5b60ebea1cfdd2811494c5dee2a0534504c12494e56261c23b"
+    },
+    "data/hanja/semantics/naming-core-characters.csv": {
+      "bytes": 43478,
+      "sha256": "0edb81a6a37e915526e987056d89680ea86dc2bc3521a01e721512ef03eb509c"
+    },
+    "data/hanja/semantics/naming-meaning-curated.csv": {
+      "bytes": 174064,
+      "sha256": "aa183fcea9a3d56334b7be5c334a70b6353dd4da48e60d1121a4641de2bc1777"
+    },
+    "data/hanja/semantics/semantic-risk-rules.csv": {
+      "bytes": 1794,
+      "sha256": "e8bc2aba5ef2380f83ea4fc6a7355b3cfdaad3587af99e0a811070bf9d180d44"
+    },
+    "data/hanja/semantics/semantic-source-issues.csv": {
+      "bytes": 1944,
+      "sha256": "5567c81b10b4fffc8f07f5c7d441a7912abd41ff371d0d3c163f83e3933e3083"
+    },
+    "data/hanja/semantics/sense-concern-curated.csv": {
+      "bytes": 825,
+      "sha256": "9e871a7d515f65d81d6f4811e5ee6a692db7ead39f28e9508f6ce5b01664994d"
+    },
+    "data/legal/name-registration-rules.csv": {
+      "bytes": 1926,
+      "sha256": "f80d711e5094df53379620bbca2ce0db8dc201bae8f84052cea89b023071b918"
+    },
+    "data/meta/build-manifest.json": {
+      "bytes": 2683,
+      "sha256": "1bca3171e3360ebd59b6760540c71673c4f2ceff6cbb81282f289cbd85db5d03"
+    },
+    "data/meta/dataset-stats.json": {
+      "bytes": 10226,
+      "sha256": "564e38ddeaeb25432d2b8c029fd277fdad3e3cc1fbbde19aeb2677365ef2c205"
+    },
+    "data/meta/distribution-policy.csv": {
+      "bytes": 5186,
+      "sha256": "c6b6295dd406afeac85a0fc93a7b2e90f602f9378eb5a7f477ce4807bf70becb"
+    },
+    "data/meta/license-map.csv": {
+      "bytes": 4963,
+      "sha256": "bd1813ed92e410b7a93531871b1e5b9e13f9cd6ea24181ce942eb49d14e1b552"
+    },
+    "data/meta/quality-gates.json": {
+      "bytes": 7622,
+      "sha256": "9a740998a7aad46a78ae11ccc4c595a6bba44b2047453db5dc084d485aacf890"
+    },
+    "data/meta/schema-version.json": {
+      "bytes": 7897,
+      "sha256": "f477ca5b5d18d2399b0e0a17d428c07e813dca8b5dee6254baf168c83b012850"
+    },
+    "data/meta/source-audit.csv": {
+      "bytes": 21920,
+      "sha256": "0926b1e849d0a5845ceb995a44db063208719e325ebd6f02229566a87602e2da"
+    },
+    "data/meta/source-rights.csv": {
+      "bytes": 31835,
+      "sha256": "6848ae63519b7bd897f1b2ae2a2bca1826a16542cc15d7f9968ccbf8c364bd98"
+    },
+    "data/meta/sources.csv": {
+      "bytes": 30923,
+      "sha256": "7cdba884a9e29c7f1cbcb346346aa66582d41de54daa50f3acf55c88e0ccf5a1"
+    },
+    "data/methods/evaluation-axis-policy.json": {
+      "bytes": 2290,
+      "sha256": "2f104944590b9f525887546d0de3b0d0a0ac07e7298c9b5b587f3605e87138c6"
+    },
+    "data/methods/kangxi-radical-stroke-ranges.csv": {
+      "bytes": 3445,
+      "sha256": "0ecf640d7e211bb02c125984724502a9cea8213682341437c738647d6ff08158"
+    },
+    "data/methods/method-evidence.csv": {
+      "bytes": 5816,
+      "sha256": "d5c073c8f637426f59fd2b8db6cddba12e5354986831ede66823613df27f2f01"
+    },
+    "data/methods/method-readiness.csv": {
+      "bytes": 3814,
+      "sha256": "22c413b5204db8501d74783a9ae820cfed928da9538eec46ef67cfbbe06d0340"
+    },
+    "data/methods/naming-method-registry.csv": {
+      "bytes": 7904,
+      "sha256": "46731b67609ed3c0aa227f08408fce033cd9864bac88d3d13daf7c4e07c23552"
+    },
+    "data/methods/numerology-81-legacy-knolname.csv": {
+      "bytes": 28559,
+      "sha256": "be4d671dc5837bddd97ba76dfdb8a288588a0c53029ed40efc67f7db1b5350c2"
+    },
+    "data/methods/numerology-81-legacy-knolname.policy.json": {
+      "bytes": 957,
+      "sha256": "d0ab96800cb8dd39f6eeb1e231b5985fb4fb2bbfa637ccfd4083be4cd3afcd4b"
+    },
+    "data/methods/numerology-81-method-provenance.csv": {
+      "bytes": 1109,
+      "sha256": "5eb1bf707f8f885517ef5bf0a117c951624aa2d7603676cdd2ab81b10446bfa9"
+    },
+    "data/methods/pronunciation-labial-guttural-variants.csv": {
+      "bytes": 1110,
+      "sha256": "4358361712b842222935d14715a47cc5fd889d1de536fe708a64f47c2e5272fe"
+    },
+    "data/methods/pronunciation-onset-common.csv": {
+      "bytes": 5046,
+      "sha256": "5d6a28ef319736af897ce4275a356bfb2f59f1de5a02a18303439e9902ff1d0a"
+    },
+    "data/methods/pronunciation-onset-common.policy.json": {
+      "bytes": 1683,
+      "sha256": "a6fd46979d67901611d58628d8624bcedae4e0b52df519ae78f6708acc30477a"
+    },
+    "data/methods/resource-element-legacy-knolname2.policy.json": {
+      "bytes": 794,
+      "sha256": "2ffa81c656a7ca76da7c768594d2a0d4785055c9ddaceaa6ab34dc294e831cd3"
+    },
+    "data/methods/resource-element-overrides-legacy-knolname2.csv": {
+      "bytes": 19990,
+      "sha256": "e49559f21008d0a9366abe5792d23c097b0299e0f9fbbdf44ebb1328ffe7443b"
+    },
+    "data/methods/resource-element-radical-legacy-knolname2.csv": {
+      "bytes": 46417,
+      "sha256": "1043a62d2d270aea7ee9e93270da551b41b28d01b00492d956478426099e38aa"
+    },
+    "data/methods/stroke-kangxi-rs-reconstruction.policy.json": {
+      "bytes": 933,
+      "sha256": "8a3915ebb97747e7961dcb828c90655f561bb7726d43bcb09f61bdcf91ef7faa"
+    },
+    "data/methods/wonhoek-adjustments-legacy-knolname2.csv": {
+      "bytes": 2215,
+      "sha256": "2eff4a00f4d431782e0f25950cfcf4d445e4c94e80ffae062d7817ee02632b8d"
+    },
+    "data/myeongri/십성_천간100.csv": {
+      "bytes": 31271,
+      "sha256": "5d3380b9b5612661ae06853c8908a8046d311cb56c8059f4fe1ae8ad3a807aee"
+    },
+    "data/myeongri/십이운성_화토동궁.csv": {
+      "bytes": 34677,
+      "sha256": "fd0b35a8a6cf38ccbe40f900aefc1ce2439cf8f6469a08910a9775604537ccc1"
+    },
+    "data/myeongri/오서둔_시간.csv": {
+      "bytes": 708,
+      "sha256": "084ff15e437facbcb1e5967fd9eddd1ed102a5a236b34ba5b4f071387f13fb24"
+    },
+    "data/myeongri/오호둔_월간.csv": {
+      "bytes": 699,
+      "sha256": "122f472be38d87bf47c6bc1ca4fe76f338d661b231778c69f49947177c50f182"
+    },
+    "data/myeongri/용신_방법론_카탈로그.csv": {
+      "bytes": 1549,
+      "sha256": "3f132db6f8c44423d78ce4556161b4e639cb8170a2f976685ea3fb9981f31124"
+    },
+    "data/myeongri/월지_절기경계.csv": {
+      "bytes": 1715,
+      "sha256": "286c2d655fe44cf598eea6b42dfc713acb49d070f69547214f79bbf319f613d8"
+    },
+    "data/myeongri/육십갑자.csv": {
+      "bytes": 2033,
+      "sha256": "264c1d1201eb5adf78a50534ba6003d4d2f6c3e32e41857270516c44644a10a9"
+    },
+    "data/myeongri/지장간.csv": {
+      "bytes": 7548,
+      "sha256": "da8cb75d864da3eea3870804bb04735b5fe14bd7c9d866769d9a3a15dbc67962"
+    },
+    "data/myeongri/지지.csv": {
+      "bytes": 1688,
+      "sha256": "78c2f6c8f151da4e1ff5f93df5e1eabef70f3da867e4bdc035f67818ece09443"
+    },
+    "data/myeongri/지지방합.csv": {
+      "bytes": 426,
+      "sha256": "f006d84ec02a8dda79b0bb073e3ffbab773015a4b2e6573afa9e5d4ff2473bef"
+    },
+    "data/myeongri/지지삼합.csv": {
+      "bytes": 426,
+      "sha256": "18434c5cb417751e8330b4132719d3ce5ad9b4933193882c584b3c8f2ebe04c1"
+    },
+    "data/myeongri/지지육합.csv": {
+      "bytes": 1000,
+      "sha256": "ca0e56600eb7d4972ac8a5128d0a0f183fa3ad457eff460f252e09b92de49f27"
+    },
+    "data/myeongri/지지충.csv": {
+      "bytes": 623,
+      "sha256": "fc4197b4d3ff843825b6b89ae4b1abd38b2ef8c0cadfc15e77215204e9e731a1"
+    },
+    "data/myeongri/지지파.csv": {
+      "bytes": 798,
+      "sha256": "16cbb35a8a99ac115e6966a1e9568ffcb956e7dce9284fdcae6a290ed112d6e2"
+    },
+    "data/myeongri/지지해.csv": {
+      "bytes": 798,
+      "sha256": "ae650877d6376ad7951040b4f0d26c674bf4810f97ca94f6ebde8910688229de"
+    },
+    "data/myeongri/지지형.csv": {
+      "bytes": 1343,
+      "sha256": "11f49e4dd1a50ccbba12bd1fb90455fca2c93d68fba89a6d477a9596cca456ff"
+    },
+    "data/myeongri/천간.csv": {
+      "bytes": 969,
+      "sha256": "9b438b68c0ae1509de5fd39b0e935293d267face0029fb13280730ecaceb35dc"
+    },
+    "data/myeongri/천간합.csv": {
+      "bytes": 973,
+      "sha256": "699f3d23036bdc1cce9adf1edcc1ae02a9a8f4b1f5510e0fd340f4c79349dd28"
+    },
+    "data/rules/오행_상생상극.csv": {
+      "bytes": 665,
+      "sha256": "304a88f9c5b705dfe8fa0fbe618ba2f699908eda3559252efe73131f3d7e1b76"
+    },
+    "data/rules/천간_음양오행.csv": {
+      "bytes": 643,
+      "sha256": "1b4f2358ad045d3b7852f0eac74ac49565d3249c74837408a9f1d2ae809cbe55"
+    },
+    "data/surnames/clan-history.csv": {
+      "bytes": 10376,
+      "sha256": "f543243fb5a85885b6da8072f1e6d7505ff4babcc5d35c6eba9ecd7635add06b"
+    },
+    "data/surnames/clans-2015.csv": {
+      "bytes": 808,
+      "sha256": "07ae48a3b35c150fe3b2417ef8f7c288207c88abffc071486cbe0a60a197aa5d"
+    },
+    "data/surnames/clans-core-2015.csv": {
+      "bytes": 66731,
+      "sha256": "738a5de0a46b4928a3139dcb2d205f4a7cc56ac5f30141282393992bcf06458a"
+    },
+    "data/surnames/entries/全.json": {
+      "bytes": 7536,
+      "sha256": "ce56f335bace11ca12561124848d19ecb35ea5e86c2f94bddab9bf8b78ea001a"
+    },
+    "data/surnames/entries/劉.json": {
+      "bytes": 7147,
+      "sha256": "87c2280b9d3300ef4dffb60bfe494e75e04a4aecc72c5d3ec3df7722028696c2"
+    },
+    "data/surnames/entries/南.json": {
+      "bytes": 7576,
+      "sha256": "83a4d17065d9aa361df6863d65091bc73de0b35acb0235ee75f10a458427d4f8"
+    },
+    "data/surnames/entries/吳.json": {
+      "bytes": 7846,
+      "sha256": "24549c60c5a418a02e6fdd78123ca6691e14ae03d65cf7945c0a100dfa172e74"
+    },
+    "data/surnames/entries/姜.json": {
+      "bytes": 6556,
+      "sha256": "cdfd4b569063b6213361063638eebb13c6591d5a0281e3611ba9368c34f72340"
+    },
+    "data/surnames/entries/孫.json": {
+      "bytes": 7564,
+      "sha256": "290c85767a638d0c4e4410653db12b98b9fdcdc2196e79208abe86e1724751d0"
+    },
+    "data/surnames/entries/安.json": {
+      "bytes": 7660,
+      "sha256": "14285280f311c99e313519bbb4805c73ee75fb0cd4d5619a5577cba61e2749d7"
+    },
+    "data/surnames/entries/宋.json": {
+      "bytes": 7439,
+      "sha256": "9ba5bf39b359485df18849a6dc55328ef1e0b88d3c36f265b30572cb91795fdb"
+    },
+    "data/surnames/entries/尹.json": {
+      "bytes": 7737,
+      "sha256": "60171b53888f512748e7a9d1bc76c18c35b16e2afae89bfadff21e14a39d70c3"
+    },
+    "data/surnames/entries/崔.json": {
+      "bytes": 8007,
+      "sha256": "3dea7a9094ae4a95e2b231bd867f99e8859e5062adfeb57f38a1afd263396cf7"
+    },
+    "data/surnames/entries/張.json": {
+      "bytes": 7732,
+      "sha256": "14401b43119b6463140b054e4b21985e453091bd409de4e925185768614bea68"
+    },
+    "data/surnames/entries/徐-strokes.json": {
+      "bytes": 966,
+      "sha256": "5a1153b4afaba3fd95c8893b1456d93e57cc3ba10336659d80ea426477e3ed55"
+    },
+    "data/surnames/entries/徐.json": {
+      "bytes": 9001,
+      "sha256": "afcc1b03772da38664af0d4b1b388e3a56f097267bacbaece391ef0a3f922f9b"
+    },
+    "data/surnames/entries/文.json": {
+      "bytes": 7026,
+      "sha256": "a0eae33e9927d49fcc47a0d8b9ec8d04ff7e04d8250713530f5358551eaa9dca"
+    },
+    "data/surnames/entries/曺.json": {
+      "bytes": 6891,
+      "sha256": "bae247b464092e269d4bc069200573eb86bc81626e174df7eb81f9d43bd30cff"
+    },
+    "data/surnames/entries/朴.json": {
+      "bytes": 7814,
+      "sha256": "daac1856d0606e73403e085c9e6703ba25edd3b998edae38c48d130d20743242"
+    },
+    "data/surnames/entries/李.json": {
+      "bytes": 8078,
+      "sha256": "b754479307abaca6ce33bd90758ec4a31206393a9d425e9b2654caab0ffe1b19"
+    },
+    "data/surnames/entries/林.json": {
+      "bytes": 7615,
+      "sha256": "17aa7094be4a2716d63bc26d37723204d53740f196fbdab4a662400b4c4db515"
+    },
+    "data/surnames/entries/柳.json": {
+      "bytes": 7509,
+      "sha256": "01967bcd507ba80f37da9be290c6048a945e2a62f1ff4c4664948ed5b98c9ab9"
+    },
+    "data/surnames/entries/梁.json": {
+      "bytes": 6632,
+      "sha256": "5aa760a5ba69772c157c0da66323ca3a634248e8b57dd8447f453c92fe3e3b08"
+    },
+    "data/surnames/entries/權.json": {
+      "bytes": 6104,
+      "sha256": "e877c9b529c3fde7e4086d3039694efae2fac10a51bba3fd2a9b97765ee74235"
+    },
+    "data/surnames/entries/洪.json": {
+      "bytes": 7140,
+      "sha256": "27a21b976f54cfd273720308b1866e9f10094909d363fe2d66096262ca205164"
+    },
+    "data/surnames/entries/申.json": {
+      "bytes": 6718,
+      "sha256": "e4996ce9c2705c3c419665a57a3febbe318bf2f8dc0fc5e5114a222dcd63b13e"
+    },
+    "data/surnames/entries/白.json": {
+      "bytes": 7185,
+      "sha256": "cfa528eff7884e316e421539438e87f23e82411e184431b6fde05e9530f73f21"
+    },
+    "data/surnames/entries/裵.json": {
+      "bytes": 7548,
+      "sha256": "223dc9c288528d44a6ca28887b093e5b0cd02dc35feee047f501d5b29f8aec5c"
+    },
+    "data/surnames/entries/許.json": {
+      "bytes": 7643,
+      "sha256": "3b740e62fca9cea13bab0bfa1cc4331dcbc05c2d3720dcb4f86fbbcf8f313765"
+    },
+    "data/surnames/entries/趙.json": {
+      "bytes": 7487,
+      "sha256": "47a02df9656b197970cf292a93bdee813a91a4ceb6957f5d565c2c7ad05b3ae1"
+    },
+    "data/surnames/entries/鄭.json": {
+      "bytes": 7687,
+      "sha256": "e338feeb58c751aa9c4bd8453ffca64cfd2007b4f619e86294122b87162a77d1"
+    },
+    "data/surnames/entries/金.json": {
+      "bytes": 8468,
+      "sha256": "1a61cca7836637fb6f55b86112199cfd5630d31c9a9a831017911578d9e4cca0"
+    },
+    "data/surnames/entries/韓.json": {
+      "bytes": 7051,
+      "sha256": "5cf918cf59067299b17e4d4da472cb6a1bf6101d4b4db2d08df30da6a1424243"
+    },
+    "data/surnames/entries/高.json": {
+      "bytes": 7508,
+      "sha256": "bd2ada21c56a48ab5c37f5f4d556c2680b64ae41bb08a7aae0efddeda01a0983"
+    },
+    "data/surnames/entries/黃.json": {
+      "bytes": 7445,
+      "sha256": "3be12efb6db9b6f33427ba7f68e28c39b5abcec257a84800ce67d00930a594ad"
+    },
+    "data/surnames/hangul-hanja-disambiguation.csv": {
+      "bytes": 706,
+      "sha256": "0be5966988b4a8e2275ba613c5c3653f1baf52f84f6bfcabb9d392abe3ed563d"
+    },
+    "data/surnames/pronunciation-heuristics.csv": {
+      "bytes": 1041,
+      "sha256": "5a947be40f8442b8ddf2cb0851b315028797b0e17f9f1a207b0ec481ef7e99e9"
+    },
+    "data/surnames/pronunciation-profiles.csv": {
+      "bytes": 7064,
+      "sha256": "04a26856fc845c874bd5b17bcd9819b89aa6bf231b8c73c8c5be185c8fc6e68a"
+    },
+    "data/surnames/representative-clans-2015.csv": {
+      "bytes": 3345,
+      "sha256": "f9755c8ca1327e20785727999bf7bfc98eade62f588e510d067e1b700fee5610"
+    },
+    "data/surnames/research-status.csv": {
+      "bytes": 5955,
+      "sha256": "95332bbef6a5fb3358942735c2731ead2cc536bcbd311dec82135b26f3f1e755"
+    },
+    "data/surnames/stroke-policies.csv": {
+      "bytes": 5468,
+      "sha256": "dc542630961a94daa10d4e4a995e4a7c23226acd2ef838352b9e1e08b0e7f364"
+    },
+    "data/surnames/surnames.csv": {
+      "bytes": 9505,
+      "sha256": "3154496eb8aa07aafcdc82547a4b96f2e2cc53ad689a07485aa8ed9c4cf95526"
+    },
+    "data/surnames/top30-excluding-xu-2015.csv": {
+      "bytes": 3453,
+      "sha256": "a5f44cb32de4584962539fe33fad3aee07fa8c4ed4bd06f7c9ebe983c05318f1"
+    },
+    "data/time/2026_24절기_KASI.csv": {
+      "bytes": 2704,
+      "sha256": "01577aabe12e49a9f087f8277a7da07729cd5e1df828221af9a619bd53554bc5"
+    },
+    "data/time/2027_24절기_KASI.csv": {
+      "bytes": 2702,
+      "sha256": "0516464fffd43be6527b423e456304501b88ed4dd0f2ca5ed543301a99ff0b49"
+    },
+    "data/time/reference-implementation-time-basis.csv": {
+      "bytes": 675,
+      "sha256": "abb5f6a2e5c42c3d06ec288b697f3f84d8f3f3e75f88cb28830dc0ef5180bea2"
+    },
+    "data/time/대한민국_DST_rules.csv": {
+      "bytes": 808,
+      "sha256": "b33cdfd63e008e977a054b6a06b184a0490173074261a049ad195778d27048f5"
+    },
+    "data/time/대한민국_표준시_역사.csv": {
+      "bytes": 370,
+      "sha256": "3ca540a1ee97e7694039bb4f62931ab4b21494507564ccf08639ec833f3b6396"
+    },
+    "data/trends/name-trend-ingestion-policy.json": {
+      "bytes": 1147,
+      "sha256": "ac02bbb27ce29e1fe69023779e0e738345dd4bf9869b163f95b712c799fb42df"
+    },
+    "data/trends/name-trend-snapshot.schema.json": {
+      "bytes": 2807,
+      "sha256": "f68706dac197dcbe534cc516ae12317afdb73e71f2a8bd56dc7d4b257e1a3f92"
+    },
+    "data/trends/name-trend-source-registry.csv": {
+      "bytes": 1086,
+      "sha256": "23b0c70567025a9e3c051debc9a3161b18d2d4ac518a2390be95c410bd4628c5"
+    }
+  }
+}

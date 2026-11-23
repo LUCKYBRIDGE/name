@@ -65,6 +65,16 @@
       ],
       "generator": "scripts/audit/build-source-rights.mjs",
       "reproducibility": "exact"
+    },
+    {
+      "outputs": [
+        "data/meta/integration-manifest.json"
+      ],
+      "inputs": [
+        "data/"
+      ],
+      "generator": "scripts/build/build-integration-manifest.mjs",
+      "reproducibility": "exact"
     }
   ],
   "not_yet_reproducible": [
