@@ -22,8 +22,8 @@ function stageBundle(t, dataPaths) {
   return directory;
 }
 
-function verify(directory) {
-  return spawnSync(process.execPath, [cli, directory], { encoding: "utf8" });
+function verify(directory, script = cli) {
+  return spawnSync(process.execPath, [script, directory], { encoding: "utf8" });
 }
 
 test("public bundle accepts the reviewed technical table with all notices", t => {
@@ -74,4 +74,53 @@ test("public bundle rejects modified data under a reviewed path", t => {
   const result = verify(directory);
   assert.equal(result.status, 1);
   assert.ok(result.stderr.includes(`Bundle file differs from the pinned checkout: ${technicalTable}`), result.stderr);
+});
+
+function stagePolicyCheckout(t) {
+  const directory = stageBundle(t, [technicalTable]);
+  for (const file of [
+    "data/meta/license-map.csv",
+    "data/meta/source-rights.csv",
+    "data/meta/distribution-policy.csv",
+    "scripts/build/lib/csv.mjs",
+    "scripts/validate/verify-public-data.mjs",
+  ]) {
+    const destination = join(directory, file);
+    fs.mkdirSync(dirname(destination), { recursive: true });
+    fs.copyFileSync(join(root, file), destination);
+  }
+  return directory;
+}
+
+for (const file of [technicalTable, unicodeNotice]) {
+  test(`public bundle rejects simultaneous changes in the checkout and stage for ${file}`, t => {
+    const checkout = stagePolicyCheckout(t);
+    const stage = stageBundle(t, [technicalTable]);
+    for (const directory of [checkout, stage]) fs.appendFileSync(join(directory, file), "\n");
+
+    const result = verify(stage, join(checkout, "scripts/validate/verify-public-data.mjs"));
+    assert.equal(result.status, 1);
+    assert.ok(result.stderr.includes(`Public bundle fingerprint requires review: ${technicalTable}`), result.stderr);
+  });
+}
+
+for (const pattern of [technicalTable, "data/methods/**"]) {
+  test(`public bundle rejects an approval covered by a review rule for ${pattern}`, t => {
+    const checkout = stagePolicyCheckout(t);
+    const stage = stageBundle(t, [technicalTable]);
+    fs.appendFileSync(join(checkout, "data/meta/distribution-policy.csv"),
+      `${pattern},review_before_broad_public_release,Manual review,medium,Regression fixture,\n`);
+
+    const result = verify(stage, join(checkout, "scripts/validate/verify-public-data.mjs"));
+    assert.equal(result.status, 1);
+    assert.match(result.stderr, /Public bundle rule conflicts with review_before_broad_public_release/);
+  });
+}
+
+test("policy validation rejects a stale fingerprint before a bundle exists", t => {
+  const checkout = stagePolicyCheckout(t);
+  fs.appendFileSync(join(checkout, unicodeNotice), "\n");
+  const result = verify("--check-policy", join(checkout, "scripts/validate/verify-public-data.mjs"));
+  assert.equal(result.status, 1);
+  assert.match(result.stderr, /Public bundle fingerprint requires review/);
 });

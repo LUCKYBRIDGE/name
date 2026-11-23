@@ -115,6 +115,9 @@ const allowedDistributionStatuses=new Set([
 for (const r of distributionRows) {
   if (!r.path_pattern) fail("distribution policy missing path_pattern");
   if (!allowedDistributionStatuses.has(r.distribution_status)) fail(`unknown distribution status: ${r.path_pattern}/${r.distribution_status}`);
+  if (r.distribution_status==="public_bundle_with_notices") {
+    if (!/^[a-f0-9]{64}$/.test(r.reviewed_sha256)) fail(`invalid public bundle review fingerprint: ${r.path_pattern}`);
+  } else if (r.reviewed_sha256) fail(`review fingerprint on non-public distribution rule: ${r.path_pattern}`);
   if (!r.required_action || !r.risk_level || !r.notes) fail(`distribution policy metadata missing: ${r.path_pattern}`);
   if (!["low","medium","high"].includes(r.risk_level)) fail(`invalid distribution risk: ${r.path_pattern}/${r.risk_level}`);
 }
