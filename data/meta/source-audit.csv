@@ -8,7 +8,7 @@ KR_ARCHIVES_TIME,official_archive,public_reference,repository_policy_label,manua
 LIBHANGUL_HANJA,open_source_dictionary,BSD-3-Clause,named_license,permitted_with_registered_license_notice,metadata_and_citation_reference_ok,low,저장소의 해당 라이선스 원문·고지와 적용 범위를 함께 유지
 UNICODE_UNIHAN,technical_standard,Unicode-3.0-License,named_license,permitted_with_registered_license_notice,metadata_and_citation_reference_ok,low,저장소의 해당 라이선스 원문·고지와 적용 범위를 함께 유지
 LUNAR_PYTHON,open_source_implementation,MIT,named_license,permitted_with_registered_license_notice,metadata_and_citation_reference_ok,low,저장소의 해당 라이선스 원문·고지와 적용 범위를 함께 유지
-RUTOPIO_NAME_HANJA,secondary_mirror,MIT,named_license,permitted_with_registered_license_notice,metadata_and_citation_reference_ok,low,저장소의 해당 라이선스 원문·고지와 적용 범위를 함께 유지
+RUTOPIO_NAME_HANJA,secondary_mirror,MIT,named_license,court_origin_bulk_reuse_review_required,metadata_and_citation_reference_ok,high,미러의 MIT 표시를 보존하되 대법원 조회에서 수집한 원천의 대량 재배포 범위는 별도 확인
 KCI_JIJANGGAN,academic,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
 KCI_TENSUNG,academic,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토
 KCI_BRANCH_REL,academic,unknown,unknown,manual_review_before_bulk_redistribution,metadata_and_citation_reference_ok,medium,출처 링크를 참고·인용하는 것과 원문/데이터 대량 재배포 권한은 별도 검토

@@ -44,6 +44,7 @@ if (sourceRightsRows.length!==sourceRows.length) fail("source-rights row count m
 const sourceRightsIds=new Set();
 const allowedRightsClasses=new Set([
   "embedded_open_license",
+  "embedded_open_license_upstream_rights_review",
   "first_party_legacy_implementation",
   "reference_only_open_source",
   "official_statistics_reuse_policy",
@@ -67,8 +68,8 @@ for (const rr of sourceRightsRows) {
   if (src?.license==="unknown" && !["official_reference_bulk_reuse_unverified","academic_reference_only","secondary_reference_only","reference_terms_not_item_verified"].includes(rr.rights_class)) {
     fail(`unknown-license source classified too permissively: ${rr.source_id}/${rr.rights_class}`);
   }
-  if (rr.embedded_source_content==="true" && !["embedded_open_license","first_party_legacy_implementation"].includes(rr.rights_class)) {
-    fail(`embedded source content lacks explicit redistributable class: ${rr.source_id}`);
+  if (rr.embedded_source_content==="true" && !["embedded_open_license","embedded_open_license_upstream_rights_review","first_party_legacy_implementation"].includes(rr.rights_class)) {
+    fail(`embedded source content lacks a registered rights class: ${rr.source_id}`);
   }
   if (rr.rights_class==="public_text_KOGL_type1" && !rr.attribution_template.includes("ⓒ한국민족문화대백과사전")) {
     fail(`AKS attribution template missing: ${rr.source_id}`);
@@ -78,6 +79,7 @@ for (const id of sourceIds) if (!sourceRightsIds.has(id)) fail(`source missing r
 for (const id of ["KR_COURT_HANJA","KR_COURT_HANJA_PDF"]) {
   if (sourceRightsRows.find(r=>r.source_id===id)?.rights_class!=="official_reference_bulk_reuse_unverified") fail(`court source must remain reference-only until bulk reuse terms verified: ${id}`);
 }
+if (sourceRightsRows.find(r=>r.source_id==="RUTOPIO_NAME_HANJA")?.rights_class!=="embedded_open_license_upstream_rights_review") fail("court-origin mirror must retain upstream reuse review");
 if (sourceRightsRows.find(r=>r.source_id==="YESJOKBO_CENSUS2015_APPENDIX")?.rights_class!=="secondary_reference_only") fail("YESJOKBO must remain secondary-reference-only");
 ok(`source rights registry: ${sourceRightsRows.length} classified sources`);
 const licenseMapRows=csvRows("data/meta/license-map.csv");
@@ -101,6 +103,7 @@ ok(`third-party license notices: ${licenseMapRows.length} path mappings`);
 const distributionRows=csvRows("data/meta/distribution-policy.csv");
 const allowedDistributionStatuses=new Set([
   "allowed_with_third_party_notices",
+  "public_bundle_with_notices",
   "allowed_with_source_attribution",
   "review_before_broad_public_release",
   "row_level_source_check_required",

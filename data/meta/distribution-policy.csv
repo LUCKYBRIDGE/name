@@ -1,8 +1,8 @@
 path_pattern,distribution_status,required_action,risk_level,notes
-data/hanja/raw/rutopio-data-gov-2024-07-16.csv|data/hanja/normalized/*,allowed_with_third_party_notices,Keep MIT notice and THIRD_PARTY_NOTICES.md,low,현행 법적 허용 여부는 공식 법원 조회로 별도 확인
-data/hanja/enriched/*|data/hanja/semantics/meaning-senses.csv,allowed_with_third_party_notices,Keep MIT/BSD-3-Clause/Unicode notices according to license-map,low,편집 작명 해석과 제3자 사전 의미를 구분
+data/hanja/raw/rutopio-data-gov-2024-07-16.csv|data/hanja/normalized/*,review_before_broad_public_release,Retain mapped notices and verify court-origin bulk reuse for the mirror and joined derivatives,medium,후보 데이터와 현행 법적 판정을 구분
+data/hanja/enriched/*|data/hanja/semantics/meaning-senses.csv,review_before_broad_public_release,Retain mapped notices and verify court-origin bulk reuse for the mirror and joined derivatives,medium,후보 데이터와 현행 법적 판정을 구분
 data/hanja/semantics/naming-meaning-curated.csv,first_party_all_rights_reserved,Do not imply an open license for editorial naming interpretations,low,제3자 사전 의미에서 출발한 자체 편집 분류는 원출처 source_id를 유지
-data/surnames/surnames.csv|data/surnames/representative-clans-2015.csv,allowed_with_source_attribution,Display KOSIS source and preserve statistical meaning,low,KOSIS 이용지침 준수
+data/surnames/surnames.csv|data/surnames/representative-clans-2015.csv,row_level_source_check_required,Keep source-specific notices and verify the conditions for the exact official report or mixed dataset,medium,성씨 마스터와 대표 본관표의 출처가 다름. license-map 확인
 data/surnames/clans-core-2015.csv,review_before_broad_public_release,Rebuild or reverify from KOSIS official data only before broad/public commercial release,medium,YESJOKBO는 추출 교차검증용 보조 출처이며 재배포 권한 근거로 사용하지 않음
 data/surnames/clan-history.csv|data/surnames/entries/*.json,row_level_source_check_required,AKS rows need KOGL-1 attribution; unknown-license local/secondary sources stay summary/citation only,medium,원문 장문·표·이미지 복제 금지
 data/time/2026_24절기_KASI.csv|data/time/2027_24절기_KASI.csv,allowed_with_kasi_attribution_if_scope_verified,Display KASI source and keep use within KOGL-1 calendar-face astronomical information scope,low,사진·디자인·전체 천문력 복제 금지
@@ -19,3 +19,5 @@ data/methods/pronunciation-onset-common.csv|data/methods/pronunciation-onset-com
 data/trends/*,allowed_with_source_attribution,"Store only directly observed official factual rows with exact query scope, registration-date basis, retrieval date and court attribution",low,출생·개명 모집단을 분리하고 TOP20 밖 순위·건수는 추정하지 않음; 현재 직접 공식 스냅샷 적재는 아직 대기
 data/methods/numerology-81-legacy-knolname.csv|data/methods/numerology-81-legacy-knolname.policy.json,first_party_all_rights_reserved,Keep legacy/non-authoritative labels intact and do not present as independently verified numerology evidence,low,기존 앱 회귀와 차이 비교용 내부 데이터
 data/hanja/semantics/naming-core-characters.csv,first_party_all_rights_reserved,Do not present editorial core order as official popularity statistics,low,300자 코어는 앱/편집 우선순위이며 대법원 사용빈도 순위가 아님
+data/hanja/excel-view/*.csv,review_before_broad_public_release,Apply the rights and notice checks of the enriched Hanja inputs,medium,통합 한자 데이터의 조회용 파생본
+data/methods/kangxi-radical-stroke-ranges.csv,public_bundle_with_notices,Include Unicode license and retain the technical-method scope,low,Unihan을 근거로 자체 정리한 강희 부수 기술 획수 범위

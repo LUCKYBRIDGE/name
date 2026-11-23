@@ -55,6 +55,11 @@ const output=rows.map(r=>{
     notes="NDL 항목의 PDM 표시를 기록하되 실제 표·본문 전사 전 페이지·항목별 이용조건을 재확인";
   }
 
+  if(r.source_id==="RUTOPIO_NAME_HANJA"){
+    redistribution_review_status="court_origin_bulk_reuse_review_required";
+    audit_priority="high";
+    notes="미러의 MIT 표시를 보존하되 대법원 조회에서 수집한 원천의 대량 재배포 범위는 별도 확인";
+  }
   if(r.source_id==="KCI_RESOURCE_ELEMENT_214_2024"){
     audit_priority="high";
     notes="214부수 전체 자원오행 배속 연구라는 점은 검증됨; 학술논문 표 원문 재배포는 하지 않으며 독립 재구성 또는 허가가 필요";
