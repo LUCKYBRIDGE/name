@@ -36,8 +36,8 @@
     "semantic_risk_rule_rows": 9,
     "curated_sense_concern_rows": 5,
     "selection_example_records": 3,
-    "build_reproducible_steps": 6,
-    "build_reproducible_files": 7,
+    "build_reproducible_steps": 7,
+    "build_reproducible_files": 8,
     "build_nonreproducible_key_files": 4,
     "semantic_source_issue_rows": 7
   },

@@ -18,6 +18,8 @@
 
 출처: 국가데이터처 국가통계포털(KOSIS), 「성씨ㆍ본관별 인구(5인 이상) - 전국」, 2015년 인구주택총조사 기준, 조회일 2026-11-14.
 
+대표 본관표의 출처는 국가데이터처 「2015년 인구주택총조사 전수집계결과」의 대표 본관 자료입니다. 성씨 마스터의 사전 훈음과 기술 획수에는 행별 `source_ids`에 따라 libhangul의 BSD 및 Unicode 고지를 함께 표시합니다. [공식 보도자료](https://mods.go.kr/board.es?act=view&bid=203&list_no=356061&mid=a10301010000)
+
 앱에서 자체 계산한 비율·순위·`상위 본관 외 나머지` 값은 KOSIS 원표의 별도 항목이 아니라 원자료를 바탕으로 계산한 파생값임을 구분합니다.
 
 ## 한국민족문화대백과사전
@@ -68,4 +70,5 @@
 - `rights_class=secondary_reference_only`: 2차 자료 자체를 앱 DB로 배포하지 않음
 - `rights_class=official_reference_bulk_reuse_unverified`: 공식 확인 링크로만 사용하고 원표/PDF의 대량 탑재 금지
 - `rights_class=official_statistics_reuse_policy`: 조회조건·조회일·출처표시를 보존한 정규화 통계 사실값 사용 가능
-- `embedded_source_content=true`: 해당 오픈 라이선스 원문 고지를 반드시 유지
+- `embedded_open_license`: 해당 파일에 적용된 라이선스와 원문 고지를 유지
+- `embedded_open_license_upstream_rights_review`: 미러 고지를 유지하고 원천 데이터의 재배포 범위를 별도 확인

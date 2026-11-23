@@ -13,11 +13,12 @@
 ## 2. 현재 재배포 근거가 명확한 자료
 
 ### 오픈 라이선스 한자 데이터
-- `RUTOPIO_NAME_HANJA`: MIT
 - `LIBHANGUL_HANJA`: BSD-3-Clause
 - `UNICODE_UNIHAN`: Unicode-3.0
 
 해당 원자료 또는 파생물을 배포할 때는 `THIRD_PARTY_NOTICES.md`와 `LICENSES/`의 고지를 함께 유지합니다.
+
+`RUTOPIO_NAME_HANJA`의 미러 프로젝트는 MIT를 표기합니다. 이 미러의 법원 조회 데이터는 원천의 대량 재배포 범위를 별도로 확인해야 하므로, 미러·독음 인덱스·결합 한자표를 신규 공개 묶음에서 보류합니다. 부수·획수 잠정표에는 법원 미러 독음이 들어 있어 같은 검토 대상입니다. [미러 프로젝트](https://github.com/rutopio/Korean-Name-Hanja-Charset) · [법원 저작권 보호 정책](https://scourt.go.kr/portal/popup/jeojak_pop.html)
 
 ### KOSIS 통계
 `KOSIS_SURNAME_2015`, `KOSIS_SURNAME_2015_MASS`는 KOSIS 통계정보 이용지침을 기준으로 사용합니다.
@@ -87,7 +88,7 @@
 
 ## 6. 앱 배포 전 체크
 
-1. `APP_ATTRIBUTION.md`의 고지를 앱의 정보/출처 화면에 반영합니다.
+1. `APP_ATTRIBUTION.md`의 고지를 앱의 정보/출처 화면에 반영합니다. 공개용 원본 파일 묶음은 [연동 가이드](docs/08-연결-프로젝트-데이터-연동.md)의 `verify:public-data`로 검사합니다.
 2. `data/meta/distribution-policy.csv`에서 `review_before_broad_public_release` 또는 `row_level_source_check_required`인 파일을 확인합니다.
 3. 성씨·본관 통계는 가능하면 KOSIS 공식 데이터만으로 재생성·재검증합니다.
 4. 한국민족문화대백과를 표시하는 화면은 항목별 출처표시를 유지합니다.

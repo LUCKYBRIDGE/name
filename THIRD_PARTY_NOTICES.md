@@ -31,6 +31,10 @@ The raw mirror and derivatives are used for candidate search and normalization.
 They are not treated as proof of current legal eligibility. Current legal
 eligibility must be checked against the official Korean court source.
 
+The mirror project declares MIT. Before any new public bundle includes the
+court-origin rows or their derivatives, verify the scope of bulk reuse for
+the original court data and retain the MIT notice.
+
 Full license text: `LICENSES/MIT-rutopio.txt`
 
 ## 2. libhangul Hanja dictionary data
@@ -50,7 +54,8 @@ Repository use:
 
 The repository mechanically joins and splits Hanja reading/meaning records.
 Editorial naming interpretations are maintained separately from the upstream
-dictionary meanings.
+dictionary meanings. The surname master also uses libhangul glosses and
+requires the dictionary notice.
 
 Full notice text: `LICENSES/BSD-3-Clause-libhangul-hanja.txt`
 
@@ -61,7 +66,7 @@ Upstream:
 - Dataset: Unihan Database
 - Repository source ID: `UNICODE_UNIHAN`
 - License: Unicode License v3 / SPDX `Unicode-3.0`
-- Copyright notice in current upstream license: Copyright © 2021-2026 Unicode, Inc.
+- Copyright notice in current upstream license: Copyright © 1991-2026 Unicode, Inc.
 
 Repository use:
 - `data/hanja/enriched/unihan-radical-strokes-provisional.csv`
@@ -70,6 +75,9 @@ Repository use:
 
 These values are technical Unicode metadata and are not automatically treated
 as Korean naming-numerology stroke counts.
+
+The standalone technical table `data/methods/kangxi-radical-stroke-ranges.csv`
+is covered by the Unicode mapping in the path-level notice table.
 
 Full license text: `LICENSES/Unicode-3.0.txt`
 

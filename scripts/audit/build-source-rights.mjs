@@ -9,7 +9,17 @@ function classify(r) {
   const id=r.source_id;
   const license=r.license;
 
-  if (["RUTOPIO_NAME_HANJA","LIBHANGUL_HANJA","UNICODE_UNIHAN"].includes(id)) {
+  if (id==="RUTOPIO_NAME_HANJA") {
+    return {
+      rights_class:"embedded_open_license_upstream_rights_review",
+      repository_use:"existing_candidate_mirror_and_derivatives",
+      app_use:"verify_court_origin_reuse_before_new_public_bundles",
+      redistribution_basis:"Upstream mirror declares MIT; underlying court-origin bulk reuse has not been verified",
+      attribution_required:"true", attribution_template:"rutopio MIT 고지와 대법원 원천 출처를 함께 유지",
+      embedded_source_content:"true", broad_release_action:"retain_mit_notice_and_verify_original_court_data_reuse"
+    };
+  }
+  if (["LIBHANGUL_HANJA","UNICODE_UNIHAN"].includes(id)) {
     return {
       rights_class:"embedded_open_license", repository_use:"embedded_source_and_derivatives",
       app_use:"allowed_with_license_notice", redistribution_basis:license,

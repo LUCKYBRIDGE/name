@@ -1,21 +1,56 @@
-export function parseCsvLine(line) {
-  const out=[]; let cur=""; let quoted=false;
-  for (let i=0;i<line.length;i++) {
-    const ch=line[i];
-    if (ch === '"') {
-      if (quoted && line[i+1] === '"') { cur += '"'; i++; } else quoted=!quoted;
-    } else if (ch === "," && !quoted) { out.push(cur); cur=""; } else cur += ch;
-  }
-  out.push(cur); return out;
-}
-
 export function parseCsv(content) {
-  const lines=content.replace(/^\uFEFF/,"").trimEnd().split(/\r?\n/);
-  const header=parseCsvLine(lines[0]);
-  return {header,rows:lines.slice(1).filter(Boolean).map(line=>{
-    const values=parseCsvLine(line);
-    return Object.fromEntries(header.map((h,i)=>[h,values[i]??""]));
-  })};
+  const input = content.replace(/^\uFEFF/, "");
+  const unquotedField = /[^",\r\n]*/y;
+  const records = [];
+  let offset = 0;
+
+  while (offset < input.length) {
+    const fields = [];
+    if (input[offset] !== "\n" && input[offset] !== "\r") {
+      while (true) {
+        if (input[offset] === '"') {
+          const start = offset + 1;
+          let closingQuote = input.indexOf('"', start);
+          while (closingQuote !== -1 && input[closingQuote + 1] === '"') {
+            closingQuote = input.indexOf('"', closingQuote + 2);
+          }
+          if (closingQuote === -1) {
+            throw new Error(`CSV record ${records.length + 1}: unclosed quoted field`);
+          }
+          fields.push(input.slice(start, closingQuote).replaceAll('""', '"'));
+          offset = closingQuote + 1;
+        } else {
+          unquotedField.lastIndex = offset;
+          fields.push(unquotedField.exec(input)[0]);
+          offset = unquotedField.lastIndex;
+        }
+        if (input[offset] !== ",") break;
+        offset++;
+      }
+      records.push(fields);
+    }
+
+    if (offset === input.length) break;
+    if (input.startsWith("\r\n", offset)) {
+      offset += 2;
+    } else if (input[offset] === "\n" || input[offset] === "\r") {
+      offset++;
+    } else {
+      throw new Error(`CSV record ${records.length}: unexpected character after field`);
+    }
+  }
+
+  const [header, ...values] = records;
+  if (!header || header.some(name => !name.trim())) throw new Error("CSV header is missing or has an empty column");
+  if (new Set(header).size !== header.length) throw new Error("CSV header has duplicate columns");
+
+  const rows = values.map((fields, index) => {
+    if (fields.length !== header.length) {
+      throw new Error(`CSV record ${index + 2}: expected ${header.length} fields, got ${fields.length}`);
+    }
+    return Object.fromEntries(header.map((name, fieldIndex) => [name, fields[fieldIndex]]));
+  });
+  return { header, rows };
 }
 
 export function csvEscape(value) {

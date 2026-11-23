@@ -10,7 +10,10 @@
     "build:derived": "node scripts/build/build-derived.mjs",
     "check:derived": "node scripts/build/build-derived.mjs --check",
     "audit:official-hanja": "node scripts/audit/compare-official-hanja.mjs",
-    "validate:data": "node scripts/validate/validate-data.mjs",
+    "validate:data": "node scripts/validate/validate-data.mjs && node scripts/validate/verify-public-data.mjs --check-policy && npm run test:audit",
+    "verify:integration": "node scripts/validate/verify-integration-snapshot.mjs",
+    "verify:public-data": "node scripts/validate/verify-public-data.mjs",
+    "test:audit": "node --test tests/official-hanja-audit.test.mjs tests/public-data-rights.test.mjs",
     "check": "npm run check:derived && npm run validate:data",
     "audit:rights": "node scripts/audit/build-source-rights.mjs"
   }

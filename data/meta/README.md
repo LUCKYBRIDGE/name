@@ -8,6 +8,7 @@
 - `dataset-stats.json`: 행 수·커버리지·검증 상태의 단일 기준
 - `schema-version.json`: 데이터 구조 버전과 공통 규칙
 - `build-manifest.json`: 파생 데이터의 입력→생성기→출력 계보
+- `integration-manifest.json`: 연동 파일 경로, 바이트 수, SHA-256 및 데이터 스키마 버전
 - `quality-gates.json`: 앱/AI가 확정값으로 사용하기 전에 확인해야 할 미완성·차단 상태
 
 ## 운영 원칙

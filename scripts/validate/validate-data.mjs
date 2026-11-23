@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import {parseCsv} from "../build/lib/csv.mjs";
 
 const root = new URL("../../", import.meta.url);
 const read = p => fs.readFileSync(new URL(p, root), "utf8").replace(/^\uFEFF/, "");
@@ -6,25 +7,7 @@ const exists = p => fs.existsSync(new URL(p, root));
 const fail = msg => { console.error("FAIL:", msg); process.exitCode = 1; };
 const ok = msg => console.log("OK:", msg);
 
-function parseCsvLine(line) {
-  const out=[]; let cur=""; let quoted=false;
-  for (let i=0;i<line.length;i++) {
-    const ch=line[i];
-    if (ch === '"') {
-      if (quoted && line[i+1] === '"') { cur += '"'; i++; } else quoted=!quoted;
-    } else if (ch === "," && !quoted) { out.push(cur); cur=""; }
-    else cur += ch;
-  }
-  out.push(cur); return out;
-}
-function csvRows(path) {
-  const lines=read(path).trim().split(/\r?\n/);
-  const header=parseCsvLine(lines[0]);
-  return lines.slice(1).filter(Boolean).map(line=>{
-    const vals=parseCsvLine(line);
-    return Object.fromEntries(header.map((h,i)=>[h,vals[i]??""]));
-  });
-}
+const csvRows = path => parseCsv(read(path)).rows;
 
 const requiredNoticeFiles=[
   "THIRD_PARTY_NOTICES.md",
@@ -61,6 +44,7 @@ if (sourceRightsRows.length!==sourceRows.length) fail("source-rights row count m
 const sourceRightsIds=new Set();
 const allowedRightsClasses=new Set([
   "embedded_open_license",
+  "embedded_open_license_upstream_rights_review",
   "first_party_legacy_implementation",
   "reference_only_open_source",
   "official_statistics_reuse_policy",
@@ -84,8 +68,8 @@ for (const rr of sourceRightsRows) {
   if (src?.license==="unknown" && !["official_reference_bulk_reuse_unverified","academic_reference_only","secondary_reference_only","reference_terms_not_item_verified"].includes(rr.rights_class)) {
     fail(`unknown-license source classified too permissively: ${rr.source_id}/${rr.rights_class}`);
   }
-  if (rr.embedded_source_content==="true" && !["embedded_open_license","first_party_legacy_implementation"].includes(rr.rights_class)) {
-    fail(`embedded source content lacks explicit redistributable class: ${rr.source_id}`);
+  if (rr.embedded_source_content==="true" && !["embedded_open_license","embedded_open_license_upstream_rights_review","first_party_legacy_implementation"].includes(rr.rights_class)) {
+    fail(`embedded source content lacks a registered rights class: ${rr.source_id}`);
   }
   if (rr.rights_class==="public_text_KOGL_type1" && !rr.attribution_template.includes("ⓒ한국민족문화대백과사전")) {
     fail(`AKS attribution template missing: ${rr.source_id}`);
@@ -95,6 +79,7 @@ for (const id of sourceIds) if (!sourceRightsIds.has(id)) fail(`source missing r
 for (const id of ["KR_COURT_HANJA","KR_COURT_HANJA_PDF"]) {
   if (sourceRightsRows.find(r=>r.source_id===id)?.rights_class!=="official_reference_bulk_reuse_unverified") fail(`court source must remain reference-only until bulk reuse terms verified: ${id}`);
 }
+if (sourceRightsRows.find(r=>r.source_id==="RUTOPIO_NAME_HANJA")?.rights_class!=="embedded_open_license_upstream_rights_review") fail("court-origin mirror must retain upstream reuse review");
 if (sourceRightsRows.find(r=>r.source_id==="YESJOKBO_CENSUS2015_APPENDIX")?.rights_class!=="secondary_reference_only") fail("YESJOKBO must remain secondary-reference-only");
 ok(`source rights registry: ${sourceRightsRows.length} classified sources`);
 const licenseMapRows=csvRows("data/meta/license-map.csv");
@@ -118,6 +103,7 @@ ok(`third-party license notices: ${licenseMapRows.length} path mappings`);
 const distributionRows=csvRows("data/meta/distribution-policy.csv");
 const allowedDistributionStatuses=new Set([
   "allowed_with_third_party_notices",
+  "public_bundle_with_notices",
   "allowed_with_source_attribution",
   "review_before_broad_public_release",
   "row_level_source_check_required",
@@ -129,6 +115,9 @@ const allowedDistributionStatuses=new Set([
 for (const r of distributionRows) {
   if (!r.path_pattern) fail("distribution policy missing path_pattern");
   if (!allowedDistributionStatuses.has(r.distribution_status)) fail(`unknown distribution status: ${r.path_pattern}/${r.distribution_status}`);
+  if (r.distribution_status==="public_bundle_with_notices") {
+    if (!/^[a-f0-9]{64}$/.test(r.reviewed_sha256)) fail(`invalid public bundle review fingerprint: ${r.path_pattern}`);
+  } else if (r.reviewed_sha256) fail(`review fingerprint on non-public distribution rule: ${r.path_pattern}`);
   if (!r.required_action || !r.risk_level || !r.notes) fail(`distribution policy metadata missing: ${r.path_pattern}`);
   if (!["low","medium","high"].includes(r.risk_level)) fail(`invalid distribution risk: ${r.path_pattern}/${r.risk_level}`);
 }
@@ -353,7 +342,7 @@ if (stats.sources.unknown_license_metadata!==sourceRows.filter(r=>r.license==="u
 ok(`semantic selection policy: ${riskRows.length} rules / ${concernRows.length} curated concerns / ${selectionExamples.examples.length} examples`);
 
 // Myeongri
-const rowCount=p=>read(p).trim().split(/\r?\n/).length-1;
+const rowCount=p=>csvRows(p).length;
 if (rowCount("data/myeongri/천간.csv") !== 10) fail("천간 count");
 if (rowCount("data/myeongri/지지.csv") !== 12) fail("지지 count");
 if (rowCount("data/myeongri/육십갑자.csv") !== 60) fail("육십갑자 count");

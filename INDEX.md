@@ -15,6 +15,7 @@ AI와 앱 개발 코드는 사용자 요청의 **의도**에 따라 필요한 �
 | 수리·음양·발음오행 | data/methods/naming-method-registry.csv | knowledge/12-성명학-학파별-분리원칙.md |
 | 후보 비교 | workflows/후보-비교.md | templates/분석-출력-형식.md |
 | 출생 전 후보 | workflows/출생전-후보와-출생후-확정.md | knowledge/14-출생일시-입력규격.md |
+| 연결 프로젝트 데이터 동기화 | [데이터 연동 가이드](docs/08-연결-프로젝트-데이터-연동.md) | [연동 매니페스트](data/meta/integration-manifest.json) |
 | 데이터 상태/개수 | data/meta/dataset-stats.json | data/meta/schema-version.json |
 | 외부 출처 | data/meta/sources.csv | sources/명리학-작명-자료맵.md |
 | AI Studio 앱 구조 | ai-studio/ | docs/06-AI-Studio-앱-스냅샷.md |
